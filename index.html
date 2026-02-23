@@ -6,27 +6,30 @@
     <title>Globaxify | Premium Digital Agency</title>
     <link rel="stylesheet" href="style.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap"
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
   </head>
   <body>
     <header class="luxury-nav">
       <div class="nav-container">
-        <div class="logo">GOLDEN<span>ELITE</span></div>
+        <div class="logo">
+          <a href="index.html" class="logo-link">
+            <img src="logo.png" alt="Globexify Logo" class="nav-brand-img" />
+          </a>
+        </div>
 
         <ul class="nav-menu" id="nav-menu">
           <li><a href="#home">Home</a></li>
-          <li><a href="#services">services</a></li>
+          <li><a href="#services">Services</a></li>
           <li><a href="#Team">Team</a></li>
-          <li><a href="#Portfolio">Portfolio</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li class="mobile-only"><a href="#" class="btn-gold">Book Now</a></li>
         </ul>
 
         <div class="nav-actions">
-          <a href="#" class="btn-gold desktop-only">Book Now</a>
+          <a href="#" class="btn-action desktop-only">Book Now</a>
           <div class="menu-toggle" id="mobile-menu">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -35,34 +38,44 @@
         </div>
       </div>
     </header>
-    <section class="premium-hero">
-      <div class="bg-glow"></div>
-
+    <!-- ---- Hero Section ---- -->
+    <section class="hero">
       <div class="hero-container">
         <div class="hero-content">
-          <span class="top-badge">Experience Pure Excellence</span>
-          <h1>
-            Crafting <span class="text-blue">Future</span><br />Legacies With
-            Vision
-          </h1>
+          <span class="badge">Global eCommerce Solutions</span>
+          <h1>Scale Your Business With <span>Globexify</span> Experts</h1>
           <p>
-            Unlock unparalleled potential with bespoke digital solutions
-            tailored for the few. Where innovation meets timeless design.
+            Hum aapke eCommerce brand ko international level par le kar jatay
+            hain. Smart strategies aur modern tools ke sath apni sales
+            barhayein.
           </p>
 
-          <div class="hero-actions">
-            <a href="#" class="btn-fill">Discover More</a>
-            <a href="#" class="btn-outline">Request A Quote</a>
+          <div class="hero-btns">
+            <a href="#services" class="btn-primary">Our Services</a>
+            <a href="#contact" class="btn-secondary">Contact Us</a>
           </div>
 
           <div class="hero-stats">
             <div class="stat-item">
-              <span class="stat-num">10+</span>
-              <span class="stat-label">Years of Mastery</span>
+              <span class="count">150+</span>
+              <span class="label">Clients</span>
             </div>
             <div class="stat-item">
-              <span class="stat-num">250+</span>
-              <span class="stat-label">Elite Projects</span>
+              <span class="count">99%</span>
+              <span class="label">Success Rate</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <div class="image-wrapper">
+            <img src="assets/Hero img.png" alt="Globexify Success" />
+            <div class="floating-card">
+              <div class="card-icon">🚀</div>
+              <div class="card-text">
+                <strong>Fast Growth</strong>
+                <span>Real-time Analytics</span>
+              </div>
             </div>
           </div>
         </div>
@@ -70,95 +83,120 @@
     </section>
     <!-- ----Services Section---- -->
 
-    <section class="services-modern-wrap">
+    <section id="services" class="services-modern-wrap">
       <div class="container">
         <div class="services-main-header">
-          <span class="service-badge">Expertise & Solutions</span>
+          <span class="service-badge">Our Global Expertise</span>
           <h2 class="services-title">
-            Precision Engineered <span class="text-gradient">Services</span>
+            Empowering Brands with
+            <span class="text-gradient">Elite Solutions</span>
           </h2>
           <p class="services-subtitle">
-            We don't just provide services; we craft digital ecosystems designed
-            for global dominance and elite performance.
+            At <strong>Globexify</strong>, we don't just offer services; we
+            engineer digital growth. From high-conversion stores to data-driven
+            marketing, we help you dominate the global marketplace.
           </p>
         </div>
 
         <div class="services-bento-grid">
-          <a
-            href="/ecommerce-architecture"
-            class="service-bento-card large-card"
-          >
-            <div class="card-content">
+          <a href="#" class="service-bento-card large-card">
+            <div class="card-inner">
               <div class="s-icon-box blue-glow">
-                <i class="fas fa-shopping-cart"></i>
+                <i class="fab fa-shopify"></i>
               </div>
-              <span class="card-tag">Main Focus</span>
-              <h3>eCommerce Architecture</h3>
+              <span class="card-tag">E-Commerce King</span>
+              <h3>End-to-End Shopify Ecosystems</h3>
               <p>
-                Building high-performance stores with Next.js & Shopify Hydrogen
-                for elite speed.
+                We provide a 360-degree Shopify experience tailored for
+                high-volume brands. Our expertise covers custom theme
+                development from scratch, headless commerce using Hydrogen, and
+                seamless third-party API integrations. We focus on
+                conversion-centric UI/UX designs that reduce bounce rates and
+                maximize average order value. Whether it’s migrating your store
+                or building a new empire, we ensure your Shopify backend is as
+                robust as your brand's vision.
               </p>
             </div>
             <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
           </a>
 
-          <a href="/growth-strategy" class="service-bento-card standard-card">
-            <div class="s-icon-box green-glow">
-              <i class="fas fa-chart-line"></i>
-            </div>
-            <h3>Growth Strategy</h3>
-            <p>
-              Scaling brands across international borders with data-driven
-              roadmaps.
-            </p>
-            <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
-          </a>
-
-          <a href="/seo-dominance" class="service-bento-card standard-card">
-            <div class="s-icon-box blue-glow">
-              <i class="fas fa-search-location"></i>
-            </div>
-            <h3>SEO Dominance</h3>
-            <p>
-              Ranking your brand #1 for high-intent global keywords and organic
-              growth.
-            </p>
-            <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
-          </a>
-
-          <a href="/branding" class="service-bento-card wide-card">
-            <div class="wide-flex">
-              <div class="s-icon-box lime-glow">
-                <i class="fas fa-paint-brush"></i>
+          <a href="#" class="service-bento-card">
+            <div class="card-inner">
+              <div class="s-icon-box green-glow">
+                <i class="fas fa-code"></i>
               </div>
-              <div class="wide-content">
-                <h3>Visual Identity & Branding</h3>
+              <h3>Full-Stack Web Development</h3>
+              <p>
+                Utilizing modern frameworks like React and Next.js, we build
+                lightning-fast, SEO-optimized websites that provide a seamless
+                user experience across all devices.
+              </p>
+            </div>
+            <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
+          </a>
+
+          <a href="#" class="service-bento-card">
+            <div class="card-inner">
+              <div class="s-icon-box blue-glow">
+                <i class="fas fa-share-alt"></i>
+              </div>
+              <h3>Social Media Strategy</h3>
+              <p>
+                Strengthen your digital footprint. We craft compelling content
+                and engagement-driven strategies to build a loyal community
+                around your brand.
+              </p>
+            </div>
+            <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
+          </a>
+
+          <a href="#" class="service-bento-card wide-card">
+            <div class="card-inner wide-flex">
+              <div class="s-icon-box blue-glow">
+                <i class="fab fa-facebook-f"></i>
+              </div>
+              <div class="wide-content-text">
+                <h3>Meta Ads & Performance Marketing</h3>
                 <p>
-                  Crafting premium aesthetics that resonate with the digital
-                  elite and luxury consumers worldwide.
+                  Reach your ideal customers with precision-targeted Facebook
+                  and Instagram ad campaigns. We specialize in high-ROI
+                  strategies that turn clicks into loyal customers. Through
+                  rigorous A/B testing, pixel optimization, and creative
+                  storytelling, we ensure your ad spend delivers measurable
+                  business growth and global scalability.
                 </p>
               </div>
             </div>
             <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
           </a>
 
-          <a href="/paid-media" class="service-bento-card standard-card">
-            <div class="s-icon-box green-glow"><i class="fas fa-ad"></i></div>
-            <h3>Paid Media</h3>
-            <p>
-              High-ROI ad campaigns tailored specifically for competitive global
-              markets.
-            </p>
+          <a href="#" class="service-bento-card">
+            <div class="card-inner">
+              <div class="s-icon-box green-glow">
+                <i class="fab fa-wordpress"></i>
+              </div>
+              <h3>WordPress Authority</h3>
+              <p>
+                Custom-built corporate websites and blogs using Elementor Pro,
+                focused on high security, speed, and easy content management for
+                your team.
+              </p>
+            </div>
             <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
           </a>
 
-          <a href="/custom-dev" class="service-bento-card standard-card">
-            <div class="s-icon-box blue-glow"><i class="fas fa-code"></i></div>
-            <h3>Custom Dev</h3>
-            <p>
-              API integrations and custom headless solutions for complex
-              enterprise needs.
-            </p>
+          <a href="#" class="service-bento-card">
+            <div class="card-inner">
+              <div class="s-icon-box blue-glow">
+                <i class="fas fa-bullhorn"></i>
+              </div>
+              <h3>360° Digital Growth</h3>
+              <p>
+                Dominate search engines and digital platforms with our holistic
+                growth hacking and SEO techniques designed for long-term brand
+                authority.
+              </p>
+            </div>
             <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
           </a>
         </div>
@@ -182,7 +220,7 @@
               />
             </div>
             <div class="stat-badge-modern">
-              <span class="stat-num">12+</span>
+              <span class="stat-num">08+</span>
               <span class="stat-label"
                 >Years of <br />
                 Innovation</span
@@ -194,22 +232,30 @@
         <div class="ceo-content-part">
           <div class="badge-tag">The Visionary</div>
           <h2 class="ceo-display-name">
-            Alex <span class="gradient-blue">Rivera</span>
+            Ahmad <span class="gradient-blue">Iqbal</span>
           </h2>
+
           <div class="ceo-quote-box">
             <i class="fas fa-quote-left quote-icon-top"></i>
             <p>
-              "Hum sirf eCommerce nahi banate, hum
-              <span class="highlight-green">Digital Empires</span> kharay karte
-              hain. Globaxify ka maqsad har brand ko uski asli global auqat tak
-              pahunchana hai."
+              "We don't just build eCommerce; we engineer
+              <span class="highlight-green">Digital Empires</span>. Our mission
+              at Globexify is to elevate brands to their true global potential."
             </p>
           </div>
 
           <div class="ceo-meta-footer">
             <div class="signature-block">
-              <img src="signature.png" alt="Signature" class="ceo-sign" />
-              <span class="role-text">Founder & CEO, Globaxify</span>
+              <div class="signature-block">
+                <a href="#" class="ceo-signature-link">
+                  <img
+                    src="assets/Ahmad Signature.png"
+                    alt="Ahmad Iqbal Signature"
+                    class="ceo-sign-img"
+                  />
+                </a>
+                <span class="role-text">Founder & CEO, Globexify</span>
+              </div>
             </div>
             <div class="social-circles">
               <a href="#"><i class="fab fa-linkedin-in"></i></a>
@@ -223,16 +269,22 @@
 
     <!-- ----Our Team Section---- -->
 
-    <section class="elite-team-modern" id="team">
+    <section class="elite-team-modern" id="Team">
       <div class="team-blob"></div>
 
       <div class="container">
         <div class="team-header-top">
-          <span class="tag-label">The Architects</span>
+          <h2 class="hero-text">
+            WE ARE THE
+            <span class="outline-text bump-animation">ARCHITECTS</span> <br />
+            OF THE <span class="gradient-text">DIGITAL ELITE.</span>
+          </h2>
           <h2 class="heavy-title">
             MEET THE <span class="gradient-blue-green">EXPERTS</span>
           </h2>
-          <p class="team-subtext">The visionaries behind the digital elite.</p>
+          <p class="team-subtext">
+            The elite visionaries driving digital dominance for global brands.
+          </p>
         </div>
 
         <div class="team-flex-container">
@@ -241,11 +293,11 @@
               <div class="image-wrapper">
                 <img
                   src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400"
-                  alt="Alex Rivera"
+                  alt="Falak Hussaain"
                 />
               </div>
               <div class="member-info-box">
-                <h4>Alex Rivera</h4>
+                <h4>Falak Hussaain</h4>
                 <p>Creative Director</p>
               </div>
             </div>
@@ -254,11 +306,11 @@
               <div class="image-wrapper">
                 <img
                   src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400"
-                  alt="Sarah J."
+                  alt="Muhammad Shoaib"
                 />
               </div>
               <div class="member-info-box">
-                <h4>Sarah Jenkins</h4>
+                <h4>Shoaib Hanif</h4>
                 <p>Global Strategist</p>
               </div>
             </div>
@@ -267,11 +319,11 @@
               <div class="image-wrapper">
                 <img
                   src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400"
-                  alt="Marcus Chen"
+                  alt="Muhammad Salman"
                 />
               </div>
               <div class="member-info-box">
-                <h4>Marcus Chen</h4>
+                <h4>Muhammad Salman</h4>
                 <p>Tech Architect</p>
               </div>
             </div>
@@ -284,14 +336,14 @@
             <div class="side-content-box">
               <h3 class="side-title">
                 Engineering <br />
-                Excellence
+                <span class="text-blue">Excellence</span>
               </h3>
               <p>
                 Our team consists of world-class developers and designers who
                 specialize in scaling brands to a global audience. We don't just
                 work; we innovate.
               </p>
-              <div class="experience-badge">10+ Years Experience</div>
+              <div class="experience-badge">03+ Years Experience</div>
             </div>
           </div>
         </div>
@@ -299,8 +351,9 @@
     </section>
 
     <!-- ----About Section---- -->
-    <section class="about-modern-wrap">
+    <section id="about" class="about-modern-wrap">
       <div class="light-orb"></div>
+      <div class="light-orb-secondary"></div>
 
       <div class="container about-flex-grid">
         <div class="side-branding">
@@ -324,8 +377,9 @@
                 Globaxify was born from a simple realization: the world doesn't
                 need more agencies. It needs visionaries who can bridge the gap
                 between luxury and commerce. We don't just build websites; we
-                engineer digital legacies. Every pixel is placed with precision,
-                every strategy crafted for unmatched global dominance.
+                engineer <span class="text-highlight">digital legacies</span>.
+                Every pixel is placed with precision, every strategy crafted for
+                unmatched global dominance.
               </p>
             </div>
           </div>
@@ -356,12 +410,7 @@
 
     <!-- ----Contact Section---- -->
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-
-    <section class="contact-modern">
+    <section id="contact" class="contact-modern">
       <div class="blob b-1"></div>
       <div class="blob b-2"></div>
 
@@ -369,9 +418,8 @@
         <div class="contact-info">
           <span class="badge">GET IN TOUCH</span>
           <h1 class="title">
-            Let’s Start Your <br /><span class="gradient-text"
-              >Digital Empire.</span
-            >
+            Let’s Start Your <br />
+            <span class="gradient-text">Digital Empire.</span>
           </h1>
 
           <div class="info-cards">
@@ -391,7 +439,7 @@
                 <i class="fas fa-envelope"></i>
               </div>
               <div class="info-content">
-                <h3>Email</h3>
+                <h3>Email Address</h3>
                 <p>hello@globaxify.com</p>
               </div>
               <i class="fas fa-chevron-right arrow-indicator"></i>
@@ -402,7 +450,7 @@
                 <i class="fas fa-phone-alt"></i>
               </div>
               <div class="info-content">
-                <h3>Call</h3>
+                <h3>Direct Line</h3>
                 <p>+1 (555) 888 - 0000</p>
               </div>
               <i class="fas fa-chevron-right arrow-indicator"></i>
@@ -412,49 +460,55 @@
 
         <div class="contact-form-container">
           <form class="main-form">
-            <h2 class="form-label">Form</h2>
+            <h2 class="form-label">Consult Our Experts</h2>
 
             <div class="input-field">
-              <input type="text" placeholder="Name" required />
+              <input type="text" placeholder="Your Name" required />
             </div>
 
             <div class="input-field">
-              <input type="email" placeholder="Email" required />
+              <input type="email" placeholder="Email Address" required />
             </div>
 
             <div class="input-field">
               <select required>
                 <option value="" disabled selected>Select Service</option>
-                <option>Web Design</option>
-                <option>App Development</option>
-                <option>SEO Strategy</option>
+                <option>Shopify Development</option>
+                <option>Web Performance</option>
+                <option>Meta Ads Growth</option>
+                <option>Brand Identity</option>
               </select>
             </div>
 
             <div class="input-field">
-              <textarea placeholder="Message" rows="4"></textarea>
+              <textarea
+                placeholder="Tell us about your project..."
+                rows="4"
+              ></textarea>
             </div>
 
             <button type="submit" class="send-btn">
-              <span>Send Message</span>
-              <i class="fas fa-arrow-right"></i>
+              <span>Initialize Project</span>
+              <i class="fas fa-paper-plane"></i>
             </button>
           </form>
         </div>
       </div>
     </section>
-
     <!-- ----Reviewer's Section---- -->
 
     <section class="reviews-modern">
+      <div class="reviews-blob-1"></div>
+      <div class="reviews-blob-2"></div>
+
       <div class="container">
         <div class="header-content">
-          <div class="modern-badge">Success Stories</div>
+          <div class="modern-badge">SUCCESS STORIES</div>
           <h2 class="main-title">
             Trusted by <span class="text-glow">Global Leaders</span>
           </h2>
           <p class="sub-desc">
-            Exceptional results for world-class companies across the globe.
+            Empowering visionaries with precision-engineered digital solutions.
           </p>
         </div>
 
@@ -462,7 +516,7 @@
           <div class="glass-card">
             <div class="card-inner">
               <div class="card-header">
-                <div class="profile-frame">
+                <div class="profile-frame frame-blue">
                   <img src="https://i.pravatar.cc/150?u=11" alt="Client" />
                 </div>
                 <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
@@ -473,7 +527,10 @@
                   ><i class="fas fa-star"></i><i class="fas fa-star"></i
                   ><i class="fas fa-star"></i>
                 </div>
-                <p>"Precision in every pixel and unmatched strategy."</p>
+                <p>
+                  "Precision in every pixel and unmatched strategy. Globaxify is
+                  the gold standard."
+                </p>
                 <div class="user-meta">
                   <strong>James Anderson</strong><span>CEO, Velora</span>
                 </div>
@@ -484,7 +541,7 @@
           <div class="glass-card">
             <div class="card-inner">
               <div class="card-header">
-                <div class="profile-frame">
+                <div class="profile-frame frame-green">
                   <img src="https://i.pravatar.cc/150?u=12" alt="Client" />
                 </div>
                 <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
@@ -495,7 +552,10 @@
                   ><i class="fas fa-star"></i><i class="fas fa-star"></i
                   ><i class="fas fa-star"></i>
                 </div>
-                <p>"Tripled our revenue in just 4 months. Incredible!"</p>
+                <p>
+                  "Tripled our revenue in just 4 months. Their scaling strategy
+                  is world-class."
+                </p>
                 <div class="user-meta">
                   <strong>Sarah Jenkins</strong><span>Founder, Luxe</span>
                 </div>
@@ -506,7 +566,7 @@
           <div class="glass-card">
             <div class="card-inner">
               <div class="card-header">
-                <div class="profile-frame">
+                <div class="profile-frame frame-blue">
                   <img src="https://i.pravatar.cc/150?u=13" alt="Client" />
                 </div>
                 <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
@@ -517,7 +577,10 @@
                   ><i class="fas fa-star"></i><i class="fas fa-star"></i
                   ><i class="fas fa-star"></i>
                 </div>
-                <p>"The UI/UX expertise is truly world-class."</p>
+                <p>
+                  "The UI/UX expertise is unmatched. They truly understand
+                  luxury commerce."
+                </p>
                 <div class="user-meta">
                   <strong>Michael Chen</strong><span>Director, TechFlow</span>
                 </div>
@@ -528,7 +591,7 @@
           <div class="glass-card">
             <div class="card-inner">
               <div class="card-header">
-                <div class="profile-frame">
+                <div class="profile-frame frame-green">
                   <img src="https://i.pravatar.cc/150?u=14" alt="Client" />
                 </div>
                 <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
@@ -539,97 +602,12 @@
                   ><i class="fas fa-star"></i><i class="fas fa-star"></i
                   ><i class="fas fa-star"></i>
                 </div>
-                <p>"Highly professional team with creative solutions."</p>
+                <p>
+                  "Professional, creative, and highly technical. A pleasure to
+                  work with."
+                </p>
                 <div class="user-meta">
                   <strong>Emma Wilson</strong><span>CMO, Horizon</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="glass-card">
-            <div class="card-inner">
-              <div class="card-header">
-                <div class="profile-frame">
-                  <img src="https://i.pravatar.cc/150?u=15" alt="Client" />
-                </div>
-                <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
-              </div>
-              <div class="card-body">
-                <div class="stars">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i>
-                </div>
-                <p>"Fast delivery and excellent support throughout."</p>
-                <div class="user-meta">
-                  <strong>David Miller</strong><span>Owner, Prime</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="glass-card">
-            <div class="card-inner">
-              <div class="card-header">
-                <div class="profile-frame">
-                  <img src="https://i.pravatar.cc/150?u=16" alt="Client" />
-                </div>
-                <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
-              </div>
-              <div class="card-body">
-                <div class="stars">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i>
-                </div>
-                <p>"Transformed our brand identity completely."</p>
-                <div class="user-meta">
-                  <strong>Sophia Rose</strong><span>Founder, Bloom</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="glass-card">
-            <div class="card-inner">
-              <div class="card-header">
-                <div class="profile-frame">
-                  <img src="https://i.pravatar.cc/150?u=17" alt="Client" />
-                </div>
-                <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
-              </div>
-              <div class="card-body">
-                <div class="stars">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i>
-                </div>
-                <p>"Scaleable code and very clean architecture."</p>
-                <div class="user-meta">
-                  <strong>Ryan Gosling</strong><span>CTO, Nexus</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="glass-card">
-            <div class="card-inner">
-              <div class="card-header">
-                <div class="profile-frame">
-                  <img src="https://i.pravatar.cc/150?u=18" alt="Client" />
-                </div>
-                <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
-              </div>
-              <div class="card-body">
-                <div class="stars">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i>
-                </div>
-                <p>"Top-notch quality. Highly recommend them!"</p>
-                <div class="user-meta">
-                  <strong>Olivia White</strong><span>Manager, Apex</span>
                 </div>
               </div>
             </div>
@@ -649,51 +627,53 @@
       <div class="footer-grid-container">
         <div class="footer-block brand-block">
           <div class="main-logo">
-            <img src="your-logo.png" alt="Company Logo" class="brand-img" />
-            <span class="brand-name">ALPHA<span>CORE</span></span>
+            <a href="index.html" class="logo-link">
+              <img src="logo.png" alt="Globaxify Logo" class="brand-logo-img" />
+            </a>
           </div>
           <p class="brand-para">
-            Engineering the next generation of digital excellence with
-            human-centered design and robust technology.
+            Engineering the next generation of digital legacies. We bridge the
+            gap between luxury design and global commerce.
           </p>
           <div class="social-wrapper">
-            <a href="#" class="social-btn"
+            <a href="#" class="social-btn linkedin"
               ><i class="fab fa-linkedin-in"></i
             ></a>
-            <a href="#" class="social-btn"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="social-btn"><i class="fab fa-github"></i></a>
-            <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-btn twitter"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+            <a href="#" class="social-btn instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" class="social-btn github"
+              ><i class="fab fa-github"></i
+            ></a>
           </div>
         </div>
 
         <div class="footer-block">
           <h4 class="block-title">Expertise</h4>
           <ul class="nav-list">
-            <li><a href="#" class="hover-link">Web Solutions</a></li>
-            <li><a href="#" class="hover-link">Cloud Infrastructure</a></li>
-            <li><a href="#" class="hover-link">UI/UX Strategy</a></li>
-            <li><a href="#" class="hover-link">Cyber Security</a></li>
+            <li><a href="#services" class="hover-link">Web Architecture</a></li>
+            <li><a href="#services" class="hover-link">App Development</a></li>
+            <li><a href="#about" class="hover-link">Global Scaling</a></li>
+            <li><a href="#reviews" class="hover-link">Success Stories</a></li>
           </ul>
         </div>
 
         <div class="footer-block">
-          <h4 class="block-title">Company</h4>
+          <h4 class="block-title">Globaxify</h4>
           <ul class="nav-list">
-            <li><a href="#" class="hover-link">Our Method</a></li>
-            <li>
-              <a href="#" class="hover-link"
-                >Careers <span class="badge">Hiring</span></a
-              >
-            </li>
-            <li><a href="#" class="hover-link">Press Release</a></li>
-            <li><a href="#" class="hover-link">Contact Hub</a></li>
+            <li><a href="Privacy Policy.html" class="hover-link">Privacy Policy</a></li>
+            <li><a href="Terms of Service.html" class="hover-link">Terms of Service</a></li>
+            <li><a href="Cookies Policy.html" class="hover-link">Cookies Policy</a></li>
           </ul>
         </div>
 
         <div class="footer-block newsletter-block">
-          <h4 class="block-title">Stay Updated</h4>
+          <h4 class="block-title">Stay Ahead</h4>
           <p class="news-para">
-            Join our elite list of 5,000+ industry leaders.
+            Join 5,000+ leaders getting our digital insights.
           </p>
           <div class="modern-input-group">
             <input type="email" placeholder="Work email address" />
@@ -707,11 +687,15 @@
       <div class="bottom-bar">
         <div class="bottom-wrapper">
           <p class="copy-text">
-            &copy; 2026 AlphaCore Inc. Built with Precision.
+            &copy; 2026 <strong>Globaxify Inc.</strong> Engineered for
+            Excellence.
           </p>
           <div class="bottom-nav">
-            <a href="#" class="hover-link">Privacy Policy</a>
-            <a href="#" class="hover-link">Terms of Service</a>
+            <a href="#" class="hover-link">Terms</a>
+            <a href="#" class="hover-link">Security</a>
+            <div class="status-indicator">
+              <span class="dot"></span> Systems Operational
+            </div>
           </div>
         </div>
       </div>

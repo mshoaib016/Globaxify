@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cookie Policy | Globaxify</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <style>
+      :root {
+        --p-blue: #0066cc;
+        --p-green: #7cc53e;
+        --dark: #0f172a;
+        --slate: #64748b;
+        --light-bg: #f8fafc;
+        --border: #f1f5f9;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        background: #ffffff;
+        color: var(--dark);
+        line-height: 1.8;
+        scroll-behavior: smooth;
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 25px;
+      }
+
+      /* --- Header --- */
+      .cookie-hero {
+        padding: 120px 0 80px;
+        text-align: center;
+        background: radial-gradient(
+          circle at center,
+          rgba(124, 197, 62, 0.05) 0%,
+          transparent 70%
+        );
+      }
+
+      .cookie-icon {
+        font-size: 3rem;
+        color: var(--p-green);
+        margin-bottom: 20px;
+        display: inline-block;
+        animation: bounce 2s infinite;
+      }
+
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      .hero-title {
+        font-size: clamp(2.5rem, 6vw, 3.5rem);
+        font-weight: 900;
+        margin-bottom: 20px;
+        letter-spacing: -1px;
+      }
+
+      .hero-title span {
+        color: var(--p-blue);
+      }
+
+      /* --- Content Layout --- */
+      .cookie-main {
+        display: grid;
+        grid-template-columns: 1fr 350px;
+        gap: 60px;
+        padding-bottom: 100px;
+      }
+
+      .content-block {
+        margin-bottom: 50px;
+      }
+      .content-block h2 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .cookie-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        background: var(--light-bg);
+        border-radius: 15px;
+        overflow: hidden;
+      }
+
+      .cookie-table th,
+      .cookie-table td {
+        padding: 15px 20px;
+        text-align: left;
+        border-bottom: 1px solid #e2e8f0;
+      }
+
+      .cookie-table th {
+        background: var(--p-blue);
+        color: white;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+      }
+
+      /* --- Sidebar Info --- */
+      .cookie-info-box {
+        background: var(--dark);
+        color: white;
+        padding: 40px;
+        border-radius: 30px;
+        position: sticky;
+        top: 50px;
+        height: fit-content;
+      }
+
+      .info-box-title {
+        color: var(--p-green);
+        font-weight: 800;
+        margin-bottom: 15px;
+      }
+      .info-box-text {
+        opacity: 0.8;
+        font-size: 0.95rem;
+        margin-bottom: 25px;
+      }
+
+      .btn-manage {
+        display: block;
+        text-align: center;
+        padding: 12px;
+        background: var(--p-blue);
+        color: white;
+        text-decoration: none;
+        border-radius: 10px;
+        font-weight: 700;
+        transition: 0.3s;
+      }
+
+      .btn-manage:hover {
+        background: var(--p-green);
+        color: var(--dark);
+      }
+
+      /* Responsive */
+      @media (max-width: 900px) {
+        .cookie-main {
+          grid-template-columns: 1fr;
+        }
+        .cookie-info-box {
+          position: static;
+          order: -1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="cookie-hero">
+      <div class="container">
+        <div class="cookie-icon"><i class="fas fa-cookie-bite"></i></div>
+        <h1 class="hero-title">Cookie <span>Policy</span></h1>
+        <p style="color: var(--slate); max-width: 600px; margin: 0 auto">
+          We use cookies to personalize your experience and analyze our traffic
+          to build a better Globaxify for you.
+        </p>
+      </div>
+    </header>
+
+    <main class="container cookie-main">
+      <div class="cookie-content">
+        <section class="content-block">
+          <h2>1. What are Cookies?</h2>
+          <p>
+            Cookies are small text files stored on your device when you visit a
+            website. They help us remember your preferences and ensure the
+            website functions securely and efficiently.
+          </p>
+        </section>
+
+        <section class="content-block">
+          <h2>2. How We Use Cookies</h2>
+          <p>At Globaxify, we use cookies for the following purposes:</p>
+          <table class="cookie-table">
+            <thead>
+              <tr>
+                <th>Type</th>
+                <th>Purpose</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Essential</strong></td>
+                <td>
+                  Required for the website to function (Security, Logins).
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Analytical</strong></td>
+                <td>To understand how visitors interact with our site.</td>
+              </tr>
+              <tr>
+                <td><strong>Marketing</strong></td>
+                <td>To show you relevant digital insights and services.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="content-block">
+          <h2>3. Third-Party Cookies</h2>
+          <p>
+            In some cases, we use cookies provided by trusted third parties such
+            as Google Analytics to help us understand how you use the site and
+            ways that we can improve your experience.
+          </p>
+        </section>
+
+        <section class="content-block">
+          <h2>4. Controlling Your Cookies</h2>
+          <p>
+            Most web browsers allow you to control cookies through their
+            settings preferences. However, if you limit the ability of websites
+            to set cookies, you may worsen your overall user experience.
+          </p>
+        </section>
+      </div>
+
+      <aside class="cookie-info-box">
+        <h3 class="info-box-title">Your Choice Matters</h3>
+        <p class="info-box-text">
+          By clicking "Accept", you agree to the storing of cookies on your
+          device to enhance site navigation and site usage analysis.
+        </p>
+        <a
+          href="#"
+          class="btn-manage"
+          onclick="alert('Cookie Preference Manager Opening...')"
+          >Manage Preferences</a
+        >
+        <p style="margin-top: 20px; font-size: 0.8rem; opacity: 0.5">
+          Last update: Feb 2026
+        </p>
+      </aside>
+    </main>
+
+    <footer
+      style="
+        padding: 40px 0;
+        text-align: center;
+        border-top: 1px solid var(--border);
+        color: var(--slate);
+        font-size: 0.9rem;
+      "
+    >
+      &copy; 2026 Globaxify Inc. Transparent. Secure. Precise.
+    </footer>
+  </body>
+</html>

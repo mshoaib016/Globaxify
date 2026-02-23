@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy | Globaxify</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <style>
+      /* --- GLOBAL STYLES --- */
+      :root {
+        --p-blue: #0066cc;
+        --p-green: #7cc53e;
+        --navy: #0f172a;
+        --slate: #64748b;
+        --bg-light: #f8fafc;
+        --white: #ffffff;
+        --border: #f1f5f9;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        background-color: var(--white);
+        color: var(--navy);
+        line-height: 1.6;
+        scroll-behavior: smooth;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 25px;
+      }
+
+      .text-glow {
+        background: linear-gradient(90deg, var(--p-blue), var(--p-green));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      /* --- HERO SECTION --- */
+      .policy-hero {
+        padding: 120px 0 80px;
+        background:
+          radial-gradient(
+            circle at top right,
+            rgba(0, 102, 204, 0.05),
+            transparent
+          ),
+          radial-gradient(
+            circle at bottom left,
+            rgba(124, 197, 62, 0.05),
+            transparent
+          );
+        text-align: center;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .policy-badge {
+        background: rgba(0, 102, 204, 0.1);
+        color: var(--p-blue);
+        padding: 8px 20px;
+        border-radius: 100px;
+        font-size: 0.75rem;
+        font-weight: 800;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+
+      .policy-title {
+        font-size: clamp(2.5rem, 8vw, 4rem);
+        font-weight: 900;
+        margin: 25px 0;
+        letter-spacing: -2px;
+      }
+
+      .policy-subtitle {
+        color: var(--slate);
+        font-size: 1.1rem;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      /* --- LAYOUT GRID --- */
+      .policy-main {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        gap: 60px;
+        padding: 100px 0;
+      }
+
+      /* STICKY SIDEBAR */
+      .policy-sidebar {
+        position: sticky;
+        top: 40px;
+        height: fit-content;
+      }
+
+      .sidebar-box {
+        background: var(--bg-light);
+        padding: 30px;
+        border-radius: 24px;
+        border: 1px solid var(--border);
+      }
+
+      .sidebar-box h4 {
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+        color: var(--slate);
+        margin-bottom: 25px;
+        text-transform: uppercase;
+      }
+
+      .sidebar-nav {
+        list-style: none;
+      }
+      .sidebar-nav li {
+        margin-bottom: 15px;
+      }
+
+      .side-link {
+        text-decoration: none;
+        color: var(--slate);
+        font-weight: 600;
+        font-size: 0.95rem;
+        transition: 0.3s;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .side-link:hover {
+        color: var(--p-blue);
+        transform: translateX(5px);
+      }
+
+      /* CONTENT CARDS */
+      .policy-content {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      .content-card {
+        background: var(--white);
+        padding: 50px;
+        border-radius: 32px;
+        border: 1px solid var(--border);
+        transition: 0.4s ease;
+      }
+
+      .content-card:hover {
+        box-shadow: 0 30px 60px rgba(15, 23, 42, 0.04);
+        border-color: rgba(0, 102, 204, 0.2);
+      }
+
+      .content-card h2 {
+        font-size: 2rem;
+        margin-bottom: 25px;
+        font-weight: 800;
+        color: var(--navy);
+      }
+
+      .content-card p {
+        color: var(--slate);
+        font-size: 1.05rem;
+        margin-bottom: 20px;
+        line-height: 1.8;
+      }
+
+      .data-list {
+        list-style: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+      }
+
+      .data-list li {
+        background: #f1f5f9;
+        padding: 15px 20px;
+        border-radius: 12px;
+        font-size: 0.95rem;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .data-list i {
+        color: var(--p-green);
+      }
+
+      /* CONTACT CTA */
+      .contact-cta {
+        background: var(--navy);
+        padding: 60px;
+        border-radius: 40px;
+        text-align: center;
+        color: var(--white);
+        margin-top: 40px;
+      }
+
+      .contact-cta h3 {
+        font-size: 2.2rem;
+        margin-bottom: 15px;
+      }
+      .contact-cta p {
+        opacity: 0.7;
+        margin-bottom: 30px;
+      }
+
+      .cta-btn {
+        display: inline-block;
+        background: linear-gradient(90deg, var(--p-blue), var(--p-green));
+        color: white;
+        padding: 18px 40px;
+        border-radius: 15px;
+        text-decoration: none;
+        font-weight: 700;
+        transition: 0.3s;
+      }
+
+      .cta-btn:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(0, 102, 204, 0.3);
+      }
+
+      /* --- RESPONSIVE --- */
+      @media (max-width: 1024px) {
+        .policy-main {
+          grid-template-columns: 1fr;
+        }
+        .policy-sidebar {
+          display: none;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .policy-hero {
+          padding: 80px 0 50px;
+        }
+        .content-card {
+          padding: 30px;
+        }
+        .data-list {
+          grid-template-columns: 1fr;
+        }
+        .contact-cta {
+          padding: 40px 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="policy-hero">
+      <div class="container">
+        <span class="policy-badge">Legal Intelligence</span>
+        <h1 class="policy-title">
+          Privacy <span class="text-glow">Policy</span>
+        </h1>
+        <p class="policy-subtitle">
+          At Globaxify, we value your trust. This policy outlines how we
+          meticulously manage and protect your digital footprint.
+        </p>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="policy-main">
+        <aside class="policy-sidebar">
+          <div class="sidebar-box">
+            <h4>Table of Contents</h4>
+            <nav class="sidebar-nav">
+              <li>
+                <a href="#section1" class="side-link"
+                  ><i class="fas fa-chevron-right"></i> Introduction</a
+                >
+              </li>
+              <li>
+                <a href="#section2" class="side-link"
+                  ><i class="fas fa-chevron-right"></i> Data Collection</a
+                >
+              </li>
+              <li>
+                <a href="#section3" class="side-link"
+                  ><i class="fas fa-chevron-right"></i> Usage Rights</a
+                >
+              </li>
+              <li>
+                <a href="#section4" class="side-link"
+                  ><i class="fas fa-chevron-right"></i> Data Security</a
+                >
+              </li>
+              <li>
+                <a href="#section5" class="side-link"
+                  ><i class="fas fa-chevron-right"></i> Cookies Policy</a
+                >
+              </li>
+            </nav>
+          </div>
+        </aside>
+
+        <div class="policy-content">
+          <section class="content-card" id="section1">
+            <h2>1. Introduction</h2>
+            <p>
+              Globaxify Inc. ("we", "us", "our") takes your privacy with the
+              utmost seriousness. This document details the specific types of
+              information we collect when you interact with our services and the
+              underlying reasons for doing so.
+            </p>
+            <p>
+              Our primary objective is to maintain radical transparency and
+              world-class security, allowing you to focus on your digital growth
+              with complete peace of mind.
+            </p>
+          </section>
+
+          <section class="content-card" id="section2">
+            <h2>2. Data Collection</h2>
+            <p>
+              We only collect information that is strictly necessary to provide
+              a superior and personalized service experience:
+            </p>
+            <ul class="data-list">
+              <li><i class="fas fa-user-shield"></i> Name & Email</li>
+              <li><i class="fas fa-globe"></i> IP Address</li>
+              <li><i class="fas fa-microchip"></i> Device Metadata</li>
+              <li><i class="fas fa-file-invoice"></i> Billing Details</li>
+            </ul>
+          </section>
+
+          <section id="section3" class="content-card">
+            <h2>3. Usage Rights</h2>
+            <p>
+              Your data is never sold to third-party advertisers. We utilize
+              your information exclusively for internal analytics, precise
+              project delivery, and high-priority personalized support.
+            </p>
+          </section>
+
+          <section id="section4" class="content-card">
+            <h2>4. Data Security</h2>
+            <p>
+              Globaxify employs <strong>AES-256 Encryption</strong> and
+              enterprise-grade security protocols. Our infrastructure is
+              continuously monitored and updated with the latest security
+              patches to proactively defend against potential breaches.
+            </p>
+          </section>
+
+          <section id="section5" class="content-card">
+            <h2>5. Cookies Policy</h2>
+            <p>
+              We use cookies to optimize your browsing performance and site
+              speed. You retain the right to manage or disable these cookies at
+              any time through your individual browser settings.
+            </p>
+          </section>
+
+          <div class="contact-cta">
+            <h3>Have Questions?</h3>
+            <p>
+              Our dedicated legal and privacy team is available to address any
+              inquiries you may have regarding your data rights.
+            </p>
+            <a href="mailto:privacy@globaxify.com" class="cta-btn"
+              >Contact Legal Team</a
+            >
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer
+      style="
+        text-align: center;
+        padding: 40px;
+        color: var(--slate);
+        font-size: 0.9rem;
+        border-top: 1px solid var(--border);
+      "
+    >
+      &copy; 2026 Globaxify Inc. All Rights Reserved. Engineered for Privacy.
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terms of Service | Globaxify</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <style>
+      :root {
+        --primary: #0066cc;
+        --secondary: #7cc53e;
+        --dark: #0f172a;
+        --slate: #64748b;
+        --light-bg: #f8fafc;
+        --border: #e2e8f0;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        background: #ffffff;
+        color: var(--dark);
+        line-height: 1.7;
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 25px;
+      }
+
+      /* --- Header Section --- */
+      .tos-header {
+        padding: 100px 0 60px;
+        background: linear-gradient(to bottom, var(--light-bg), #fff);
+        text-align: center;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .accent-pill {
+        background: rgba(124, 197, 62, 0.1);
+        color: var(--secondary);
+        padding: 6px 16px;
+        border-radius: 50px;
+        font-size: 0.75rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+      }
+
+      .tos-title {
+        font-size: clamp(2.5rem, 7vw, 3.8rem);
+        font-weight: 900;
+        margin: 20px 0;
+        letter-spacing: -2px;
+      }
+
+      .text-blue {
+        color: var(--primary);
+      }
+
+      /* --- Main Content Layout --- */
+      .tos-grid {
+        display: grid;
+        grid-template-columns: 260px 1fr;
+        gap: 60px;
+        padding: 80px 0;
+      }
+
+      /* Sidebar Navigation */
+      .tos-nav {
+        position: sticky;
+        top: 50px;
+        height: fit-content;
+      }
+      .tos-nav h4 {
+        font-size: 0.8rem;
+        color: var(--slate);
+        margin-bottom: 20px;
+        letter-spacing: 1px;
+      }
+      .tos-nav ul {
+        list-style: none;
+      }
+      .tos-nav li {
+        margin-bottom: 12px;
+      }
+      .tos-nav a {
+        text-decoration: none;
+        color: var(--slate);
+        font-weight: 600;
+        font-size: 0.9rem;
+        transition: 0.3s;
+      }
+      .tos-nav a:hover {
+        color: var(--primary);
+        padding-left: 8px;
+      }
+
+      /* Content Blocks */
+      .tos-body section {
+        margin-bottom: 60px;
+      }
+      .tos-body h2 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        font-weight: 800;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .tos-body h2 span {
+        color: var(--secondary);
+        font-size: 1.2rem;
+      }
+      .tos-body p {
+        color: var(--slate);
+        margin-bottom: 15px;
+        font-size: 1.05rem;
+      }
+
+      .rules-card {
+        background: var(--light-bg);
+        padding: 30px;
+        border-radius: 20px;
+        border-left: 5px solid var(--primary);
+        margin: 25px 0;
+      }
+
+      .rules-card ul {
+        list-style: none;
+      }
+      .rules-card li {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 500;
+        color: var(--dark);
+        font-size: 0.95rem;
+      }
+      .rules-card i {
+        color: var(--primary);
+        font-size: 0.8rem;
+      }
+
+      /* --- Action Footer --- */
+      .tos-footer {
+        background: var(--dark);
+        border-radius: 30px;
+        padding: 50px;
+        color: #fff;
+        text-align: center;
+        margin-bottom: 100px;
+      }
+
+      .tos-footer h3 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+      }
+      .tos-footer p {
+        opacity: 0.7;
+        margin-bottom: 25px;
+      }
+
+      .btn-contact {
+        display: inline-block;
+        background: var(--secondary);
+        color: var(--dark);
+        padding: 14px 35px;
+        border-radius: 12px;
+        text-decoration: none;
+        font-weight: 700;
+        transition: 0.3s;
+      }
+
+      .btn-contact:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(124, 197, 62, 0.2);
+      }
+
+      /* Responsive */
+      @media (max-width: 900px) {
+        .tos-grid {
+          grid-template-columns: 1fr;
+        }
+        .tos-nav {
+          display: none;
+        }
+        .tos-header {
+          padding: 60px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="tos-header">
+      <div class="container">
+        <span class="accent-pill">Standard Agreement</span>
+        <h1 class="tos-title">
+          Terms of <span class="text-blue">Service</span>
+        </h1>
+        <p style="color: var(--slate)">
+          Your journey with Globaxify is governed by the following terms and
+          conditions.
+        </p>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="tos-grid">
+        <aside class="tos-nav">
+          <h4>QUICK LINKS</h4>
+          <ul>
+            <li><a href="#acceptance">1. Acceptance</a></li>
+            <li><a href="#services">2. Services</a></li>
+            <li><a href="#payment">3. Payments</a></li>
+            <li><a href="#intellectual">4. Ownership</a></li>
+            <li><a href="#liability">5. Liability</a></li>
+          </ul>
+        </aside>
+
+        <article class="tos-body">
+          <section id="acceptance">
+            <h2><span>01</span> Agreement Acceptance</h2>
+            <p>
+              By accessing the Globaxify website or utilizing our services, you
+              acknowledge that you have read, understood, and agreed to be bound
+              by these terms and conditions.
+            </p>
+            <p>
+              If you do not agree with any part of these terms, please
+              discontinue the use of our services immediately.
+            </p>
+          </section>
+
+          <section id="services">
+            <h2><span>02</span> Provided Services</h2>
+            <p>
+              Globaxify provides premium Web Design, App Development, and
+              Digital Branding services. Each project is governed by a specific
+              <strong>Statement of Work (SOW)</strong> signed by both parties.
+            </p>
+            <div class="rules-card">
+              <ul>
+                <li>
+                  <i class="fas fa-circle"></i> Requires timely feedback from
+                  the client.
+                </li>
+                <li>
+                  <i class="fas fa-circle"></i> Final design approvals are
+                  legally binding.
+                </li>
+                <li>
+                  <i class="fas fa-circle"></i> Standard support period lasts 30
+                  days post-launch.
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <section id="payment">
+            <h2><span>03</span> Payment Terms</h2>
+            <p>
+              All payments shall be processed in USD or PKR as per the initial
+              agreement. A 50% non-refundable advance deposit is required to
+              initiate any project.
+            </p>
+            <p>
+              The remaining 50% balance must be settled upon project completion,
+              prior to the final deployment or handover of assets.
+            </p>
+          </section>
+
+          <section id="intellectual">
+            <h2><span>04</span> Intellectual Property</h2>
+            <p>
+              Globaxify retains full ownership of all project rights and source
+              codes until the final payment is cleared. Upon full settlement,
+              the intellectual property and final assets will be transferred to
+              the client.
+            </p>
+          </section>
+
+          <section id="liability">
+            <h2><span>05</span> Limitation of Liability</h2>
+            <p>
+              Globaxify shall not be held liable for any indirect or
+              consequential losses (such as loss of profits) arising from
+              circumstances beyond our control. Our total liability is limited
+              to the amount paid for the specific project.
+            </p>
+          </section>
+
+          <div class="tos-footer">
+            <h3>Legal Concerns?</h3>
+            <p>
+              Our legal team is available to address any specific inquiries you
+              may have.
+            </p>
+            <a href="mailto:legal@globaxify.com" class="btn-contact"
+              >Talk to Legal Team</a
+            >
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <footer
+      style="
+        padding: 40px 0;
+        text-align: center;
+        border-top: 1px solid var(--border);
+        color: var(--slate);
+        font-size: 0.9rem;
+      "
+    >
+      &copy; 2026 Globaxify Inc. Professional Standards Apply.
+    </footer>
+  </body>
+</html>
