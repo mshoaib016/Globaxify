@@ -73,7 +73,7 @@ body {
 }
 
 .nav-brand-img {
-  height: 40px;
+  height: 150px;
   width: auto;
   display: block;
   object-fit: contain;
@@ -1931,10 +1931,13 @@ body {
 }
 
 /* Social Buttons */
+/* Social Wrapper ko set karne ke liye ye use karein */
 .social-wrapper {
   display: flex;
   gap: 12px;
+  margin-top: 20px;
 }
+
 .social-btn {
   width: 42px;
   height: 42px;
@@ -1945,15 +1948,22 @@ body {
   align-items: center;
   justify-content: center;
   color: var(--f-dark);
-  transition: 0.3s;
+  transition: 0.3s ease;
   text-decoration: none;
+  font-size: 1.2rem; /* Icon ka size thora bara karne ke liye */
 }
+
 .social-btn:hover {
   background: var(--f-blue);
-  color: #fff;
+  color: #fff !important; /* Hover par icon white ho jayega */
   transform: translateY(-5px);
   box-shadow: 0 10px 15px rgba(0, 102, 204, 0.1);
 }
+
+/* Specific colors on hover (Optional - agar aap colors dikhana chahen) */
+.social-btn:hover .fa-upwork { color: #fff; }
+.social-btn:hover .fa-tiktok { color: #fff; }
+.social-btn:hover .fa-facebook-square { color: #fff; }
 
 /* Titles & Links */
 .block-title {

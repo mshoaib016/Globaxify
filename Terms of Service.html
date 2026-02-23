@@ -9,12 +9,206 @@
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" type="image/png" href="assets/fav icon.png" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
 
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+      :root {
+        --primary-blue: #0056b3;
+        --accent-green: #7cc53e;
+        --text-dark: #1a1a1a;
+        --white: #ffffff;
+        --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      }
+
+      /* Base Reset */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #f8f9fa; /* Light background for contrast */
+      }
+
+      /* Header with Glassmorphism */
+      .luxury-nav {
+        height: 80px;
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(15px); /* Modern blur effect */
+        -webkit-backdrop-filter: blur(15px);
+        display: flex;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 999;
+        transition: var(--transition);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      }
+
+      /* Scroll hone par header thora chota aur shadow wala ho jayega */
+      .luxury-nav.scrolled {
+        height: 70px;
+        background: rgba(255, 255, 255, 0.95);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      }
+
+      .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 25px;
+      }
+
+      /* Logo Animation */
+      .logo {
+        display: flex;
+        align-items: center;
+      }
+
+      .logo-link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+      }
+
+      .nav-brand-img {
+        height: 150px;
+        width: auto;
+        display: block;
+        object-fit: contain;
+        transition: transform 0.3s ease;
+      }
+
+      /* Hover Effect: Logo par halka sa zoom */
+      .logo-link:hover .nav-brand-img {
+        transform: scale(1.05);
+      }
+
+      /* Mobile Responsive */
+      @media (max-width: 768px) {
+        .nav-brand-img {
+          height: 32px;
+        }
+      }
+
+      /* Navigation Links & Hover Effect */
+      .nav-menu {
+        display: flex;
+        list-style: none;
+      }
+
+      .nav-menu li a {
+        color: var(--text-dark);
+        text-decoration: none;
+        margin: 0 20px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        position: relative;
+        padding: 5px 0;
+        transition: var(--transition);
+      }
+
+      /* Modern Underline Animation */
+      .nav-menu li a::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 50%;
+        background: linear-gradient(
+          to right,
+          var(--primary-blue),
+          var(--accent-green)
+        );
+        transition: var(--transition);
+        transform: translateX(-50%);
+      }
+
+      .nav-menu li a:hover {
+        color: var(--primary-blue);
+      }
+
+      .nav-menu li a:hover::after {
+        width: 100%;
+      }
+
+      /* Premium Button with Shine Animation */
+      .btn-action {
+        position: relative;
+        overflow: hidden; /* Shine effect ko andar rakhne ke liye */
+        background: var(--primary-blue);
+        color: white !important;
+        padding: 12px 28px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.85rem;
+        transition: var(--transition);
+        display: inline-block;
+        border: none;
+        box-shadow: 0 4px 15px rgba(0, 86, 179, 0.3);
+      }
+
+      .btn-action::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          120deg,
+          transparent,
+          rgba(255, 255, 255, 0.3),
+          transparent
+        );
+        transition: 0.6s;
+      }
+
+      .btn-action:hover::before {
+        left: 100%;
+      }
+
+      .btn-action:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(0, 86, 179, 0.4);
+        background: #004494;
+      }
+
+      /* Mobile Toggle Animation */
+      .menu-toggle .bar {
+        width: 25px;
+        height: 2px;
+        margin: 6px auto;
+        background: var(--text-dark);
+        transition: var(--transition);
+      }
+
+      /* Active State for Mobile Menu */
+      .menu-toggle.is-active .bar:nth-child(2) {
+        opacity: 0;
+      }
+      .menu-toggle.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+      .menu-toggle.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
       :root {
         --primary: #0066cc;
         --secondary: #7cc53e;
@@ -192,6 +386,226 @@
         transform: translateY(-3px);
         box-shadow: 0 10px 20px rgba(124, 197, 62, 0.2);
       }
+      @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap");
+
+      .neo-footer {
+        --f-blue: #0066cc;
+        --f-green: #7cc53e;
+        --f-dark: #0f172a;
+        --f-slate: #64748b;
+        --f-border: #f1f5f9;
+
+        background: #ffffff;
+        color: var(--f-dark);
+        font-family: "Plus Jakarta Sans", sans-serif;
+        padding: 80px 0 0;
+        border-top: 1px solid var(--f-border);
+      }
+
+      .footer-grid-container {
+        max-width: 1300px;
+        margin: 0 auto;
+        padding: 0 40px 60px;
+        display: grid;
+        grid-template-columns: 1.5fr 0.8fr 0.8fr 1.2fr;
+        gap: 50px;
+      }
+
+      /* Logo & Brand */
+      .brand-logo-img {
+        height: 45px;
+        width: auto;
+        margin-bottom: 20px;
+        transition: transform 0.3s ease;
+      }
+      .logo-link:hover .brand-logo-img {
+        transform: scale(1.05);
+      }
+
+      .brand-para {
+        color: var(--f-slate);
+        line-height: 1.7;
+        font-size: 0.95rem;
+        margin-bottom: 30px;
+        max-width: 300px;
+      }
+
+      /* Social Buttons */
+      /* Social Wrapper ko set karne ke liye ye use karein */
+      .social-wrapper {
+        display: flex;
+        gap: 12px;
+        margin-top: 20px;
+      }
+
+      .social-btn {
+        width: 42px;
+        height: 42px;
+        border-radius: 12px;
+        background: #f8fafc;
+        border: 1px solid var(--f-border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--f-dark);
+        transition: 0.3s ease;
+        text-decoration: none;
+        font-size: 1.2rem; /* Icon ka size thora bara karne ke liye */
+      }
+
+      .social-btn:hover {
+        background: var(--f-blue);
+        color: #fff !important; /* Hover par icon white ho jayega */
+        transform: translateY(-5px);
+        box-shadow: 0 10px 15px rgba(0, 102, 204, 0.1);
+      }
+
+      /* Specific colors on hover (Optional - agar aap colors dikhana chahen) */
+      .social-btn:hover .fa-upwork {
+        color: #fff;
+      }
+      .social-btn:hover .fa-tiktok {
+        color: #fff;
+      }
+      .social-btn:hover .fa-facebook-square {
+        color: #fff;
+      }
+
+      /* Titles & Links */
+      .block-title {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 800;
+        margin-bottom: 25px;
+        color: var(--f-dark);
+      }
+
+      .nav-list {
+        list-style: none;
+        padding: 0;
+      }
+      .nav-list li {
+        margin-bottom: 12px;
+      }
+      .hover-link {
+        text-decoration: none;
+        color: var(--f-slate);
+        font-size: 0.95rem;
+        font-weight: 500;
+        transition: 0.3s;
+      }
+      .hover-link:hover {
+        color: var(--f-blue);
+        padding-left: 5px;
+      }
+
+      .hiring-badge {
+        background: rgba(124, 197, 62, 0.1);
+        color: var(--f-green);
+        font-size: 0.7rem;
+        padding: 2px 8px;
+        border-radius: 100px;
+        font-weight: 700;
+      }
+
+      /* Newsletter Input */
+      .modern-input-group {
+        display: flex;
+        background: #f8fafc;
+        border: 1px solid var(--f-border);
+        padding: 6px;
+        border-radius: 16px;
+        transition: 0.3s;
+      }
+      .modern-input-group:focus-within {
+        border-color: var(--f-blue);
+        background: #fff;
+      }
+      .modern-input-group input {
+        flex: 1;
+        border: none;
+        background: transparent;
+        padding: 10px;
+        outline: none;
+      }
+      .submit-btn {
+        background: linear-gradient(135deg, var(--f-blue), var(--f-green));
+        color: #fff;
+        border: none;
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        cursor: pointer;
+      }
+
+      /* Bottom Bar */
+      .bottom-bar {
+        border-top: 1px solid var(--f-border);
+        padding: 30px 0;
+        background: #fafafa;
+      }
+      .bottom-wrapper {
+        max-width: 1300px;
+        margin: 0 auto;
+        padding: 0 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .copy-text {
+        font-size: 0.85rem;
+        color: var(--f-slate);
+      }
+      .status-indicator {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.8rem;
+        color: var(--f-slate);
+        font-weight: 600;
+      }
+      .dot {
+        width: 8px;
+        height: 8px;
+        background: var(--f-green);
+        border-radius: 50%;
+        box-shadow: 0 0 10px var(--f-green);
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.4;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      /* Responsive */
+      @media (max-width: 1024px) {
+        .footer-grid-container {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media (max-width: 650px) {
+        .footer-grid-container {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+        .social-wrapper,
+        .main-logo {
+          justify-content: center;
+        }
+        .bottom-wrapper {
+          flex-direction: column;
+          gap: 15px;
+        }
+      }
 
       /* Responsive */
       @media (max-width: 900px) {
@@ -208,7 +622,38 @@
     </style>
   </head>
   <body>
-    <header class="tos-header">
+    <header class="luxury-nav">
+      <div class="nav-container">
+        <div class="logo">
+          <a href="index.html" class="logo-link">
+            <img
+              src="assets/header logo.png"
+              alt="Globexify Logo"
+              class="nav-brand-img"
+            />
+          </a>
+        </div>
+
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#Team">Team</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="#" class="btn-action desktop-only">Let's Talk</a>
+          <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <headerr class="tos-header">
       <div class="container">
         <span class="accent-pill">Standard Agreement</span>
         <h1 class="tos-title">
@@ -219,18 +664,18 @@
           conditions.
         </p>
       </div>
-    </header>
+    </headerr>
 
     <main class="container">
       <div class="tos-grid">
         <aside class="tos-nav">
           <h4>QUICK LINKS</h4>
           <ul>
-            <li><a href="#acceptance">1. Acceptance</a></li>
-            <li><a href="#services">2. Services</a></li>
-            <li><a href="#payment">3. Payments</a></li>
-            <li><a href="#intellectual">4. Ownership</a></li>
-            <li><a href="#liability">5. Liability</a></li>
+            <li><a href="index.html#acceptance">1. Acceptance</a></li>
+            <li><a href="index.html#services">2. Services</a></li>
+            <li><a href="index.html#payment">3. Payments</a></li>
+            <li><a href="index.html#intellectual">4. Ownership</a></li>
+            <li><a href="index.html#liability">5. Liability</a></li>
           </ul>
         </aside>
 
@@ -320,16 +765,109 @@
       </div>
     </main>
 
-    <footer
-      style="
-        padding: 40px 0;
-        text-align: center;
-        border-top: 1px solid var(--border);
-        color: var(--slate);
-        font-size: 0.9rem;
-      "
-    >
-      &copy; 2026 Globaxify Inc. Professional Standards Apply.
+    <footer class="neo-footer">
+      <div class="footer-grid-container">
+        <div class="footer-block brand-block">
+          <div class="main-logo">
+            <a href="index.html" class="logo-link">
+              <img src="logo.png" alt="Globaxify Logo" class="brand-logo-img" />
+            </a>
+          </div>
+          <p class="brand-para">
+            Engineering the next generation of digital legacies. We bridge the
+            gap between luxury design and global commerce.
+          </p>
+          <div class="social-wrapper">
+            <a
+              href="https://www.upwork.com/freelancers/muhammadhaseebiqbal?mp_source=share"
+              target="_blank"
+              class="social-btn"
+            >
+              <i class="fab fa-upwork"></i>
+            </a>
+            <a
+              href="https://www.tiktok.com/@ahmad_0309?_r=1&_t=ZS-94Afrf0HEue"
+              target="_blank"
+              class="social-btn"
+            >
+              <i class="fab fa-tiktok"></i>
+            </a>
+            <a
+              href="https://www.facebook.com/share/18D3N37reL/"
+              target="_blank"
+              class="social-btn"
+            >
+              <i class="fab fa-facebook-square"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-block">
+          <h4 class="block-title">Expertise</h4>
+          <ul class="nav-list">
+            <li><a href="index.html#home" class="hover-link">Home</a></li>
+            <li>
+              <a href="index.html#services" class="hover-link">Services</a>
+            </li>
+            <li><a href="index.html#Team" class="hover-link">Team</a></li>
+            <li>
+              <a href="index.htmlportfolio.html" class="hover-link"
+                >Portfolio</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-block">
+          <h4 class="block-title">Globaxify</h4>
+          <ul class="nav-list">
+            <li>
+              <a href="Privacy Policy.html" class="hover-link" target="_blank"
+                >Privacy Policy</a
+              >
+            </li>
+            <li>
+              <a href="Terms of Service.html" class="hover-link" target="_blank"
+                >Terms of Service</a
+              >
+            </li>
+            <li>
+              <a href="Cookies Policy.html" class="hover-link" target="_blank"
+                >Cookies Policy</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-block newsletter-block">
+          <h4 class="block-title">Stay Ahead</h4>
+          <p class="news-para">
+            Join 5,000+ leaders getting our digital insights.
+          </p>
+          <div class="modern-input-group">
+            <input type="email" placeholder="Work email address" />
+            <button type="submit" class="submit-btn">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-bar">
+        <div class="bottom-wrapper">
+          <p class="copy-text">
+            &copy; 2026 <strong>Globaxify Inc.</strong> Engineered for
+            Excellence.
+          </p>
+          <div class="bottom-nav">
+            <a href="#" class="hover-link">Terms</a>
+            <a href="#" class="hover-link">Security</a>
+            <div class="status-indicator">
+              <span class="dot"></span> Systems Operational
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
   </body>
 </html>

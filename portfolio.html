@@ -3,13 +3,1055 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Our Portfolio | Globaxify</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Ahmad Iqbal | Shopify Expert & E-commerce Architect</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="assets/fav icon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+      :root {
+        --primary-blue: #0056b3;
+        --accent-green: #7cc53e;
+        --text-dark: #1a1a1a;
+        --white: #ffffff;
+        --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      }
+
+      /* Base Reset */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #f8f9fa; /* Light background for contrast */
+      }
+
+      /* Header with Glassmorphism */
+      .luxury-nav {
+        height: 80px;
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(15px); /* Modern blur effect */
+        -webkit-backdrop-filter: blur(15px);
+        display: flex;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 999;
+        transition: var(--transition);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      }
+
+      /* Scroll hone par header thora chota aur shadow wala ho jayega */
+      .luxury-nav.scrolled {
+        height: 70px;
+        background: rgba(255, 255, 255, 0.95);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      }
+
+      .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 25px;
+      }
+
+      /* Logo Animation */
+      .logo {
+        display: flex;
+        align-items: center;
+      }
+
+      .logo-link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+      }
+
+      .nav-brand-img {
+        height: 150px;
+        width: auto;
+        display: block;
+        object-fit: contain;
+        transition: transform 0.3s ease;
+      }
+
+      /* Hover Effect: Logo par halka sa zoom */
+      .logo-link:hover .nav-brand-img {
+        transform: scale(1.05);
+      }
+
+      /* Mobile Responsive */
+      @media (max-width: 768px) {
+        .nav-brand-img {
+          height: 32px;
+        }
+      }
+
+      /* Navigation Links & Hover Effect */
+      .nav-menu {
+        display: flex;
+        list-style: none;
+      }
+
+      .nav-menu li a {
+        color: var(--text-dark);
+        text-decoration: none;
+        margin: 0 20px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        position: relative;
+        padding: 5px 0;
+        transition: var(--transition);
+      }
+
+      /* Modern Underline Animation */
+      .nav-menu li a::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 50%;
+        background: linear-gradient(
+          to right,
+          var(--primary-blue),
+          var(--accent-green)
+        );
+        transition: var(--transition);
+        transform: translateX(-50%);
+      }
+
+      .nav-menu li a:hover {
+        color: var(--primary-blue);
+      }
+
+      .nav-menu li a:hover::after {
+        width: 100%;
+      }
+
+      /* Premium Button with Shine Animation */
+      .btn-action {
+        position: relative;
+        overflow: hidden; /* Shine effect ko andar rakhne ke liye */
+        background: var(--primary-blue);
+        color: white !important;
+        padding: 12px 28px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.85rem;
+        transition: var(--transition);
+        display: inline-block;
+        border: none;
+        box-shadow: 0 4px 15px rgba(0, 86, 179, 0.3);
+      }
+
+      .btn-action::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          120deg,
+          transparent,
+          rgba(255, 255, 255, 0.3),
+          transparent
+        );
+        transition: 0.6s;
+      }
+
+      .btn-action:hover::before {
+        left: 100%;
+      }
+
+      .btn-action:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(0, 86, 179, 0.4);
+        background: #004494;
+      }
+
+      /* Mobile Toggle Animation */
+      .menu-toggle .bar {
+        width: 25px;
+        height: 2px;
+        margin: 6px auto;
+        background: var(--text-dark);
+        transition: var(--transition);
+      }
+
+      /* Active State for Mobile Menu */
+      .menu-toggle.is-active .bar:nth-child(2) {
+        opacity: 0;
+      }
+      .menu-toggle.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+      .menu-toggle.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+      :root {
+        --bg: #050505;
+        --shopify: #95bf47; /* Shopify Green */
+        --accent: #0066cc;
+        --upwork: #14a800;
+        --text-main: #ffffff;
+        --text-dim: #a1a1aa;
+        --card-bg: rgba(255, 255, 255, 0.03);
+        --border: rgba(255, 255, 255, 0.1);
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        background-color: var(--bg);
+        color: var(--text-main);
+        overflow-x: hidden;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 25px;
+      }
+
+      /* --- BACKGROUND GLOW --- */
+      .bg-glow {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background:
+          radial-gradient(circle at 80% 20%, #2d3a14, transparent 40%),
+          radial-gradient(circle at 10% 80%, #064e3b, transparent 40%);
+        z-index: -1;
+        opacity: 0.4;
+      }
+
+      /* --- HERO SECTION --- */
+      .hero {
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+        padding: 80px 0;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 60px;
+        align-items: center;
+      }
+
+      .hero-text h1 {
+        font-size: clamp(3rem, 8vw, 5rem);
+        font-weight: 800;
+        line-height: 1.1;
+        margin-bottom: 25px;
+        letter-spacing: -2px;
+      }
+
+      .hero-text h1 span {
+        color: var(--shopify);
+      }
+
+      .profile-img-wrap {
+        position: relative;
+        width: 100%;
+        max-width: 380px;
+        aspect-ratio: 1/1;
+        margin: 0 auto;
+      }
+
+      .profile-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 40px;
+        border: 1px solid var(--border);
+        z-index: 2;
+        position: relative;
+      }
+
+      .img-frame {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 100%;
+        height: 100%;
+        border: 2px solid var(--shopify);
+        border-radius: 40px;
+        z-index: 1;
+      }
+
+      /* --- UPWORK SECTION (Priority) --- */
+      .upwork-card {
+        background: rgba(20, 168, 0, 0.05);
+        border: 1px solid rgba(20, 168, 0, 0.2);
+        border-radius: 40px;
+        padding: 50px;
+        display: grid;
+        grid-template-columns: 1fr 300px;
+        gap: 40px;
+        align-items: center;
+        margin-bottom: 80px;
+        backdrop-filter: blur(10px);
+      }
+
+      .stat-group {
+        display: flex;
+        gap: 30px;
+        margin: 25px 0;
+      }
+      .stat {
+        border-left: 2px solid var(--upwork);
+        padding-left: 15px;
+      }
+      .stat h4 {
+        font-size: 1.8rem;
+        font-weight: 800;
+      }
+      .stat p {
+        font-size: 0.7rem;
+        color: var(--text-dim);
+        text-transform: uppercase;
+      }
+
+      .btn-upwork {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        padding: 18px 40px;
+        background: var(--upwork);
+        color: white;
+        text-decoration: none;
+        border-radius: 100px;
+        font-weight: 800;
+        transition: 0.3s;
+      }
+
+      .btn-upwork:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(20, 168, 0, 0.4);
+      }
+
+      /* --- SHOPIFY SERVICES --- */
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        margin-bottom: 80px;
+      }
+
+      .service-card {
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+        padding: 35px;
+        border-radius: 24px;
+        transition: 0.3s;
+      }
+
+      .service-card i {
+        font-size: 2.2rem;
+        color: var(--shopify);
+        margin-bottom: 15px;
+        display: block;
+      }
+      .service-card h3 {
+        margin-bottom: 10px;
+        font-size: 1.3rem;
+      }
+      .service-card p {
+        color: var(--text-dim);
+        font-size: 0.9rem;
+      }
+
+      /* --- SHOPIFY PROJECTS --- */
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 30px;
+        margin-bottom: 80px;
+      }
+
+      .project-card {
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        padding: 15px;
+        transition: 0.4s;
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .project-card:hover {
+        border-color: var(--shopify);
+        transform: scale(1.02);
+      }
+      .project-img {
+        width: 100%;
+        height: 200px;
+        border-radius: 16px;
+        object-fit: cover;
+        margin-bottom: 15px;
+      }
+      .tag {
+        font-size: 0.65rem;
+        padding: 3px 10px;
+        background: rgba(149, 191, 71, 0.1);
+        color: var(--shopify);
+        border-radius: 4px;
+        margin-right: 5px;
+        font-weight: 700;
+      }
+
+      #backToTop {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        background: var(--shopify);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+      }
+      @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap");
+
+      .neo-footer {
+        --f-blue: #0066cc;
+        --f-green: #7cc53e;
+        --f-dark: #0f172a;
+        --f-slate: #64748b;
+        --f-border: #f1f5f9;
+
+        background: #ffffff;
+        color: var(--f-dark);
+        font-family: "Plus Jakarta Sans", sans-serif;
+        padding: 80px 0 0;
+        border-top: 1px solid var(--f-border);
+      }
+
+      .footer-grid-container {
+        max-width: 1300px;
+        margin: 0 auto;
+        padding: 0 40px 60px;
+        display: grid;
+        grid-template-columns: 1.5fr 0.8fr 0.8fr 1.2fr;
+        gap: 50px;
+      }
+
+      /* Logo & Brand */
+      .brand-logo-img {
+        height: 45px;
+        width: auto;
+        margin-bottom: 20px;
+        transition: transform 0.3s ease;
+      }
+      .logo-link:hover .brand-logo-img {
+        transform: scale(1.05);
+      }
+
+      .brand-para {
+        color: var(--f-slate);
+        line-height: 1.7;
+        font-size: 0.95rem;
+        margin-bottom: 30px;
+        max-width: 300px;
+      }
+
+      /* Social Buttons */
+      /* Social Wrapper ko set karne ke liye ye use karein */
+      .social-wrapper {
+        display: flex;
+        gap: 12px;
+        margin-top: 20px;
+      }
+
+      .social-btn {
+        width: 42px;
+        height: 42px;
+        border-radius: 12px;
+        background: #f8fafc;
+        border: 1px solid var(--f-border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--f-dark);
+        transition: 0.3s ease;
+        text-decoration: none;
+        font-size: 1.2rem; /* Icon ka size thora bara karne ke liye */
+      }
+
+      .social-btn:hover {
+        background: var(--f-blue);
+        color: #fff !important; /* Hover par icon white ho jayega */
+        transform: translateY(-5px);
+        box-shadow: 0 10px 15px rgba(0, 102, 204, 0.1);
+      }
+
+      /* Specific colors on hover (Optional - agar aap colors dikhana chahen) */
+      .social-btn:hover .fa-upwork {
+        color: #fff;
+      }
+      .social-btn:hover .fa-tiktok {
+        color: #fff;
+      }
+      .social-btn:hover .fa-facebook-square {
+        color: #fff;
+      }
+
+      /* Titles & Links */
+      .block-title {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 800;
+        margin-bottom: 25px;
+        color: var(--f-dark);
+      }
+
+      .nav-list {
+        list-style: none;
+        padding: 0;
+      }
+      .nav-list li {
+        margin-bottom: 12px;
+      }
+      .hover-link {
+        text-decoration: none;
+        color: var(--f-slate);
+        font-size: 0.95rem;
+        font-weight: 500;
+        transition: 0.3s;
+      }
+      .hover-link:hover {
+        color: var(--f-blue);
+        padding-left: 5px;
+      }
+
+      .hiring-badge {
+        background: rgba(124, 197, 62, 0.1);
+        color: var(--f-green);
+        font-size: 0.7rem;
+        padding: 2px 8px;
+        border-radius: 100px;
+        font-weight: 700;
+      }
+
+      /* Newsletter Input */
+      .modern-input-group {
+        display: flex;
+        background: #f8fafc;
+        border: 1px solid var(--f-border);
+        padding: 6px;
+        border-radius: 16px;
+        transition: 0.3s;
+      }
+      .modern-input-group:focus-within {
+        border-color: var(--f-blue);
+        background: #fff;
+      }
+      .modern-input-group input {
+        flex: 1;
+        border: none;
+        background: transparent;
+        padding: 10px;
+        outline: none;
+      }
+      .submit-btn {
+        background: linear-gradient(135deg, var(--f-blue), var(--f-green));
+        color: #fff;
+        border: none;
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        cursor: pointer;
+      }
+
+      /* Bottom Bar */
+      .bottom-bar {
+        border-top: 1px solid var(--f-border);
+        padding: 30px 0;
+        background: #fafafa;
+      }
+      .bottom-wrapper {
+        max-width: 1300px;
+        margin: 0 auto;
+        padding: 0 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .copy-text {
+        font-size: 0.85rem;
+        color: var(--f-slate);
+      }
+      .status-indicator {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.8rem;
+        color: var(--f-slate);
+        font-weight: 600;
+      }
+      .dot {
+        width: 8px;
+        height: 8px;
+        background: var(--f-green);
+        border-radius: 50%;
+        box-shadow: 0 0 10px var(--f-green);
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.4;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      /* Responsive */
+      @media (max-width: 1024px) {
+        .footer-grid-container {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media (max-width: 650px) {
+        .footer-grid-container {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+        .social-wrapper,
+        .main-logo {
+          justify-content: center;
+        }
+        .bottom-wrapper {
+          flex-direction: column;
+          gap: 15px;
+        }
+      }
+
+      @media (max-width: 900px) {
+        .hero-grid,
+        .upwork-card {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+        .profile-img-wrap {
+          order: -1;
+          margin-bottom: 30px;
+        }
+        .stat-group {
+          justify-content: center;
+        }
+      }
+    </style>
   </head>
   <body>
-    <section class="portfolio-page-header">
-      <h1>Our Elite Projects</h1>
-      <p>Explore the digital empires we have built.</p>
-    </section>
+    <header class="luxury-nav">
+      <div class="nav-container">
+        <div class="logo">
+          <a href="index.html" class="logo-link">
+            <img
+              src="assets/header logo.png"
+              alt="Globexify Logo"
+              class="nav-brand-img"
+            />
+          </a>
+        </div>
+
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#Team">Team</a></li>
+          <li><a href="index.htmlportfolio.html">Portfolio</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="#" class="btn-action desktop-only">Let's Talk</a>
+          <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="bg-glow"></div>
+
+    <button
+      id="backToTop"
+      onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    >
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <main class="container">
+      <section class="hero">
+        <div class="hero-grid">
+          <div class="hero-text">
+            <span
+              style="
+                color: var(--shopify);
+                font-weight: 800;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+              "
+              >Verified Shopify Expert</span
+            >
+            <h1>Building High-Converting <span>Shopify Stores.</span></h1>
+            <p
+              style="
+                color: var(--text-dim);
+                font-size: 1.1rem;
+                margin-bottom: 30px;
+                max-width: 550px;
+              "
+            >
+              Main Ahmad Iqbal hoon, ek E-commerce specialist jo Shopify Plus
+              stores ko scale karne aur custom Liquid solutions dene mein mahir
+              hai.
+            </p>
+            <a href="#upwork" class="btn-upwork">Let's Build Your Store</a>
+          </div>
+
+          <div class="profile-img-wrap">
+            <img
+              src="https://via.placeholder.com/400x400"
+              alt="Ahmad Iqbal"
+              class="profile-img"
+            />
+            <div class="img-frame"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="upwork">
+        <div class="upwork-card">
+          <div class="upwork-content">
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin-bottom: 15px;
+              "
+            >
+              <i
+                class="fab fa-upwork"
+                style="color: var(--upwork); font-size: 1.3rem"
+              ></i>
+              <span
+                style="
+                  font-weight: 800;
+                  font-size: 0.75rem;
+                  color: var(--upwork);
+                  letter-spacing: 1px;
+                "
+                >TOP RATED PLUS ON UPWORK</span
+              >
+            </div>
+            <h2>Hire a Trusted <span>Shopify Developer</span></h2>
+            <p
+              style="
+                color: var(--text-dim);
+                font-size: 0.95rem;
+                margin-top: 10px;
+              "
+            >
+              Safe, secure, and professional handling of your Shopify migration
+              and custom theme development projects.
+            </p>
+
+            <div class="stat-group">
+              <div class="stat">
+                <h4>100%</h4>
+                <p>Job Success</p>
+              </div>
+              <div class="stat">
+                <h4>$10k+</h4>
+                <p>Earned</p>
+              </div>
+            </div>
+
+            <a
+              href="https://www.upwork.com/freelancers/~YOUR_ID"
+              target="_blank"
+              class="btn-upwork"
+            >
+              <i class="fab fa-upwork"></i> Hire Me on Upwork
+            </a>
+          </div>
+
+          <div
+            style="
+              background: rgba(255, 255, 255, 0.02);
+              padding: 30px;
+              border-radius: 20px;
+              border: 1px dashed var(--upwork);
+              text-align: center;
+            "
+          >
+            <i
+              class="fas fa-store-check"
+              style="
+                font-size: 2.5rem;
+                color: var(--shopify);
+                margin-bottom: 10px;
+              "
+            ></i>
+            <h4 style="font-size: 1.1rem">Store Launch Ready</h4>
+            <p style="font-size: 0.75rem; color: var(--text-dim)">
+              A-Z Shopify setup and optimization expert.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section style="margin-bottom: 80px">
+        <div style="text-align: center; margin-bottom: 50px">
+          <h2 style="font-size: 2.5rem; font-weight: 800">
+            My Shopify Expertise
+          </h2>
+        </div>
+        <div class="services-grid">
+          <div class="service-card">
+            <i class="fas fa-paint-brush"></i>
+            <h3>Custom Theme Design</h3>
+            <p>
+              Unique, high-speed Shopify themes tailored to your brand's
+              identity and conversion goals.
+            </p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-code"></i>
+            <h3>Liquid Development</h3>
+            <p>
+              Advanced Liquid coding for custom sections, snippets, and complex
+              store functionality.
+            </p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-sync-alt"></i>
+            <h3>App Integration</h3>
+            <p>
+              Seamlessly connecting CRM, Inventory, and Marketing apps to your
+              Shopify ecosystem.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div style="text-align: center; margin-bottom: 50px">
+          <h2 style="font-size: 2.5rem; font-weight: 800">
+            Recent Store Launches
+          </h2>
+          <p style="color: var(--text-dim)">
+            Real results for real e-commerce businesses.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <div class="project-card">
+            <img
+              src="https://via.placeholder.com/600x400/222"
+              alt="Fashion Store"
+              class="project-img"
+            />
+            <span class="tag">Shopify Plus</span
+            ><span class="tag">Custom Liquid</span>
+            <h3 style="margin-top: 10px">Luxury Fashion Hub</h3>
+            <p style="color: var(--text-dim); font-size: 0.85rem">
+              Redesigned for a 35% increase in mobile checkout conversion.
+            </p>
+          </div>
+
+          <div class="project-card">
+            <img
+              src="https://via.placeholder.com/600x400/111"
+              alt="Beauty Store"
+              class="project-img"
+            />
+            <span class="tag">OS 2.0</span><span class="tag">App Setup</span>
+            <h3 style="margin-top: 10px">Glow Skin Care</h3>
+            <p style="color: var(--text-dim); font-size: 0.85rem">
+              Full migration from WooCommerce to Shopify with zero data loss.
+            </p>
+          </div>
+
+          <div class="project-card">
+            <img
+              src="https://via.placeholder.com/600x400/000"
+              alt="Tech Store"
+              class="project-img"
+            />
+            <span class="tag">Optimization</span
+            ><span class="tag">UX Design</span>
+            <h3 style="margin-top: 10px">NextGen Gadgets</h3>
+            <p style="color: var(--text-dim); font-size: 0.85rem">
+              Speed optimization achieving 95+ score on PageSpeed Insights.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="neo-footer">
+      <div class="footer-grid-container">
+        <div class="footer-block brand-block">
+          <div class="main-logo">
+            <a href="index.html" class="logo-link">
+              <img src="logo.png" alt="Globaxify Logo" class="brand-logo-img" />
+            </a>
+          </div>
+          <p class="brand-para">
+            Engineering the next generation of digital legacies. We bridge the
+            gap between luxury design and global commerce.
+          </p>
+          <div class="social-wrapper">
+            <a
+              href="https://www.upwork.com/freelancers/muhammadhaseebiqbal?mp_source=share"
+              target="_blank"
+              class="social-btn"
+            >
+              <i class="fab fa-upwork"></i>
+            </a>
+            <a
+              href="https://www.tiktok.com/@ahmad_0309?_r=1&_t=ZS-94Afrf0HEue"
+              target="_blank"
+              class="social-btn"
+            >
+              <i class="fab fa-tiktok"></i>
+            </a>
+            <a
+              href="https://www.facebook.com/share/18D3N37reL/"
+              target="_blank"
+              class="social-btn"
+            >
+              <i class="fab fa-facebook-square"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-block">
+          <h4 class="block-title">Expertise</h4>
+          <ul class="nav-list">
+            <li><a href="index.html#home" class="hover-link">Home</a></li>
+            <li>
+              <a href="index.html#services" class="hover-link">Services</a>
+            </li>
+            <li><a href="index.html#Team" class="hover-link">Team</a></li>
+            <li>
+              <a href="index.htmlportfolio.html" class="hover-link"
+                >Portfolio</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-block">
+          <h4 class="block-title">Globaxify</h4>
+          <ul class="nav-list">
+            <li>
+              <a href="Privacy Policy.html" class="hover-link" target="_blank"
+                >Privacy Policy</a
+              >
+            </li>
+            <li>
+              <a href="Terms of Service.html" class="hover-link" target="_blank"
+                >Terms of Service</a
+              >
+            </li>
+            <li>
+              <a href="Cookies Policy.html" class="hover-link" target="_blank"
+                >Cookies Policy</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-block newsletter-block">
+          <h4 class="block-title">Stay Ahead</h4>
+          <p class="news-para">
+            Join 5,000+ leaders getting our digital insights.
+          </p>
+          <div class="modern-input-group">
+            <input type="email" placeholder="Work email address" />
+            <button type="submit" class="submit-btn">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-bar">
+        <div class="bottom-wrapper">
+          <p class="copy-text">
+            &copy; 2026 <strong>Globaxify Inc.</strong> Engineered for
+            Excellence.
+          </p>
+          <div class="bottom-nav">
+            <a href="#" class="hover-link">Terms</a>
+            <a href="#" class="hover-link">Security</a>
+            <div class="status-indicator">
+              <span class="dot"></span> Systems Operational
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      window.onscroll = function () {
+        const btt = document.getElementById("backToTop");
+        if (document.documentElement.scrollTop > 500) {
+          btt.style.display = "flex";
+        } else {
+          btt.style.display = "none";
+        }
+      };
+    </script>
   </body>
 </html>
