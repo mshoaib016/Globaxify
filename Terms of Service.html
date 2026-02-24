@@ -43,79 +43,200 @@
       }
 
       /* --- NAVIGATION (Global Style) --- */
-      .luxury-nav {
-        height: 80px;
-        background: rgba(255, 255, 255, 0.8);
-        backdrop-filter: blur(15px);
-        -webkit-backdrop-filter: blur(15px);
-        display: flex;
-        align-items: center;
-        position: fixed;
-        width: 100%;
-        top: 0;
-        z-index: 1000;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-        transition: var(--transition);
-      }
+      @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap");
 
-      .nav-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 25px;
-      }
+:root {
+  --primary-blue: #0066cc;
+  --accent-green: #7cc53e;
+  --dark-navy: #0f172a;
+  --slate: #64748b;
+  --light-text: #475569;
+  --white: #ffffff;
+  --card-bg: #f8fafc;
+  --border-color: #f1f5f9;
+  --transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
 
-      .nav-brand-img {
-        height: 150px;
-        width: auto;
-        transition: transform 0.3s ease;
-      }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-      .nav-menu {
-        display: flex;
-        list-style: none;
-        align-items: center;
-      }
+html {
+  scroll-behavior: smooth;
+}
 
-      .nav-menu li a {
-        color: var(--text-dark);
-        text-decoration: none;
-        margin: 0 15px;
-        font-size: 0.9rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        position: relative;
-        transition: var(--transition);
-      }
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background: var(--white);
+  color: var(--dark-navy);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
 
-      .btn-action {
-        background: var(--primary-blue);
-        color: white !important;
-        padding: 12px 28px;
-        border-radius: 50px;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 0.85rem;
-        box-shadow: 0 4px 15px rgba(0, 86, 179, 0.3);
-        transition: var(--transition);
-      }
+section {
+  scroll-margin-top: 100px;
+}
 
-      .menu-toggle {
-        display: none;
-        cursor: pointer;
-        z-index: 1001;
-      }
-      .menu-toggle .bar {
-        width: 25px;
-        height: 2px;
-        background: var(--text-dark);
-        margin: 6px 0;
-        transition: 0.4s;
-      }
+.container {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0 25px;
+}
 
+/* --- 2. NAVBAR --- */
+.navbar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 10px 30px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 60px;
+  z-index: 9999;
+  transition: var(--transition);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  height: 100%; /* Full height lega */
+}
+
+.logo-img {
+  height: 150px; /* Navbar height ke hisaab se adjust */
+  width: auto;
+  max-height: 150px; /* Navbar se bahar na nikle */
+  display: block;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+.logo-link:hover {
+  transform: scale(1.05);
+}
+
+.logo-link:hover .logo-img {
+  filter: brightness(1.1);
+}
+
+/* Mobile pe thora chota */
+@media (max-width: 768px) {
+  .logo-img {
+    height: 40px;
+    max-height: 40px;
+  }
+}
+
+.nav-links ul {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+}
+
+.nav-links ul li a {
+  text-decoration: none;
+  color: var(--dark-navy);
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 700;
+  transition: var(--transition);
+  display: block;
+}
+
+.nav-links ul li a:hover,
+.nav-links ul li a.active {
+  background: var(--primary-blue);
+  color: var(--white);
+}
+
+.right-side {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+button {
+  width: 9em;
+  height: 3em;
+  border-radius: 30em;
+  font-size: 15px;
+  font-family: inherit;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow:
+    6px 6px 12px #9bb6db,
+    -6px -6px 12px #a7deb9;
+}
+
+button::before {
+  content: "";
+  width: 0;
+  height: 3em;
+  border-radius: 30em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to right, #0fd850 0%, #475cf9 100%);
+  transition: 0.5s ease;
+  display: block;
+  z-index: -1;
+}
+
+button:hover::before {
+  width: 9em;
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: var(--dark-navy);
+  border-radius: 2px;
+  transition: var(--transition);
+}
+
+.mobile-menu-header {
+  display: none;
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 9998;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
       /* --- TOS HEADER --- */
       .tos-header {
         padding: 140px 0 60px;
@@ -477,38 +598,41 @@
     </style>
   </head>
   <body>
-    <header class="luxury-nav">
-      <div class="nav-container">
-        <div class="logo">
-          <a href="index.html" class="logo-link">
-            <img
-              src="assets/header logo.png"
-              alt="Globexify Logo"
-              class="nav-brand-img"
-            />
-          </a>
-        </div>
+     <header class="navbar">
+      <div class="logo">
+        <a href="index.html" class="logo-link">
+          <img
+            src="assets/header logo.png"
+            alt="Globaxify Logo"
+            class="logo-img"
+          />
+        </a>
+      </div>
 
-        <ul class="nav-menu" id="nav-menu">
+      <nav class="nav-links" id="navLinks">
+        <div class="mobile-menu-header">
+          <div>Menu</div>
+          <div class="close-btn" id="closeBtn">&times;</div>
+        </div>
+        <ul>
           <li><a href="index.html#home">Home</a></li>
           <li><a href="index.html#services">Services</a></li>
-          <li><a href="index.html#team">Team</a></li>
+          <li><a href="index.html#Team">Team</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="index.html#about">About</a></li>
           <li><a href="index.html#contact">Contact</a></li>
         </ul>
+      </nav>
 
-        <div class="nav-actions">
-          <a href="#" class="btn-action desktop-only">Let's Talk</a>
-          <div class="menu-toggle" id="mobile-menu">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-          </div>
+      <div class="right-side">
+        <button>Let's Talk</button>
+        <div class="menu-toggle" id="menuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
       </div>
     </header>
-
     <div class="tos-header">
       <div class="container">
         <span class="accent-pill">Standard Agreement</span>

@@ -4,50 +4,62 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Globaxify | Premium Digital Agency</title>
-    <head>
-      <link rel="icon" type="image/png" href="assets/fav icon.png" />
-    </head>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="assets/fav icon.png" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="navbar" id="mainHeader">
-    <div class="logo">
-        <a href="#"><img src="logo.png" alt="Logo"></a>
-    </div>
+    <div class="menu-overlay" id="menuOverlay"></div>
 
-    <nav class="nav-links" id="navLinks">
+    <!-- Header -->
+    <header class="navbar">
+      <div class="logo">
+        <a href="index.html" class="logo-link">
+          <img
+            src="assets/header logo.png"
+            alt="Globaxify Logo"
+            class="logo-img"
+          />
+        </a>
+      </div>
+
+      <nav class="nav-links" id="navLinks">
         <div class="mobile-menu-header">
-            <span>Menu</span>
-            <div class="close-btn" id="closeBtn">&times;</div>
+          <div>Menu</div>
+          <div class="close-btn" id="closeBtn">&times;</div>
         </div>
         <ul>
-            <li><a href="#home" class="nav-item active" onclick="closeMenu()">Home</a></li>
-            <li><a href="#about" class="nav-item" onclick="closeMenu()">About</a></li>
-            <li><a href="#services" class="nav-item" onclick="closeMenu()">Services</a></li>
-            <li><a href="#contact" class="nav-item" onclick="closeMenu()">Contact</a></li>
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#Team">Team</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
         </ul>
-    </nav>
+      </nav>
 
-    <div class="header-right">
-        <a href="#" class="btn-cta">Login</a>
-        <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
+      <div class="right-side">
+        <button>Let's Talk</button>
+        <div class="menu-toggle" id="menuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-    </div>
-</header>
-<div class="menu-overlay" id="overlay"></div>
-    <!-- ---- Hero Section ---- -->
+      </div>
+    </header>
+
+    <!-- Hero Section -->
     <section class="hero" id="home">
       <div class="hero-container">
         <div class="hero-content">
           <span class="badge">Global eCommerce Solutions</span>
-          <h1>Scale Your Business With <span>Globexify</span> Experts</h1>
+          <h1>
+            Scale Your Business With
+            <span class="text-primary">Globexify</span> Experts
+          </h1>
           <p>
             Hum aapke eCommerce brand ko international level par le kar jatay
             hain. Smart strategies aur modern tools ke sath apni sales
@@ -85,8 +97,8 @@
         </div>
       </div>
     </section>
-    <!-- ----Services Section---- -->
 
+    <!-- Services Section -->
     <section id="services" class="services-modern-wrap">
       <div class="container">
         <div class="services-main-header">
@@ -114,11 +126,7 @@
                 We provide a 360-degree Shopify experience tailored for
                 high-volume brands. Our expertise covers custom theme
                 development from scratch, headless commerce using Hydrogen, and
-                seamless third-party API integrations. We focus on
-                conversion-centric UI/UX designs that reduce bounce rates and
-                maximize average order value. Whether it’s migrating your store
-                or building a new empire, we ensure your Shopify backend is as
-                robust as your brand's vision.
+                seamless third-party API integrations.
               </p>
             </div>
             <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
@@ -132,8 +140,7 @@
               <h3>Full-Stack Web Development</h3>
               <p>
                 Utilizing modern frameworks like React and Next.js, we build
-                lightning-fast, SEO-optimized websites that provide a seamless
-                user experience across all devices.
+                lightning-fast, SEO-optimized websites.
               </p>
             </div>
             <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
@@ -147,8 +154,7 @@
               <h3>Social Media Strategy</h3>
               <p>
                 Strengthen your digital footprint. We craft compelling content
-                and engagement-driven strategies to build a loyal community
-                around your brand.
+                and engagement-driven strategies.
               </p>
             </div>
             <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
@@ -164,10 +170,7 @@
                 <p>
                   Reach your ideal customers with precision-targeted Facebook
                   and Instagram ad campaigns. We specialize in high-ROI
-                  strategies that turn clicks into loyal customers. Through
-                  rigorous A/B testing, pixel optimization, and creative
-                  storytelling, we ensure your ad spend delivers measurable
-                  business growth and global scalability.
+                  strategies that turn clicks into loyal customers.
                 </p>
               </div>
             </div>
@@ -182,8 +185,7 @@
               <h3>WordPress Authority</h3>
               <p>
                 Custom-built corporate websites and blogs using Elementor Pro,
-                focused on high security, speed, and easy content management for
-                your team.
+                focused on high security and speed.
               </p>
             </div>
             <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
@@ -197,8 +199,7 @@
               <h3>360° Digital Growth</h3>
               <p>
                 Dominate search engines and digital platforms with our holistic
-                growth hacking and SEO techniques designed for long-term brand
-                authority.
+                growth hacking and SEO techniques.
               </p>
             </div>
             <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
@@ -207,11 +208,9 @@
       </div>
     </section>
 
-    <!-- ----Ceo Section---- -->
-
+    <!-- CEO Section -->
     <section class="ceo-modern-section">
-      <div class="bg-text-ghost">LEADERSHIP</div>
-
+      <div class="bg-text-ghost"></div>
       <div class="container ceo-flex-row">
         <div class="ceo-visual-part">
           <div class="image-frame-wrap">
@@ -225,10 +224,7 @@
             </div>
             <div class="stat-badge-modern">
               <span class="stat-num">08+</span>
-              <span class="stat-label"
-                >Years of <br />
-                Innovation</span
-              >
+              <span class="stat-label">Years of<br />Innovation</span>
             </div>
           </div>
         </div>
@@ -250,53 +246,43 @@
 
           <div class="ceo-meta-footer">
             <div class="signature-block">
-              <div class="signature-block">
-                <a href="#" class="ceo-signature-link">
-                  <img
-                    src="assets/Ahmad Signature.png"
-                    alt="Ahmad Iqbal Signature"
-                    class="ceo-sign-img"
-                  />
-                </a>
-                <span class="role-text">Founder & CEO, Globexify</span>
-              </div>
+              <a href="#" class="ceo-signature-link">
+                <img
+                  src="assets/Ahmad Signature.png"
+                  alt="Ahmad Iqbal Signature"
+                  class="ceo-sign-img"
+                />
+              </a>
+              <span class="role-text">Founder & CEO, Globexify</span>
             </div>
             <div class="social-circles">
               <a
-                href="https://www.upwork.com/freelancers/muhammadhaseebiqbal?mp_source=share"
+                href="https://www.upwork.com/freelancers/muhammadhaseebiqbal"
                 target="_blank"
-              >
-                <i class="fab fa-upwork"></i>
-              </a>
-              <a
-                href="https://www.tiktok.com/@ahmad_0309?_r=1&_t=ZS-94Afrf0HEue"
-                target="_blank"
-              >
-                <i class="fab fa-tiktok"></i>
-              </a>
+                ><i class="fab fa-upwork"></i
+              ></a>
+              <a href="https://www.tiktok.com/@ahmad_0309" target="_blank"
+                ><i class="fab fa-tiktok"></i
+              ></a>
               <a
                 href="https://www.facebook.com/share/18D3N37reL/"
                 target="_blank"
-              >
-                <i class="fab fa-facebook-square"></i>
-              </a>
+                ><i class="fab fa-facebook-square"></i
+              ></a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ----Our Team Section---- -->
-
+    <!-- Team Section -->
     <section class="elite-team-modern" id="Team">
       <div class="team-blob"></div>
-
       <div class="container">
         <div class="team-header-top">
           <h2 class="hero-text">
-            WE ARE THE
-            <span class="outline-text bump-animation">ARCHITECTS</span> <br />
-            OF THE <span class="gradient-text">DIGITAL ELITE.</span>
+            WE ARE THE <span class="outline-text">ARCHITECTS</span><br />OF THE
+            <span class="gradient-text">DIGITAL ELITE.</span>
           </h2>
           <h2 class="heavy-title">
             MEET THE <span class="gradient-blue-green">EXPERTS</span>
@@ -325,7 +311,7 @@
               <div class="image-wrapper">
                 <img
                   src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400"
-                  alt="Muhammad Shoaib"
+                  alt="Shoaib Hanif"
                 />
               </div>
               <div class="member-info-box">
@@ -349,18 +335,14 @@
           </div>
 
           <div class="team-text-side">
-            <div class="vertical-branding">
-              <span>GLOBAXIFY CORE</span>
-            </div>
+            <div class="vertical-branding"><span>GLOBAXIFY CORE</span></div>
             <div class="side-content-box">
               <h3 class="side-title">
-                Engineering <br />
-                <span class="text-blue">Excellence</span>
+                Engineering<br /><span class="text-blue">Excellence</span>
               </h3>
               <p>
                 Our team consists of world-class developers and designers who
-                specialize in scaling brands to a global audience. We don't just
-                work; we innovate.
+                specialize in scaling brands to a global audience.
               </p>
               <div class="experience-badge">03+ Years Experience</div>
             </div>
@@ -369,21 +351,17 @@
       </div>
     </section>
 
-    <!-- ----About Section---- -->
+    <!-- About Section -->
     <section id="about" class="about-modern-wrap">
       <div class="light-orb"></div>
       <div class="light-orb-secondary"></div>
-
       <div class="container about-flex-grid">
-        <div class="side-branding">
-          <span>ESTABLISHED MMXXIV</span>
-        </div>
-
+        <div class="side-branding"><span>ESTABLISHED MMXXIV</span></div>
         <div class="about-content">
           <h4 class="philosophy-tag">Globaxify Philosophy</h4>
           <h2 class="hero-text">
-            WE ARE THE <span class="outline-text">ARCHITECTS</span> <br />
-            OF THE <span class="gradient-text">DIGITAL ELITE.</span>
+            WE ARE THE <span class="outline-text">ARCHITECTS</span><br />OF THE
+            <span class="gradient-text">DIGITAL ELITE.</span>
           </h2>
 
           <div class="description-grid-single">
@@ -397,8 +375,6 @@
                 need more agencies. It needs visionaries who can bridge the gap
                 between luxury and commerce. We don't just build websites; we
                 engineer <span class="text-highlight">digital legacies</span>.
-                Every pixel is placed with precision, every strategy crafted for
-                unmatched global dominance.
               </p>
             </div>
           </div>
@@ -427,18 +403,17 @@
       </div>
     </section>
 
-    <!-- ----Contact Section---- -->
-
+    <!-- Contact Section -->
     <section id="contact" class="contact-modern">
       <div class="blob b-1"></div>
       <div class="blob b-2"></div>
-
       <div class="container contact-wrapper">
         <div class="contact-info">
           <span class="badge">GET IN TOUCH</span>
           <h1 class="title">
-            Let’s Start Your <br />
-            <span class="gradient-text">Digital Empire.</span>
+            Let's Start Your<br /><span class="gradient-text"
+              >Digital Empire.</span
+            >
           </h1>
 
           <div class="info-cards">
@@ -448,7 +423,7 @@
               </div>
               <div class="info-content">
                 <h3>Headquarters</h3>
-                <p>BahalawPur Punjab Pakistan</p>
+                <p>Bahawalpur, Punjab, Pakistan</p>
               </div>
               <i class="fas fa-chevron-right arrow-indicator"></i>
             </div>
@@ -480,15 +455,12 @@
         <div class="contact-form-container">
           <form class="main-form">
             <h2 class="form-label">Consult Our Experts</h2>
-
             <div class="input-field">
               <input type="text" placeholder="Your Name" required />
             </div>
-
             <div class="input-field">
               <input type="email" placeholder="Email Address" required />
             </div>
-
             <div class="input-field">
               <select required>
                 <option value="" disabled selected>Select Service</option>
@@ -498,14 +470,12 @@
                 <option>Brand Identity</option>
               </select>
             </div>
-
             <div class="input-field">
               <textarea
                 placeholder="Tell us about your project..."
                 rows="4"
               ></textarea>
             </div>
-
             <button type="submit" class="send-btn">
               <span>Initialize Project</span>
               <i class="fas fa-paper-plane"></i>
@@ -514,12 +484,11 @@
         </div>
       </div>
     </section>
-    <!-- ----Reviewer's Section---- -->
 
+    <!-- Reviews Section -->
     <section class="reviews-modern">
       <div class="reviews-blob-1"></div>
       <div class="reviews-blob-2"></div>
-
       <div class="container">
         <div class="header-content">
           <div class="modern-badge">SUCCESS STORIES</div>
@@ -635,19 +604,17 @@
       </div>
     </section>
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-
-    <!-- ----Footer Section---- -->
-
+    <!-- Footer -->
     <footer class="neo-footer">
       <div class="footer-grid-container">
         <div class="footer-block brand-block">
           <div class="main-logo">
             <a href="index.html" class="logo-link">
-              <img src="logo.png" alt="Globaxify Logo" class="brand-logo-img" />
+              <img
+                src="assets/header logo.png"
+                alt="Globaxify Logo"
+                class="footer-logo-img"
+              />
             </a>
           </div>
           <p class="brand-para">
@@ -656,26 +623,23 @@
           </p>
           <div class="social-wrapper">
             <a
-              href="https://www.upwork.com/freelancers/muhammadhaseebiqbal?mp_source=share"
+              href="https://www.upwork.com/freelancers/muhammadhaseebiqbal"
               target="_blank"
               class="social-btn"
-            >
-              <i class="fab fa-upwork"></i>
-            </a>
+              ><i class="fab fa-upwork"></i
+            ></a>
             <a
-              href="https://www.tiktok.com/@ahmad_0309?_r=1&_t=ZS-94Afrf0HEue"
+              href="https://www.tiktok.com/@ahmad_0309"
               target="_blank"
               class="social-btn"
-            >
-              <i class="fab fa-tiktok"></i>
-            </a>
+              ><i class="fab fa-tiktok"></i
+            ></a>
             <a
               href="https://www.facebook.com/share/18D3N37reL/"
               target="_blank"
               class="social-btn"
-            >
-              <i class="fab fa-facebook-square"></i>
-            </a>
+              ><i class="fab fa-facebook-square"></i
+            ></a>
           </div>
         </div>
 
@@ -740,6 +704,7 @@
         </div>
       </div>
     </footer>
+
     <script src="script.js"></script>
   </body>
 </html>

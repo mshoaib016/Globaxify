@@ -1,39 +1,44 @@
-// Header Scroll Effect
-window.addEventListener("scroll", function () {
-  const header = document.querySelector(".luxury-nav");
-  if (window.scrollY > 50) {
-    header.classList.add("scrolled");
-  } else {
-    header.classList.remove("scrolled");
+// Mobile Menu Toggle
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+const closeBtn = document.getElementById("closeBtn");
+const menuOverlay = document.getElementById("menuOverlay");
+
+function openMenu() {
+  navLinks.classList.add("active");
+  menuOverlay.classList.add("active");
+  document.body.style.overflow = "hidden";
+}
+
+function closeMenu() {
+  navLinks.classList.remove("active");
+  menuOverlay.classList.remove("active");
+  document.body.style.overflow = "";
+}
+
+menuToggle.addEventListener("click", openMenu);
+closeBtn.addEventListener("click", closeMenu);
+menuOverlay.addEventListener("click", closeMenu);
+
+// Close menu when clicking on a link
+const navItems = navLinks.querySelectorAll("a");
+navItems.forEach((item) => {
+  item.addEventListener("click", closeMenu);
+});
+
+// Close menu on escape key
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && navLinks.classList.contains("active")) {
+    closeMenu();
   }
 });
 
-// Mobile Menu Toggle
-const menu = document.querySelector("#mobile-menu");
-const menuLinks = document.querySelector(".nav-menu");
-
-menu.addEventListener("click", function () {
-  menu.classList.toggle("is-active");
-  menuLinks.classList.toggle("active");
+// Navbar scroll effect
+window.addEventListener("scroll", () => {
+  const navbar = document.querySelector(".navbar");
+  if (window.scrollY > 50) {
+    navbar.style.boxShadow = "0 10px 30px rgba(0,0,0,0.1)";
+  } else {
+    navbar.style.boxShadow = "0 10px 30px rgba(0,0,0,0.05)";
+  }
 });
-const hamburger = document.getElementById('hamburger');
-const closeBtn = document.getElementById('closeBtn');
-const navLinks = document.getElementById('navLinks');
-const overlay = document.getElementById('overlay');
-
-// Open Menu
-hamburger.addEventListener('click', () => {
-    navLinks.classList.add('active');
-    overlay.classList.add('active');
-    document.body.style.overflow = 'hidden'; // Stop scrolling when menu open
-});
-
-// Close Menu
-function closeMenu() {
-    navLinks.classList.remove('active');
-    overlay.classList.remove('active');
-    document.body.style.overflow = 'auto'; // Re-enable scrolling
-}
-
-closeBtn.addEventListener('click', closeMenu);
-overlay.addEventListener('click', closeMenu);
