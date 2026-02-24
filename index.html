@@ -14,34 +14,34 @@
     />
   </head>
   <body>
-    <header class="luxury-nav" id="main-header">
-        <div class="nav-container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="assets/header logo.png" alt="Logo" class="nav-brand-img">
-                </a>
-            </div>
+    <header class="navbar" id="mainHeader">
+    <div class="logo">
+        <a href="#"><img src="logo.png" alt="Logo"></a>
+    </div>
 
-            <ul class="nav-menu" id="nav-list">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#Team">Team</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-
-            <div class="nav-actions">
-                <a href="#contact" class="btn-action desktop-only">Let's Talk</a>
-                
-                <div class="menu-toggle" id="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </div>
+    <nav class="nav-links" id="navLinks">
+        <div class="mobile-menu-header">
+            <span>Menu</span>
+            <div class="close-btn" id="closeBtn">&times;</div>
         </div>
-    </header>
+        <ul>
+            <li><a href="#home" class="nav-item active" onclick="closeMenu()">Home</a></li>
+            <li><a href="#about" class="nav-item" onclick="closeMenu()">About</a></li>
+            <li><a href="#services" class="nav-item" onclick="closeMenu()">Services</a></li>
+            <li><a href="#contact" class="nav-item" onclick="closeMenu()">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="header-right">
+        <a href="#" class="btn-cta">Login</a>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</header>
+<div class="menu-overlay" id="overlay"></div>
     <!-- ---- Hero Section ---- -->
     <section class="hero" id="home">
       <div class="hero-container">
