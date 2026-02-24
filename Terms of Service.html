@@ -6,7 +6,7 @@
     <title>Terms of Service | Globaxify</title>
 
     <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="icon" type="image/png" href="assets/fav icon.png" />
@@ -16,17 +16,18 @@
     />
 
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
-
       :root {
         --primary-blue: #0056b3;
         --accent-green: #7cc53e;
         --text-dark: #1a1a1a;
         --white: #ffffff;
+        --slate: #64748b;
+        --navy: #0f172a;
+        --border: #f1f5f9;
+        --bg-light: #f8fafc;
         --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
       }
 
-      /* Base Reset */
       * {
         box-sizing: border-box;
         margin: 0;
@@ -35,30 +36,26 @@
 
       body {
         font-family: "Poppins", sans-serif;
-        background-color: #f8f9fa; /* Light background for contrast */
+        background-color: #ffffff;
+        color: var(--navy);
+        line-height: 1.7;
+        overflow-x: hidden;
       }
 
-      /* Header with Glassmorphism */
+      /* --- NAVIGATION (Global Style) --- */
       .luxury-nav {
         height: 80px;
         background: rgba(255, 255, 255, 0.8);
-        backdrop-filter: blur(15px); /* Modern blur effect */
+        backdrop-filter: blur(15px);
         -webkit-backdrop-filter: blur(15px);
         display: flex;
         align-items: center;
         position: fixed;
         width: 100%;
         top: 0;
-        z-index: 999;
-        transition: var(--transition);
+        z-index: 1000;
         border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-      }
-
-      /* Scroll hone par header thora chota aur shadow wala ho jayega */
-      .luxury-nav.scrolled {
-        height: 70px;
-        background: rgba(255, 255, 255, 0.95);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        transition: var(--transition);
       }
 
       .nav-container {
@@ -71,86 +68,30 @@
         padding: 0 25px;
       }
 
-      /* Logo Animation */
-      .logo {
-        display: flex;
-        align-items: center;
-      }
-
-      .logo-link {
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-      }
-
       .nav-brand-img {
         height: 150px;
         width: auto;
-        display: block;
-        object-fit: contain;
         transition: transform 0.3s ease;
       }
 
-      /* Hover Effect: Logo par halka sa zoom */
-      .logo-link:hover .nav-brand-img {
-        transform: scale(1.05);
-      }
-
-      /* Mobile Responsive */
-      @media (max-width: 768px) {
-        .nav-brand-img {
-          height: 32px;
-        }
-      }
-
-      /* Navigation Links & Hover Effect */
       .nav-menu {
         display: flex;
         list-style: none;
+        align-items: center;
       }
 
       .nav-menu li a {
         color: var(--text-dark);
         text-decoration: none;
-        margin: 0 20px;
+        margin: 0 15px;
         font-size: 0.9rem;
-        font-weight: 500;
+        font-weight: 600;
         text-transform: uppercase;
-        letter-spacing: 0.5px;
         position: relative;
-        padding: 5px 0;
         transition: var(--transition);
       }
 
-      /* Modern Underline Animation */
-      .nav-menu li a::after {
-        content: "";
-        position: absolute;
-        width: 0;
-        height: 2px;
-        bottom: 0;
-        left: 50%;
-        background: linear-gradient(
-          to right,
-          var(--primary-blue),
-          var(--accent-green)
-        );
-        transition: var(--transition);
-        transform: translateX(-50%);
-      }
-
-      .nav-menu li a:hover {
-        color: var(--primary-blue);
-      }
-
-      .nav-menu li a:hover::after {
-        width: 100%;
-      }
-
-      /* Premium Button with Shine Animation */
       .btn-action {
-        position: relative;
-        overflow: hidden; /* Shine effect ko andar rakhne ke liye */
         background: var(--primary-blue);
         color: white !important;
         padding: 12px 28px;
@@ -158,96 +99,34 @@
         text-decoration: none;
         font-weight: 600;
         font-size: 0.85rem;
-        transition: var(--transition);
-        display: inline-block;
-        border: none;
         box-shadow: 0 4px 15px rgba(0, 86, 179, 0.3);
+        transition: var(--transition);
       }
 
-      .btn-action::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-          120deg,
-          transparent,
-          rgba(255, 255, 255, 0.3),
-          transparent
-        );
-        transition: 0.6s;
+      .menu-toggle {
+        display: none;
+        cursor: pointer;
+        z-index: 1001;
       }
-
-      .btn-action:hover::before {
-        left: 100%;
-      }
-
-      .btn-action:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 8px 25px rgba(0, 86, 179, 0.4);
-        background: #004494;
-      }
-
-      /* Mobile Toggle Animation */
       .menu-toggle .bar {
         width: 25px;
         height: 2px;
-        margin: 6px auto;
         background: var(--text-dark);
-        transition: var(--transition);
+        margin: 6px 0;
+        transition: 0.4s;
       }
 
-      /* Active State for Mobile Menu */
-      .menu-toggle.is-active .bar:nth-child(2) {
-        opacity: 0;
-      }
-      .menu-toggle.is-active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-      }
-      .menu-toggle.is-active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-      }
-      :root {
-        --primary: #0066cc;
-        --secondary: #7cc53e;
-        --dark: #0f172a;
-        --slate: #64748b;
-        --light-bg: #f8fafc;
-        --border: #e2e8f0;
-      }
-
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        font-family: "Plus Jakarta Sans", sans-serif;
-        background: #ffffff;
-        color: var(--dark);
-        line-height: 1.7;
-      }
-
-      .container {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 0 25px;
-      }
-
-      /* --- Header Section --- */
+      /* --- TOS HEADER --- */
       .tos-header {
-        padding: 100px 0 60px;
-        background: linear-gradient(to bottom, var(--light-bg), #fff);
+        padding: 140px 0 60px;
+        background: linear-gradient(to bottom, var(--bg-light), #fff);
         text-align: center;
         border-bottom: 1px solid var(--border);
       }
 
       .accent-pill {
         background: rgba(124, 197, 62, 0.1);
-        color: var(--secondary);
+        color: var(--accent-green);
         padding: 6px 16px;
         border-radius: 50px;
         font-size: 0.75rem;
@@ -262,12 +141,16 @@
         margin: 20px 0;
         letter-spacing: -2px;
       }
-
       .text-blue {
-        color: var(--primary);
+        color: var(--primary-blue);
       }
 
-      /* --- Main Content Layout --- */
+      /* --- TOS GRID LAYOUT --- */
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 25px;
+      }
       .tos-grid {
         display: grid;
         grid-template-columns: 260px 1fr;
@@ -275,10 +158,9 @@
         padding: 80px 0;
       }
 
-      /* Sidebar Navigation */
       .tos-nav {
         position: sticky;
-        top: 50px;
+        top: 100px;
         height: fit-content;
       }
       .tos-nav h4 {
@@ -290,22 +172,21 @@
       .tos-nav ul {
         list-style: none;
       }
-      .tos-nav li {
-        margin-bottom: 12px;
-      }
       .tos-nav a {
         text-decoration: none;
         color: var(--slate);
         font-weight: 600;
         font-size: 0.9rem;
         transition: 0.3s;
+        display: block;
+        margin-bottom: 12px;
       }
       .tos-nav a:hover {
-        color: var(--primary);
-        padding-left: 8px;
+        color: var(--primary-blue);
+        transform: translateX(5px);
       }
 
-      /* Content Blocks */
+      /* CONTENT BLOCKS */
       .tos-body section {
         margin-bottom: 60px;
       }
@@ -318,7 +199,7 @@
         gap: 12px;
       }
       .tos-body h2 span {
-        color: var(--secondary);
+        color: var(--accent-green);
         font-size: 1.2rem;
       }
       .tos-body p {
@@ -328,13 +209,12 @@
       }
 
       .rules-card {
-        background: var(--light-bg);
+        background: var(--bg-light);
         padding: 30px;
         border-radius: 20px;
-        border-left: 5px solid var(--primary);
+        border-left: 5px solid var(--primary-blue);
         margin: 25px 0;
       }
-
       .rules-card ul {
         list-style: none;
       }
@@ -344,48 +224,36 @@
         align-items: center;
         gap: 10px;
         font-weight: 500;
-        color: var(--dark);
+        color: var(--navy);
         font-size: 0.95rem;
       }
       .rules-card i {
-        color: var(--primary);
-        font-size: 0.8rem;
+        color: var(--primary-blue);
+        font-size: 0.7rem;
       }
 
-      /* --- Action Footer --- */
+      /* ACTION FOOTER */
       .tos-footer {
-        background: var(--dark);
+        background: var(--navy);
         border-radius: 30px;
         padding: 50px;
         color: #fff;
         text-align: center;
         margin-bottom: 100px;
       }
-
-      .tos-footer h3 {
-        font-size: 2rem;
-        margin-bottom: 10px;
-      }
-      .tos-footer p {
-        opacity: 0.7;
-        margin-bottom: 25px;
-      }
-
       .btn-contact {
         display: inline-block;
-        background: var(--secondary);
-        color: var(--dark);
+        background: var(--accent-green);
+        color: var(--navy);
         padding: 14px 35px;
         border-radius: 12px;
         text-decoration: none;
         font-weight: 700;
         transition: 0.3s;
+        margin-top: 20px;
       }
 
-      .btn-contact:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 10px 20px rgba(124, 197, 62, 0.2);
-      }
+      /* --- FOOTER --- */
       @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap");
 
       .neo-footer {
@@ -606,19 +474,6 @@
           gap: 15px;
         }
       }
-
-      /* Responsive */
-      @media (max-width: 900px) {
-        .tos-grid {
-          grid-template-columns: 1fr;
-        }
-        .tos-nav {
-          display: none;
-        }
-        .tos-header {
-          padding: 60px 0;
-        }
-      }
     </style>
   </head>
   <body>
@@ -635,25 +490,26 @@
         </div>
 
         <ul class="nav-menu" id="nav-menu">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#team">Team</a></li>
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#team">Team</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
         </ul>
 
         <div class="nav-actions">
           <a href="#" class="btn-action desktop-only">Let's Talk</a>
           <div class="menu-toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
           </div>
         </div>
       </div>
     </header>
-    <headerr class="tos-header">
+
+    <div class="tos-header">
       <div class="container">
         <span class="accent-pill">Standard Agreement</span>
         <h1 class="tos-title">
@@ -664,18 +520,18 @@
           conditions.
         </p>
       </div>
-    </headerr>
+    </div>
 
     <main class="container">
       <div class="tos-grid">
         <aside class="tos-nav">
           <h4>QUICK LINKS</h4>
           <ul>
-            <li><a href="index.html#acceptance">1. Acceptance</a></li>
-            <li><a href="index.html#services">2. Services</a></li>
-            <li><a href="index.html#payment">3. Payments</a></li>
-            <li><a href="index.html#intellectual">4. Ownership</a></li>
-            <li><a href="index.html#liability">5. Liability</a></li>
+            <li><a href="#acceptance">1. Acceptance</a></li>
+            <li><a href="#services">2. Services</a></li>
+            <li><a href="#payment">3. Payments</a></li>
+            <li><a href="#intellectual">4. Ownership</a></li>
+            <li><a href="#liability">5. Liability</a></li>
           </ul>
         </aside>
 
@@ -809,10 +665,8 @@
             <li>
               <a href="index.html#services" class="hover-link">Services</a>
             </li>
-            <li><a href="index.html#team" class="hover-link">Team</a></li>
-            <li>
-              <a href="portfolio.html" class="hover-link">Portfolio</a>
-            </li>
+            <li><a href="index.html#Team" class="hover-link">Team</a></li>
+            <li><a href="portfolio.html" class="hover-link">Portfolio</a></li>
           </ul>
         </div>
 
@@ -867,5 +721,22 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      const menuToggle = document.getElementById("mobile-menu");
+      const navMenu = document.getElementById("nav-menu");
+
+      menuToggle.addEventListener("click", () => {
+        menuToggle.classList.toggle("is-active");
+        navMenu.classList.toggle("active");
+      });
+
+      document.querySelectorAll(".nav-menu a").forEach((link) => {
+        link.addEventListener("click", () => {
+          menuToggle.classList.remove("is-active");
+          navMenu.classList.remove("active");
+        });
+      });
+    </script>
   </body>
 </html>

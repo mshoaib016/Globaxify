@@ -6,28 +6,28 @@
     <title>Privacy Policy | Globaxify</title>
 
     <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="icon" type="image/png" href="assets/fav icon.png" />
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
 
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
-
       :root {
         --primary-blue: #0056b3;
         --accent-green: #7cc53e;
         --text-dark: #1a1a1a;
         --white: #ffffff;
+        --slate: #64748b;
+        --navy: #0f172a;
+        --border: #f1f5f9;
+        --bg-light: #f8fafc;
         --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
       }
 
-      /* Base Reset */
       * {
         box-sizing: border-box;
         margin: 0;
@@ -36,30 +36,26 @@
 
       body {
         font-family: "Poppins", sans-serif;
-        background-color: #f8f9fa; /* Light background for contrast */
+        background-color: #f8f9fa;
+        color: var(--navy);
+        line-height: 1.6;
+        overflow-x: hidden;
       }
 
-      /* Header with Glassmorphism */
+      /* --- NAVIGATION --- */
       .luxury-nav {
         height: 80px;
         background: rgba(255, 255, 255, 0.8);
-        backdrop-filter: blur(15px); /* Modern blur effect */
+        backdrop-filter: blur(15px);
         -webkit-backdrop-filter: blur(15px);
         display: flex;
         align-items: center;
         position: fixed;
         width: 100%;
         top: 0;
-        z-index: 999;
-        transition: var(--transition);
+        z-index: 1000;
         border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-      }
-
-      /* Scroll hone par header thora chota aur shadow wala ho jayega */
-      .luxury-nav.scrolled {
-        height: 70px;
-        background: rgba(255, 255, 255, 0.95);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        transition: var(--transition);
       }
 
       .nav-container {
@@ -72,58 +68,29 @@
         padding: 0 25px;
       }
 
-      /* Logo Animation */
-      .logo {
-        display: flex;
-        align-items: center;
-      }
-
-      .logo-link {
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-      }
-
       .nav-brand-img {
         height: 150px;
         width: auto;
-        display: block;
-        object-fit: contain;
         transition: transform 0.3s ease;
       }
 
-      /* Hover Effect: Logo par halka sa zoom */
-      .logo-link:hover .nav-brand-img {
-        transform: scale(1.05);
-      }
-
-      /* Mobile Responsive */
-      @media (max-width: 768px) {
-        .nav-brand-img {
-          height: 32px;
-        }
-      }
-
-      /* Navigation Links & Hover Effect */
       .nav-menu {
         display: flex;
         list-style: none;
+        align-items: center;
       }
 
       .nav-menu li a {
         color: var(--text-dark);
         text-decoration: none;
-        margin: 0 20px;
+        margin: 0 15px;
         font-size: 0.9rem;
-        font-weight: 500;
+        font-weight: 600;
         text-transform: uppercase;
-        letter-spacing: 0.5px;
         position: relative;
-        padding: 5px 0;
         transition: var(--transition);
       }
 
-      /* Modern Underline Animation */
       .nav-menu li a::after {
         content: "";
         position: absolute;
@@ -140,18 +107,11 @@
         transform: translateX(-50%);
       }
 
-      .nav-menu li a:hover {
-        color: var(--primary-blue);
-      }
-
       .nav-menu li a:hover::after {
         width: 100%;
       }
 
-      /* Premium Button with Shine Animation */
       .btn-action {
-        position: relative;
-        overflow: hidden; /* Shine effect ko andar rakhne ke liye */
         background: var(--primary-blue);
         color: white !important;
         padding: 12px 28px;
@@ -159,97 +119,27 @@
         text-decoration: none;
         font-weight: 600;
         font-size: 0.85rem;
+        box-shadow: 0 4px 15px rgba(0, 86, 179, 0.3);
         transition: var(--transition);
         display: inline-block;
-        border: none;
-        box-shadow: 0 4px 15px rgba(0, 86, 179, 0.3);
       }
 
-      .btn-action::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-          120deg,
-          transparent,
-          rgba(255, 255, 255, 0.3),
-          transparent
-        );
-        transition: 0.6s;
+      .menu-toggle {
+        display: none;
+        cursor: pointer;
+        z-index: 1001;
       }
-
-      .btn-action:hover::before {
-        left: 100%;
-      }
-
-      .btn-action:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 8px 25px rgba(0, 86, 179, 0.4);
-        background: #004494;
-      }
-
-      /* Mobile Toggle Animation */
       .menu-toggle .bar {
         width: 25px;
         height: 2px;
-        margin: 6px auto;
         background: var(--text-dark);
-        transition: var(--transition);
-      }
-
-      /* Active State for Mobile Menu */
-      .menu-toggle.is-active .bar:nth-child(2) {
-        opacity: 0;
-      }
-      .menu-toggle.is-active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-      }
-      .menu-toggle.is-active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-      }
-      /* --- GLOBAL STYLES --- */
-      :root {
-        --p-blue: #0066cc;
-        --p-green: #7cc53e;
-        --navy: #0f172a;
-        --slate: #64748b;
-        --bg-light: #f8fafc;
-        --white: #ffffff;
-        --border: #f1f5f9;
-      }
-
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        font-family: "Plus Jakarta Sans", sans-serif;
-        background-color: var(--white);
-        color: var(--navy);
-        line-height: 1.6;
-        scroll-behavior: smooth;
-      }
-
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 25px;
-      }
-
-      .text-glow {
-        background: linear-gradient(90deg, var(--p-blue), var(--p-green));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        margin: 6px 0;
+        transition: 0.4s;
       }
 
       /* --- HERO SECTION --- */
       .policy-hero {
-        padding: 120px 0 80px;
+        padding: 140px 0 80px;
         background:
           radial-gradient(
             circle at top right,
@@ -267,13 +157,13 @@
 
       .policy-badge {
         background: rgba(0, 102, 204, 0.1);
-        color: var(--p-blue);
+        color: var(--primary-blue);
         padding: 8px 20px;
         border-radius: 100px;
         font-size: 0.75rem;
         font-weight: 800;
-        letter-spacing: 2px;
         text-transform: uppercase;
+        letter-spacing: 2px;
       }
 
       .policy-title {
@@ -282,7 +172,15 @@
         margin: 25px 0;
         letter-spacing: -2px;
       }
-
+      .text-glow {
+        background: linear-gradient(
+          90deg,
+          var(--primary-blue),
+          var(--accent-green)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
       .policy-subtitle {
         color: var(--slate);
         font-size: 1.1rem;
@@ -290,7 +188,12 @@
         margin: 0 auto;
       }
 
-      /* --- LAYOUT GRID --- */
+      /* --- MAIN LAYOUT --- */
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 25px;
+      }
       .policy-main {
         display: grid;
         grid-template-columns: 300px 1fr;
@@ -298,20 +201,17 @@
         padding: 100px 0;
       }
 
-      /* STICKY SIDEBAR */
       .policy-sidebar {
         position: sticky;
-        top: 40px;
+        top: 100px;
         height: fit-content;
       }
-
       .sidebar-box {
         background: var(--bg-light);
         padding: 30px;
         border-radius: 24px;
         border: 1px solid var(--border);
       }
-
       .sidebar-box h4 {
         font-size: 0.8rem;
         letter-spacing: 2px;
@@ -319,14 +219,9 @@
         margin-bottom: 25px;
         text-transform: uppercase;
       }
-
       .sidebar-nav {
         list-style: none;
       }
-      .sidebar-nav li {
-        margin-bottom: 15px;
-      }
-
       .side-link {
         text-decoration: none;
         color: var(--slate);
@@ -336,40 +231,31 @@
         display: flex;
         align-items: center;
         gap: 10px;
+        margin-bottom: 15px;
       }
-
       .side-link:hover {
-        color: var(--p-blue);
+        color: var(--primary-blue);
         transform: translateX(5px);
       }
 
-      /* CONTENT CARDS */
       .policy-content {
         display: flex;
         flex-direction: column;
         gap: 40px;
       }
-
       .content-card {
         background: var(--white);
         padding: 50px;
         border-radius: 32px;
         border: 1px solid var(--border);
-        transition: 0.4s ease;
+        transition: 0.4s;
       }
-
-      .content-card:hover {
-        box-shadow: 0 30px 60px rgba(15, 23, 42, 0.04);
-        border-color: rgba(0, 102, 204, 0.2);
-      }
-
       .content-card h2 {
         font-size: 2rem;
         margin-bottom: 25px;
         font-weight: 800;
         color: var(--navy);
       }
-
       .content-card p {
         color: var(--slate);
         font-size: 1.05rem;
@@ -383,7 +269,6 @@
         grid-template-columns: 1fr 1fr;
         gap: 15px;
       }
-
       .data-list li {
         background: #f1f5f9;
         padding: 15px 20px;
@@ -394,12 +279,11 @@
         align-items: center;
         gap: 10px;
       }
-
       .data-list i {
-        color: var(--p-green);
+        color: var(--accent-green);
       }
 
-      /* CONTACT CTA */
+      /* CTA */
       .contact-cta {
         background: var(--navy);
         padding: 60px;
@@ -408,31 +292,23 @@
         color: var(--white);
         margin-top: 40px;
       }
-
-      .contact-cta h3 {
-        font-size: 2.2rem;
-        margin-bottom: 15px;
-      }
-      .contact-cta p {
-        opacity: 0.7;
-        margin-bottom: 30px;
-      }
-
       .cta-btn {
         display: inline-block;
-        background: linear-gradient(90deg, var(--p-blue), var(--p-green));
+        background: linear-gradient(
+          90deg,
+          var(--primary-blue),
+          var(--accent-green)
+        );
         color: white;
         padding: 18px 40px;
         border-radius: 15px;
         text-decoration: none;
         font-weight: 700;
         transition: 0.3s;
+        margin-top: 20px;
       }
 
-      .cta-btn:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 20px 40px rgba(0, 102, 204, 0.3);
-      }
+      /* --- FOOTER --- */
       @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap");
 
       .neo-footer {
@@ -653,31 +529,6 @@
           gap: 15px;
         }
       }
-
-      /* --- RESPONSIVE --- */
-      @media (max-width: 1024px) {
-        .policy-main {
-          grid-template-columns: 1fr;
-        }
-        .policy-sidebar {
-          display: none;
-        }
-      }
-
-      @media (max-width: 600px) {
-        .policy-hero {
-          padding: 80px 0 50px;
-        }
-        .content-card {
-          padding: 30px;
-        }
-        .data-list {
-          grid-template-columns: 1fr;
-        }
-        .contact-cta {
-          padding: 40px 20px;
-        }
-      }
     </style>
   </head>
   <body>
@@ -705,14 +556,15 @@
         <div class="nav-actions">
           <a href="#" class="btn-action desktop-only">Let's Talk</a>
           <div class="menu-toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
           </div>
         </div>
       </div>
     </header>
-    <headerr class="policy-hero">
+
+    <header class="policy-hero">
       <div class="container">
         <span class="policy-badge">Legal Intelligence</span>
         <h1 class="policy-title">
@@ -723,7 +575,7 @@
           meticulously manage and protect your digital footprint.
         </p>
       </div>
-    </headerr>
+    </header>
 
     <main class="container">
       <div class="policy-main">
@@ -876,10 +728,8 @@
             <li>
               <a href="index.html#services" class="hover-link">Services</a>
             </li>
-            <li><a href="index.html#team" class="hover-link">Team</a></li>
-            <li>
-              <a href="portfolio.html" class="hover-link">Portfolio</a>
-            </li>
+            <li><a href="index.html#Team" class="hover-link">Team</a></li>
+            <li><a href="portfolio.html" class="hover-link">Portfolio</a></li>
           </ul>
         </div>
 
@@ -934,5 +784,23 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      const menuToggle = document.getElementById("mobile-menu");
+      const navMenu = document.getElementById("nav-menu");
+
+      menuToggle.addEventListener("click", () => {
+        menuToggle.classList.toggle("is-active");
+        navMenu.classList.toggle("active");
+      });
+
+      // Close menu when link is clicked
+      document.querySelectorAll(".nav-menu a").forEach((link) => {
+        link.addEventListener("click", () => {
+          menuToggle.classList.remove("is-active");
+          navMenu.classList.remove("active");
+        });
+      });
+    </script>
   </body>
 </html>
