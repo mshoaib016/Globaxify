@@ -4,57 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Privacy Policy | Globaxify</title>
-
     <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" type="image/png" href="assets/fav icon.png" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-
     <style>
       :root {
         --primary-blue: #0056b3;
-        --accent-green: #7cc53e;
-        --text-dark: #1a1a1a;
-        --white: #ffffff;
-        --slate: #64748b;
-        --navy: #0f172a;
-        --border: #f1f5f9;
-        --bg-light: #f8fafc;
-        --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-      }
-
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-
-      body {
-        font-family: "Poppins", sans-serif;
-        background-color: #f8f9fa;
-        color: var(--navy);
-        line-height: 1.6;
-        overflow-x: hidden;
-      }
-
-      /* --- NAVIGATION --- */
-      @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap");
-
-      :root {
-        --primary-blue: #0066cc;
         --accent-green: #7cc53e;
         --dark-navy: #0f172a;
         --slate: #64748b;
         --light-text: #475569;
         --white: #ffffff;
         --card-bg: #f8fafc;
-        --border-color: #f1f5f9;
-        --transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+        --border-color: #e2e8f0;
+        --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        --shadow-soft: 0 10px 40px rgba(0, 0, 0, 0.08);
+        --shadow-medium: 0 20px 60px rgba(0, 0, 0, 0.12);
       }
 
       * {
@@ -63,834 +35,1231 @@
         box-sizing: border-box;
       }
 
-      html {
-        scroll-behavior: smooth;
-      }
-
       body {
         font-family: "Plus Jakarta Sans", sans-serif;
         background: var(--white);
         color: var(--dark-navy);
+        line-height: 1.7;
         overflow-x: hidden;
-        line-height: 1.6;
       }
 
-      section {
-        scroll-margin-top: 100px;
-      }
-
-      .container {
-        max-width: 1250px;
-        margin: 0 auto;
-        padding: 0 25px;
-      }
-
-      /* --- 2. NAVBAR --- */
-      .navbar {
-        position: fixed;
-        top: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 90%;
-        max-width: 1200px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 70px;
-        padding: 10px 30px;
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        border-radius: 60px;
-        z-index: 9999;
-        transition: var(--transition);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-      }
-
-      .logo-link {
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        height: 100%; /* Full height lega */
-      }
-
-      .logo-img {
-        height: 150px; /* Navbar height ke hisaab se adjust */
-        width: auto;
-        max-height: 150px; /* Navbar se bahar na nikle */
-        display: block;
-        object-fit: contain;
-        transition: all 0.3s ease;
-      }
-
-      .logo-link:hover {
-        transform: scale(1.05);
-      }
-
-      .logo-link:hover .logo-img {
-        filter: brightness(1.1);
-      }
-
-      /* Mobile pe thora chota */
-      @media (max-width: 768px) {
-        .logo-img {
-          height: 40px;
-          max-height: 40px;
-        }
-      }
-
-      .nav-links ul {
-        display: flex;
-        list-style: none;
-        gap: 15px;
-      }
-
-      .nav-links ul li a {
-        text-decoration: none;
-        color: var(--dark-navy);
-        padding: 10px 20px;
-        border-radius: 50px;
-        font-size: 15px;
-        font-weight: 700;
-        transition: var(--transition);
-        display: block;
-      }
-
-      .nav-links ul li a:hover,
-      .nav-links ul li a.active {
-        background: var(--primary-blue);
-        color: var(--white);
-      }
-
-      .right-side {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-      }
-
-      button {
-        width: 9em;
-        height: 3em;
-        border-radius: 30em;
-        font-size: 15px;
-        font-family: inherit;
-        border: none;
-        position: relative;
-        overflow: hidden;
-        z-index: 1;
-        box-shadow:
-          6px 6px 12px #9bb6db,
-          -6px -6px 12px #a7deb9;
-      }
-
-      button::before {
-        content: "";
-        width: 0;
-        height: 3em;
-        border-radius: 30em;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-image: linear-gradient(to right, #0fd850 0%, #475cf9 100%);
-        transition: 0.5s ease;
-        display: block;
-        z-index: -1;
-      }
-
-      button:hover::before {
-        width: 9em;
-      }
-
-      .menu-toggle {
-        display: none;
-        cursor: pointer;
-        flex-direction: column;
-        gap: 5px;
-      }
-
-      .menu-toggle span {
-        width: 25px;
-        height: 3px;
-        background: var(--dark-navy);
-        border-radius: 2px;
-        transition: var(--transition);
-      }
-
-      .mobile-menu-header {
-        display: none;
-      }
-
-      .menu-overlay {
+      /* Animated Background */
+      .bg-animation {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.4);
-        opacity: 0;
-        visibility: hidden;
-        transition: 0.3s;
-        z-index: 9998;
+        z-index: -1;
+        overflow: hidden;
       }
 
-      .menu-overlay.active {
-        opacity: 1;
-        visibility: visible;
+      .bg-animation .shape {
+        position: absolute;
+        filter: blur(80px);
+        opacity: 0.4;
+        animation: float 20s infinite ease-in-out;
       }
 
-      /* --- HERO SECTION --- */
-      .policy-hero {
-        padding: 140px 0 80px;
-        background:
-          radial-gradient(
-            circle at top right,
-            rgba(0, 102, 204, 0.05),
-            transparent
-          ),
-          radial-gradient(
-            circle at bottom left,
-            rgba(124, 197, 62, 0.05),
-            transparent
-          );
-        text-align: center;
-        border-bottom: 1px solid var(--border);
+      .shape-1 {
+        width: 400px;
+        height: 400px;
+        background: var(--primary-blue);
+        border-radius: 50%;
+        top: -10%;
+        left: -10%;
+        animation-delay: 0s;
       }
 
-      .policy-badge {
-        background: rgba(0, 102, 204, 0.1);
-        color: var(--primary-blue);
-        padding: 8px 20px;
-        border-radius: 100px;
-        font-size: 0.75rem;
-        font-weight: 800;
-        text-transform: uppercase;
-        letter-spacing: 2px;
+      .shape-2 {
+        width: 300px;
+        height: 300px;
+        background: var(--accent-green);
+        border-radius: 50%;
+        top: 40%;
+        right: -5%;
+        animation-delay: 5s;
       }
 
-      .policy-title {
-        font-size: clamp(2.5rem, 8vw, 4rem);
-        font-weight: 900;
-        margin: 25px 0;
-        letter-spacing: -2px;
-      }
-      .text-glow {
-        background: linear-gradient(
-          90deg,
-          var(--primary-blue),
-          var(--accent-green)
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-      .policy-subtitle {
-        color: var(--slate);
-        font-size: 1.1rem;
-        max-width: 600px;
-        margin: 0 auto;
+      .shape-3 {
+        width: 250px;
+        height: 250px;
+        background: linear-gradient(45deg, #f093fb, #f5576c);
+        border-radius: 50%;
+        bottom: -10%;
+        left: 30%;
+        animation-delay: 10s;
       }
 
-      /* --- MAIN LAYOUT --- */
+      @keyframes float {
+        0%,
+        100% {
+          transform: translate(0, 0) scale(1);
+        }
+        33% {
+          transform: translate(30px, -30px) scale(1.1);
+        }
+        66% {
+          transform: translate(-20px, 20px) scale(0.9);
+        }
+      }
+
+      /* Header Section */
+      .policy-header {
+        background: linear-gradient(135deg, var(--dark-navy) 0%, #1e293b 100%);
+        color: var(--white);
+        padding: 100px 0 80px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .policy-header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      }
+
       .container {
         max-width: 1200px;
         margin: 0 auto;
         padding: 0 25px;
-      }
-      .policy-main {
-        display: grid;
-        grid-template-columns: 300px 1fr;
-        gap: 60px;
-        padding: 100px 0;
+        position: relative;
+        z-index: 1;
       }
 
-      .policy-sidebar {
-        position: sticky;
-        top: 100px;
-        height: fit-content;
+      .breadcrumb {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 30px;
+        font-size: 0.9rem;
+        opacity: 0.8;
       }
-      .sidebar-box {
-        background: var(--bg-light);
-        padding: 30px;
-        border-radius: 24px;
-        border: 1px solid var(--border);
-      }
-      .sidebar-box h4 {
-        font-size: 0.8rem;
-        letter-spacing: 2px;
-        color: var(--slate);
-        margin-bottom: 25px;
-        text-transform: uppercase;
-      }
-      .sidebar-nav {
-        list-style: none;
-      }
-      .side-link {
+
+      .breadcrumb a {
+        color: var(--white);
         text-decoration: none;
-        color: var(--slate);
-        font-weight: 600;
-        font-size: 0.95rem;
-        transition: 0.3s;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        margin-bottom: 15px;
-      }
-      .side-link:hover {
-        color: var(--primary-blue);
-        transform: translateX(5px);
+        transition: all 0.3s ease;
       }
 
-      .policy-content {
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-      }
-      .content-card {
-        background: var(--white);
-        padding: 50px;
-        border-radius: 32px;
-        border: 1px solid var(--border);
-        transition: 0.4s;
-      }
-      .content-card h2 {
-        font-size: 2rem;
-        margin-bottom: 25px;
-        font-weight: 800;
-        color: var(--navy);
-      }
-      .content-card p {
-        color: var(--slate);
-        font-size: 1.05rem;
-        margin-bottom: 20px;
-        line-height: 1.8;
-      }
-
-      .data-list {
-        list-style: none;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 15px;
-      }
-      .data-list li {
-        background: #f1f5f9;
-        padding: 15px 20px;
-        border-radius: 12px;
-        font-size: 0.95rem;
-        font-weight: 600;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-      }
-      .data-list i {
+      .breadcrumb a:hover {
         color: var(--accent-green);
       }
 
-      /* CTA */
-      .contact-cta {
-        background: var(--navy);
-        padding: 60px;
-        border-radius: 40px;
+      .breadcrumb i {
+        font-size: 0.7rem;
+      }
+
+      .header-content {
         text-align: center;
-        color: var(--white);
-        margin-top: 40px;
-      }
-      .cta-btn {
-        display: inline-block;
-        background: linear-gradient(
-          90deg,
-          var(--primary-blue),
-          var(--accent-green)
-        );
-        color: white;
-        padding: 18px 40px;
-        border-radius: 15px;
-        text-decoration: none;
-        font-weight: 700;
-        transition: 0.3s;
-        margin-top: 20px;
       }
 
-      /* --- FOOTER --- */
-      @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap");
-
-      .neo-footer {
-        --f-blue: #0066cc;
-        --f-green: #7cc53e;
-        --f-dark: #0f172a;
-        --f-slate: #64748b;
-        --f-border: #f1f5f9;
-
-        background: #ffffff;
-        color: var(--f-dark);
-        font-family: "Plus Jakarta Sans", sans-serif;
-        padding: 80px 0 0;
-        border-top: 1px solid var(--f-border);
-      }
-
-      .footer-grid-container {
-        max-width: 1300px;
-        margin: 0 auto;
-        padding: 0 40px 60px;
-        display: grid;
-        grid-template-columns: 1.5fr 0.8fr 0.8fr 1.2fr;
-        gap: 50px;
-      }
-
-      /* Logo & Brand */
-      .brand-logo-img {
-        height: 45px;
-        width: auto;
-        margin-bottom: 20px;
-        transition: transform 0.3s ease;
-      }
-      .logo-link:hover .brand-logo-img {
-        transform: scale(1.05);
-      }
-
-      .brand-para {
-        color: var(--f-slate);
-        line-height: 1.7;
-        font-size: 0.95rem;
-        margin-bottom: 30px;
-        max-width: 300px;
-      }
-
-      /* Social Buttons */
-      /* Social Wrapper ko set karne ke liye ye use karein */
-      .social-wrapper {
-        display: flex;
-        gap: 12px;
-        margin-top: 20px;
-      }
-
-      .social-btn {
-        width: 42px;
-        height: 42px;
-        border-radius: 12px;
-        background: #f8fafc;
-        border: 1px solid var(--f-border);
+      .header-icon {
+        width: 80px;
+        height: 80px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 24px;
         display: flex;
         align-items: center;
         justify-content: center;
-        color: var(--f-dark);
-        transition: 0.3s ease;
-        text-decoration: none;
-        font-size: 1.2rem; /* Icon ka size thora bara karne ke liye */
-      }
-
-      .social-btn:hover {
-        background: var(--f-blue);
-        color: #fff !important; /* Hover par icon white ho jayega */
-        transform: translateY(-5px);
-        box-shadow: 0 10px 15px rgba(0, 102, 204, 0.1);
-      }
-
-      /* Specific colors on hover (Optional - agar aap colors dikhana chahen) */
-      .social-btn:hover .fa-upwork {
-        color: #fff;
-      }
-      .social-btn:hover .fa-tiktok {
-        color: #fff;
-      }
-      .social-btn:hover .fa-facebook-square {
-        color: #fff;
-      }
-
-      /* Titles & Links */
-      .block-title {
-        font-size: 0.8rem;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        font-weight: 800;
-        margin-bottom: 25px;
-        color: var(--f-dark);
-      }
-
-      .nav-list {
-        list-style: none;
-        padding: 0;
-      }
-      .nav-list li {
-        margin-bottom: 12px;
-      }
-      .hover-link {
-        text-decoration: none;
-        color: var(--f-slate);
-        font-size: 0.95rem;
-        font-weight: 500;
-        transition: 0.3s;
-      }
-      .hover-link:hover {
-        color: var(--f-blue);
-        padding-left: 5px;
-      }
-
-      .hiring-badge {
-        background: rgba(124, 197, 62, 0.1);
-        color: var(--f-green);
-        font-size: 0.7rem;
-        padding: 2px 8px;
-        border-radius: 100px;
-        font-weight: 700;
-      }
-
-      /* Newsletter Input */
-      .modern-input-group {
-        display: flex;
-        background: #f8fafc;
-        border: 1px solid var(--f-border);
-        padding: 6px;
-        border-radius: 16px;
-        transition: 0.3s;
-      }
-      .modern-input-group:focus-within {
-        border-color: var(--f-blue);
-        background: #fff;
-      }
-      .modern-input-group input {
-        flex: 1;
-        border: none;
-        background: transparent;
-        padding: 10px;
-        outline: none;
-      }
-      .submit-btn {
-        background: linear-gradient(135deg, var(--f-blue), var(--f-green));
-        color: #fff;
-        border: none;
-        width: 44px;
-        height: 44px;
-        border-radius: 12px;
-        cursor: pointer;
-      }
-
-      /* Bottom Bar */
-      .bottom-bar {
-        border-top: 1px solid var(--f-border);
-        padding: 30px 0;
-        background: #fafafa;
-      }
-      .bottom-wrapper {
-        max-width: 1300px;
-        margin: 0 auto;
-        padding: 0 40px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .copy-text {
-        font-size: 0.85rem;
-        color: var(--f-slate);
-      }
-      .status-indicator {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        font-size: 0.8rem;
-        color: var(--f-slate);
-        font-weight: 600;
-      }
-      .dot {
-        width: 8px;
-        height: 8px;
-        background: var(--f-green);
-        border-radius: 50%;
-        box-shadow: 0 0 10px var(--f-green);
+        margin: 0 auto 25px;
+        font-size: 2.5rem;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
         animation: pulse 2s infinite;
       }
 
       @keyframes pulse {
-        0% {
-          opacity: 1;
+        0%,
+        100% {
+          box-shadow: 0 0 0 0 rgba(124, 197, 62, 0.4);
         }
         50% {
-          opacity: 0.4;
+          box-shadow: 0 0 0 20px rgba(124, 197, 62, 0);
         }
-        100% {
-          opacity: 1;
-        }
+      }
+
+      .policy-header h1 {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        font-weight: 800;
+        margin-bottom: 15px;
+        letter-spacing: -2px;
+      }
+
+      .last-updated {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 10px 20px;
+        border-radius: 50px;
+        font-size: 0.85rem;
+        backdrop-filter: blur(10px);
+      }
+
+      /* Main Content */
+      .policy-content {
+        padding: 80px 0;
+      }
+
+      .content-grid {
+        display: grid;
+        grid-template-columns: 280px 1fr;
+        gap: 60px;
+        align-items: start;
+      }
+
+      /* Sidebar Navigation */
+      .policy-sidebar {
+        position: sticky;
+        top: 100px;
+      }
+
+      .sidebar-card {
+        background: var(--white);
+        border-radius: 24px;
+        padding: 30px;
+        box-shadow: var(--shadow-soft);
+        border: 1px solid var(--border-color);
+      }
+
+      .sidebar-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: var(--dark-navy);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .sidebar-title i {
+        color: var(--accent-green);
+      }
+
+      .nav-list {
+        list-style: none;
+      }
+
+      .nav-list li {
+        margin-bottom: 8px;
+      }
+
+      .nav-list a {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 16px;
+        border-radius: 12px;
+        color: var(--slate);
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+      }
+
+      .nav-list a:hover,
+      .nav-list a.active {
+        background: linear-gradient(
+          135deg,
+          rgba(0, 86, 179, 0.1),
+          rgba(124, 197, 62, 0.1)
+        );
+        color: var(--primary-blue);
+      }
+
+      .nav-list a i {
+        font-size: 0.8rem;
+        opacity: 0;
+        transition: all 0.3s ease;
+      }
+
+      .nav-list a:hover i,
+      .nav-list a.active i {
+        opacity: 1;
+        transform: translateX(5px);
+      }
+
+      /* Policy Sections */
+      .policy-main {
+        background: var(--white);
+        border-radius: 32px;
+        padding: 50px;
+        box-shadow: var(--shadow-soft);
+        border: 1px solid var(--border-color);
+      }
+
+      .policy-section {
+        margin-bottom: 50px;
+        padding-bottom: 50px;
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      .policy-section:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+
+      .section-header {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 25px;
+      }
+
+      .section-number {
+        width: 50px;
+        height: 50px;
+        background: linear-gradient(
+          135deg,
+          var(--primary-blue),
+          var(--accent-green)
+        );
+        color: var(--white);
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+        font-weight: 700;
+        flex-shrink: 0;
+      }
+
+      .section-title {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--dark-navy);
+      }
+
+      .policy-section p {
+        color: var(--light-text);
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .policy-section ul {
+        margin: 20px 0;
+        padding-left: 30px;
+      }
+
+      .policy-section li {
+        margin-bottom: 12px;
+        color: var(--light-text);
+        position: relative;
+      }
+
+      .policy-section li::marker {
+        color: var(--accent-green);
+      }
+
+      /* Info Cards */
+      .info-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin: 30px 0;
+      }
+
+      .info-card {
+        background: var(--card-bg);
+        border-radius: 20px;
+        padding: 25px;
+        border: 1px solid var(--border-color);
+        transition: all 0.3s ease;
+      }
+
+      .info-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-medium);
+        border-color: var(--accent-green);
+      }
+
+      .info-card-icon {
+        width: 50px;
+        height: 50px;
+        background: linear-gradient(
+          135deg,
+          rgba(0, 86, 179, 0.1),
+          rgba(124, 197, 62, 0.1)
+        );
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+        color: var(--primary-blue);
+        margin-bottom: 15px;
+      }
+
+      .info-card h4 {
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: var(--dark-navy);
+      }
+
+      .info-card p {
+        font-size: 0.9rem;
+        margin: 0;
+      }
+
+      /* Data Collection Table */
+      .data-table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin: 30px 0;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: var(--shadow-soft);
+      }
+
+      .data-table th {
+        background: linear-gradient(135deg, var(--dark-navy), #1e293b);
+        color: var(--white);
+        padding: 20px;
+        text-align: left;
+        font-weight: 600;
+        font-size: 0.9rem;
+      }
+
+      .data-table td {
+        padding: 20px;
+        border-bottom: 1px solid var(--border-color);
+        background: var(--white);
+        color: var(--light-text);
+        font-size: 0.95rem;
+      }
+
+      .data-table tr:last-child td {
+        border-bottom: none;
+      }
+
+      .data-table tr:hover td {
+        background: var(--card-bg);
+      }
+
+      .data-type {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 14px;
+        border-radius: 50px;
+        font-size: 0.8rem;
+        font-weight: 600;
+      }
+
+      .type-personal {
+        background: #dbeafe;
+        color: #1e40af;
+      }
+
+      .type-usage {
+        background: #dcfce7;
+        color: #166534;
+      }
+
+      .type-technical {
+        background: #fce7f3;
+        color: #be185d;
+      }
+
+      /* Rights Cards */
+      .rights-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin: 30px 0;
+      }
+
+      .right-card {
+        background: linear-gradient(135deg, var(--card-bg), var(--white));
+        border-radius: 20px;
+        padding: 30px;
+        border: 1px solid var(--border-color);
+        text-align: center;
+        transition: all 0.3s ease;
+      }
+
+      .right-card:hover {
+        transform: translateY(-10px);
+        box-shadow: var(--shadow-medium);
+        border-color: var(--primary-blue);
+      }
+
+      .right-icon {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(
+          135deg,
+          var(--primary-blue),
+          var(--accent-green)
+        );
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        color: var(--white);
+        margin: 0 auto 20px;
+      }
+
+      .right-card h4 {
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: var(--dark-navy);
+      }
+
+      .right-card p {
+        font-size: 0.9rem;
+        margin: 0;
+      }
+
+      /* Security Features */
+      .security-features {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        margin: 25px 0;
+      }
+
+      .security-item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 15px 20px;
+        background: var(--card-bg);
+        border-radius: 12px;
+        border: 1px solid var(--border-color);
+      }
+
+      .security-item i {
+        color: var(--accent-green);
+        font-size: 1.2rem;
+      }
+
+      .security-item span {
+        font-weight: 600;
+        color: var(--dark-navy);
+      }
+
+      /* Contact CTA */
+      .contact-cta {
+        background: linear-gradient(
+          135deg,
+          var(--primary-blue),
+          var(--accent-green)
+        );
+        border-radius: 24px;
+        padding: 40px;
+        text-align: center;
+        color: var(--white);
+        margin-top: 50px;
+      }
+
+      .contact-cta h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+      }
+
+      .contact-cta p {
+        opacity: 0.9;
+        margin-bottom: 25px;
+      }
+
+      .cta-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: var(--white);
+        color: var(--primary-blue);
+        padding: 15px 30px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 700;
+        transition: all 0.3s ease;
+      }
+
+      .cta-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Footer Simple */
+      .simple-footer {
+        background: var(--dark-navy);
+        color: var(--white);
+        padding: 40px 0;
+        text-align: center;
+      }
+
+      .simple-footer p {
+        opacity: 0.8;
+        font-size: 0.9rem;
+      }
+
+      .simple-footer a {
+        color: var(--accent-green);
+        text-decoration: none;
       }
 
       /* Responsive */
       @media (max-width: 1024px) {
-        .footer-grid-container {
-          grid-template-columns: 1fr 1fr;
+        .content-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .policy-sidebar {
+          position: relative;
+          top: 0;
+          order: 2;
+        }
+
+        .sidebar-card {
+          padding: 20px;
+        }
+
+        .nav-list {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+        }
+
+        .nav-list li {
+          margin: 0;
+        }
+
+        .nav-list a {
+          padding: 8px 16px;
+          font-size: 0.85rem;
+        }
+
+        .rights-grid {
+          grid-template-columns: repeat(2, 1fr);
         }
       }
-      @media (max-width: 650px) {
-        .footer-grid-container {
-          grid-template-columns: 1fr;
-          text-align: center;
+
+      @media (max-width: 768px) {
+        .policy-header {
+          padding: 60px 0 50px;
         }
-        .social-wrapper,
-        .main-logo {
-          justify-content: center;
+
+        .policy-main {
+          padding: 30px;
+          border-radius: 20px;
         }
-        .bottom-wrapper {
+
+        .section-header {
           flex-direction: column;
+          text-align: center;
           gap: 15px;
         }
+
+        .section-title {
+          font-size: 1.4rem;
+        }
+
+        .info-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .rights-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .security-features {
+          grid-template-columns: 1fr;
+        }
+
+        .data-table {
+          font-size: 0.85rem;
+        }
+
+        .data-table th,
+        .data-table td {
+          padding: 15px;
+        }
+      }
+
+      /* Scroll Animations */
+      .fade-in {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.6s ease;
+      }
+
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
       }
     </style>
   </head>
   <body>
-    <header class="navbar">
-      <div class="logo">
-        <a href="index.html" class="logo-link">
-          <img
-            src="assets/header logo.png"
-            alt="Globaxify Logo"
-            class="logo-img"
-          />
-        </a>
-      </div>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
 
-      <nav class="nav-links" id="navLinks">
-        <div class="mobile-menu-header">
-          <div>Menu</div>
-          <div class="close-btn" id="closeBtn">&times;</div>
+    <!-- Header -->
+    <header class="policy-header">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="index.html"><i class="fas fa-home"></i> Home</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>Privacy Policy</span>
         </div>
-        <ul>
-          <li><a href="index.html#home">Home</a></li>
-          <li><a href="index.html#services">Services</a></li>
-          <li><a href="index.html#Team">Team</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
-        </ul>
-      </nav>
-
-      <div class="right-side">
-        <button>Let's Talk</button>
-        <div class="menu-toggle" id="menuToggle">
-          <span></span>
-          <span></span>
-          <span></span>
+        <div class="header-content">
+          <div class="header-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h1>Privacy Policy</h1>
+          <div class="last-updated">
+            <i class="fas fa-calendar-alt"></i>
+            Last Updated: February 25, 2026
+          </div>
         </div>
       </div>
     </header>
 
-    <main class="container">
-      <div class="policy-main">
-        <aside class="policy-sidebar">
-          <div class="sidebar-box">
-            <h4>Table of Contents</h4>
-            <nav class="sidebar-nav">
-              <li>
-                <a href="#section1" class="side-link"
-                  ><i class="fas fa-chevron-right"></i> Introduction</a
-                >
-              </li>
-              <li>
-                <a href="#section2" class="side-link"
-                  ><i class="fas fa-chevron-right"></i> Data Collection</a
-                >
-              </li>
-              <li>
-                <a href="#section3" class="side-link"
-                  ><i class="fas fa-chevron-right"></i> Usage Rights</a
-                >
-              </li>
-              <li>
-                <a href="#section4" class="side-link"
-                  ><i class="fas fa-chevron-right"></i> Data Security</a
-                >
-              </li>
-              <li>
-                <a href="#section5" class="side-link"
-                  ><i class="fas fa-chevron-right"></i> Cookies Policy</a
-                >
-              </li>
-            </nav>
-          </div>
-        </aside>
+    <!-- Main Content -->
+    <main class="policy-content">
+      <div class="container">
+        <div class="content-grid">
+          <!-- Sidebar -->
+          <aside class="policy-sidebar">
+            <div class="sidebar-card">
+              <h3 class="sidebar-title">
+                <i class="fas fa-list-ul"></i>
+                Quick Navigation
+              </h3>
+              <ul class="nav-list">
+                <li>
+                  <a href="#intro" class="active"
+                    >Introduction <i class="fas fa-arrow-right"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#collect"
+                    >Information We Collect <i class="fas fa-arrow-right"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#use"
+                    >How We Use Info <i class="fas fa-arrow-right"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#share"
+                    >Information Sharing <i class="fas fa-arrow-right"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#rights"
+                    >Your Rights <i class="fas fa-arrow-right"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#security"
+                    >Data Security <i class="fas fa-arrow-right"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#retention"
+                    >Data Retention <i class="fas fa-arrow-right"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#changes"
+                    >Policy Changes <i class="fas fa-arrow-right"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#contact"
+                    >Contact Us <i class="fas fa-arrow-right"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </aside>
 
-        <div class="policy-content">
-          <section class="content-card" id="section1">
-            <h2>1. Introduction</h2>
-            <p>
-              Globaxify Inc. ("we", "us", "our") takes your privacy with the
-              utmost seriousness. This document details the specific types of
-              information we collect when you interact with our services and the
-              underlying reasons for doing so.
-            </p>
-            <p>
-              Our primary objective is to maintain radical transparency and
-              world-class security, allowing you to focus on your digital growth
-              with complete peace of mind.
-            </p>
-          </section>
+          <!-- Main Content -->
+          <div class="policy-main">
+            <!-- Section 1: Introduction -->
+            <section class="policy-section fade-in" id="intro">
+              <div class="section-header">
+                <span class="section-number">01</span>
+                <h2 class="section-title">Introduction</h2>
+              </div>
+              <p>
+                At Globaxify, we respect your privacy and are committed to
+                protecting your personal data. This Privacy Policy explains how
+                we collect, use, store, and safeguard your information when you
+                visit our website or use our services.
+              </p>
+              <p>
+                We adhere to the highest standards of data protection and comply
+                with applicable privacy laws, including GDPR, CCPA, and other
+                international regulations. By using our website, you consent to
+                the practices described in this policy.
+              </p>
 
-          <section class="content-card" id="section2">
-            <h2>2. Data Collection</h2>
-            <p>
-              We only collect information that is strictly necessary to provide
-              a superior and personalized service experience:
-            </p>
-            <ul class="data-list">
-              <li><i class="fas fa-user-shield"></i> Name & Email</li>
-              <li><i class="fas fa-globe"></i> IP Address</li>
-              <li><i class="fas fa-microchip"></i> Device Metadata</li>
-              <li><i class="fas fa-file-invoice"></i> Billing Details</li>
-            </ul>
-          </section>
+              <div class="info-grid">
+                <div class="info-card">
+                  <div class="info-card-icon">
+                    <i class="fas fa-lock"></i>
+                  </div>
+                  <h4>Data Protection</h4>
+                  <p>
+                    Your data is encrypted and stored securely using
+                    industry-standard protocols.
+                  </p>
+                </div>
+                <div class="info-card">
+                  <div class="info-card-icon">
+                    <i class="fas fa-user-check"></i>
+                  </div>
+                  <h4>Your Control</h4>
+                  <p>
+                    You have full control over your personal data and can
+                    request its deletion anytime.
+                  </p>
+                </div>
+              </div>
+            </section>
 
-          <section id="section3" class="content-card">
-            <h2>3. Usage Rights</h2>
-            <p>
-              Your data is never sold to third-party advertisers. We utilize
-              your information exclusively for internal analytics, precise
-              project delivery, and high-priority personalized support.
-            </p>
-          </section>
+            <!-- Section 2: Information We Collect -->
+            <section class="policy-section fade-in" id="collect">
+              <div class="section-header">
+                <span class="section-number">02</span>
+                <h2 class="section-title">Information We Collect</h2>
+              </div>
+              <p>
+                We collect various types of information to provide and improve
+                our services. This includes information you provide directly and
+                data collected automatically.
+              </p>
 
-          <section id="section4" class="content-card">
-            <h2>4. Data Security</h2>
-            <p>
-              Globaxify employs <strong>AES-256 Encryption</strong> and
-              enterprise-grade security protocols. Our infrastructure is
-              continuously monitored and updated with the latest security
-              patches to proactively defend against potential breaches.
-            </p>
-          </section>
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Data Category</th>
+                    <th>Examples</th>
+                    <th>Collection Method</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <span class="data-type type-personal">
+                        <i class="fas fa-id-card"></i> Personal
+                      </span>
+                    </td>
+                    <td>
+                      Name, email, phone number, company name, billing address
+                    </td>
+                    <td>
+                      Contact forms, account registration, direct communication
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="data-type type-usage">
+                        <i class="fas fa-chart-line"></i> Usage
+                      </span>
+                    </td>
+                    <td>Pages visited, time spent, clicks, referring URLs</td>
+                    <td>Cookies, analytics tools, server logs</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="data-type type-technical">
+                        <i class="fas fa-laptop-code"></i> Technical
+                      </span>
+                    </td>
+                    <td>
+                      IP address, browser type, device info, operating system
+                    </td>
+                    <td>Automatic collection when accessing our website</td>
+                  </tr>
+                </tbody>
+              </table>
 
-          <section id="section5" class="content-card">
-            <h2>5. Cookies Policy</h2>
-            <p>
-              We use cookies to optimize your browsing performance and site
-              speed. You retain the right to manage or disable these cookies at
-              any time through your individual browser settings.
-            </p>
-          </section>
+              <p>
+                <strong>Note:</strong> We do not collect sensitive personal
+                information such as racial or ethnic origin, political opinions,
+                religious beliefs, or health information unless explicitly
+                required for specific services with your consent.
+              </p>
+            </section>
 
-          <div class="contact-cta">
-            <h3>Have Questions?</h3>
-            <p>
-              Our dedicated legal and privacy team is available to address any
-              inquiries you may have regarding your data rights.
-            </p>
-            <a href="mailto:mahmadiqbal84@gmail.com" class="cta-btn"
-              >Contact Legal Team</a
-            >
+            <!-- Section 3: How We Use Information -->
+            <section class="policy-section fade-in" id="use">
+              <div class="section-header">
+                <span class="section-number">03</span>
+                <h2 class="section-title">How We Use Your Information</h2>
+              </div>
+              <p>
+                We use the collected information for various legitimate business
+                purposes, always ensuring transparency and lawful processing:
+              </p>
+              <ul>
+                <li>
+                  <strong>Service Delivery:</strong> To provide, maintain, and
+                  improve our Shopify development services
+                </li>
+                <li>
+                  <strong>Communication:</strong> To respond to inquiries, send
+                  project updates, and provide customer support
+                </li>
+                <li>
+                  <strong>Personalization:</strong> To tailor our services and
+                  website content to your preferences
+                </li>
+                <li>
+                  <strong>Analytics:</strong> To understand user behavior and
+                  improve website performance
+                </li>
+                <li>
+                  <strong>Marketing:</strong> To send promotional materials
+                  (only with your explicit consent)
+                </li>
+                <li>
+                  <strong>Legal Compliance:</strong> To comply with legal
+                  obligations and protect our rights
+                </li>
+                <li>
+                  <strong>Fraud Prevention:</strong> To detect and prevent
+                  fraudulent activities and security breaches
+                </li>
+              </ul>
+
+              <div class="info-grid">
+                <div class="info-card">
+                  <div class="info-card-icon">
+                    <i class="fas fa-bullseye"></i>
+                  </div>
+                  <h4>Legitimate Interests</h4>
+                  <p>
+                    We process data based on legitimate business interests that
+                    don't override your rights.
+                  </p>
+                </div>
+                <div class="info-card">
+                  <div class="info-card-icon">
+                    <i class="fas fa-handshake"></i>
+                  </div>
+                  <h4>Contractual Necessity</h4>
+                  <p>
+                    Some data processing is necessary to fulfill our contractual
+                    obligations to you.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <!-- Section 4: Information Sharing -->
+            <section class="policy-section fade-in" id="share">
+              <div class="section-header">
+                <span class="section-number">04</span>
+                <h2 class="section-title">Information Sharing</h2>
+              </div>
+              <p>
+                We respect your privacy and do not sell your personal
+                information. We only share data in the following circumstances:
+              </p>
+              <ul>
+                <li>
+                  <strong>Service Providers:</strong> Trusted third-party
+                  vendors who assist in operating our website and conducting
+                  business (e.g., hosting providers, payment processors,
+                  analytics services)
+                </li>
+                <li>
+                  <strong>Legal Requirements:</strong> When required by law,
+                  court order, or governmental authority
+                </li>
+                <li>
+                  <strong>Business Transfers:</strong> In connection with a
+                  merger, acquisition, or sale of assets, with prior notice to
+                  you
+                </li>
+                <li>
+                  <strong>With Your Consent:</strong> When you explicitly
+                  authorize us to share information
+                </li>
+              </ul>
+              <p>
+                All third-party service providers are contractually obligated to
+                maintain the confidentiality and security of your data and are
+                prohibited from using it for any other purpose.
+              </p>
+            </section>
+
+            <!-- Section 5: Your Rights -->
+            <section class="policy-section fade-in" id="rights">
+              <div class="section-header">
+                <span class="section-number">05</span>
+                <h2 class="section-title">Your Privacy Rights</h2>
+              </div>
+              <p>
+                Depending on your location, you have certain rights regarding
+                your personal data. We are committed to facilitating these
+                rights:
+              </p>
+
+              <div class="rights-grid">
+                <div class="right-card">
+                  <div class="right-icon">
+                    <i class="fas fa-eye"></i>
+                  </div>
+                  <h4>Right to Access</h4>
+                  <p>Request copies of your personal data we hold</p>
+                </div>
+                <div class="right-card">
+                  <div class="right-icon">
+                    <i class="fas fa-edit"></i>
+                  </div>
+                  <h4>Right to Rectification</h4>
+                  <p>Request correction of inaccurate or incomplete data</p>
+                </div>
+                <div class="right-card">
+                  <div class="right-icon">
+                    <i class="fas fa-trash-alt"></i>
+                  </div>
+                  <h4>Right to Erasure</h4>
+                  <p>
+                    Request deletion of your personal data ("Right to be
+                    Forgotten")
+                  </p>
+                </div>
+                <div class="right-card">
+                  <div class="right-icon">
+                    <i class="fas fa-pause-circle"></i>
+                  </div>
+                  <h4>Right to Restrict</h4>
+                  <p>Request limitation of processing your data</p>
+                </div>
+                <div class="right-card">
+                  <div class="right-icon">
+                    <i class="fas fa-file-export"></i>
+                  </div>
+                  <h4>Right to Portability</h4>
+                  <p>
+                    Receive your data in a structured, machine-readable format
+                  </p>
+                </div>
+                <div class="right-card">
+                  <div class="right-icon">
+                    <i class="fas fa-ban"></i>
+                  </div>
+                  <h4>Right to Object</h4>
+                  <p>
+                    Object to processing based on legitimate interests or direct
+                    marketing
+                  </p>
+                </div>
+              </div>
+
+              <p>
+                To exercise any of these rights, please contact us using the
+                information provided at the end of this policy. We will respond
+                to your request within 30 days as required by applicable law.
+              </p>
+            </section>
+
+            <!-- Section 6: Data Security -->
+            <section class="policy-section fade-in" id="security">
+              <div class="section-header">
+                <span class="section-number">06</span>
+                <h2 class="section-title">Data Security</h2>
+              </div>
+              <p>
+                We implement robust security measures to protect your personal
+                information from unauthorized access, alteration, disclosure, or
+                destruction:
+              </p>
+
+              <div class="security-features">
+                <div class="security-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>SSL/TLS Encryption</span>
+                </div>
+                <div class="security-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Two-Factor Authentication</span>
+                </div>
+                <div class="security-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Regular Security Audits</span>
+                </div>
+                <div class="security-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Access Controls & Monitoring</span>
+                </div>
+                <div class="security-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Secure Data Centers</span>
+                </div>
+                <div class="security-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Employee Training & NDA</span>
+                </div>
+              </div>
+
+              <p>
+                Despite our best efforts, no method of transmission over the
+                Internet or electronic storage is 100% secure. While we strive
+                to use commercially acceptable means to protect your data, we
+                cannot guarantee absolute security.
+              </p>
+            </section>
+
+            <!-- Section 7: Data Retention -->
+            <section class="policy-section fade-in" id="retention">
+              <div class="section-header">
+                <span class="section-number">07</span>
+                <h2 class="section-title">Data Retention</h2>
+              </div>
+              <p>
+                We retain your personal information only for as long as
+                necessary to fulfill the purposes for which it was collected,
+                including legal, accounting, or reporting requirements.
+              </p>
+              <ul>
+                <li>
+                  <strong>Active Accounts:</strong> Data retained while your
+                  account is active or as needed to provide services
+                </li>
+                <li>
+                  <strong>Inactive Accounts:</strong> Data deleted or anonymized
+                  after 2 years of inactivity, unless legal obligations require
+                  retention
+                </li>
+                <li>
+                  <strong>Marketing Data:</strong> Retained until you opt out or
+                  withdraw consent
+                </li>
+                <li>
+                  <strong>Legal Compliance:</strong> Some data may be retained
+                  longer if required by law (e.g., tax records for 7 years)
+                </li>
+              </ul>
+              <p>
+                When we no longer need your data, we will securely delete or
+                anonymize it in accordance with our data retention policies.
+              </p>
+            </section>
+
+            <!-- Section 8: Policy Changes -->
+            <section class="policy-section fade-in" id="changes">
+              <div class="section-header">
+                <span class="section-number">08</span>
+                <h2 class="section-title">Changes to This Policy</h2>
+              </div>
+              <p>
+                We may update this Privacy Policy periodically to reflect
+                changes in our practices, legal requirements, or operational
+                needs. We will notify you of any material changes by:
+              </p>
+              <ul>
+                <li>
+                  Posting the updated policy on this page with a revised "Last
+                  Updated" date
+                </li>
+                <li>
+                  Sending an email notification to registered users (for
+                  significant changes)
+                </li>
+                <li>Displaying a prominent notice on our website</li>
+              </ul>
+              <p>
+                We encourage you to review this policy regularly. Your continued
+                use of our services after changes constitutes acceptance of the
+                updated policy.
+              </p>
+            </section>
+
+            <!-- Contact CTA -->
+            <div class="contact-cta fade-in" id="contact">
+              <h3>Questions About Your Privacy?</h3>
+              <p>
+                If you have any questions, concerns, or requests regarding this
+                Privacy Policy or our data practices, please contact our Data
+                Protection Officer.
+              </p>
+              <a href="mailto:privacy@globaxify.com" class="cta-btn">
+                <i class="fas fa-envelope"></i>
+                Contact DPO
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </main>
 
-    <footer class="neo-footer">
-      <div class="footer-grid-container">
-        <div class="footer-block brand-block">
-          <div class="main-logo">
-            <a href="index.html" class="logo-link">
-              <img src="logo.png" alt="Globaxify Logo" class="brand-logo-img" />
-            </a>
-          </div>
-          <p class="brand-para">
-            Engineering the next generation of digital legacies. We bridge the
-            gap between luxury design and global commerce.
-          </p>
-          <div class="social-wrapper">
-            <a
-              href="https://www.upwork.com/freelancers/muhammadhaseebiqbal?mp_source=share"
-              target="_blank"
-              class="social-btn"
-            >
-              <i class="fab fa-upwork"></i>
-            </a>
-            <a
-              href="https://www.tiktok.com/@ahmad_0309?_r=1&_t=ZS-94Afrf0HEue"
-              target="_blank"
-              class="social-btn"
-            >
-              <i class="fab fa-tiktok"></i>
-            </a>
-            <a
-              href="https://www.facebook.com/share/18D3N37reL/"
-              target="_blank"
-              class="social-btn"
-            >
-              <i class="fab fa-facebook-square"></i>
-            </a>
-          </div>
-        </div>
-
-        <div class="footer-block">
-          <h4 class="block-title">Expertise</h4>
-          <ul class="nav-list">
-            <li><a href="index.html#home" class="hover-link">Home</a></li>
-            <li>
-              <a href="index.html#services" class="hover-link">Services</a>
-            </li>
-            <li><a href="index.html#Team" class="hover-link">Team</a></li>
-            <li><a href="portfolio.html" class="hover-link">Portfolio</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-block">
-          <h4 class="block-title">Globaxify</h4>
-          <ul class="nav-list">
-            <li>
-              <a href="Privacy Policy.html" class="hover-link" target="_blank"
-                >Privacy Policy</a
-              >
-            </li>
-            <li>
-              <a href="Terms of Service.html" class="hover-link" target="_blank"
-                >Terms of Service</a
-              >
-            </li>
-            <li>
-              <a href="Cookies Policy.html" class="hover-link" target="_blank"
-                >Cookies Policy</a
-              >
-            </li>
-          </ul>
-        </div>
-
-        <div class="footer-block newsletter-block">
-          <h4 class="block-title">Stay Ahead</h4>
-          <p class="news-para">
-            Join 5,000+ leaders getting our digital insights.
-          </p>
-          <div class="modern-input-group">
-            <input type="email" placeholder="Work email address" />
-            <button type="submit" class="submit-btn">
-              <i class="fas fa-paper-plane"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div class="bottom-bar">
-        <div class="bottom-wrapper">
-          <p class="copy-text">
-            &copy; 2026 <strong>Globaxify Inc.</strong> Engineered for
-            Excellence.
-          </p>
-          <div class="bottom-nav">
-            <a href="#" class="hover-link">Terms</a>
-            <a href="#" class="hover-link">Security</a>
-            <div class="status-indicator">
-              <span class="dot"></span> Systems Operational
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <!-- Simple Footer -->
 
     <script>
-      const menuToggle = document.getElementById("mobile-menu");
-      const navMenu = document.getElementById("nav-menu");
+      // Scroll Animation
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
 
-      menuToggle.addEventListener("click", () => {
-        menuToggle.classList.toggle("is-active");
-        navMenu.classList.toggle("active");
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll(".fade-in").forEach((el) => {
+        observer.observe(el);
       });
 
-      // Close menu when link is clicked
-      document.querySelectorAll(".nav-menu a").forEach((link) => {
-        link.addEventListener("click", () => {
-          menuToggle.classList.remove("is-active");
-          navMenu.classList.remove("active");
+      // Active Navigation Link
+      const sections = document.querySelectorAll(".policy-section");
+      const navLinks = document.querySelectorAll(".nav-list a");
+
+      window.addEventListener("scroll", () => {
+        let current = "";
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          if (scrollY >= sectionTop - 200) {
+            current = section.getAttribute("id");
+          }
+        });
+
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href").slice(1) === current) {
+            link.classList.add("active");
+          }
+        });
+      });
+
+      // Smooth Scroll
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
         });
       });
     </script>

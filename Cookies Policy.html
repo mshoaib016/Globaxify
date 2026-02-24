@@ -2,63 +2,42 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cookie Policy | Globaxify</title>
-
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Cookies Policy | Globaxify</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" type="image/png" href="assets/fav icon.png" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-
     <style>
       :root {
         --primary-blue: #0056b3;
-        --accent-green: #7cc53e;
-        --text-dark: #1a1a1a;
-        --white: #ffffff;
-        --slate: #64748b;
-        --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-      }
-
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-      body {
-        font-family: "Poppins", sans-serif;
-        background-color: #f8f9fa;
-        color: var(--text-dark);
-        overflow-x: hidden;
-      }
-
-      /* --- Header --- */
-      @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap");
-
-      :root {
-        --primary-blue: #0066cc;
         --accent-green: #7cc53e;
         --dark-navy: #0f172a;
         --slate: #64748b;
         --light-text: #475569;
         --white: #ffffff;
         --card-bg: #f8fafc;
-        --border-color: #f1f5f9;
-        --transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+        --border-color: #e2e8f0;
+        --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.08);
+        --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.12);
       }
 
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        -webkit-tap-highlight-color: transparent;
       }
 
       html {
+        font-size: 16px;
         scroll-behavior: smooth;
       }
 
@@ -66,672 +45,1358 @@
         font-family: "Plus Jakarta Sans", sans-serif;
         background: var(--white);
         color: var(--dark-navy);
-        overflow-x: hidden;
         line-height: 1.6;
+        overflow-x: hidden;
+        min-height: 100vh;
       }
 
-      section {
-        scroll-margin-top: 100px;
-      }
-
-      .container {
-        max-width: 1250px;
-        margin: 0 auto;
-        padding: 0 25px;
-      }
-
-      /* --- 2. NAVBAR --- */
-      .navbar {
-        position: fixed;
-        top: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 90%;
-        max-width: 1200px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 70px;
-        padding: 10px 30px;
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        border-radius: 60px;
-        z-index: 9999;
-        transition: var(--transition);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-      }
-
-      .logo-link {
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        height: 100%; /* Full height lega */
-      }
-
-      .logo-img {
-        height: 150px; /* Navbar height ke hisaab se adjust */
-        width: auto;
-        max-height: 150px; /* Navbar se bahar na nikle */
+      img {
+        max-width: 100%;
+        height: auto;
         display: block;
-        object-fit: contain;
-        transition: all 0.3s ease;
       }
 
-      .logo-link:hover {
-        transform: scale(1.05);
+      /* Mobile First Container */
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
       }
 
-      .logo-link:hover .logo-img {
-        filter: brightness(1.1);
-      }
-
-      /* Mobile pe thora chota */
-      @media (max-width: 768px) {
-        .logo-img {
-          height: 40px;
-          max-height: 40px;
+      @media (min-width: 640px) {
+        .container {
+          padding: 0 20px;
         }
       }
 
-      .nav-links ul {
-        display: flex;
-        list-style: none;
-        gap: 15px;
+      @media (min-width: 1024px) {
+        .container {
+          padding: 0 25px;
+        }
       }
 
-      .nav-links ul li a {
-        text-decoration: none;
-        color: var(--dark-navy);
-        padding: 10px 20px;
-        border-radius: 50px;
-        font-size: 15px;
-        font-weight: 700;
-        transition: var(--transition);
-        display: block;
-      }
-
-      .nav-links ul li a:hover,
-      .nav-links ul li a.active {
-        background: var(--primary-blue);
-        color: var(--white);
-      }
-
-      .right-side {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-      }
-
-      button {
-        width: 9em;
-        height: 3em;
-        border-radius: 30em;
-        font-size: 15px;
-        font-family: inherit;
-        border: none;
-        position: relative;
-        overflow: hidden;
-        z-index: 1;
-        box-shadow:
-          6px 6px 12px #9bb6db,
-          -6px -6px 12px #a7deb9;
-      }
-
-      button::before {
-        content: "";
-        width: 0;
-        height: 3em;
-        border-radius: 30em;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-image: linear-gradient(to right, #0fd850 0%, #475cf9 100%);
-        transition: 0.5s ease;
-        display: block;
-        z-index: -1;
-      }
-
-      button:hover::before {
-        width: 9em;
-      }
-
-      .menu-toggle {
-        display: none;
-        cursor: pointer;
-        flex-direction: column;
-        gap: 5px;
-      }
-
-      .menu-toggle span {
-        width: 25px;
-        height: 3px;
-        background: var(--dark-navy);
-        border-radius: 2px;
-        transition: var(--transition);
-      }
-
-      .mobile-menu-header {
-        display: none;
-      }
-
-      .menu-overlay {
+      /* Animated Background - Simplified for Mobile */
+      .bg-animation {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.4);
-        opacity: 0;
-        visibility: hidden;
-        transition: 0.3s;
-        z-index: 9998;
+        z-index: -1;
+        overflow: hidden;
+        pointer-events: none;
       }
 
-      .menu-overlay.active {
-        opacity: 1;
-        visibility: visible;
+      .bg-animation .shape {
+        position: absolute;
+        filter: blur(60px);
+        opacity: 0.3;
+        animation: float 15s infinite ease-in-out;
       }
 
-      /* --- CONTENT --- */
-      .container {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 0 25px;
+      .shape-1 {
+        width: 200px;
+        height: 200px;
+        background: var(--primary-blue);
+        border-radius: 50%;
+        top: -5%;
+        left: -10%;
       }
-      .cookie-hero {
-        padding: 140px 0 60px;
+
+      .shape-2 {
+        width: 150px;
+        height: 150px;
+        background: var(--accent-green);
+        border-radius: 50%;
+        top: 30%;
+        right: -5%;
+        animation-delay: 5s;
+      }
+
+      .shape-3 {
+        width: 120px;
+        height: 120px;
+        background: linear-gradient(45deg, #f093fb, #f5576c);
+        border-radius: 50%;
+        bottom: -5%;
+        left: 20%;
+        animation-delay: 10s;
+      }
+
+      @media (min-width: 768px) {
+        .shape-1 {
+          width: 300px;
+          height: 300px;
+        }
+        .shape-2 {
+          width: 200px;
+          height: 200px;
+        }
+        .shape-3 {
+          width: 180px;
+          height: 180px;
+        }
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translate(0, 0) scale(1);
+        }
+        50% {
+          transform: translate(20px, -20px) scale(1.05);
+        }
+      }
+
+      /* Header - Mobile First */
+      .policy-header {
+        background: linear-gradient(135deg, var(--dark-navy) 0%, #1e293b 100%);
+        color: var(--white);
+        padding: 60px 0 40px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      @media (min-width: 640px) {
+        .policy-header {
+          padding: 80px 0 60px;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .policy-header {
+          padding: 100px 0 80px;
+        }
+      }
+
+      .policy-header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.5;
+        background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      }
+
+      .breadcrumb {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 20px;
+        font-size: 0.8rem;
+        opacity: 0.8;
+        flex-wrap: wrap;
+      }
+
+      .breadcrumb a {
+        color: var(--white);
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .breadcrumb a:hover {
+        color: var(--accent-green);
+      }
+
+      .breadcrumb i {
+        font-size: 0.6rem;
+      }
+
+      .header-content {
         text-align: center;
       }
-      .cookie-main {
-        display: grid;
-        grid-template-columns: 1fr 350px;
-        gap: 50px;
-        padding-bottom: 80px;
-      }
 
-      /* Table Responsive Fix */
-      .table-responsive {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-      }
-
-      .cookie-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 20px 0;
-        background: #fff;
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-      }
-      .cookie-table th,
-      .cookie-table td {
-        padding: 15px;
-        border-bottom: 1px solid #eee;
-        text-align: left;
-      }
-      .cookie-table th {
-        background: var(--primary-blue);
-        color: white;
-      }
-      .cookie-info-box {
-        background: var(--text-dark);
-        color: white;
-        padding: 30px;
-        border-radius: 20px;
-        height: fit-content;
-        position: sticky;
-        top: 100px;
-      }
-
-      /* --- FOOTER --- */
-      @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap");
-
-      .neo-footer {
-        --f-blue: #0066cc;
-        --f-green: #7cc53e;
-        --f-dark: #0f172a;
-        --f-slate: #64748b;
-        --f-border: #f1f5f9;
-
-        background: #ffffff;
-        color: var(--f-dark);
-        font-family: "Plus Jakarta Sans", sans-serif;
-        padding: 80px 0 0;
-        border-top: 1px solid var(--f-border);
-      }
-
-      .footer-grid-container {
-        max-width: 1300px;
-        margin: 0 auto;
-        padding: 0 40px 60px;
-        display: grid;
-        grid-template-columns: 1.5fr 0.8fr 0.8fr 1.2fr;
-        gap: 50px;
-      }
-
-      /* Logo & Brand */
-      .brand-logo-img {
-        height: 45px;
-        width: auto;
-        margin-bottom: 20px;
-        transition: transform 0.3s ease;
-      }
-      .logo-link:hover .brand-logo-img {
-        transform: scale(1.05);
-      }
-
-      .brand-para {
-        color: var(--f-slate);
-        line-height: 1.7;
-        font-size: 0.95rem;
-        margin-bottom: 30px;
-        max-width: 300px;
-      }
-
-      /* Social Buttons */
-      /* Social Wrapper ko set karne ke liye ye use karein */
-      .social-wrapper {
-        display: flex;
-        gap: 12px;
-        margin-top: 20px;
-      }
-
-      .social-btn {
-        width: 42px;
-        height: 42px;
-        border-radius: 12px;
-        background: #f8fafc;
-        border: 1px solid var(--f-border);
+      .header-icon {
+        width: 60px;
+        height: 60px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 16px;
         display: flex;
         align-items: center;
         justify-content: center;
-        color: var(--f-dark);
-        transition: 0.3s ease;
-        text-decoration: none;
-        font-size: 1.2rem; /* Icon ka size thora bara karne ke liye */
+        margin: 0 auto 15px;
+        font-size: 1.8rem;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        animation: pulse 2s infinite;
       }
 
-      .social-btn:hover {
-        background: var(--f-blue);
-        color: #fff !important; /* Hover par icon white ho jayega */
-        transform: translateY(-5px);
-        box-shadow: 0 10px 15px rgba(0, 102, 204, 0.1);
+      @media (min-width: 640px) {
+        .header-icon {
+          width: 70px;
+          height: 70px;
+          font-size: 2.2rem;
+          margin-bottom: 20px;
+        }
       }
 
-      /* Specific colors on hover (Optional - agar aap colors dikhana chahen) */
-      .social-btn:hover .fa-upwork {
-        color: #fff;
-      }
-      .social-btn:hover .fa-tiktok {
-        color: #fff;
-      }
-      .social-btn:hover .fa-facebook-square {
-        color: #fff;
+      @media (min-width: 1024px) {
+        .header-icon {
+          width: 80px;
+          height: 80px;
+          font-size: 2.5rem;
+          margin-bottom: 25px;
+        }
       }
 
-      /* Titles & Links */
-      .block-title {
-        font-size: 0.8rem;
-        text-transform: uppercase;
-        letter-spacing: 2px;
+      @keyframes pulse {
+        0%,
+        100% {
+          box-shadow: 0 0 0 0 rgba(124, 197, 62, 0.4);
+        }
+        50% {
+          box-shadow: 0 0 0 15px rgba(124, 197, 62, 0);
+        }
+      }
+
+      .policy-header h1 {
+        font-size: 1.8rem;
         font-weight: 800;
-        margin-bottom: 25px;
-        color: var(--f-dark);
+        margin-bottom: 10px;
+        letter-spacing: -1px;
+        line-height: 1.2;
+      }
+
+      @media (min-width: 640px) {
+        .policy-header h1 {
+          font-size: 2.2rem;
+        }
+      }
+
+      @media (min-width: 768px) {
+        .policy-header h1 {
+          font-size: 2.8rem;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .policy-header h1 {
+          font-size: 3.5rem;
+        }
+      }
+
+      .last-updated {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 8px 16px;
+        border-radius: 50px;
+        font-size: 0.75rem;
+        backdrop-filter: blur(10px);
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      @media (min-width: 640px) {
+        .last-updated {
+          font-size: 0.85rem;
+          padding: 10px 20px;
+        }
+      }
+
+      /* Main Content - Mobile First */
+      .policy-content {
+        padding: 40px 0;
+      }
+
+      @media (min-width: 640px) {
+        .policy-content {
+          padding: 60px 0;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .policy-content {
+          padding: 80px 0;
+        }
+      }
+
+      .content-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      @media (min-width: 1024px) {
+        .content-grid {
+          display: grid;
+          grid-template-columns: 260px 1fr;
+          gap: 40px;
+          align-items: start;
+        }
+      }
+
+      /* Sidebar - Mobile Optimized */
+      .policy-sidebar {
+        order: 2;
+      }
+
+      @media (min-width: 1024px) {
+        .policy-sidebar {
+          position: sticky;
+          top: 90px;
+          order: 1;
+        }
+      }
+
+      .sidebar-card {
+        background: var(--white);
+        border-radius: 16px;
+        padding: 20px;
+        box-shadow: var(--shadow-soft);
+        border: 1px solid var(--border-color);
+      }
+
+      @media (min-width: 640px) {
+        .sidebar-card {
+          padding: 25px;
+          border-radius: 20px;
+        }
+      }
+
+      .sidebar-title {
+        font-size: 1rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+        color: var(--dark-navy);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      @media (min-width: 640px) {
+        .sidebar-title {
+          font-size: 1.1rem;
+          margin-bottom: 20px;
+        }
+      }
+
+      .sidebar-title i {
+        color: var(--accent-green);
       }
 
       .nav-list {
         list-style: none;
-        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
       }
+
+      @media (min-width: 1024px) {
+        .nav-list {
+          flex-direction: column;
+          gap: 5px;
+        }
+      }
+
       .nav-list li {
-        margin-bottom: 12px;
-      }
-      .hover-link {
-        text-decoration: none;
-        color: var(--f-slate);
-        font-size: 0.95rem;
-        font-weight: 500;
-        transition: 0.3s;
-      }
-      .hover-link:hover {
-        color: var(--f-blue);
-        padding-left: 5px;
+        margin: 0;
+        flex: 1 1 calc(50% - 4px);
       }
 
-      .hiring-badge {
-        background: rgba(124, 197, 62, 0.1);
-        color: var(--f-green);
-        font-size: 0.7rem;
-        padding: 2px 8px;
-        border-radius: 100px;
-        font-weight: 700;
+      @media (min-width: 480px) {
+        .nav-list li {
+          flex: 1 1 calc(33.333% - 6px);
+        }
       }
 
-      /* Newsletter Input */
-      .modern-input-group {
-        display: flex;
-        background: #f8fafc;
-        border: 1px solid var(--f-border);
-        padding: 6px;
-        border-radius: 16px;
-        transition: 0.3s;
-      }
-      .modern-input-group:focus-within {
-        border-color: var(--f-blue);
-        background: #fff;
-      }
-      .modern-input-group input {
-        flex: 1;
-        border: none;
-        background: transparent;
-        padding: 10px;
-        outline: none;
-      }
-      .submit-btn {
-        background: linear-gradient(135deg, var(--f-blue), var(--f-green));
-        color: #fff;
-        border: none;
-        width: 44px;
-        height: 44px;
-        border-radius: 12px;
-        cursor: pointer;
+      @media (min-width: 1024px) {
+        .nav-list li {
+          flex: none;
+          width: 100%;
+        }
       }
 
-      /* Bottom Bar */
-      .bottom-bar {
-        border-top: 1px solid var(--f-border);
-        padding: 30px 0;
-        background: #fafafa;
-      }
-      .bottom-wrapper {
-        max-width: 1300px;
-        margin: 0 auto;
-        padding: 0 40px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .copy-text {
-        font-size: 0.85rem;
-        color: var(--f-slate);
-      }
-      .status-indicator {
+      .nav-list a {
         display: flex;
         align-items: center;
         gap: 8px;
+        padding: 10px 12px;
+        border-radius: 8px;
+        color: var(--slate);
+        text-decoration: none;
         font-size: 0.8rem;
-        color: var(--f-slate);
-        font-weight: 600;
-      }
-      .dot {
-        width: 8px;
-        height: 8px;
-        background: var(--f-green);
-        border-radius: 50%;
-        box-shadow: 0 0 10px var(--f-green);
-        animation: pulse 2s infinite;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        background: var(--card-bg);
+        height: 100%;
       }
 
-      @keyframes pulse {
-        0% {
-          opacity: 1;
-        }
-        50% {
-          opacity: 0.4;
-        }
-        100% {
-          opacity: 1;
+      @media (min-width: 640px) {
+        .nav-list a {
+          font-size: 0.85rem;
+          padding: 12px 16px;
         }
       }
 
-      /* Responsive */
-      @media (max-width: 1024px) {
-        .footer-grid-container {
-          grid-template-columns: 1fr 1fr;
+      @media (min-width: 1024px) {
+        .nav-list a {
+          background: transparent;
+          font-size: 0.9rem;
         }
       }
-      @media (max-width: 650px) {
-        .footer-grid-container {
-          grid-template-columns: 1fr;
-          text-align: center;
+
+      .nav-list a:hover,
+      .nav-list a.active {
+        background: linear-gradient(
+          135deg,
+          rgba(0, 86, 179, 0.1),
+          rgba(124, 197, 62, 0.1)
+        );
+        color: var(--primary-blue);
+      }
+
+      .nav-list a i {
+        font-size: 0.7rem;
+        opacity: 0;
+        transition: all 0.3s ease;
+        display: none;
+      }
+
+      @media (min-width: 1024px) {
+        .nav-list a i {
+          display: block;
         }
-        .social-wrapper,
-        .main-logo {
-          justify-content: center;
+      }
+
+      .nav-list a:hover i,
+      .nav-list a.active i {
+        opacity: 1;
+        transform: translateX(3px);
+      }
+
+      /* Policy Main Content */
+      .policy-main {
+        background: var(--white);
+        border-radius: 20px;
+        padding: 25px;
+        box-shadow: var(--shadow-soft);
+        border: 1px solid var(--border-color);
+        order: 1;
+      }
+
+      @media (min-width: 640px) {
+        .policy-main {
+          padding: 35px;
+          border-radius: 24px;
         }
-        .bottom-wrapper {
-          flex-direction: column;
+      }
+
+      @media (min-width: 1024px) {
+        .policy-main {
+          padding: 50px;
+          border-radius: 32px;
+          order: 2;
+        }
+      }
+
+      .policy-section {
+        margin-bottom: 35px;
+        padding-bottom: 35px;
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      @media (min-width: 640px) {
+        .policy-section {
+          margin-bottom: 45px;
+          padding-bottom: 45px;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .policy-section {
+          margin-bottom: 50px;
+          padding-bottom: 50px;
+        }
+      }
+
+      .policy-section:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+
+      .section-header {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        margin-bottom: 20px;
+      }
+
+      @media (min-width: 640px) {
+        .section-header {
+          align-items: center;
           gap: 15px;
+          margin-bottom: 25px;
+        }
+      }
+
+      .section-number {
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(
+          135deg,
+          var(--primary-blue),
+          var(--accent-green)
+        );
+        color: var(--white);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        font-weight: 700;
+        flex-shrink: 0;
+      }
+
+      @media (min-width: 640px) {
+        .section-number {
+          width: 45px;
+          height: 45px;
+          font-size: 1.1rem;
+          border-radius: 12px;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .section-number {
+          width: 50px;
+          height: 50px;
+          font-size: 1.3rem;
+          border-radius: 16px;
+        }
+      }
+
+      .section-title {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--dark-navy);
+        line-height: 1.3;
+        padding-top: 8px;
+      }
+
+      @media (min-width: 640px) {
+        .section-title {
+          font-size: 1.4rem;
+          padding-top: 0;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .section-title {
+          font-size: 1.8rem;
+        }
+      }
+
+      .policy-section p {
+        color: var(--light-text);
+        margin-bottom: 15px;
+        font-size: 0.9rem;
+      }
+
+      @media (min-width: 640px) {
+        .policy-section p {
+          font-size: 0.95rem;
+          margin-bottom: 18px;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .policy-section p {
+          font-size: 1.05rem;
+          margin-bottom: 20px;
+        }
+      }
+
+      .policy-section ul {
+        margin: 15px 0;
+        padding-left: 20px;
+      }
+
+      @media (min-width: 640px) {
+        .policy-section ul {
+          margin: 20px 0;
+          padding-left: 25px;
+        }
+      }
+
+      .policy-section li {
+        margin-bottom: 10px;
+        color: var(--light-text);
+        font-size: 0.9rem;
+      }
+
+      @media (min-width: 640px) {
+        .policy-section li {
+          font-size: 0.95rem;
+          margin-bottom: 12px;
+        }
+      }
+
+      .policy-section li::marker {
+        color: var(--accent-green);
+      }
+
+      /* Info Cards Grid */
+      .info-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin: 20px 0;
+      }
+
+      @media (min-width: 480px) {
+        .info-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 15px;
+        }
+      }
+
+      @media (min-width: 768px) {
+        .info-grid {
+          gap: 20px;
+          margin: 30px 0;
+        }
+      }
+
+      .info-card {
+        background: var(--card-bg);
+        border-radius: 12px;
+        padding: 20px;
+        border: 1px solid var(--border-color);
+        transition: all 0.3s ease;
+      }
+
+      @media (min-width: 640px) {
+        .info-card {
+          padding: 25px;
+          border-radius: 16px;
+        }
+      }
+
+      .info-card:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-soft);
+        border-color: var(--accent-green);
+      }
+
+      .info-card-icon {
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(
+          135deg,
+          rgba(0, 86, 179, 0.1),
+          rgba(124, 197, 62, 0.1)
+        );
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem;
+        color: var(--primary-blue);
+        margin-bottom: 12px;
+      }
+
+      @media (min-width: 640px) {
+        .info-card-icon {
+          width: 45px;
+          height: 45px;
+          font-size: 1.2rem;
+          border-radius: 12px;
+          margin-bottom: 15px;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .info-card-icon {
+          width: 50px;
+          height: 50px;
+          font-size: 1.3rem;
+          border-radius: 14px;
+        }
+      }
+
+      .info-card h4 {
+        font-size: 0.95rem;
+        font-weight: 700;
+        margin-bottom: 8px;
+        color: var(--dark-navy);
+      }
+
+      @media (min-width: 640px) {
+        .info-card h4 {
+          font-size: 1rem;
+          margin-bottom: 10px;
+        }
+      }
+
+      .info-card p {
+        font-size: 0.8rem;
+        margin: 0;
+      }
+
+      @media (min-width: 640px) {
+        .info-card p {
+          font-size: 0.85rem;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .info-card p {
+          font-size: 0.9rem;
+        }
+      }
+
+      /* Cookie Table - Mobile Optimized */
+      .cookie-table-wrapper {
+        overflow-x: auto;
+        margin: 20px 0;
+        border-radius: 12px;
+        box-shadow: var(--shadow-soft);
+        -webkit-overflow-scrolling: touch;
+      }
+
+      @media (min-width: 640px) {
+        .cookie-table-wrapper {
+          margin: 30px 0;
+          border-radius: 16px;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .cookie-table-wrapper {
+          border-radius: 20px;
+        }
+      }
+
+      .cookie-table {
+        width: 100%;
+        min-width: 600px;
+        border-collapse: separate;
+        border-spacing: 0;
+        background: var(--white);
+      }
+
+      .cookie-table th {
+        background: linear-gradient(135deg, var(--dark-navy), #1e293b);
+        color: var(--white);
+        padding: 12px 15px;
+        text-align: left;
+        font-weight: 600;
+        font-size: 0.75rem;
+        white-space: nowrap;
+      }
+
+      @media (min-width: 640px) {
+        .cookie-table th {
+          padding: 15px 20px;
+          font-size: 0.85rem;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .cookie-table th {
+          padding: 20px;
+          font-size: 0.9rem;
+        }
+      }
+
+      .cookie-table td {
+        padding: 12px 15px;
+        border-bottom: 1px solid var(--border-color);
+        background: var(--white);
+        color: var(--light-text);
+        font-size: 0.8rem;
+        vertical-align: top;
+      }
+
+      @media (min-width: 640px) {
+        .cookie-table td {
+          padding: 15px 20px;
+          font-size: 0.9rem;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .cookie-table td {
+          padding: 20px;
+          font-size: 0.95rem;
+        }
+      }
+
+      .cookie-table tr:last-child td {
+        border-bottom: none;
+      }
+
+      .cookie-table tr:nth-child(even) td {
+        background: var(--card-bg);
+      }
+
+      .cookie-type {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        padding: 4px 10px;
+        border-radius: 50px;
+        font-size: 0.7rem;
+        font-weight: 600;
+        white-space: nowrap;
+      }
+
+      @media (min-width: 640px) {
+        .cookie-type {
+          padding: 5px 12px;
+          font-size: 0.75rem;
+        }
+      }
+
+      .type-essential {
+        background: #dbeafe;
+        color: #1e40af;
+      }
+
+      .type-analytics {
+        background: #dcfce7;
+        color: #166534;
+      }
+
+      .type-marketing {
+        background: #fce7f3;
+        color: #be185d;
+      }
+
+      /* Contact CTA */
+      .contact-cta {
+        background: linear-gradient(
+          135deg,
+          var(--primary-blue),
+          var(--accent-green)
+        );
+        border-radius: 16px;
+        padding: 30px 20px;
+        text-align: center;
+        color: var(--white);
+        margin-top: 35px;
+      }
+
+      @media (min-width: 640px) {
+        .contact-cta {
+          padding: 35px 30px;
+          border-radius: 20px;
+          margin-top: 45px;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .contact-cta {
+          padding: 40px;
+          border-radius: 24px;
+          margin-top: 50px;
+        }
+      }
+
+      .contact-cta h3 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-bottom: 12px;
+      }
+
+      @media (min-width: 640px) {
+        .contact-cta h3 {
+          font-size: 1.4rem;
+          margin-bottom: 15px;
+        }
+      }
+
+      .contact-cta p {
+        opacity: 0.9;
+        margin-bottom: 20px;
+        font-size: 0.85rem;
+      }
+
+      @media (min-width: 640px) {
+        .contact-cta p {
+          font-size: 0.95rem;
+          margin-bottom: 25px;
+        }
+      }
+
+      .cta-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--white);
+        color: var(--primary-blue);
+        padding: 12px 24px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+      }
+
+      @media (min-width: 640px) {
+        .cta-btn {
+          padding: 15px 30px;
+          font-size: 1rem;
+        }
+      }
+
+      .cta-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Footer */
+      .simple-footer {
+        background: var(--dark-navy);
+        color: var(--white);
+        padding: 25px 0;
+        text-align: center;
+      }
+
+      @media (min-width: 640px) {
+        .simple-footer {
+          padding: 35px 0;
+        }
+      }
+
+      .simple-footer p {
+        opacity: 0.8;
+        font-size: 0.8rem;
+        line-height: 1.6;
+      }
+
+      @media (min-width: 640px) {
+        .simple-footer p {
+          font-size: 0.9rem;
+        }
+      }
+
+      .simple-footer a {
+        color: var(--accent-green);
+        text-decoration: none;
+      }
+
+      /* Scroll Animations */
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.5s ease;
+      }
+
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Reduce motion for accessibility */
+      @media (prefers-reduced-motion: reduce) {
+        .bg-animation .shape,
+        .header-icon,
+        .fade-in {
+          animation: none;
+          transition: none;
         }
       }
     </style>
   </head>
   <body>
-    <header class="navbar">
-      <div class="logo">
-        <a href="index.html" class="logo-link">
-          <img
-            src="assets/header logo.png"
-            alt="Globaxify Logo"
-            class="logo-img"
-          />
-        </a>
-      </div>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
 
-      <nav class="nav-links" id="navLinks">
-        <div class="mobile-menu-header">
-          <div>Menu</div>
-          <div class="close-btn" id="closeBtn">&times;</div>
+    <!-- Header -->
+    <header class="policy-header">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="index.html"><i class="fas fa-home"></i> Home</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>Cookies Policy</span>
         </div>
-        <ul>
-          <li><a href="index.html#home">Home</a></li>
-          <li><a href="index.html#services">Services</a></li>
-          <li><a href="index.html#Team">Team</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
-        </ul>
-      </nav>
-
-      <div class="right-side">
-        <button>Let's Talk</button>
-        <div class="menu-toggle" id="menuToggle">
-          <span></span>
-          <span></span>
-          <span></span>
+        <div class="header-content">
+          <div class="header-icon">
+            <i class="fas fa-cookie-bite"></i>
+          </div>
+          <h1>Cookies Policy</h1>
+          <div class="last-updated">
+            <i class="fas fa-calendar-alt"></i>
+            Last Updated: February 25, 2026
+          </div>
         </div>
       </div>
     </header>
 
-    <div class="cookie-hero">
+    <!-- Main Content -->
+    <main class="policy-content">
       <div class="container">
-        <div
-          style="
-            font-size: 3rem;
-            color: var(--accent-green);
-            margin-bottom: 20px;
-          "
-        >
-          <i class="fas fa-cookie-bite"></i>
-        </div>
-        <h1 style="font-size: 3rem; margin-bottom: 10px">
-          Cookie <span style="color: var(--primary-blue)">Policy</span>
-        </h1>
-        <p style="color: var(--slate)">Last update: Feb 2026</p>
-      </div>
-    </div>
+        <div class="content-grid">
+          <!-- Sidebar -->
+          <aside class="policy-sidebar">
+            <div class="sidebar-card">
+              <h3 class="sidebar-title">
+                <i class="fas fa-list-ul"></i>
+                Quick Navigation
+              </h3>
+              <ul class="nav-list">
+                <li><a href="#intro" class="active">Introduction</a></li>
+                <li><a href="#what">What Are Cookies</a></li>
+                <li><a href="#types">Types We Use</a></li>
+                <li><a href="#how">How We Use</a></li>
+                <li><a href="#manage">Manage Cookies</a></li>
+                <li><a href="#changes">Policy Changes</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+              </ul>
+            </div>
+          </aside>
 
-    <main class="container cookie-main">
-      <div class="cookie-content">
-        <section style="margin-bottom: 40px">
-          <h2 style="margin-bottom: 15px">1. What are Cookies?</h2>
-          <p>
-            Cookies are small text files stored on your device when you visit a
-            website. They help us remember your preferences and ensure security.
-          </p>
-        </section>
+          <!-- Main Content -->
+          <div class="policy-main">
+            <!-- Section 1: Introduction -->
+            <section class="policy-section fade-in" id="intro">
+              <div class="section-header">
+                <span class="section-number">01</span>
+                <h2 class="section-title">Introduction</h2>
+              </div>
+              <p>
+                Welcome to Globaxify. This Cookies Policy explains how we use
+                cookies and similar technologies to recognize you when you visit
+                our website. It explains what these technologies are and why we
+                use them, as well as your rights to control our use of them.
+              </p>
+              <p>
+                By continuing to use our website, you are agreeing to our use of
+                cookies as described in this policy. We value your privacy and
+                are committed to being transparent about our data practices.
+              </p>
+            </section>
 
-        <section style="margin-bottom: 40px">
-          <h2 style="margin-bottom: 15px">2. How We Use Cookies</h2>
-          <div class="table-responsive">
-            <table class="cookie-table">
-              <thead>
-                <tr>
-                  <th>Type</th>
-                  <th>Purpose</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>Essential</strong></td>
-                  <td>For security and site functionality.</td>
-                </tr>
-                <tr>
-                  <td><strong>Analytical</strong></td>
-                  <td>To understand visitor behavior.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-      </div>
+            <!-- Section 2: What Are Cookies -->
+            <section class="policy-section fade-in" id="what">
+              <div class="section-header">
+                <span class="section-number">02</span>
+                <h2 class="section-title">What Are Cookies?</h2>
+              </div>
+              <p>
+                Cookies are small data files that are placed on your computer or
+                mobile device when you visit a website. Cookies are widely used
+                by website owners to make their websites work, or to work more
+                efficiently, as well as to provide reporting information.
+              </p>
 
-      <aside class="cookie-info-box">
-        <h3 style="color: var(--accent-green); margin-bottom: 15px">
-          Your Choice
-        </h3>
-        <p style="font-size: 0.9rem; margin-bottom: 20px; opacity: 0.8">
-          By using our site, you agree to our cookie settings.
-        </p>
-        <a
-          href="#"
-          class="btn-action"
-          style="
-            display: block;
-            text-align: center;
-            background: var(--primary-blue);
-          "
-          >Manage Settings</a
-        >
-      </aside>
-    </main>
+              <div class="info-grid">
+                <div class="info-card">
+                  <div class="info-card-icon">
+                    <i class="fas fa-hdd"></i>
+                  </div>
+                  <h4>Stored on Your Device</h4>
+                  <p>
+                    Cookies are stored in your browser's memory and help
+                    websites remember your preferences.
+                  </p>
+                </div>
+                <div class="info-card">
+                  <div class="info-card-icon">
+                    <i class="fas fa-shield-alt"></i>
+                  </div>
+                  <h4>Secure & Safe</h4>
+                  <p>
+                    Our cookies don't contain personal information and cannot
+                    harm your device.
+                  </p>
+                </div>
+                <div class="info-card">
+                  <div class="info-card-icon">
+                    <i class="fas fa-clock"></i>
+                  </div>
+                  <h4>Session & Persistent</h4>
+                  <p>
+                    Some cookies expire when you close your browser, others stay
+                    for a set period.
+                  </p>
+                </div>
+                <div class="info-card">
+                  <div class="info-card-icon">
+                    <i class="fas fa-globe"></i>
+                  </div>
+                  <h4>First & Third Party</h4>
+                  <p>
+                    We use both our own cookies and trusted third-party cookies
+                    for analytics.
+                  </p>
+                </div>
+              </div>
+            </section>
 
-    <footer class="neo-footer">
-      <div class="footer-grid-container">
-        <div class="footer-block brand-block">
-          <div class="main-logo">
-            <a href="index.html" class="logo-link">
-              <img src="logo.png" alt="Globaxify Logo" class="brand-logo-img" />
-            </a>
-          </div>
-          <p class="brand-para">
-            Engineering the next generation of digital legacies. We bridge the
-            gap between luxury design and global commerce.
-          </p>
-          <div class="social-wrapper">
-            <a
-              href="https://www.upwork.com/freelancers/muhammadhaseebiqbal?mp_source=share"
-              target="_blank"
-              class="social-btn"
-            >
-              <i class="fab fa-upwork"></i>
-            </a>
-            <a
-              href="https://www.tiktok.com/@ahmad_0309?_r=1&_t=ZS-94Afrf0HEue"
-              target="_blank"
-              class="social-btn"
-            >
-              <i class="fab fa-tiktok"></i>
-            </a>
-            <a
-              href="https://www.facebook.com/share/18D3N37reL/"
-              target="_blank"
-              class="social-btn"
-            >
-              <i class="fab fa-facebook-square"></i>
-            </a>
-          </div>
-        </div>
+            <!-- Section 3: Types of Cookies -->
+            <section class="policy-section fade-in" id="types">
+              <div class="section-header">
+                <span class="section-number">03</span>
+                <h2 class="section-title">Types of Cookies We Use</h2>
+              </div>
+              <p>
+                We use different types of cookies for various purposes. Here's a
+                detailed breakdown:
+              </p>
 
-        <div class="footer-block">
-          <h4 class="block-title">Expertise</h4>
-          <ul class="nav-list">
-            <li><a href="index.html#home" class="hover-link">Home</a></li>
-            <li>
-              <a href="index.html#services" class="hover-link">Services</a>
-            </li>
-            <li><a href="index.html#Team" class="hover-link">Team</a></li>
-            <li><a href="portfolio.html" class="hover-link">Portfolio</a></li>
-          </ul>
-        </div>
+              <div class="cookie-table-wrapper">
+                <table class="cookie-table">
+                  <thead>
+                    <tr>
+                      <th>Cookie Type</th>
+                      <th>Purpose</th>
+                      <th>Duration</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <span class="cookie-type type-essential">
+                          <i class="fas fa-lock"></i> Essential
+                        </span>
+                      </td>
+                      <td>
+                        Necessary for the website to function properly. Enable
+                        core functionality like security, network management,
+                        and accessibility.
+                      </td>
+                      <td>Session</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="cookie-type type-analytics">
+                          <i class="fas fa-chart-line"></i> Analytics
+                        </span>
+                      </td>
+                      <td>
+                        Help us understand how visitors interact with our
+                        website by collecting and reporting information
+                        anonymously.
+                      </td>
+                      <td>2 Years</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="cookie-type type-marketing">
+                          <i class="fas fa-bullhorn"></i> Marketing
+                        </span>
+                      </td>
+                      <td>
+                        Used to track visitors across websites to display
+                        relevant and engaging advertisements.
+                      </td>
+                      <td>1 Year</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="cookie-type type-essential">
+                          <i class="fas fa-cog"></i> Preferences
+                        </span>
+                      </td>
+                      <td>
+                        Enable the website to remember choices you make (like
+                        language or region) for a customized experience.
+                      </td>
+                      <td>1 Year</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
 
-        <div class="footer-block">
-          <h4 class="block-title">Globaxify</h4>
-          <ul class="nav-list">
-            <li>
-              <a href="Privacy Policy.html" class="hover-link" target="_blank"
-                >Privacy Policy</a
-              >
-            </li>
-            <li>
-              <a href="Terms of Service.html" class="hover-link" target="_blank"
-                >Terms of Service</a
-              >
-            </li>
-            <li>
-              <a href="Cookies Policy.html" class="hover-link" target="_blank"
-                >Cookies Policy</a
-              >
-            </li>
-          </ul>
-        </div>
+            <!-- Section 4: How We Use -->
+            <section class="policy-section fade-in" id="how">
+              <div class="section-header">
+                <span class="section-number">04</span>
+                <h2 class="section-title">How We Use Cookies</h2>
+              </div>
+              <p>
+                We use cookies for several important purposes that enhance your
+                browsing experience and help us improve our services:
+              </p>
+              <ul>
+                <li>
+                  <strong>Authentication:</strong> To recognize you when you
+                  visit our website and authenticate your identity
+                </li>
+                <li>
+                  <strong>Security:</strong> To protect user accounts, prevent
+                  fraudulent activity, and enhance security
+                </li>
+                <li>
+                  <strong>Preferences:</strong> To remember your settings and
+                  preferences, such as language selection and display options
+                </li>
+                <li>
+                  <strong>Analytics:</strong> To analyze how our website is
+                  accessed, used, or performing, helping us improve user
+                  experience
+                </li>
+                <li>
+                  <strong>Marketing:</strong> To deliver relevant content and
+                  measure the effectiveness of our marketing campaigns
+                </li>
+                <li>
+                  <strong>Performance:</strong> To optimize website speed,
+                  reliability, and overall performance
+                </li>
+              </ul>
+            </section>
 
-        <div class="footer-block newsletter-block">
-          <h4 class="block-title">Stay Ahead</h4>
-          <p class="news-para">
-            Join 5,000+ leaders getting our digital insights.
-          </p>
-          <div class="modern-input-group">
-            <input type="email" placeholder="Work email address" />
-            <button type="submit" class="submit-btn">
-              <i class="fas fa-paper-plane"></i>
-            </button>
-          </div>
-        </div>
-      </div>
+            <!-- Section 5: Manage Cookies -->
+            <section class="policy-section fade-in" id="manage">
+              <div class="section-header">
+                <span class="section-number">05</span>
+                <h2 class="section-title">Managing Your Cookies</h2>
+              </div>
+              <p>
+                You have the right to decide whether to accept or reject
+                cookies. You can exercise your cookie preferences by adjusting
+                your browser settings. Most web browsers allow some control of
+                most cookies through the browser settings.
+              </p>
 
-      <div class="bottom-bar">
-        <div class="bottom-wrapper">
-          <p class="copy-text">
-            &copy; 2026 <strong>Globaxify Inc.</strong> Engineered for
-            Excellence.
-          </p>
-          <div class="bottom-nav">
-            <a href="#" class="hover-link">Terms</a>
-            <a href="#" class="hover-link">Security</a>
-            <div class="status-indicator">
-              <span class="dot"></span> Systems Operational
+              <div class="info-grid">
+                <div class="info-card">
+                  <div class="info-card-icon">
+                    <i class="fab fa-chrome"></i>
+                  </div>
+                  <h4>Google Chrome</h4>
+                  <p>
+                    Settings → Privacy and security → Cookies and other site
+                    data
+                  </p>
+                </div>
+                <div class="info-card">
+                  <div class="info-card-icon">
+                    <i class="fab fa-firefox"></i>
+                  </div>
+                  <h4>Mozilla Firefox</h4>
+                  <p>Options → Privacy & Security → Cookies and Site Data</p>
+                </div>
+                <div class="info-card">
+                  <div class="info-card-icon">
+                    <i class="fab fa-safari"></i>
+                  </div>
+                  <h4>Safari</h4>
+                  <p>Preferences → Privacy → Cookies and website data</p>
+                </div>
+                <div class="info-card">
+                  <div class="info-card-icon">
+                    <i class="fab fa-edge"></i>
+                  </div>
+                  <h4>Microsoft Edge</h4>
+                  <p>
+                    Settings → Cookies and site permissions → Manage cookies
+                  </p>
+                </div>
+              </div>
+
+              <p>
+                <strong>Note:</strong> If you choose to reject cookies, you may
+                still use our website, but some functionality and features may
+                be restricted or not work properly.
+              </p>
+            </section>
+
+            <!-- Section 6: Policy Changes -->
+            <section class="policy-section fade-in" id="changes">
+              <div class="section-header">
+                <span class="section-number">06</span>
+                <h2 class="section-title">Changes to This Policy</h2>
+              </div>
+              <p>
+                We may update this Cookies Policy from time to time to reflect
+                changes in technology, regulation, or our business operations.
+                Any changes will be posted on this page with an updated revision
+                date.
+              </p>
+              <p>
+                We encourage you to periodically review this page for the latest
+                information on our cookie practices. Your continued use of our
+                website after any changes indicates your acceptance of the
+                updated policy.
+              </p>
+            </section>
+
+            <!-- Contact CTA -->
+            <div class="contact-cta fade-in" id="contact">
+              <h3>Questions About Our Cookie Policy?</h3>
+              <p>
+                If you have any questions or concerns about our use of cookies,
+                please don't hesitate to contact us.
+              </p>
+              <a href="index.html#contact" class="cta-btn">
+                <i class="fas fa-envelope"></i>
+                Contact Us
+              </a>
             </div>
           </div>
         </div>
       </div>
-    </footer>
+    </main>
+
+    <!-- Simple Footer -->
 
     <script>
-      const menuBtn = document.getElementById("mobile-menu");
-      const nav = document.getElementById("nav-menu");
+      // Scroll Animation
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -30px 0px",
+      };
 
-      menuBtn.addEventListener("click", () => {
-        menuBtn.classList.toggle("is-active");
-        nav.classList.toggle("active");
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll(".fade-in").forEach((el) => {
+        observer.observe(el);
       });
 
-      document.querySelectorAll(".nav-menu li a").forEach((link) => {
-        link.addEventListener("click", () => {
-          menuBtn.classList.remove("is-active");
-          nav.classList.remove("active");
+      // Active Navigation Link
+      const sections = document.querySelectorAll(".policy-section");
+      const navLinks = document.querySelectorAll(".nav-list a");
+
+      window.addEventListener("scroll", () => {
+        let current = "";
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          if (scrollY >= sectionTop - 100) {
+            current = section.getAttribute("id");
+          }
+        });
+
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href").slice(1) === current) {
+            link.classList.add("active");
+          }
+        });
+      });
+
+      // Smooth Scroll
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
         });
       });
     </script>
