@@ -1633,6 +1633,7 @@ button:hover::before {
 .social-wrapper {
   display: flex;
   gap: 12px;
+  margin-left: 60px;
 }
 
 .social-btn {
