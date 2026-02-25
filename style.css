@@ -116,8 +116,8 @@ section {
 
 .nav-links ul li a:hover,
 .nav-links ul li a.active {
-  background: var(--primary-blue);
-  color: var(--white);
+  background: linear-gradient(to right, #0066cc, #0fd850);
+  color: var(--black);
 }
 
 .right-side {
@@ -361,8 +361,8 @@ button:hover::before {
 
 .btn-primary:hover {
   transform: translateY(-3px);
-  background: #004494;
-  box-shadow: 0 15px 30px rgba(0, 86, 179, 0.3);
+  background: linear-gradient(to right, #0066cc, #0fd850);
+  box-shadow: 0 15px 30px rgba(0, 179, 27, 0.3);
 }
 
 .btn-secondary:hover {
