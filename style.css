@@ -92,8 +92,8 @@ section {
 /* Mobile pe thora chota */
 @media (max-width: 768px) {
   .logo-img {
-    height: 40px;
-    max-height: 40px;
+    height: 140px;
+    max-height: 140px;
   }
 }
 
