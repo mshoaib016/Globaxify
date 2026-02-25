@@ -6,13 +6,13 @@
     <title>Ahmad Iqbal | Shopify Expert & E-commerce Architect</title>
 
     <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300 ;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300   ;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="icon" type="image/png" href="assets/fav icon.png" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css "
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css   "
     />
 
     <style>
@@ -30,6 +30,7 @@
         --dark-navy: #0f172a;
         --slate: #64748b;
         --border-color: #f1f5f9;
+        --code-blue: #3b82f6;
       }
 
       * {
@@ -469,6 +470,8 @@
         text-decoration: none;
         color: inherit;
         transition: 0.4s;
+        display: block;
+        cursor: pointer;
       }
       .project-card:hover {
         border-color: var(--shopify);
@@ -484,11 +487,40 @@
       .tag {
         font-size: 0.7rem;
         padding: 4px 12px;
-        background: #f0f7e6;
-        color: var(--shopify);
         border-radius: 6px;
         margin-right: 8px;
         font-weight: 700;
+      }
+      .tag.shopify {
+        background: #f0f7e6;
+        color: var(--shopify);
+      }
+      .tag.code {
+        background: #eff6ff;
+        color: var(--code-blue);
+      }
+      .platform-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+        padding: 6px 12px;
+        border-radius: 20px;
+        background: #f8fafc;
+        color: var(--slate);
+      }
+      .platform-badge i {
+        font-size: 0.9rem;
+      }
+      .platform-badge.shopify-badge {
+        color: var(--shopify);
+        background: #f0fdf4;
+      }
+      .platform-badge.code-badge {
+        color: var(--code-blue);
+        background: #eff6ff;
       }
 
       /* --- Footer --- */
@@ -1219,7 +1251,7 @@
             </div>
 
             <a
-              href="https://www.upwork.com/freelancers/~YOUR_ID "
+              href="https://www.upwork.com/freelancers/~YOUR_ID   "
               target="_blank"
               class="btn-upwork"
             >
@@ -1319,51 +1351,80 @@
           </p>
         </div>
         <div class="projects-grid">
-          <div class="project-card">
+          <!-- Project 1: Custom Coded (Taqwa.Services) -->
+          <a
+            href="https://taqwa.services/index.html"
+            target="_blank"
+            class="project-card"
+          >
             <img
-              src="https://via.placeholder.com/600x400/222 "
-              alt="Fashion Store"
+              src="assets/Taqwq.png"
+              alt="Taqwa.Services"
               class="project-img"
             />
-            <div style="margin-bottom: 10px">
-              <span class="tag">Shopify Plus</span>
-              <span class="tag">Custom Liquid</span>
+            <div class="platform-badge code-badge">
+              <i class="fas fa-code"></i> Custom Coded
             </div>
-            <h3 style="margin-bottom: 8px">Luxury Fashion Hub</h3>
+            <div style="margin-bottom: 10px">
+              <span class="tag code">HTML/CSS/JS</span>
+              <span class="tag code">Custom PHP</span>
+            </div>
+            <h3 style="margin-bottom: 8px">Taqwa.Services</h3>
             <p style="color: var(--text-dim); font-size: 0.85rem">
-              Redesigned for a 35% increase in mobile checkout conversion.
+              Fully custom e-commerce platform built from scratch with modern
+              web technologies and secure payment integration.
             </p>
-          </div>
-          <div class="project-card">
+          </a>
+
+          <!-- Project 2: Shopify (Secret wear.Site) -->
+          <a
+            href="https://secretwear.site/"
+            target="_blank"
+            class="project-card"
+          >
             <img
-              src="https://via.placeholder.com/600x400/111 "
-              alt="Beauty Store"
+              src="assets/Secretwear.png"
+              alt="Secret wear.Site"
               class="project-img"
             />
-            <div style="margin-bottom: 10px">
-              <span class="tag">OS 2.0</span>
-              <span class="tag">App Setup</span>
+            <div class="platform-badge shopify-badge">
+              <i class="fab fa-shopify"></i> Shopify
             </div>
-            <h3 style="margin-bottom: 8px">Glow Skin Care</h3>
+            <div style="margin-bottom: 10px">
+              <span class="tag shopify">Shopify Plus</span>
+              <span class="tag shopify">Custom Theme</span>
+            </div>
+            <h3 style="margin-bottom: 8px">Secret wear</h3>
             <p style="color: var(--text-dim); font-size: 0.85rem">
-              Full migration from WooCommerce to Shopify with zero data loss.
+              Premium Shopify store with custom Liquid coding, optimized for
+              conversions and mobile shopping experience.
             </p>
-          </div>
-          <div class="project-card">
+          </a>
+
+          <!-- Project 3: Shopify (Fazwidawakha) -->
+          <a
+            href="https://fazwidawakhana.site/"
+            target="_blank"
+            class="project-card"
+          >
             <img
-              src="https://via.placeholder.com/600x400/333 "
-              alt="Tech Store"
+              src="assets/Fazwidawakha.png"
+              alt="Fazwidawakha - Shopify Store"
               class="project-img"
             />
-            <div style="margin-bottom: 10px">
-              <span class="tag">Optimization</span>
-              <span class="tag">UX Design</span>
+            <div class="platform-badge shopify-badge">
+              <i class="fab fa-shopify"></i> Shopify
             </div>
-            <h3 style="margin-bottom: 8px">NextGen Gadgets</h3>
+            <div style="margin-bottom: 10px">
+              <span class="tag shopify">OS 2.0</span>
+              <span class="tag shopify">App Integration</span>
+            </div>
+            <h3 style="margin-bottom: 8px">Fazwidawakha</h3>
             <p style="color: var(--text-dim); font-size: 0.85rem">
-              Speed optimization achieving 95+ score on PageSpeed Insights.
+              Modern Shopify 2.0 store with advanced app integrations and
+              seamless inventory management system.
             </p>
-          </div>
+          </a>
         </div>
       </section>
     </main>
@@ -1386,19 +1447,19 @@
           </p>
           <div class="social-wrapper">
             <a
-              href="https://www.upwork.com/freelancers/muhammadhaseebiqbal"
+              href="https://www.upwork.com/freelancers/muhammadhaseebiqbal  "
               target="_blank"
               class="social-btn"
               ><i class="fab fa-upwork"></i
             ></a>
             <a
-              href="https://www.tiktok.com/@ahmad_0309"
+              href="https://www.tiktok.com/@ahmad_0309  "
               target="_blank"
               class="social-btn"
               ><i class="fab fa-tiktok"></i
             ></a>
             <a
-              href="https://www.facebook.com/share/18D3N37reL/"
+              href="https://www.facebook.com/share/18D3N37reL/  "
               target="_blank"
               class="social-btn"
               ><i class="fab fa-facebook-square"></i
