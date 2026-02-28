@@ -5,690 +5,2047 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Globaxify | Premium Digital Agency</title>
     <link rel="icon" type="image/png" href="assets/fav icon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
   </head>
   <body>
-    <div class="menu-overlay" id="menuOverlay"></div>
+    <!-- Glowing Background Elements -->
+    <div class="glow-container">
+      <div class="glow glow-1"></div>
+      <div class="glow glow-2"></div>
+      <div class="glow glow-3"></div>
+    </div>
 
     <!-- Header -->
-    <header class="navbar">
-      <div class="logo">
-        <a href="index.html" class="logo-link">
-          <img src="assets/Logo.png" alt="Globaxify Logo" class="logo-img" />
-        </a>
-      </div>
-
-      <nav class="nav-links" id="navLinks">
-        <div class="mobile-menu-header">
-          <div>Menu</div>
-          <div class="close-btn" id="closeBtn">&times;</div>
-        </div>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#Team">Team</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-
-      <div class="right-side">
-        <a href="#contact">
-          <button type="button">Let's Talk</button>
-        </a>
-        <div class="menu-toggle" id="menuToggle">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+    <header class="header" id="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <span class="logo-icon">G</span>
+            <span class="logo-text">Globaxify</span>
+          </div>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#services" class="nav-link">Services</a></li>
+            <li><a href="#team" class="nav-link">Team</a></li>
+            <li>
+              <a href="portfolio.html" class="nav-link">Portfolio</a>
+            </li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#contact" class="nav-link">Contact Us</a></li>
+          </ul>
+          <div class="hamburger" id="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </nav>
       </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
-      <div class="hero-container">
-        <div class="hero-content">
-          <span class="badge">Global eCommerce Solutions</span>
-          <h1>
-            Scale Your Business With
-            <span class="text-primary">Globaxify</span> Experts
-          </h1>
-          <p>
-            Hum aapke eCommerce brand ko international level par le kar jatay
-            hain. Smart strategies aur modern tools ke sath apni sales
-            barhayein.
-          </p>
+    <section class="hero-section" id="home">
+      <!-- Background Elements -->
+      <div class="blob blob-cyan float-slow"></div>
+      <div class="blob blob-emerald float-medium"></div>
+      <div class="blob blob-teal float-fast"></div>
 
-          <div class="hero-btns">
-            <a href="#services" class="btn-primary">Our Services</a>
-            <a href="#contact" class="btn-secondary">Contact Us</a>
+      <!-- Grid Pattern -->
+      <div class="grid-pattern"></div>
+
+      <!-- Decorative Circles -->
+      <div class="deco-circle circle-1 float-fast"></div>
+      <div class="deco-circle circle-2 float-medium"></div>
+      <div class="deco-circle circle-3 float-slow"></div>
+
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Left Content -->
+          <div class="hero-content">
+            <!-- Badge -->
+            <div class="badge reveal-up">
+              <span class="pulse-dot"></span>
+              <span class="badge-text">Available for Projects</span>
+            </div>
+
+            <!-- Main Heading -->
+            <h1 class="hero-title reveal-up delay-100">
+              We Build <br />
+              <span class="gradient-text">Digital Future</span>
+            </h1>
+
+            <!-- Subtitle with Typing Effect -->
+            <p class="hero-subtitle reveal-up delay-200">
+              Transforming ideas into powerful digital experiences.
+              <span id="typing-text" class="typing-text"></span
+              ><span class="cursor-blink">|</span>
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="button-group reveal-up delay-300">
+              <button class="btn-primary" onclick="scrollToSection('contact')">
+                Get Started
+                <i data-lucide="arrow-right" class="btn-icon"></i>
+              </button>
+              <button class="btn-secondary" onclick="showComingSoon()">
+                <i data-lucide="play-circle" class="btn-icon-play"></i>
+                Watch Showreel
+              </button>
+            </div>
+
+            <!-- Trust Badges -->
+            <div class="trust-badges reveal-up delay-400">
+              <div class="badge-item">
+                <i data-lucide="check-circle" class="badge-icon"></i>
+                <span>150+ Projects Delivered</span>
+              </div>
+              <div class="badge-item">
+                <i data-lucide="users" class="badge-icon"></i>
+                <span>50+ Happy Clients</span>
+              </div>
+              <div class="badge-item">
+                <i data-lucide="globe" class="badge-icon"></i>
+                <span>Global Reach</span>
+              </div>
+            </div>
           </div>
 
-          <div class="hero-stats">
-            <div class="stat-item">
-              <span class="count">150+</span>
-              <span class="label">Clients</span>
+          <!-- Right Content - Visual -->
+          <div class="hero-visual reveal-up delay-200">
+            <!-- Main Visual Container -->
+            <div class="visual-wrapper">
+              <!-- Background Glow -->
+              <div class="glow-bg"></div>
+
+              <!-- Main Card -->
+              <div class="main-card">
+                <div class="card-inner">
+                  <img
+                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=80"
+                    alt="Digital Dashboard"
+                    class="hero-image"
+                  />
+
+                  <!-- Floating UI Elements -->
+                  <div class="floating-card card-growth float-fast">
+                    <div class="growth-content">
+                      <div class="growth-icon">
+                        <i data-lucide="trending-up" class="icon-24"></i>
+                      </div>
+                      <div class="growth-text">
+                        <p class="growth-label">Growth</p>
+                        <p class="growth-value">+247%</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="floating-card card-project float-medium">
+                    <div class="project-content">
+                      <div class="project-icon">
+                        <i data-lucide="code-2" class="icon-20"></i>
+                      </div>
+                      <div class="project-text">
+                        <p class="project-label">Active Project</p>
+                        <p class="project-name">E-Commerce App</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="stat-item">
-              <span class="count">99%</span>
-              <span class="label">Success Rate</span>
+
+            <!-- Service Icons Grid -->
+            <div class="services-grid reveal-up delay-500">
+              <div class="service-card" onclick="scrollToSection('services')">
+                <div class="service-icon icon-cyan">
+                  <i data-lucide="layout" class="icon-24"></i>
+                </div>
+                <p class="service-name">Web Dev</p>
+              </div>
+              <div class="service-card" onclick="scrollToSection('services')">
+                <div class="service-icon icon-emerald">
+                  <i data-lucide="palette" class="icon-24"></i>
+                </div>
+                <p class="service-name">UI/UX</p>
+              </div>
+              <div class="service-card" onclick="scrollToSection('services')">
+                <div class="service-icon icon-teal">
+                  <i data-lucide="megaphone" class="icon-24"></i>
+                </div>
+                <p class="service-name">Marketing</p>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="hero-image">
-          <div class="image-wrapper">
-            <img src="assets/Hero img.png" alt="Globaxify Success" />
-            <div class="floating-card">
-              <div class="card-icon">🚀</div>
-              <div class="card-text">
-                <strong>Fast Growth</strong>
-                <span>Real-time Analytics</span>
-              </div>
+        <!-- Tech Stack Marquee -->
+        <div class="tech-marquee reveal-up delay-500">
+          <p class="marquee-label">Trusted Technologies</p>
+          <div class="marquee-wrapper">
+            <div class="marquee-content">
+              <span class="tech-name">React</span>
+              <span class="tech-name">Next.js</span>
+              <span class="tech-name">Node.js</span>
+              <span class="tech-name">Python</span>
+              <span class="tech-name">AWS</span>
+              <span class="tech-name">Flutter</span>
+              <span class="tech-name">Figma</span>
+              <span class="tech-name">Shopify</span>
+              <span class="tech-name">React</span>
+              <span class="tech-name">Next.js</span>
+              <span class="tech-name">Node.js</span>
+              <span class="tech-name">Python</span>
+              <span class="tech-name">AWS</span>
+              <span class="tech-name">Flutter</span>
+              <span class="tech-name">Figma</span>
+              <span class="tech-name">Shopify</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Projects Section -->
+    <section class="light-projects" id="projects">
+      <!-- Animated Background -->
+      <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+      </div>
+
+      <!-- Floating Shapes -->
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+
+      <!-- Section Header -->
+      <div class="section-header">
+        <div class="light-tagline">
+          <span class="tagline-dot"></span>
+          <span class="tagline-text">Our Portfolio</span>
+        </div>
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">
+          Discover our latest work in Shopify development, UI/UX design, and
+          digital solutions that drive exceptional results.
+        </p>
+      </div>
+
+      <!-- Device Showcase -->
+      <div class="showcase-section">
+        <div class="showcase-wrapper">
+          <a
+            href="https://secretwear.site/"
+            class="mockup-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="screen laptop-screen"></div>
+            <div class="laptop-base"></div>
+            <span class="device-label">Desktop</span>
+          </a>
+
+          <a
+            href="https://secretwear.site/"
+            class="mockup-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="screen tablet-screen"></div>
+            <span class="device-label">Tablet</span>
+          </a>
+
+          <a
+            href="https://secretwear.site/"
+            class="mockup-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="screen mobile-screen"></div>
+            <span class="device-label">Mobile</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-container">
+        <div class="projects-grid">
+          <!-- Project Card 1 -->
+          <div class="project-card">
+            <div
+              class="project-image"
+              style="background-image: url(assets/Secretwear.png)"
+            >
+              <div class="project-info">
+                <div class="project-category">E-Commerce</div>
+                <a
+                  href="https://secretwear.site/"
+                  class="project-btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span>View Project</span>
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card 2 -->
+          <div class="project-card">
+            <div
+              class="project-image"
+              style="background-image: url(assets/Fazwidawakha.png)"
+            >
+              <div class="project-info">
+                <div class="project-category">Healthcare</div>
+                <a
+                  href="https://fazwidawakhana.site/"
+                  class="project-btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span>View Project</span>
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card 3 -->
+          <div class="project-card">
+            <div
+              class="project-image"
+              style="background-image: url(assets/Taqwq.png)"
+            >
+              <div class="project-info">
+                <div class="project-category">Services</div>
+                <a
+                  href="https://taqwa.services/"
+                  class="project-btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span>View Project</span>
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- View All Button -->
+      <div class="button-container">
+        <a
+          href="projects.html"
+          class="btn-light"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span>View All Projects</span>
+        </a>
+      </div>
+    </section>
+
     <!-- Services Section -->
-    <section id="services" class="services-modern-wrap">
-      <div class="container">
-        <div class="services-main-header">
-          <span class="service-badge">Our Global Expertise</span>
-          <h2 class="services-title">
-            Empowering Brands with
-            <span class="text-gradient">Elite Solutions</span>
+    <section class="services-luxury" id="services">
+      <!-- Background Elements -->
+      <div class="services-bg">
+        <div class="luxury-grid"></div>
+        <div class="glow-orb orb-blue"></div>
+        <div class="glow-orb orb-purple"></div>
+      </div>
+
+      <div class="container-services">
+        <!-- Section Header -->
+        <div class="section-header-luxury" data-aos="fade-up">
+          <div class="header-badge">
+            <span class="badge-line"></span>
+            <span>Our Expertise</span>
+            <span class="badge-line"></span>
+          </div>
+          <h2 class="section-title-luxury">
+            Premium <span class="gradient-text">Services</span>
           </h2>
-          <p class="services-subtitle">
-            At <strong>Globaxify</strong>, we don't just offer services; we
-            engineer digital growth. From high-conversion stores to data-driven
-            marketing, we help you dominate the global marketplace.
+          <p class="section-subtitle-luxury">
+            Elevating businesses through cutting-edge digital solutions crafted
+            with precision and excellence
           </p>
         </div>
 
-        <div class="services-bento-grid">
-          <a href="#" class="service-bento-card large-card">
-            <div class="card-inner">
-              <div class="s-icon-box blue-glow">
+        <!-- Services Grid - 4 Cards in One Row -->
+        <div class="services-grid-luxury">
+          <!-- Card 1: Shopify -->
+          <div
+            class="service-card-luxury"
+            data-aos="fade-up"
+            data-aos-delay="0"
+          >
+            <div class="card-glow"></div>
+            <div class="card-content">
+              <div class="card-icon-wrapper">
+                <div class="icon-bg"></div>
                 <i class="fab fa-shopify"></i>
+                <div class="icon-ring"></div>
               </div>
-              <span class="card-tag">E-Commerce King</span>
-              <h3>End-to-End Shopify Ecosystems</h3>
-              <p>
-                We provide a 360-degree Shopify experience tailored for
-                high-volume brands. Our expertise covers custom theme
-                development from scratch, headless commerce using Hydrogen, and
-                seamless third-party API integrations.
+              <h3 class="card-title">Shopify Store Design</h3>
+              <p class="card-description">
+                Custom Shopify stores that convert visitors into loyal customers
+                with stunning designs and seamless functionality.
               </p>
+              <ul class="card-features">
+                <li>
+                  <span class="feature-icon"><i class="fas fa-check"></i></span>
+                  <span>Custom Theme Development</span>
+                </li>
+                <li>
+                  <span class="feature-icon"><i class="fas fa-check"></i></span>
+                  <span>Mobile-First Responsive Design</span>
+                </li>
+                <li>
+                  <span class="feature-icon"><i class="fas fa-check"></i></span>
+                  <span>Conversion Rate Optimization</span>
+                </li>
+                <li>
+                  <span class="feature-icon"><i class="fas fa-check"></i></span>
+                  <span>Payment Gateway Integration</span>
+                </li>
+              </ul>
             </div>
-            <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
-          </a>
+            <div class="card-shine"></div>
+          </div>
 
-          <a href="#" class="service-bento-card">
-            <div class="card-inner">
-              <div class="s-icon-box green-glow">
+          <!-- Card 2: Product Hunting -->
+          <div
+            class="service-card-luxury"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="card-glow"></div>
+            <div class="card-content">
+              <div class="card-icon-wrapper">
+                <div class="icon-bg"></div>
+                <i class="fas fa-search-dollar"></i>
+                <div class="icon-ring"></div>
+              </div>
+              <h3 class="card-title">Winning Product Hunting</h3>
+              <p class="card-description">
+                Data-driven product research to identify high-demand,
+                low-competition products for maximum profitability.
+              </p>
+              <ul class="card-features">
+                <li>
+                  <span class="feature-icon"><i class="fas fa-check"></i></span>
+                  <span>Advanced Market Analysis</span>
+                </li>
+                <li>
+                  <span class="feature-icon"><i class="fas fa-check"></i></span>
+                  <span>Competitor Intelligence</span>
+                </li>
+                <li>
+                  <span class="feature-icon"><i class="fas fa-check"></i></span>
+                  <span>Trend Forecasting & Prediction</span>
+                </li>
+                <li>
+                  <span class="feature-icon"><i class="fas fa-check"></i></span>
+                  <span>Profit Margin Analysis</span>
+                </li>
+              </ul>
+            </div>
+            <div class="card-shine"></div>
+          </div>
+
+          <!-- Card 3: Web Development -->
+          <div
+            class="service-card-luxury"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="card-glow"></div>
+            <div class="card-content">
+              <div class="card-icon-wrapper">
+                <div class="icon-bg"></div>
                 <i class="fas fa-code"></i>
+                <div class="icon-ring"></div>
               </div>
-              <h3>Full-Stack Web Development</h3>
-              <p>
-                Utilizing modern frameworks like React and Next.js, we build
-                lightning-fast, SEO-optimized websites.
+              <h3 class="card-title">Web Development</h3>
+              <p class="card-description">
+                Full-stack development using modern technologies to build
+                scalable, robust, and high-performance applications.
               </p>
+              <ul class="card-features">
+                <li>
+                  <span class="feature-icon"><i class="fas fa-check"></i></span>
+                  <span>Custom Web Applications</span>
+                </li>
+                <li>
+                  <span class="feature-icon"><i class="fas fa-check"></i></span>
+                  <span>API Integration & Development</span>
+                </li>
+                <li>
+                  <span class="feature-icon"><i class="fas fa-check"></i></span>
+                  <span>Database Architecture</span>
+                </li>
+                <li>
+                  <span class="feature-icon"><i class="fas fa-check"></i></span>
+                  <span>Cloud Deployment & DevOps</span>
+                </li>
+              </ul>
             </div>
-            <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
-          </a>
+            <div class="card-shine"></div>
+          </div>
 
-          <a href="#" class="service-bento-card">
-            <div class="card-inner">
-              <div class="s-icon-box blue-glow">
-                <i class="fas fa-share-alt"></i>
-              </div>
-              <h3>Social Media Strategy</h3>
-              <p>
-                Strengthen your digital footprint. We craft compelling content
-                and engagement-driven strategies.
-              </p>
-            </div>
-            <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
-          </a>
-
-          <a href="#" class="service-bento-card wide-card">
-            <div class="card-inner wide-flex">
-              <div class="s-icon-box blue-glow">
-                <i class="fab fa-facebook-f"></i>
-              </div>
-              <div class="wide-content-text">
-                <h3>Meta Ads & Performance Marketing</h3>
-                <p>
-                  Reach your ideal customers with precision-targeted Facebook
-                  and Instagram ad campaigns. We specialize in high-ROI
-                  strategies that turn clicks into loyal customers.
-                </p>
-              </div>
-            </div>
-            <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
-          </a>
-
-          <a href="#" class="service-bento-card">
-            <div class="card-inner">
-              <div class="s-icon-box green-glow">
-                <i class="fab fa-wordpress"></i>
-              </div>
-              <h3>WordPress Authority</h3>
-              <p>
-                Custom-built corporate websites and blogs using Elementor Pro,
-                focused on high security and speed.
-              </p>
-            </div>
-            <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
-          </a>
-
-          <a href="#" class="service-bento-card">
-            <div class="card-inner">
-              <div class="s-icon-box blue-glow">
+          <!-- Card 4: Social Media Marketing -->
+          <div
+            class="service-card-luxury"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="card-glow"></div>
+            <div class="card-content">
+              <div class="card-icon-wrapper">
+                <div class="icon-bg"></div>
                 <i class="fas fa-bullhorn"></i>
+                <div class="icon-ring"></div>
               </div>
-              <h3>360° Digital Growth</h3>
-              <p>
-                Dominate search engines and digital platforms with our holistic
-                growth hacking and SEO techniques.
+              <h3 class="card-title">Social Media Marketing</h3>
+              <p class="card-description">
+                Strategic campaigns that build brand awareness, drive
+                engagement, and convert followers into customers.
               </p>
+              <ul class="card-features">
+                <li>
+                  <span class="feature-icon"><i class="fas fa-check"></i></span>
+                  <span>Content Strategy & Creation</span>
+                </li>
+                <li>
+                  <span class="feature-icon"><i class="fas fa-check"></i></span>
+                  <span>Paid Advertising Management</span>
+                </li>
+                <li>
+                  <span class="feature-icon"><i class="fas fa-check"></i></span>
+                  <span>Influencer Partnerships</span>
+                </li>
+                <li>
+                  <span class="feature-icon"><i class="fas fa-check"></i></span>
+                  <span>Analytics & ROI Reporting</span>
+                </li>
+              </ul>
             </div>
-            <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
-          </a>
+            <div class="card-shine"></div>
+          </div>
+        </div>
+
+        <!-- Show More Button -->
+        <div class="show-more-container" data-aos="fade-up">
+          <button class="btn-show-more" id="showMoreBtn">
+            <span class="btn-text">Show More Services</span>
+            <span class="btn-icon">
+              <i class="fas fa-arrow-down"></i>
+            </span>
+            <div class="btn-glow-effect"></div>
+          </button>
+        </div>
+
+        <!-- Hidden Services (Initially Hidden) -->
+        <div class="hidden-services" id="hiddenServices">
+          <div class="services-grid-luxury secondary-grid">
+            <!-- Card 5: SEO Optimization -->
+            <div class="service-card-luxury card-secondary">
+              <div class="card-glow"></div>
+              <div class="card-content">
+                <div class="card-icon-wrapper">
+                  <div class="icon-bg"></div>
+                  <i class="fas fa-search"></i>
+                  <div class="icon-ring"></div>
+                </div>
+                <h3 class="card-title">SEO Optimization</h3>
+                <p class="card-description">
+                  Dominate search rankings with our comprehensive SEO strategies
+                  and technical optimization.
+                </p>
+                <ul class="card-features">
+                  <li>
+                    <span class="feature-icon"
+                      ><i class="fas fa-check"></i
+                    ></span>
+                    <span>Technical SEO Audit</span>
+                  </li>
+                  <li>
+                    <span class="feature-icon"
+                      ><i class="fas fa-check"></i
+                    ></span>
+                    <span>Content Optimization</span>
+                  </li>
+                  <li>
+                    <span class="feature-icon"
+                      ><i class="fas fa-check"></i
+                    ></span>
+                    <span>Link Building Strategy</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-shine"></div>
+            </div>
+
+            <!-- Card 6: Brand Identity -->
+            <div class="service-card-luxury card-secondary">
+              <div class="card-glow"></div>
+              <div class="card-content">
+                <div class="card-icon-wrapper">
+                  <div class="icon-bg"></div>
+                  <i class="fas fa-palette"></i>
+                  <div class="icon-ring"></div>
+                </div>
+                <h3 class="card-title">Brand Identity</h3>
+                <p class="card-description">
+                  Create memorable brand experiences with our comprehensive
+                  identity design services.
+                </p>
+                <ul class="card-features">
+                  <li>
+                    <span class="feature-icon"
+                      ><i class="fas fa-check"></i
+                    ></span>
+                    <span>Logo & Visual Design</span>
+                  </li>
+                  <li>
+                    <span class="feature-icon"
+                      ><i class="fas fa-check"></i
+                    ></span>
+                    <span>Brand Guidelines</span>
+                  </li>
+                  <li>
+                    <span class="feature-icon"
+                      ><i class="fas fa-check"></i
+                    ></span>
+                    <span>Marketing Collateral</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-shine"></div>
+            </div>
+
+            <!-- Card 7: Mobile Apps -->
+            <div class="service-card-luxury card-secondary">
+              <div class="card-glow"></div>
+              <div class="card-content">
+                <div class="card-icon-wrapper">
+                  <div class="icon-bg"></div>
+                  <i class="fas fa-mobile-alt"></i>
+                  <div class="icon-ring"></div>
+                </div>
+                <h3 class="card-title">Mobile Apps</h3>
+                <p class="card-description">
+                  Native and cross-platform mobile applications that deliver
+                  exceptional user experiences.
+                </p>
+                <ul class="card-features">
+                  <li>
+                    <span class="feature-icon"
+                      ><i class="fas fa-check"></i
+                    ></span>
+                    <span>iOS & Android Development</span>
+                  </li>
+                  <li>
+                    <span class="feature-icon"
+                      ><i class="fas fa-check"></i
+                    ></span>
+                    <span>React Native & Flutter</span>
+                  </li>
+                  <li>
+                    <span class="feature-icon"
+                      ><i class="fas fa-check"></i
+                    ></span>
+                    <span>UI/UX Design</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-shine"></div>
+            </div>
+
+            <!-- Card 8: Consulting -->
+            <div class="service-card-luxury card-secondary">
+              <div class="card-glow"></div>
+              <div class="card-content">
+                <div class="card-icon-wrapper">
+                  <div class="icon-bg"></div>
+                  <i class="fas fa-lightbulb"></i>
+                  <div class="icon-ring"></div>
+                </div>
+                <h3 class="card-title">IT Consulting</h3>
+                <p class="card-description">
+                  Strategic technology consulting to help you make informed
+                  decisions and drive growth.
+                </p>
+                <ul class="card-features">
+                  <li>
+                    <span class="feature-icon"
+                      ><i class="fas fa-check"></i
+                    ></span>
+                    <span>Digital Transformation</span>
+                  </li>
+                  <li>
+                    <span class="feature-icon"
+                      ><i class="fas fa-check"></i
+                    ></span>
+                    <span>Technology Roadmap</span>
+                  </li>
+                  <li>
+                    <span class="feature-icon"
+                      ><i class="fas fa-check"></i
+                    ></span>
+                    <span>Process Optimization</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-shine"></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- CEO Section -->
-    <section class="ceo-modern-section">
-      <div class="bg-text-ghost"></div>
-      <div class="container ceo-flex-row">
-        <div class="ceo-visual-part">
-          <div class="image-frame-wrap">
-            <div class="frame-border"></div>
-            <div class="ceo-image-container">
-              <img src="assets/CEO iMG.png" alt="CEO" class="ceo-img-fluid" />
-            </div>
-            <div class="stat-badge-modern">
-              <span class="stat-num">08+</span>
-              <span class="stat-label">Years of<br />Innovation</span>
+    <section class="ceo-section-attractive" id="ceo">
+      <!-- Background Elements -->
+      <div class="ceo-bg-elements">
+        <div class="gradient-orb-ceo orb-1"></div>
+        <div class="gradient-orb-ceo orb-2"></div>
+        <div class="grid-pattern"></div>
+      </div>
+
+      <div class="container-ceo-attractive">
+        <div class="ceo-grid-attractive">
+          <!-- Left Side - Image Area -->
+          <div class="ceo-image-area">
+            <div class="image-frame-attractive">
+              <!-- Decorative Rings -->
+              <div class="ring ring-1"></div>
+              <div class="ring ring-2"></div>
+              <div class="ring ring-3"></div>
+
+              <!-- Main Image Container -->
+              <div class="main-image-box">
+                <div class="image-glow-effect"></div>
+                <div class="image-wrapper-3d">
+                  <img
+                    src="assets/CEO iMG.png"
+                    alt="CEO - Globaxify"
+                    class="ceo-image-attractive"
+                  />
+                </div>
+              </div>
+
+              <!-- Decorative Dots -->
+              <div class="deco-dots dots-1"></div>
+              <div class="deco-dots dots-2"></div>
             </div>
           </div>
-        </div>
 
-        <div class="ceo-content-part">
-          <div class="badge-tag">The Visionary</div>
-          <h2 class="ceo-display-name">
-            Ahmad <span class="gradient-blue">Iqbal</span>
-          </h2>
+          <!-- Right Side - Content Area -->
+          <div class="ceo-content-area">
+            <!-- Header Badge -->
+            <div class="section-badge-ceo">
+              <span class="badge-dot-ceo"></span>
+              <span>Meet Our Leader</span>
+            </div>
 
-          <div class="ceo-quote-box">
-            <i class="fas fa-quote-left quote-icon-top"></i>
-            <p>
-              "We don't just build eCommerce; we engineer
-              <span class="highlight-green">Digital Empires</span>. Our mission
-              at Globaxify is to elevate brands to their true global potential."
-            </p>
-          </div>
+            <!-- Name & Title -->
+            <h2 class="ceo-name-attractive">
+              <span class="name-line">Muhammad</span>
+              <span class="name-line gradient-name">Ahmed Iqbal</span>
+            </h2>
 
-          <div class="ceo-meta-footer">
-            <div class="signature-block">
-              <a href="#" class="ceo-signature-link">
-                <img
-                  src="assets/Ahmad Signature.png"
-                  alt="Ahmad Iqbal Signature"
-                  class="ceo-sign-img"
-                />
+            <!-- Bio Text -->
+            <div class="ceo-bio-attractive">
+              <p class="bio-text">
+                Visionary entrepreneur with a passion for transforming
+                businesses through innovative digital solutions. Leading
+                Globaxify from a startup to a premier software house in
+                Bahawalpur, Pakistan.
+              </p>
+              <p class="bio-text secondary">
+                Committed to delivering excellence and empowering local talent
+                to compete on a global scale.
+              </p>
+            </div>
+
+            <!-- Achievement Cards - COUNTERS FIXED -->
+            <div class="achievement-cards">
+              <div class="achieve-card">
+                <div class="achieve-icon">
+                  <i class="fas fa-project-diagram"></i>
+                </div>
+                <div class="achieve-content">
+                  <span class="achieve-number counter" data-target="150"
+                    >0</span
+                  >
+                  <span class="achieve-label">Projects Completed</span>
+                </div>
+                <div class="achieve-glow"></div>
+              </div>
+
+              <div class="achieve-card">
+                <div class="achieve-icon">
+                  <i class="fas fa-users"></i>
+                </div>
+                <div class="achieve-content">
+                  <span class="achieve-number counter" data-target="50">0</span>
+                  <span class="achieve-label">Happy Clients</span>
+                </div>
+                <div class="achieve-glow"></div>
+              </div>
+
+              <div class="achieve-card">
+                <div class="achieve-icon">
+                  <i class="fas fa-award"></i>
+                </div>
+                <div class="achieve-content">
+                  <span class="achieve-number counter" data-target="25">0</span>
+                  <span class="achieve-label">Awards Won</span>
+                </div>
+                <div class="achieve-glow"></div>
+              </div>
+            </div>
+
+            <!-- Quote Section -->
+            <div class="ceo-quote-attractive">
+              <div class="quote-icon">
+                <i class="fas fa-quote-left"></i>
+              </div>
+              <blockquote>
+                "Innovation distinguishes between a leader and a follower. At
+                Globaxify, we don't just follow trends—we create them."
+              </blockquote>
+              <div class="quote-author">
+                <div class="author-line"></div>
+                <span>Muhammad Ahmed Iqbal</span>
+              </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="ceo-social-attractive">
+              <a
+                href="https://www.facebook.com/share/17wXMTtAkC/"
+                class="social-link-ceo"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-facebook-f"></i>
+                <span>Facebook</span>
               </a>
-              <span class="role-text">Founder & CEO, Globaxify</span>
+              <a
+                href="https://www.tiktok.com/@fazwi.dawakhana.p"
+                class="social-link-ceo"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-tiktok"></i>
+                <span>TikTok</span>
+              </a>
+              <a
+                href="https://www.instagram.com/fazwidawakhanapk"
+                class="social-link-ceo"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-instagram"></i>
+                <span>Instagram</span>
+              </a>
+              <a href="mailto:mahmadiqbal84@gmail.com" class="social-link-ceo">
+                <i class="fas fa-envelope"></i>
+                <span>Gmail</span>
+              </a>
             </div>
-            <div class="social-circles">
+
+            <!-- CTA Button -->
+            <div class="ceo-cta">
               <a
-                href="https://www.upwork.com/freelancers/muhammadhaseebiqbal"
+                href="https://wa.me/923097242046"
+                class="btn-ceo-cta"
                 target="_blank"
-                ><i class="fab fa-upwork"></i
-              ></a>
-              <a href="https://www.tiktok.com/@ahmad_0309" target="_blank"
-                ><i class="fab fa-tiktok"></i
-              ></a>
-              <a
-                href="https://www.facebook.com/share/18D3N37reL/"
-                target="_blank"
-                ><i class="fab fa-facebook-square"></i
-              ></a>
+                rel="noopener noreferrer"
+              >
+                <span>Work With Us</span>
+                <div class="btn-ripple"></div>
+                <i class="fab fa-whatsapp"></i>
+              </a>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- Decorative Elements -->
+      <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+      </div>
     </section>
 
-    <!-- Team Section -->
-    <section class="elite-team-modern" id="Team">
-      <div class="team-blob"></div>
-      <div class="container">
-        <div class="team-header-top">
-          <h2 class="hero-text">
-            WE ARE THE <span class="outline-text">ARCHITECTS</span><br />OF THE
-            <span class="gradient-text">DIGITAL ELITE.</span>
+    <!-- Team Section - Ultra Modern Luxury Design -->
+    <section class="team-luxury" id="team">
+      <!-- Background Elements -->
+      <div class="team-bg-luxury">
+        <div class="gradient-mesh"></div>
+        <div class="floating-blobs">
+          <div class="blob blob-1"></div>
+          <div class="blob blob-2"></div>
+          <div class="blob blob-3"></div>
+        </div>
+        <div class="noise-overlay"></div>
+      </div>
+
+      <div class="container-team-luxury">
+        <!-- Section Header -->
+        <div class="team-header-luxury" data-aos="fade-up">
+          <div class="header-badge-luxury">
+            <span class="badge-icon"><i class="fas fa-users"></i></span>
+            <span>Our Team</span>
+          </div>
+          <h2 class="team-title-luxury">
+            Meet The <span class="gradient-text-team">Experts</span>
           </h2>
-          <h2 class="heavy-title">
-            MEET THE <span class="gradient-blue-green">EXPERTS</span>
-          </h2>
-          <p class="team-subtext">
-            The elite visionaries driving digital dominance for global brands.
+          <p class="team-subtitle-luxury">
+            A passionate team of innovators, creators, and problem-solvers
+            dedicated to transforming your digital vision into reality
           </p>
         </div>
 
-        <div class="team-flex-container">
-          <div class="team-grid-side">
-            <div class="member-card">
-              <div class="image-wrapper">
-                <img src="assets/Falak Img.jpeg" alt="Falak Hussaain" />
+        <!-- Team Grid -->
+        <div class="team-grid-luxury">
+          <!-- Member 1: CEO -->
+          <div class="team-card-luxury" data-aos="fade-up" data-aos-delay="0">
+            <div class="card-inner">
+              <div class="card-front">
+                <div class="image-container-luxury">
+                  <div class="image-frame">
+                    <img
+                      src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=500&fit=crop"
+                      alt="CEO - Muhammad Ahmed"
+                      class="team-image-luxury"
+                    />
+                    <div class="image-overlay"></div>
+                    <div class="social-trigger">
+                      <i class="fas fa-plus"></i>
+                    </div>
+                  </div>
+                  <div class="glow-ring"></div>
+                  <div class="decoration-ring ring-1"></div>
+                  <div class="decoration-ring ring-2"></div>
+                </div>
+                <div class="member-info-luxury">
+                  <h3 class="member-name">Muhammad Ahmed</h3>
+
+                  <p class="member-bio">
+                    Visionary leader with 8+ years of experience in digital
+                    transformation and business strategy.
+                  </p>
+                </div>
               </div>
-              <div class="member-info-box">
-                <h4>Falak Hussaain</h4>
-                <p>Shopify Specialist</p>
+              <div class="card-back">
+                <div class="back-content">
+                  <h4>Expertise</h4>
+                  <ul class="expertise-list">
+                    <li><i class="fas fa-check"></i> Business Strategy</li>
+                    <li><i class="fas fa-check"></i> Team Leadership</li>
+                    <li><i class="fas fa-check"></i> Client Relations</li>
+                    <li><i class="fas fa-check"></i> Innovation</li>
+                  </ul>
+                  <div class="social-links-luxury">
+                    <a href="#" class="social-luxury-link"
+                      ><i class="fab fa-linkedin-in"></i
+                    ></a>
+                    <a href="#" class="social-luxury-link"
+                      ><i class="fab fa-twitter"></i
+                    ></a>
+                    <a href="#" class="social-luxury-link"
+                      ><i class="fas fa-envelope"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-shine"></div>
+          </div>
+
+          <!-- Member 2: Lead Developer -->
+          <div class="team-card-luxury" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-inner">
+              <div class="card-front">
+                <div class="image-container-luxury">
+                  <div class="image-frame">
+                    <img
+                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=500&fit=crop"
+                      alt="Lead Developer - Ali Hassan"
+                      class="team-image-luxury"
+                    />
+                    <div class="image-overlay"></div>
+                    <div class="social-trigger">
+                      <i class="fas fa-plus"></i>
+                    </div>
+                  </div>
+                  <div class="glow-ring"></div>
+                  <div class="decoration-ring ring-1"></div>
+                  <div class="decoration-ring ring-2"></div>
+                </div>
+                <div class="member-info-luxury">
+                  <h3 class="member-name">Ali Hassan</h3>
+                  <div class="member-role">
+                    <span class="role-badge role-dev">Lead Developer</span>
+                  </div>
+                  <p class="member-bio">
+                    Full-stack wizard specializing in React, Node.js, and cloud
+                    architecture solutions.
+                  </p>
+                </div>
+              </div>
+              <div class="card-back">
+                <div class="back-content">
+                  <h4>Expertise</h4>
+                  <ul class="expertise-list">
+                    <li><i class="fas fa-check"></i> React & Next.js</li>
+                    <li><i class="fas fa-check"></i> Node.js & Python</li>
+                    <li><i class="fas fa-check"></i> AWS & DevOps</li>
+                    <li><i class="fas fa-check"></i> Database Design</li>
+                  </ul>
+                  <div class="social-links-luxury">
+                    <a href="#" class="social-luxury-link"
+                      ><i class="fab fa-github"></i
+                    ></a>
+                    <a href="#" class="social-luxury-link"
+                      ><i class="fab fa-stack-overflow"></i
+                    ></a>
+                    <a href="#" class="social-luxury-link"
+                      ><i class="fas fa-envelope"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-shine"></div>
+          </div>
+
+          <!-- Member 3: UI/UX Designer -->
+          <div class="team-card-luxury" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-inner">
+              <div class="card-front">
+                <div class="image-container-luxury">
+                  <div class="image-frame">
+                    <img
+                      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=500&fit=crop"
+                      alt="Designer - Fatima Zahra"
+                      class="team-image-luxury"
+                    />
+                    <div class="image-overlay"></div>
+                    <div class="social-trigger">
+                      <i class="fas fa-plus"></i>
+                    </div>
+                  </div>
+                  <div class="glow-ring"></div>
+                  <div class="decoration-ring ring-1"></div>
+                  <div class="decoration-ring ring-2"></div>
+                </div>
+                <div class="member-info-luxury">
+                  <h3 class="member-name">Fatima Zahra</h3>
+                  <div class="member-role">
+                    <span class="role-badge role-design">UI/UX Designer</span>
+                  </div>
+                  <p class="member-bio">
+                    Creative mind crafting beautiful, user-centered designs that
+                    delight and convert.
+                  </p>
+                </div>
+              </div>
+              <div class="card-back">
+                <div class="back-content">
+                  <h4>Expertise</h4>
+                  <ul class="expertise-list">
+                    <li><i class="fas fa-check"></i> Figma & Adobe XD</li>
+                    <li><i class="fas fa-check"></i> User Research</li>
+                    <li><i class="fas fa-check"></i> Prototyping</li>
+                    <li><i class="fas fa-check"></i> Design Systems</li>
+                  </ul>
+                  <div class="social-links-luxury">
+                    <a href="#" class="social-luxury-link"
+                      ><i class="fab fa-dribbble"></i
+                    ></a>
+                    <a href="#" class="social-luxury-link"
+                      ><i class="fab fa-behance"></i
+                    ></a>
+                    <a href="#" class="social-luxury-link"
+                      ><i class="fas fa-envelope"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-shine"></div>
+          </div>
+
+          <!-- Member 4: Marketing Head -->
+          <div class="team-card-luxury" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-inner">
+              <div class="card-front">
+                <div class="image-container-luxury">
+                  <div class="image-frame">
+                    <img
+                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop"
+                      alt="Marketing Head - Usman Khan"
+                      class="team-image-luxury"
+                    />
+                    <div class="image-overlay"></div>
+                    <div class="social-trigger">
+                      <i class="fas fa-plus"></i>
+                    </div>
+                  </div>
+                  <div class="glow-ring"></div>
+                  <div class="decoration-ring ring-1"></div>
+                  <div class="decoration-ring ring-2"></div>
+                </div>
+                <div class="member-info-luxury">
+                  <h3 class="member-name">Usman Khan</h3>
+                  <div class="member-role">
+                    <span class="role-badge role-marketing"
+                      >Marketing Head</span
+                    >
+                  </div>
+                  <p class="member-bio">
+                    Growth hacker driving results through data-driven strategies
+                    and creative campaigns.
+                  </p>
+                </div>
+              </div>
+              <div class="card-back">
+                <div class="back-content">
+                  <h4>Expertise</h4>
+                  <ul class="expertise-list">
+                    <li><i class="fas fa-check"></i> Digital Marketing</li>
+                    <li><i class="fas fa-check"></i> SEO & Content</li>
+                    <li><i class="fas fa-check"></i> Paid Advertising</li>
+                    <li><i class="fas fa-check"></i> Analytics</li>
+                  </ul>
+                  <div class="social-links-luxury">
+                    <a href="#" class="social-luxury-link"
+                      ><i class="fab fa-linkedin-in"></i
+                    ></a>
+                    <a href="#" class="social-luxury-link"
+                      ><i class="fab fa-twitter"></i
+                    ></a>
+                    <a href="#" class="social-luxury-link"
+                      ><i class="fas fa-envelope"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-shine"></div>
+          </div>
+        </div>
+
+        <!-- Join Team CTA -->
+        <div class="team-cta-luxury" data-aos="fade-up">
+          <div class="cta-box">
+            <div class="cta-content">
+              <h3>Want to Join Our Team?</h3>
+              <p>
+                We're always looking for talented individuals to join our
+                growing team.
+              </p>
+            </div>
+            <a
+              href="#contact"
+              class="btn-join-team"
+              onclick="
+                scrollToSection('contact');
+                return false;
+              "
+            >
+              <span>View Openings</span>
+              <i class="fas fa-arrow-right"></i>
+              <div class="btn-glow"></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section - Modern Luxury Design -->
+    <section class="about-luxury" id="about">
+      <!-- Background Elements -->
+      <div class="about-bg-luxury">
+        <div class="gradient-orb-about orb-1"></div>
+        <div class="gradient-orb-about orb-2"></div>
+        <div class="gradient-orb-about orb-3"></div>
+        <div class="grid-lines"></div>
+        <div class="particles-about" id="aboutParticles"></div>
+      </div>
+
+      <div class="container-about-luxury">
+        <!-- Section Header -->
+        <div class="about-header-luxury" data-aos="fade-up">
+          <div class="section-tag-luxury">
+            <span class="tag-line"></span>
+            <span>About Globaxify</span>
+            <span class="tag-line"></span>
+          </div>
+          <h2 class="about-title-luxury">
+            Pioneering
+            <span class="gradient-text-about">Digital Excellence</span><br />
+            From Bahawalpur to the World
+          </h2>
+          <p class="about-subtitle-luxury">
+            Transforming businesses through innovative technology solutions
+            since 2021
+          </p>
+        </div>
+
+        <!-- Main Content Grid -->
+        <div class="about-content-luxury">
+          <!-- Left Side - Story & Mission -->
+          <div class="about-left-luxury" data-aos="fade-right">
+            <!-- Story Card -->
+            <div class="story-card-luxury">
+              <div class="card-icon-large">
+                <i class="fas fa-rocket"></i>
+              </div>
+              <h3>Our Story</h3>
+              <p>
+                Founded in 2021 in the heart of Bahawalpur, Punjab,
+                <strong>Globaxify</strong> began with a simple yet powerful
+                vision: to bring world-class digital solutions to local
+                businesses and empower them to compete on a global scale.
+              </p>
+              <p>
+                What started as a small team of passionate developers has now
+                grown into a premier software house serving clients across
+                Pakistan and internationally. Our journey from a startup to an
+                industry leader is a testament to our commitment to excellence,
+                innovation, and client success.
+              </p>
+              <div class="story-highlight">
+                <span class="highlight-number counter-about" data-count="3"
+                  >0</span
+                >
+                <span class="highlight-text">Years of Excellence</span>
               </div>
             </div>
 
-            <div class="member-card offset-card">
-              <div class="image-wrapper">
-                <img src="assets/Shoaib Img.png" alt="Shoaib Hanif" />
+            <!-- Mission & Vision -->
+            <div class="mission-vision-grid">
+              <div class="mv-card mission">
+                <div class="mv-icon">
+                  <i class="fas fa-bullseye"></i>
+                </div>
+                <h4>Our Mission</h4>
+                <p>
+                  To empower businesses with cutting-edge digital solutions that
+                  drive growth, efficiency, and competitive advantage in the
+                  modern marketplace.
+                </p>
               </div>
-              <div class="member-info-box">
-                <h4>Shoaib Hanif</h4>
-                <p>Full Stack Developer</p>
-              </div>
-            </div>
-
-            <div class="member-card">
-              <div class="image-wrapper">
-                <img src="assets/Salman Img.jpeg" alt="Muhammad Salman" />
-              </div>
-              <div class="member-info-box">
-                <h4>Muhammad Salman</h4>
-                <p>Store Manager</p>
+              <div class="mv-card vision">
+                <div class="mv-icon">
+                  <i class="fas fa-eye"></i>
+                </div>
+                <h4>Our Vision</h4>
+                <p>
+                  To become the leading technology partner for businesses in
+                  Pakistan, recognized globally for innovation, quality, and
+                  transformative impact.
+                </p>
               </div>
             </div>
           </div>
 
-          <div class="team-text-side">
-            <div class="vertical-branding"><span>GLOBAXIFY CORE</span></div>
-            <div class="side-content-box">
-              <h3 class="side-title">
-                Engineering<br /><span class="text-blue">Excellence</span>
-              </h3>
-              <p>
-                Our team consists of world-class developers and designers who
-                specialize in scaling brands to a global audience.
-              </p>
-              <div class="experience-badge">03+ Years Experience</div>
+          <!-- Right Side - Stats & Values -->
+          <div class="about-right-luxury" data-aos="fade-left">
+            <!-- Stats Grid -->
+            <div class="stats-grid-luxury">
+              <div class="stat-card-large">
+                <div class="stat-icon-wrap">
+                  <i class="fas fa-project-diagram"></i>
+                </div>
+                <div class="stat-info">
+                  <span class="stat-number-about counter-about" data-count="150"
+                    >0</span
+                  >
+                  <span class="stat-label-about">Projects Completed</span>
+                </div>
+                <div class="stat-glow"></div>
+              </div>
+
+              <div class="stat-card-large">
+                <div class="stat-icon-wrap">
+                  <i class="fas fa-smile-beam"></i>
+                </div>
+                <div class="stat-info">
+                  <span class="stat-number-about counter-about" data-count="50"
+                    >0</span
+                  >
+                  <span class="stat-label-about">Happy Clients</span>
+                </div>
+                <div class="stat-glow"></div>
+              </div>
+
+              <div class="stat-card-large">
+                <div class="stat-icon-wrap">
+                  <i class="fas fa-users"></i>
+                </div>
+                <div class="stat-info">
+                  <span class="stat-number-about counter-about" data-count="15"
+                    >0</span
+                  >
+                  <span class="stat-label-about">Team Members</span>
+                </div>
+                <div class="stat-glow"></div>
+              </div>
+
+              <div class="stat-card-large">
+                <div class="stat-icon-wrap">
+                  <i class="fas fa-award"></i>
+                </div>
+                <div class="stat-info">
+                  <span class="stat-number-about counter-about" data-count="10"
+                    >0</span
+                  >
+                  <span class="stat-label-about">Awards Won</span>
+                </div>
+                <div class="stat-glow"></div>
+              </div>
+            </div>
+
+            <!-- Core Values -->
+            <div class="values-section-luxury">
+              <h3 class="values-title">Our Core Values</h3>
+              <div class="values-grid">
+                <div class="value-item">
+                  <div class="value-icon-box">
+                    <i class="fas fa-gem"></i>
+                  </div>
+                  <div class="value-content">
+                    <h5>Excellence</h5>
+                    <p>
+                      We deliver nothing short of the best in every project.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="value-item">
+                  <div class="value-icon-box">
+                    <i class="fas fa-lightbulb"></i>
+                  </div>
+                  <div class="value-content">
+                    <h5>Innovation</h5>
+                    <p>
+                      Constantly pushing boundaries with creative solutions.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="value-item">
+                  <div class="value-icon-box">
+                    <i class="fas fa-handshake"></i>
+                  </div>
+                  <div class="value-content">
+                    <h5>Integrity</h5>
+                    <p>Transparent and honest in all our dealings.</p>
+                  </div>
+                </div>
+
+                <div class="value-item">
+                  <div class="value-icon-box">
+                    <i class="fas fa-clock"></i>
+                  </div>
+                  <div class="value-content">
+                    <h5>Commitment</h5>
+                    <p>
+                      Dedicated to meeting deadlines and exceeding expectations.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Why Choose Us -->
+        <div class="why-choose-luxury" data-aos="fade-up">
+          <h3 class="wcu-title">Why Choose Globaxify?</h3>
+          <div class="wcu-grid">
+            <div class="wcu-card">
+              <div class="wcu-number">01</div>
+              <div class="wcu-content">
+                <h4>Local Expertise, Global Standards</h4>
+                <p>
+                  Based in Bahawalpur with international quality standards and
+                  practices.
+                </p>
+              </div>
+            </div>
+
+            <div class="wcu-card">
+              <div class="wcu-number">02</div>
+              <div class="wcu-content">
+                <h4>End-to-End Solutions</h4>
+                <p>
+                  From concept to deployment, we handle every aspect of your
+                  digital journey.
+                </p>
+              </div>
+            </div>
+
+            <div class="wcu-card">
+              <div class="wcu-number">03</div>
+              <div class="wcu-content">
+                <h4>Client-Centric Approach</h4>
+                <p>
+                  Your success is our priority. We work as an extension of your
+                  team.
+                </p>
+              </div>
+            </div>
+
+            <div class="wcu-card">
+              <div class="wcu-number">04</div>
+              <div class="wcu-content">
+                <h4>Cutting-Edge Technology</h4>
+                <p>
+                  We leverage the latest tools and frameworks for optimal
+                  results.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Location & Contact Info -->
+        <div class="location-luxury" data-aos="fade-up">
+          <div class="location-card">
+            <div class="location-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="location-content">
+              <h4>Our Headquarters</h4>
+              <p>Bahawalpur, Punjab, Pakistan</p>
+              <span>Serving clients globally</span>
+            </div>
+            <div class="location-map">
+              <div class="map-pin">
+                <i class="fas fa-map-pin"></i>
+                <div class="pin-pulse"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="about-cta-luxury" data-aos="fade-up">
+          <div class="cta-content-box">
+            <h3>Ready to Transform Your Business?</h3>
+            <p>
+              Let's discuss how Globaxify can help you achieve your digital
+              goals.
+            </p>
+            <div class="cta-buttons">
+              <a
+                href="#contact"
+                class="btn-about-primary"
+                onclick="
+                  scrollToSection('contact');
+                  return false;
+                "
+              >
+                <span>Start a Project</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+              <a
+                href="services.html"
+                class="btn-about-secondary"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>Explore Services</span>
+              </a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about-modern-wrap">
-      <div class="light-orb"></div>
-      <div class="light-orb-secondary"></div>
-      <div class="container about-flex-grid">
-        <div class="side-branding"><span>ESTABLISHED MMXXIV</span></div>
-        <div class="about-content">
-          <h4 class="philosophy-tag">Globaxify Philosophy</h4>
-          <h2 class="hero-text">
-            WE ARE THE <span class="outline-text">ARCHITECTS</span><br />OF THE
-            <span class="gradient-text">DIGITAL ELITE.</span>
-          </h2>
+    <!-- Reviews Section - Ultra Modern Luxury Design -->
+    <section class="reviews-luxury" id="reviews">
+      <!-- Background Elements -->
+      <div class="reviews-bg-luxury">
+        <div class="gradient-sphere sphere-1"></div>
+        <div class="gradient-sphere sphere-2"></div>
+        <div class="gradient-sphere sphere-3"></div>
+        <div class="floating-stars" id="floatingStars"></div>
+        <div class="noise-texture"></div>
+      </div>
 
-          <div class="description-grid-single">
-            <div class="glass-info-card featured-card">
-              <div class="card-header-flex">
-                <div class="card-number">01</div>
-                <div class="card-badge">Our Mission</div>
+      <div class="container-reviews-luxury">
+        <!-- Section Header -->
+        <div class="reviews-header-luxury" data-aos="fade-up">
+          <div class="header-badge-reviews">
+            <span class="badge-star"><i class="fas fa-star"></i></span>
+            <span>Testimonials</span>
+          </div>
+          <h2 class="reviews-title-luxury">
+            What Our <span class="gradient-text-reviews">Clients Say</span>
+          </h2>
+          <p class="reviews-subtitle-luxury">
+            Real stories from real people who trusted us with their digital
+            transformation
+          </p>
+
+          <!-- Rating Overview -->
+          <div class="rating-overview">
+            <div class="rating-big">
+              <span class="rating-number">4.9</span>
+              <div class="rating-stars-big">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
               </div>
-              <p>
-                Globaxify was born from a simple realization: the world doesn't
-                need more agencies. It needs visionaries who can bridge the gap
-                between luxury and commerce. We don't just build websites; we
-                engineer <span class="text-highlight">digital legacies</span>.
-              </p>
+            </div>
+            <div class="rating-divider"></div>
+            <div class="rating-stats">
+              <span class="stat-item"><strong>150+</strong> Reviews</span>
+              <span class="stat-item"><strong>98%</strong> Satisfaction</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reviews Carousel -->
+        <div class="reviews-carousel-luxury" data-aos="fade-up">
+          <!-- Main Slider -->
+          <div class="slider-container">
+            <div class="slider-track" id="sliderTrack">
+              <!-- Review 1 -->
+              <div class="review-card-luxury active">
+                <div class="card-glow"></div>
+                <div class="review-content">
+                  <div class="quote-icon-luxury">
+                    <i class="fas fa-quote-left"></i>
+                  </div>
+                  <p class="review-text-luxury">
+                    "Globaxify transformed our e-commerce business completely.
+                    Their Shopify expertise helped us increase sales by 300% in
+                    just 3 months. The team's dedication and professionalism
+                    exceeded all our expectations."
+                  </p>
+                  <div class="review-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <div class="reviewer-info-luxury">
+                  <div class="reviewer-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop"
+                      alt="Ahmed Iqbal"
+                    />
+                    <div class="image-ring"></div>
+                  </div>
+                  <div class="reviewer-details">
+                    <h4 class="reviewer-name">Ahmed Iqbal</h4>
+                    <p class="reviewer-role">CEO, TechStore Pakistan</p>
+                    <span class="verified-badge"
+                      ><i class="fas fa-check-circle"></i> Verified Client</span
+                    >
+                  </div>
+                </div>
+                <div class="company-logo">
+                  <i class="fas fa-shopping-bag"></i>
+                </div>
+              </div>
+
+              <!-- Review 2 -->
+              <div class="review-card-luxury">
+                <div class="card-glow"></div>
+                <div class="review-content">
+                  <div class="quote-icon-luxury">
+                    <i class="fas fa-quote-left"></i>
+                  </div>
+                  <p class="review-text-luxury">
+                    "Working with Globaxify was a game-changer for our startup.
+                    Their web development team delivered a world-class platform
+                    that helped us secure our first round of funding. Highly
+                    recommended!"
+                  </p>
+                  <div class="review-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <div class="reviewer-info-luxury">
+                  <div class="reviewer-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop"
+                      alt="Sarah Ahmed"
+                    />
+                    <div class="image-ring"></div>
+                  </div>
+                  <div class="reviewer-details">
+                    <h4 class="reviewer-name">Sarah Ahmed</h4>
+                    <p class="reviewer-role">Founder, StartupX</p>
+                    <span class="verified-badge"
+                      ><i class="fas fa-check-circle"></i> Verified Client</span
+                    >
+                  </div>
+                </div>
+                <div class="company-logo">
+                  <i class="fas fa-rocket"></i>
+                </div>
+              </div>
+
+              <!-- Review 3 -->
+              <div class="review-card-luxury">
+                <div class="card-glow"></div>
+                <div class="review-content">
+                  <div class="quote-icon-luxury">
+                    <i class="fas fa-quote-left"></i>
+                  </div>
+                  <p class="review-text-luxury">
+                    "The social media marketing strategy by Globaxify increased
+                    our brand visibility by 500%. Their creative team
+                    understands exactly what the audience wants. Best investment
+                    we ever made!"
+                  </p>
+                  <div class="review-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <div class="reviewer-info-luxury">
+                  <div class="reviewer-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop"
+                      alt="Muhammad Ali"
+                    />
+                    <div class="image-ring"></div>
+                  </div>
+                  <div class="reviewer-details">
+                    <h4 class="reviewer-name">Muhammad Ali</h4>
+                    <p class="reviewer-role">Marketing Director, BrandCo</p>
+                    <span class="verified-badge"
+                      ><i class="fas fa-check-circle"></i> Verified Client</span
+                    >
+                  </div>
+                </div>
+                <div class="company-logo">
+                  <i class="fas fa-bullhorn"></i>
+                </div>
+              </div>
+
+              <!-- Review 4 -->
+              <div class="review-card-luxury">
+                <div class="card-glow"></div>
+                <div class="review-content">
+                  <div class="quote-icon-luxury">
+                    <i class="fas fa-quote-left"></i>
+                  </div>
+                  <p class="review-text-luxury">
+                    "Product hunting service by Globaxify is exceptional. They
+                    found winning products that generated $50k revenue in the
+                    first month. Their research team is incredibly talented and
+                    data-driven."
+                  </p>
+                  <div class="review-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <div class="reviewer-info-luxury">
+                  <div class="reviewer-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop"
+                      alt="Usman Tariq"
+                    />
+                    <div class="image-ring"></div>
+                  </div>
+                  <div class="reviewer-details">
+                    <h4 class="reviewer-name">Usman Tariq</h4>
+                    <p class="reviewer-role">E-commerce Entrepreneur</p>
+                    <span class="verified-badge"
+                      ><i class="fas fa-check-circle"></i> Verified Client</span
+                    >
+                  </div>
+                </div>
+                <div class="company-logo">
+                  <i class="fas fa-chart-line"></i>
+                </div>
+              </div>
+
+              <!-- Review 5 -->
+              <div class="review-card-luxury">
+                <div class="card-glow"></div>
+                <div class="review-content">
+                  <div class="quote-icon-luxury">
+                    <i class="fas fa-quote-left"></i>
+                  </div>
+                  <p class="review-text-luxury">
+                    "From web development to digital marketing, Globaxify
+                    handled everything professionally. Their 24/7 support and
+                    commitment to quality makes them stand out from the
+                    competition."
+                  </p>
+                  <div class="review-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <div class="reviewer-info-luxury">
+                  <div class="reviewer-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&h=150&fit=crop"
+                      alt="Hassan Raza"
+                    />
+                    <div class="image-ring"></div>
+                  </div>
+                  <div class="reviewer-details">
+                    <h4 class="reviewer-name">Hassan Raza</h4>
+                    <p class="reviewer-role">Owner, HR Solutions</p>
+                    <span class="verified-badge"
+                      ><i class="fas fa-check-circle"></i> Verified Client</span
+                    >
+                  </div>
+                </div>
+                <div class="company-logo">
+                  <i class="fas fa-building"></i>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="ticker-wrapper">
-            <div class="ticker-content">
-              <span class="ticker-item">LUXURY DESIGN</span>
-              <div class="dot"></div>
-              <span class="ticker-item">GLOBAL SCALING</span>
-              <div class="dot"></div>
-              <span class="ticker-item">PRECISION CODE</span>
-              <div class="dot"></div>
-              <span class="ticker-item">STRATEGIC GROWTH</span>
-              <div class="dot"></div>
-              <span class="ticker-item">LUXURY DESIGN</span>
-              <div class="dot"></div>
-              <span class="ticker-item">GLOBAL SCALING</span>
-              <div class="dot"></div>
-              <span class="ticker-item">PRECISION CODE</span>
-              <div class="dot"></div>
-              <span class="ticker-item">STRATEGIC GROWTH</span>
-              <div class="dot"></div>
+          <!-- Navigation -->
+          <div class="slider-navigation">
+            <button class="nav-btn prev-btn" id="prevBtn">
+              <i class="fas fa-arrow-left"></i>
+              <div class="btn-glow"></div>
+            </button>
+
+            <div class="slider-dots-luxury" id="sliderDots">
+              <span class="dot active" data-index="0"></span>
+              <span class="dot" data-index="1"></span>
+              <span class="dot" data-index="2"></span>
+              <span class="dot" data-index="3"></span>
+              <span class="dot" data-index="4"></span>
             </div>
+
+            <button class="nav-btn next-btn" id="nextBtn">
+              <i class="fas fa-arrow-right"></i>
+              <div class="btn-glow"></div>
+            </button>
+          </div>
+
+          <!-- Progress Bar -->
+          <div class="slider-progress">
+            <div class="progress-bar" id="progressBar"></div>
+          </div>
+        </div>
+
+        <!-- Trust Badges -->
+        <div class="trust-badges-luxury" data-aos="fade-up">
+          <p class="trust-title">Trusted by leading companies worldwide</p>
+          <div class="trust-logos">
+            <div class="trust-logo"><i class="fab fa-google"></i></div>
+            <div class="trust-logo"><i class="fab fa-microsoft"></i></div>
+            <div class="trust-logo"><i class="fab fa-amazon"></i></div>
+            <div class="trust-logo"><i class="fab fa-shopify"></i></div>
+            <div class="trust-logo"><i class="fab fa-wordpress"></i></div>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="reviews-cta-luxury" data-aos="fade-up">
+          <div class="cta-box-reviews">
+            <div class="cta-icon">
+              <i class="fas fa-comments"></i>
+            </div>
+            <div class="cta-content">
+              <h3>Have a project in mind?</h3>
+              <p>
+                Join our satisfied clients and transform your business today.
+              </p>
+            </div>
+            <a
+              href="#contact"
+              class="btn-reviews-cta"
+              onclick="
+                scrollToSection('contact');
+                return false;
+              "
+            >
+              <span>Get Started</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact-modern">
-      <div class="blob b-1"></div>
-      <div class="blob b-2"></div>
-      <div class="container contact-wrapper">
-        <div class="contact-info">
-          <span class="badge">GET IN TOUCH</span>
-          <h1 class="title">
-            Let's Start Your<br /><span class="gradient-text"
-              >Digital Empire.</span
-            >
-          </h1>
-
-          <div class="info-cards">
-            <div class="info-card">
-              <div class="icon-box green-icon">
-                <i class="fas fa-map-marker-alt"></i>
-              </div>
-              <div class="info-content">
-                <h3>Headquarters</h3>
-                <p>Bahawalpur, Punjab, Pakistan</p>
-              </div>
-              <i class="fas fa-chevron-right arrow-indicator"></i>
-            </div>
-
-            <div class="info-card">
-              <div class="icon-box blue-icon">
-                <i class="fas fa-envelope"></i>
-              </div>
-              <div class="info-content">
-                <h3>Email Address</h3>
-                <p>mahmadiqbal84@gmail.com</p>
-              </div>
-              <i class="fas fa-chevron-right arrow-indicator"></i>
-            </div>
-
-            <div class="info-card">
-              <div class="icon-box lime-icon">
-                <i class="fas fa-phone-alt"></i>
-              </div>
-              <div class="info-content">
-                <h3>Direct Line</h3>
-                <p>+92 309 7242046</p>
-              </div>
-              <i class="fas fa-chevron-right arrow-indicator"></i>
-            </div>
-          </div>
-        </div>
-
-        <div class="contact-form-container">
-          <form class="main-form">
-            <h2 class="form-label">Consult Our Experts</h2>
-            <div class="input-field">
-              <input type="text" placeholder="Your Name" required />
-            </div>
-            <div class="input-field">
-              <input type="email" placeholder="Email Address" required />
-            </div>
-            <div class="input-field">
-              <select required>
-                <option value="" disabled selected>Select Service</option>
-                <option>Shopify Development</option>
-                <option>Web Performance</option>
-                <option>Meta Ads Growth</option>
-                <option>Brand Identity</option>
-              </select>
-            </div>
-            <div class="input-field">
-              <textarea
-                placeholder="Tell us about your project..."
-                rows="4"
-              ></textarea>
-            </div>
-            <button type="submit" class="send-btn">
-              <span>Initialize Project</span>
-              <i class="fas fa-paper-plane"></i>
-            </button>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <!-- Reviews Section -->
-    <section class="reviews-modern">
-      <div class="reviews-blob-1"></div>
-      <div class="reviews-blob-2"></div>
+    <section class="contact" id="contact">
       <div class="container">
-        <div class="header-content">
-          <div class="modern-badge">SUCCESS STORIES</div>
-          <h2 class="main-title">
-            Trusted by <span class="text-glow">Global Leaders</span>
+        <div class="section-header">
+          <span class="section-tag">Get In Touch</span>
+          <h2 class="section-title">
+            Let's Start Your <span class="gradient-text">Project</span>
           </h2>
-          <p class="sub-desc">
-            Empowering visionaries with precision-engineered digital solutions.
+          <p class="section-subtitle">
+            Ready to transform your digital presence?
           </p>
         </div>
-
-        <div class="bento-matrix">
-          <div class="glass-card">
-            <div class="card-inner">
-              <div class="card-header">
-                <div class="profile-frame frame-blue">
-                  <img src="https://i.pravatar.cc/150?u=11" alt="Client" />
-                </div>
-                <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
+        <div class="contact-container">
+          <div class="contact-info" data-aos="fade-right">
+            <div class="contact-card">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
               </div>
-              <div class="card-body">
-                <div class="stars">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i>
-                </div>
-                <p>
-                  "Precision in every pixel and unmatched strategy. Globaxify is
-                  the gold standard."
-                </p>
-                <div class="user-meta">
-                  <strong>James Anderson</strong><span>CEO, Velora</span>
-                </div>
+              <div class="contact-details">
+                <h3>Location</h3>
+                <p>Bahawalpur, Punjab, Pakistan</p>
               </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-details">
+                <h3>Email</h3>
+                <p>mahmadiqbal84@gmail.com</p>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="contact-details">
+                <h3>Phone</h3>
+                <p>+92 309 7242046</p>
+              </div>
+            </div>
+            <div class="contact-social">
+              <a
+                href="https://www.facebook.com/share/17wXMTtAkC/"
+                class="social-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                href="https://www.tiktok.com/@fazwi.dawakhana.p"
+                class="social-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-tiktok"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/fazwidawakhanapk"
+                class="social-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-instagram"></i
+              ></a>
             </div>
           </div>
-
-          <div class="glass-card">
-            <div class="card-inner">
-              <div class="card-header">
-                <div class="profile-frame frame-green">
-                  <img src="https://i.pravatar.cc/150?u=12" alt="Client" />
-                </div>
-                <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
+          <div class="contact-form-wrapper" data-aos="fade-left">
+            <form class="contact-form glow-form" id="contactForm">
+              <div class="form-group">
+                <input type="text" id="name" required />
+                <label for="name">Your Name</label>
+                <i class="fas fa-user"></i>
               </div>
-              <div class="card-body">
-                <div class="stars">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i>
-                </div>
-                <p>
-                  "Tripled our revenue in just 4 months. Their scaling strategy
-                  is world-class."
-                </p>
-                <div class="user-meta">
-                  <strong>Sarah Jenkins</strong><span>Founder, Luxe</span>
-                </div>
+              <div class="form-group">
+                <input type="email" id="email" required />
+                <label for="email">Your Email</label>
+                <i class="fas fa-envelope"></i>
               </div>
-            </div>
-          </div>
-
-          <div class="glass-card">
-            <div class="card-inner">
-              <div class="card-header">
-                <div class="profile-frame frame-blue">
-                  <img src="https://i.pravatar.cc/150?u=13" alt="Client" />
-                </div>
-                <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
+              <div class="form-group">
+                <select id="service" required>
+                  <option value="">Select Service</option>
+                  <option value="shopify">Shopify Store Design</option>
+                  <option value="product">Winning Product Hunting</option>
+                  <option value="web">Web Development</option>
+                  <option value="marketing">Social Media Marketing</option>
+                </select>
+                <i class="fas fa-chevron-down"></i>
               </div>
-              <div class="card-body">
-                <div class="stars">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i>
-                </div>
-                <p>
-                  "The UI/UX expertise is unmatched. They truly understand
-                  luxury commerce."
-                </p>
-                <div class="user-meta">
-                  <strong>Michael Chen</strong><span>Director, TechFlow</span>
-                </div>
+              <div class="form-group">
+                <textarea id="message" rows="4" required></textarea>
+                <label for="message">Your Message</label>
+                <i class="fas fa-comment"></i>
               </div>
-            </div>
-          </div>
-
-          <div class="glass-card">
-            <div class="card-inner">
-              <div class="card-header">
-                <div class="profile-frame frame-green">
-                  <img src="https://i.pravatar.cc/150?u=14" alt="Client" />
-                </div>
-                <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
-              </div>
-              <div class="card-body">
-                <div class="stars">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i>
-                </div>
-                <p>
-                  "Professional, creative, and highly technical. A pleasure to
-                  work with."
-                </p>
-                <div class="user-meta">
-                  <strong>Emma Wilson</strong><span>CMO, Horizon</span>
-                </div>
-              </div>
-            </div>
+              <button type="submit" class="btn btn-primary glow-btn submit-btn">
+                <span>Send Message</span>
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </form>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="neo-footer">
-      <div class="footer-grid-container">
-        <div class="footer-block brand-block">
-          <div class="main-logo">
-            <a href="index.html" class="logo-link">
-              <img
-                src="assets/Logo.png"
-                alt="Globaxify Logo"
-                class="footer-logo-img"
-              />
-            </a>
-          </div>
-          <p class="brand-para">
-            Engineering the next generation of digital legacies. We bridge the
-            gap between luxury design and global commerce.
-          </p>
-          <div class="social-wrapper">
-            <a
-              href="https://www.upwork.com/freelancers/muhammadhaseebiqbal"
-              target="_blank"
-              class="social-btn"
-              ><i class="fab fa-upwork"></i
-            ></a>
-            <a
-              href="https://www.tiktok.com/@ahmad_0309"
-              target="_blank"
-              class="social-btn"
-              ><i class="fab fa-tiktok"></i
-            ></a>
-            <a
-              href="https://www.facebook.com/share/18D3N37reL/"
-              target="_blank"
-              class="social-btn"
-              ><i class="fab fa-facebook-square"></i
-            ></a>
-          </div>
-        </div>
-
-        <div class="footer-block">
-          <h4 class="block-title">Expertise</h4>
-          <ul class="nav-list">
-            <li><a href="#home" class="hover-link">Home</a></li>
-            <li><a href="#services" class="hover-link">Services</a></li>
-            <li><a href="#Team" class="hover-link">Team</a></li>
-            <li><a href="portfolio.html" class="hover-link">Portfolio</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-block">
-          <h4 class="block-title">Globaxify</h4>
-          <ul class="nav-list">
-            <li>
-              <a href="Privacy Policy.html" class="hover-link" target="_blank"
-                >Privacy Policy</a
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <div class="footer-logo">
+              <span class="logo-icon">G</span>
+              <span class="logo-text">Globaxify</span>
+            </div>
+            <p class="footer-desc">
+              Transforming businesses through innovative digital solutions in
+              Bahawalpur and beyond.
+            </p>
+            <div class="footer-social">
+              <a
+                href="https://www.facebook.com/share/17wXMTtAkC/"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-            </li>
-            <li>
-              <a href="Terms of Service.html" class="hover-link" target="_blank"
-                >Terms of Service</a
-              >
-            </li>
-            <li>
-              <a href="Cookies Policy.html" class="hover-link" target="_blank"
-                >Cookies Policy</a
-              >
-            </li>
-          </ul>
-        </div>
+                <i class="fab fa-facebook-f"></i>
+              </a>
 
-        <div class="footer-block newsletter-block">
-          <h4 class="block-title">Stay Ahead</h4>
-          <p class="news-para">
-            Join 5,000+ leaders getting our digital insights.
-          </p>
-          <div class="modern-input-group">
-            <input type="email" placeholder="Work email address" />
-            <button type="submit" class="submit-btn">
-              <i class="fas fa-paper-plane"></i>
-            </button>
-          </div>
-        </div>
-      </div>
+              <a
+                href="https://www.tiktok.com/@fazwi.dawakhana.p"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-tiktok"></i>
+              </a>
 
-      <div class="bottom-bar">
-        <div class="bottom-wrapper">
-          <p class="copy-text">
-            &copy; 2026 <strong>Globaxify Inc.</strong> Engineered for
-            Excellence.
-          </p>
-          <div class="bottom-nav">
-            <a href="#" class="hover-link">Terms</a>
-            <a href="#" class="hover-link">Security</a>
-            <div class="status-indicator">
-              <span class="dot"></span> Systems Operational
+              <a
+                href="https://www.instagram.com/fazwidawakhanapk"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
             </div>
           </div>
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+              <li>
+                <a
+                  href="portfolio.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Portfolio</a
+                >
+              </li>
+              <li>
+                <a
+                  href="projects.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Projects</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Services</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Services</h3>
+            <ul class="footer-links">
+              <li>
+                <a
+                  href="Privacy Policy.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="Terms of Service.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Terms of Service</a
+                >
+              </li>
+              <li>
+                <a
+                  href="Cookies Policy.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Cookies Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Newsletter</h3>
+            <p>Subscribe for latest updates and insights</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Your email" required />
+              <button type="submit"><i class="fas fa-arrow-right"></i></button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; 2024 Globaxify. All rights reserved. | Designed with
+            <i class="fas fa-heart"></i> in Bahawalpur
+          </p>
         </div>
       </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+      <i class="fas fa-arrow-up"></i>
+    </button>
 
     <script src="script.js"></script>
   </body>

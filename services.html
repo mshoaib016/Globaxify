@@ -1,0 +1,1060 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Services - Globaxify | Ultra Luxury</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --mint-light: #e0f7fa;
+        --mint-soft: #b2ebf2;
+        --mint-medium: #80deea;
+        --mint-dark: #4dd0e1;
+        --ocean-light: #e3f2fd;
+        --ocean-soft: #bbdefb;
+        --ocean-medium: #90caf9;
+        --ocean-dark: #64b5f6;
+        --ocean-deep: #42a5f5;
+        --glass-white: rgba(255, 255, 255, 0.15);
+        --glass-border: rgba(255, 255, 255, 0.25);
+        --glass-highlight: rgba(255, 255, 255, 0.4);
+        --dark-bg: #0f172a;
+        --darker-bg: #020617;
+        --text-primary: #f0f9ff;
+        --text-secondary: #bae6fd;
+      }
+
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        background: var(--darker-bg);
+        color: var(--text-primary);
+        overflow-x: hidden;
+        line-height: 1.6;
+      }
+
+      /* Aurora Background */
+      .aurora-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
+        background: var(--darker-bg);
+        overflow: hidden;
+      }
+
+      .aurora-blob {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(80px);
+        opacity: 0.6;
+        animation: auroraMove 20s infinite ease-in-out;
+      }
+
+      .blob-1 {
+        width: 600px;
+        height: 600px;
+        background: linear-gradient(
+          135deg,
+          var(--mint-medium),
+          var(--mint-dark)
+        );
+        top: -200px;
+        left: -100px;
+        animation-delay: 0s;
+      }
+
+      .blob-2 {
+        width: 500px;
+        height: 500px;
+        background: linear-gradient(
+          135deg,
+          var(--ocean-medium),
+          var(--ocean-deep)
+        );
+        top: 20%;
+        right: -150px;
+        animation-delay: -5s;
+      }
+
+      .blob-3 {
+        width: 400px;
+        height: 400px;
+        background: linear-gradient(
+          135deg,
+          var(--mint-soft),
+          var(--ocean-soft)
+        );
+        bottom: -100px;
+        left: 30%;
+        animation-delay: -10s;
+      }
+
+      .blob-4 {
+        width: 300px;
+        height: 300px;
+        background: linear-gradient(
+          135deg,
+          var(--ocean-light),
+          var(--mint-light)
+        );
+        top: 60%;
+        left: 10%;
+        animation-delay: -15s;
+      }
+
+      @keyframes auroraMove {
+        0%,
+        100% {
+          transform: translate(0, 0) scale(1);
+        }
+        25% {
+          transform: translate(50px, -30px) scale(1.1);
+        }
+        50% {
+          transform: translate(-30px, 50px) scale(0.9);
+        }
+        75% {
+          transform: translate(-50px, -20px) scale(1.05);
+        }
+      }
+
+      /* Noise Texture Overlay */
+      .noise-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0.03;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        pointer-events: none;
+      }
+
+      /* Glass Particles */
+      .particles {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 0;
+        overflow: hidden;
+      }
+
+      .particle {
+        position: absolute;
+        background: linear-gradient(
+          135deg,
+          var(--mint-light),
+          var(--ocean-light)
+        );
+        border-radius: 50%;
+        opacity: 0.3;
+        animation: floatUp 15s infinite ease-in-out;
+        box-shadow: 0 0 20px rgba(128, 222, 234, 0.3);
+      }
+
+      @keyframes floatUp {
+        0%,
+        100% {
+          transform: translateY(100vh) scale(0);
+          opacity: 0;
+        }
+        10% {
+          opacity: 0.3;
+        }
+        90% {
+          opacity: 0.3;
+        }
+        100% {
+          transform: translateY(-100px) scale(1);
+          opacity: 0;
+        }
+      }
+
+      /* Hero Section */
+      .hero {
+        padding: 6rem 5% 4rem;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.8rem;
+        padding: 1rem 2.5rem;
+        background: var(--glass-white);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid var(--glass-border);
+        border-radius: 50px;
+        font-size: 0.9rem;
+        color: var(--text-primary);
+        margin-bottom: 3rem;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: 600;
+        box-shadow:
+          0 8px 32px rgba(31, 38, 135, 0.2),
+          inset 0 1px 0 var(--glass-highlight);
+        animation: badgePulse 3s infinite ease-in-out;
+      }
+
+      @keyframes badgePulse {
+        0%,
+        100% {
+          box-shadow:
+            0 8px 32px rgba(31, 38, 135, 0.2),
+            inset 0 1px 0 var(--glass-highlight),
+            0 0 20px rgba(128, 222, 234, 0.2);
+        }
+        50% {
+          box-shadow:
+            0 12px 40px rgba(31, 38, 135, 0.3),
+            inset 0 1px 0 var(--glass-highlight),
+            0 0 40px rgba(128, 222, 234, 0.4);
+        }
+      }
+
+      .hero h1 {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(3rem, 8vw, 5.5rem);
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        background: linear-gradient(
+          135deg,
+          #ffffff 0%,
+          var(--mint-light) 25%,
+          var(--ocean-light) 50%,
+          var(--mint-soft) 75%,
+          #ffffff 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        background-size: 300% auto;
+        animation: gradientFlow 8s linear infinite;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+      }
+
+      @keyframes gradientFlow {
+        0% {
+          background-position: 0% center;
+        }
+        100% {
+          background-position: 300% center;
+        }
+      }
+
+      .hero p {
+        font-size: 1.25rem;
+        color: var(--text-secondary);
+        max-width: 600px;
+        margin: 0 auto 3rem;
+        line-height: 1.8;
+        font-weight: 300;
+      }
+
+      /* Services Section */
+      .services-section {
+        padding: 4rem 5% 6rem;
+        max-width: 1400px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+      }
+
+      .section-header {
+        text-align: center;
+        margin-bottom: 5rem;
+      }
+
+      .section-header h2 {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(2.5rem, 5vw, 3.5rem);
+        margin-bottom: 1rem;
+        background: linear-gradient(
+          135deg,
+          var(--mint-light) 0%,
+          var(--ocean-light) 50%,
+          var(--mint-soft) 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-weight: 600;
+      }
+
+      .section-header p {
+        color: var(--text-secondary);
+        font-size: 1.1rem;
+        font-weight: 300;
+      }
+
+      /* Bento Grid Layout */
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+        perspective: 1000px;
+      }
+
+      /* Ultra Luxury Glass Card */
+      .luxury-card {
+        position: relative;
+        background: var(--glass-white);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid var(--glass-border);
+        border-radius: 24px;
+        padding: 2.5rem;
+        overflow: hidden;
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        transform-style: preserve-3d;
+        box-shadow:
+          0 8px 32px rgba(31, 38, 135, 0.1),
+          inset 0 1px 0 var(--glass-highlight);
+      }
+
+      .luxury-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.2),
+          transparent
+        );
+        transition: left 0.7s ease;
+      }
+
+      .luxury-card:hover::before {
+        left: 100%;
+      }
+
+      .luxury-card:hover {
+        transform: translateY(-10px) scale(1.02);
+        border-color: rgba(128, 222, 234, 0.5);
+        box-shadow:
+          0 20px 60px rgba(31, 38, 135, 0.2),
+          0 0 40px rgba(128, 222, 234, 0.2),
+          inset 0 1px 0 rgba(255, 255, 255, 0.4);
+      }
+
+      /* Card Inner Glow */
+      .card-glow {
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(
+          circle,
+          rgba(128, 222, 234, 0.15) 0%,
+          transparent 70%
+        );
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        pointer-events: none;
+      }
+
+      .luxury-card:hover .card-glow {
+        opacity: 1;
+      }
+
+      /* Icon Container with Liquid Effect */
+      .icon-container {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 1.5rem;
+        position: relative;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        color: white;
+        overflow: hidden;
+        box-shadow:
+          0 10px 30px rgba(0, 0, 0, 0.2),
+          inset 0 2px 4px rgba(255, 255, 255, 0.3);
+        transition: all 0.4s ease;
+      }
+
+      .luxury-card:hover .icon-container {
+        transform: scale(1.1) rotate(5deg);
+        box-shadow:
+          0 15px 40px rgba(0, 0, 0, 0.3),
+          inset 0 2px 4px rgba(255, 255, 255, 0.4),
+          0 0 30px rgba(128, 222, 234, 0.4);
+      }
+
+      /* Gradient Backgrounds for Icons */
+      .icon-shopify {
+        background: linear-gradient(135deg, #96bf48 0%, #5e8e3e 100%);
+      }
+
+      .icon-listing {
+        background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+      }
+
+      .icon-hunting {
+        background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+      }
+
+      .icon-web {
+        background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+      }
+
+      .icon-wordpress {
+        background: linear-gradient(135deg, #21759b 0%, #1a5f7a 100%);
+      }
+
+      .icon-woo {
+        background: linear-gradient(135deg, #96588a 0%, #7a4680 100%);
+      }
+
+      .icon-digital {
+        background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+      }
+
+      .icon-social {
+        background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+      }
+
+      .icon-amazon {
+        background: linear-gradient(135deg, #ff9900 0%, #ff7700 100%);
+      }
+
+      .icon-brand {
+        background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+      }
+
+      .icon-dropship {
+        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      }
+
+      .icon-consult {
+        background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      }
+
+      .icon-container i {
+        position: relative;
+        z-index: 2;
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+      }
+
+      /* Card Content */
+      .luxury-card h3 {
+        font-family: "Playfair Display", serif;
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
+        color: var(--text-primary);
+        text-align: center;
+        font-weight: 600;
+      }
+
+      .luxury-card p {
+        color: var(--text-secondary);
+        line-height: 1.7;
+        text-align: center;
+        margin-bottom: 1.5rem;
+        font-size: 0.95rem;
+        font-weight: 300;
+      }
+
+      /* Features List */
+      .luxury-features {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .luxury-features li {
+        padding: 0.6rem 0;
+        color: rgba(255, 255, 255, 0.8);
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        font-size: 0.9rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        transition: all 0.3s ease;
+        font-weight: 400;
+      }
+
+      .luxury-features li:last-child {
+        border-bottom: none;
+      }
+
+      .luxury-features li:hover {
+        color: var(--mint-light);
+        padding-left: 8px;
+      }
+
+      .luxury-features li i {
+        color: var(--mint-medium);
+        font-size: 0.7rem;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(128, 222, 234, 0.1);
+        border-radius: 50%;
+        transition: all 0.3s ease;
+      }
+
+      .luxury-features li:hover i {
+        background: rgba(128, 222, 234, 0.3);
+        transform: scale(1.2);
+      }
+
+      /* Number Badge */
+      .card-number {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 36px;
+        height: 36px;
+        background: linear-gradient(
+          135deg,
+          rgba(128, 222, 234, 0.2) 0%,
+          rgba(144, 202, 249, 0.2) 100%
+        );
+        border: 1px solid rgba(128, 222, 234, 0.3);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        color: var(--mint-light);
+        font-size: 0.85rem;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      /* CTA Section */
+      .luxury-cta {
+        padding: 6rem 5%;
+        text-align: center;
+        position: relative;
+        margin-top: 4rem;
+        z-index: 1;
+      }
+
+      .luxury-cta::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60%;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(128, 222, 234, 0.5),
+          transparent
+        );
+      }
+
+      .cta-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 1.2rem 3rem;
+        background: linear-gradient(
+          135deg,
+          rgba(128, 222, 234, 0.9) 0%,
+          rgba(144, 202, 249, 0.9) 100%
+        );
+        color: var(--dark-bg);
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 700;
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px);
+        box-shadow:
+          0 10px 40px rgba(128, 222, 234, 0.3),
+          0 0 60px rgba(128, 222, 234, 0.2),
+          inset 0 1px 0 rgba(255, 255, 255, 0.4);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .cta-button:hover {
+        transform: translateY(-3px) scale(1.05);
+        box-shadow:
+          0 20px 60px rgba(128, 222, 234, 0.5),
+          0 0 80px rgba(128, 222, 234, 0.4),
+          inset 0 1px 0 rgba(255, 255, 255, 0.5);
+      }
+
+      .cta-button::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(
+          45deg,
+          transparent,
+          rgba(255, 255, 255, 0.4),
+          transparent
+        );
+        transform: rotate(45deg);
+        transition: all 0.6s ease;
+      }
+
+      .cta-button:hover::before {
+        left: 100%;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .hero {
+          padding: 4rem 5% 2rem;
+        }
+
+        .services-grid {
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+        }
+
+        .luxury-card {
+          padding: 2rem;
+        }
+      }
+
+      /* Scroll Reveal Animation */
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Stagger animation for cards */
+      .luxury-card:nth-child(1) {
+        transition-delay: 0.1s;
+      }
+      .luxury-card:nth-child(2) {
+        transition-delay: 0.2s;
+      }
+      .luxury-card:nth-child(3) {
+        transition-delay: 0.3s;
+      }
+      .luxury-card:nth-child(4) {
+        transition-delay: 0.4s;
+      }
+      .luxury-card:nth-child(5) {
+        transition-delay: 0.5s;
+      }
+      .luxury-card:nth-child(6) {
+        transition-delay: 0.6s;
+      }
+      .luxury-card:nth-child(7) {
+        transition-delay: 0.7s;
+      }
+      .luxury-card:nth-child(8) {
+        transition-delay: 0.8s;
+      }
+      .luxury-card:nth-child(9) {
+        transition-delay: 0.9s;
+      }
+      .luxury-card:nth-child(10) {
+        transition-delay: 1s;
+      }
+      .luxury-card:nth-child(11) {
+        transition-delay: 1.1s;
+      }
+      .luxury-card:nth-child(12) {
+        transition-delay: 1.2s;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Aurora Background -->
+    <div class="aurora-bg">
+      <div class="aurora-blob blob-1"></div>
+      <div class="aurora-blob blob-2"></div>
+      <div class="aurora-blob blob-3"></div>
+      <div class="aurora-blob blob-4"></div>
+    </div>
+
+    <!-- Noise Texture -->
+    <div class="noise-overlay"></div>
+
+    <!-- Floating Particles -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-badge reveal">
+        <i class="fas fa-sparkles"></i>
+        Premium E-Commerce Solutions
+      </div>
+      <h1 class="reveal">Ultra Luxury Services</h1>
+      <p class="reveal">
+        Elevate your digital presence with our premium suite of e-commerce
+        solutions. Experience excellence redefined through innovation and
+        sophistication.
+      </p>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+      <div class="section-header reveal">
+        <h2>Our Exclusive Services</h2>
+        <p>Discover world-class solutions tailored for elite businesses</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service 1: Shopify -->
+        <div class="luxury-card reveal">
+          <div class="card-glow"></div>
+          <div class="card-number">01</div>
+          <div class="icon-container icon-shopify">
+            <i class="fab fa-shopify"></i>
+          </div>
+          <h3>Shopify Elite Design</h3>
+          <p>
+            Bespoke Shopify stores with premium themes and conversion-optimized
+            architecture.
+          </p>
+          <ul class="luxury-features">
+            <li><i class="fas fa-check"></i> Custom Premium Themes</li>
+            <li><i class="fas fa-check"></i> Luxury UI/UX Design</li>
+            <li><i class="fas fa-check"></i> Advanced Analytics Setup</li>
+            <li><i class="fas fa-check"></i> VIP Support & Maintenance</li>
+          </ul>
+        </div>
+
+        <!-- Service 2: Product Listing -->
+        <div class="luxury-card reveal">
+          <div class="card-glow"></div>
+          <div class="card-number">02</div>
+          <div class="icon-container icon-listing">
+            <i class="fas fa-list-alt"></i>
+          </div>
+          <h3>Premium Listing Optimization</h3>
+          <p>
+            Elite product catalog management with SEO mastery and visual
+            perfection.
+          </p>
+          <ul class="luxury-features">
+            <li><i class="fas fa-check"></i> SEO-Optimized Content</li>
+            <li><i class="fas fa-check"></i> Professional Photography</li>
+            <li><i class="fas fa-check"></i> A+ Content Creation</li>
+            <li><i class="fas fa-check"></i> Keyword Research & Strategy</li>
+          </ul>
+        </div>
+
+        <!-- Service 3: Product Hunting -->
+        <div class="luxury-card reveal">
+          <div class="card-glow"></div>
+          <div class="card-number">03</div>
+          <div class="icon-container icon-hunting">
+            <i class="fas fa-search-dollar"></i>
+          </div>
+          <h3>Winning Product Intelligence</h3>
+          <p>
+            AI-powered product research uncovering high-margin opportunities.
+          </p>
+          <ul class="luxury-features">
+            <li><i class="fas fa-check"></i> Market Trend Analysis</li>
+            <li><i class="fas fa-check"></i> Competitor Intelligence</li>
+            <li><i class="fas fa-check"></i> Profit Margin Optimization</li>
+            <li><i class="fas fa-check"></i> Supplier Vetting</li>
+          </ul>
+        </div>
+
+        <!-- Service 4: Web Development -->
+        <div class="luxury-card reveal">
+          <div class="card-glow"></div>
+          <div class="card-number">04</div>
+          <div class="icon-container icon-web">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3>Bespoke Web Development</h3>
+          <p>
+            Custom-coded luxury websites with cutting-edge technology stack.
+          </p>
+          <ul class="luxury-features">
+            <li><i class="fas fa-check"></i> React & Next.js Architecture</li>
+            <li><i class="fas fa-check"></i> Custom API Development</li>
+            <li><i class="fas fa-check"></i> Cloud Infrastructure</li>
+            <li><i class="fas fa-check"></i> Security Hardening</li>
+          </ul>
+        </div>
+
+        <!-- Service 5: WordPress -->
+        <div class="luxury-card reveal">
+          <div class="card-glow"></div>
+          <div class="card-number">05</div>
+          <div class="icon-container icon-wordpress">
+            <i class="fab fa-wordpress"></i>
+          </div>
+          <h3>WordPress Excellence</h3>
+          <p>Premium WordPress solutions with custom theme development.</p>
+          <ul class="luxury-features">
+            <li><i class="fas fa-check"></i> Bespoke Theme Design</li>
+            <li><i class="fas fa-check"></i> Custom Plugin Development</li>
+            <li><i class="fas fa-check"></i> Performance Optimization</li>
+            <li><i class="fas fa-check"></i> Enterprise Security</li>
+          </ul>
+        </div>
+
+        <!-- Service 6: WooCommerce -->
+        <div class="luxury-card reveal">
+          <div class="card-glow"></div>
+          <div class="card-number">06</div>
+          <div class="icon-container icon-woo">
+            <i class="fas fa-shopping-cart"></i>
+          </div>
+          <h3>WooCommerce Mastery</h3>
+          <p>Luxury e-commerce experiences powered by WooCommerce.</p>
+          <ul class="luxury-features">
+            <li><i class="fas fa-check"></i> Store Architecture Design</li>
+            <li><i class="fas fa-check"></i> Payment Gateway Integration</li>
+            <li><i class="fas fa-check"></i> Inventory Management</li>
+            <li><i class="fas fa-check"></i> Shipping Automation</li>
+          </ul>
+        </div>
+
+        <!-- Service 7: Digital Marketing -->
+        <div class="luxury-card reveal">
+          <div class="card-glow"></div>
+          <div class="card-number">07</div>
+          <div class="icon-container icon-digital">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3>Elite Digital Marketing</h3>
+          <p>
+            Comprehensive marketing strategies for premium brand positioning.
+          </p>
+          <ul class="luxury-features">
+            <li><i class="fas fa-check"></i> SEO Dominance Strategy</li>
+            <li><i class="fas fa-check"></i> PPC Campaign Management</li>
+            <li><i class="fas fa-check"></i> Email Marketing Automation</li>
+            <li><i class="fas fa-check"></i> Content Marketing</li>
+          </ul>
+        </div>
+
+        <!-- Service 8: Social Media -->
+        <div class="luxury-card reveal">
+          <div class="card-glow"></div>
+          <div class="card-number">08</div>
+          <div class="icon-container icon-social">
+            <i class="fas fa-hashtag"></i>
+          </div>
+          <h3>Social Media Empire</h3>
+          <p>Build your brand presence across all premium social platforms.</p>
+          <ul class="luxury-features">
+            <li><i class="fas fa-check"></i> Content Strategy & Creation</li>
+            <li><i class="fas fa-check"></i> Paid Social Advertising</li>
+            <li><i class="fas fa-check"></i> Influencer Partnerships</li>
+            <li><i class="fas fa-check"></i> Community Management</li>
+          </ul>
+        </div>
+
+        <!-- Service 9: Amazon/eBay -->
+        <div class="luxury-card reveal">
+          <div class="card-glow"></div>
+          <div class="card-number">09</div>
+          <div class="icon-container icon-amazon">
+            <i class="fab fa-amazon"></i>
+          </div>
+          <h3>Marketplace Domination</h3>
+          <p>Elite management for Amazon, eBay, and premium marketplaces.</p>
+          <ul class="luxury-features">
+            <li><i class="fas fa-check"></i> Account Setup & Optimization</li>
+            <li><i class="fas fa-check"></i> A+ Content & Brand Store</li>
+            <li><i class="fas fa-check"></i> PPC & Advertising Management</li>
+            <li><i class="fas fa-check"></i> Review & Reputation Management</li>
+          </ul>
+        </div>
+
+        <!-- Service 10: Brand Design -->
+        <div class="luxury-card reveal">
+          <div class="card-glow"></div>
+          <div class="card-number">10</div>
+          <div class="icon-container icon-brand">
+            <i class="fas fa-palette"></i>
+          </div>
+          <h3>Luxury Brand Identity</h3>
+          <p>Premium visual identity design that commands attention.</p>
+          <ul class="luxury-features">
+            <li><i class="fas fa-check"></i> Logo & Brand Design</li>
+            <li><i class="fas fa-check"></i> Packaging Design</li>
+            <li><i class="fas fa-check"></i> Marketing Collateral</li>
+            <li><i class="fas fa-check"></i> Brand Guidelines</li>
+          </ul>
+        </div>
+
+        <!-- Service 11: Dropshipping -->
+        <div class="luxury-card reveal">
+          <div class="card-glow"></div>
+          <div class="card-number">11</div>
+          <div class="icon-container icon-dropship">
+            <i class="fas fa-shipping-fast"></i>
+          </div>
+          <h3>Automated Dropshipping</h3>
+          <p>Hands-free dropshipping systems with premium automation.</p>
+          <ul class="luxury-features">
+            <li><i class="fas fa-check"></i> Store Automation Setup</li>
+            <li><i class="fas fa-check"></i> Supplier Integration</li>
+            <li><i class="fas fa-check"></i> Order Fulfillment Systems</li>
+            <li><i class="fas fa-check"></i> Profit Analytics Dashboard</li>
+          </ul>
+        </div>
+
+        <!-- Service 12: Consulting -->
+        <div class="luxury-card reveal">
+          <div class="card-glow"></div>
+          <div class="card-number">12</div>
+          <div class="icon-container icon-consult">
+            <i class="fas fa-handshake"></i>
+          </div>
+          <h3>Strategic Consulting</h3>
+          <p>Expert guidance to scale your e-commerce empire.</p>
+          <ul class="luxury-features">
+            <li><i class="fas fa-check"></i> Business Strategy Planning</li>
+            <li><i class="fas fa-check"></i> Conversion Optimization</li>
+            <li><i class="fas fa-check"></i> Operational Excellence</li>
+            <li><i class="fas fa-check"></i> Growth Scaling Roadmap</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="luxury-cta reveal">
+      <a href="#" class="cta-button">
+        <i class="fas fa-sparkles"></i>
+        Start Your Premium Journey
+      </a>
+    </section>
+
+    <script>
+      // Generate Floating Particles
+      const particlesContainer = document.getElementById("particles");
+
+      function createParticle() {
+        const particle = document.createElement("div");
+        particle.className = "particle";
+        const size = Math.random() * 4 + 2;
+        particle.style.width = size + "px";
+        particle.style.height = size + "px";
+        particle.style.left = Math.random() * 100 + "%";
+        particle.style.animationDuration = Math.random() * 10 + 10 + "s";
+        particle.style.animationDelay = Math.random() * 5 + "s";
+        particlesContainer.appendChild(particle);
+
+        // Remove particle after animation
+        setTimeout(() => {
+          particle.remove();
+        }, 20000);
+      }
+
+      // Create initial particles
+      for (let i = 0; i < 20; i++) {
+        setTimeout(createParticle, Math.random() * 5000);
+      }
+
+      // Continuously create particles
+      setInterval(createParticle, 1000);
+
+      // Scroll Reveal Animation with Intersection Observer
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll(".reveal").forEach((el) => {
+        observer.observe(el);
+      });
+
+      // 3D Tilt Effect on Cards
+      document.querySelectorAll(".luxury-card").forEach((card) => {
+        card.addEventListener("mousemove", (e) => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+
+          const rotateX = (y - centerY) / 25;
+          const rotateY = (centerX - x) / 25;
+
+          card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px) scale(1.02)`;
+        });
+
+        card.addEventListener("mouseleave", () => {
+          card.style.transform =
+            "perspective(1000px) rotateX(0) rotateY(0) translateY(0) scale(1)";
+        });
+      });
+
+      // Smooth parallax effect on mouse move
+      document.addEventListener("mousemove", (e) => {
+        const mouseX = e.clientX / window.innerWidth;
+        const mouseY = e.clientY / window.innerHeight;
+
+        const blobs = document.querySelectorAll(".aurora-blob");
+        blobs.forEach((blob, index) => {
+          const speed = (index + 1) * 20;
+          const x = (window.innerWidth / 2 - e.clientX) / speed;
+          const y = (window.innerHeight / 2 - e.clientY) / speed;
+          blob.style.transform = `translate(${x}px, ${y}px)`;
+        });
+      });
+    </script>
+  </body>
+</html>
