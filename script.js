@@ -812,3 +812,79 @@ if (document.readyState === "loading") {
 window.reinitAboutCounters = function () {
   initAboutCounters();
 };
+
+function initTeamCounters() {
+  const counters = document.querySelectorAll(".counter-team");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const counter = entry.target;
+          const target = parseInt(counter.getAttribute("data-target"));
+          const duration = 2000;
+          const step = target / (duration / 16);
+          let current = 0;
+
+          const timer = setInterval(() => {
+            current += step;
+            if (current >= target) {
+              counter.textContent = target + (target === 1200 ? "+" : "");
+              clearInterval(timer);
+            } else {
+              counter.textContent = Math.floor(current);
+            }
+          }, 16);
+
+          observer.unobserve(counter);
+        }
+      });
+    },
+    { threshold: 0.5 },
+  );
+
+  counters.forEach((counter) => observer.observe(counter));
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initTeamCounters);
+} else {
+  initTeamCounters();
+}
+
+// Hero Section Counter Animation
+document.addEventListener("DOMContentLoaded", function () {
+  const counters = document.querySelectorAll(".stat-number");
+
+  const animateCounter = (counter) => {
+    const target = parseInt(counter.getAttribute("data-count"));
+    const duration = 2000;
+    const step = target / (duration / 16);
+    let current = 0;
+
+    const timer = setInterval(() => {
+      current += step;
+      if (current >= target) {
+        counter.textContent = target + "+";
+        clearInterval(timer);
+      } else {
+        counter.textContent = Math.floor(current);
+      }
+    }, 16);
+  };
+
+  // Intersection Observer for counters
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.5 },
+  );
+
+  counters.forEach((counter) => observer.observe(counter));
+});

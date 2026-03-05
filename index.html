@@ -40,8 +40,14 @@
       <div class="container">
         <nav class="navbar">
           <div class="logo">
-            <span class="logo-icon">G</span>
-            <span class="logo-text">Globaxify</span>
+            <a href="#home">
+              <img
+                src="assets/fav icon.png"
+                alt="Globaxify Logo"
+                class="logo-img"
+              />
+              <span class="logo-text">Globaxify</span>
+            </a>
           </div>
           <ul class="nav-menu" id="navMenu">
             <li><a href="#home" class="nav-link active">Home</a></li>
@@ -63,166 +69,162 @@
       </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero-section" id="home">
-      <!-- Background Elements -->
-      <div class="blob blob-cyan float-slow"></div>
-      <div class="blob blob-emerald float-medium"></div>
-      <div class="blob blob-teal float-fast"></div>
+    <!-- Hero Section - Modern Luxury Text & Icons Design -->
+    <section class="hero-luxury" id="home">
+      <!-- Animated Background -->
+      <div class="hero-bg-luxury">
+        <div class="luxury-grid"></div>
+        <div class="floating-orb orb-1"></div>
+        <div class="floating-orb orb-2"></div>
+        <div class="floating-orb orb-3"></div>
+        <div class="gradient-mesh"></div>
+      </div>
 
-      <!-- Grid Pattern -->
-      <div class="grid-pattern"></div>
-
-      <!-- Decorative Circles -->
-      <div class="deco-circle circle-1 float-fast"></div>
-      <div class="deco-circle circle-2 float-medium"></div>
-      <div class="deco-circle circle-3 float-slow"></div>
-
-      <div class="container">
-        <div class="hero-grid">
-          <!-- Left Content -->
-          <div class="hero-content">
-            <!-- Badge -->
-            <div class="badge reveal-up">
-              <span class="pulse-dot"></span>
-              <span class="badge-text">Available for Projects</span>
-            </div>
-
-            <!-- Main Heading -->
-            <h1 class="hero-title reveal-up delay-100">
-              We Build <br />
-              <span class="gradient-text">Digital Future</span>
-            </h1>
-
-            <!-- Subtitle with Typing Effect -->
-            <p class="hero-subtitle reveal-up delay-200">
-              Transforming ideas into powerful digital experiences.
-              <span id="typing-text" class="typing-text"></span
-              ><span class="cursor-blink">|</span>
-            </p>
-
-            <!-- CTA Buttons -->
-            <div class="button-group reveal-up delay-300">
-              <button class="btn-primary" onclick="scrollToSection('contact')">
-                Get Started
-                <i data-lucide="arrow-right" class="btn-icon"></i>
-              </button>
-              <button class="btn-secondary" onclick="showComingSoon()">
-                <i data-lucide="play-circle" class="btn-icon-play"></i>
-                Watch Showreel
-              </button>
-            </div>
-
-            <!-- Trust Badges -->
-            <div class="trust-badges reveal-up delay-400">
-              <div class="badge-item">
-                <i data-lucide="check-circle" class="badge-icon"></i>
-                <span>150+ Projects Delivered</span>
-              </div>
-              <div class="badge-item">
-                <i data-lucide="users" class="badge-icon"></i>
-                <span>50+ Happy Clients</span>
-              </div>
-              <div class="badge-item">
-                <i data-lucide="globe" class="badge-icon"></i>
-                <span>Global Reach</span>
-              </div>
-            </div>
+      <div class="container-luxury">
+        <!-- Main Hero Content -->
+        <div class="hero-content-luxury">
+          <!-- Top Badge -->
+          <div class="luxury-badge" data-aos="fade-down">
+            <span class="badge-pulse"></span>
+            <span class="badge-text">Premium Digital Agency</span>
+            <div class="badge-line"></div>
           </div>
 
-          <!-- Right Content - Visual -->
-          <div class="hero-visual reveal-up delay-200">
-            <!-- Main Visual Container -->
-            <div class="visual-wrapper">
-              <!-- Background Glow -->
-              <div class="glow-bg"></div>
+          <!-- Main Headline -->
+          <h1 class="hero-headline" data-aos="fade-up" data-aos-delay="100">
+            <span class="headline-line">We Craft</span>
+            <span class="headline-line highlight">
+              <span class="text-gradient">Digital Excellence</span>
+            </span>
+            <span class="headline-line">For Visionaries</span>
+          </h1>
 
-              <!-- Main Card -->
-              <div class="main-card">
-                <div class="card-inner">
-                  <img
-                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=80"
-                    alt="Digital Dashboard"
-                    class="hero-image"
-                  />
+          <!-- Subtitle -->
+          <p
+            class="hero-subtitle-luxury"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            Transforming ambitious ideas into extraordinary digital experiences
+            through innovative strategy, cutting-edge technology, and
+            unparalleled creativity.
+          </p>
 
-                  <!-- Floating UI Elements -->
-                  <div class="floating-card card-growth float-fast">
-                    <div class="growth-content">
-                      <div class="growth-icon">
-                        <i data-lucide="trending-up" class="icon-24"></i>
-                      </div>
-                      <div class="growth-text">
-                        <p class="growth-label">Growth</p>
-                        <p class="growth-value">+247%</p>
-                      </div>
-                    </div>
-                  </div>
+          <!-- CTA Buttons -->
+          <div class="hero-cta-luxury" data-aos="fade-up" data-aos-delay="300">
+            <a href="#contact" class="btn-luxury-primary">
+              <span>Start Your Project</span>
+              <div class="btn-icon-wrap">
+                <i class="fas fa-arrow-right"></i>
+              </div>
+              <div class="btn-shine"></div>
+            </a>
+            <a href="#projects" class="btn-luxury-secondary">
+              <div class="btn-icon-wrap">
+                <i class="fas fa-arrow-up"></i>
+              </div>
+              <span>Hire Me on Upwork</span>
+            </a>
+          </div>
 
-                  <div class="floating-card card-project float-medium">
-                    <div class="project-content">
-                      <div class="project-icon">
-                        <i data-lucide="code-2" class="icon-20"></i>
-                      </div>
-                      <div class="project-text">
-                        <p class="project-label">Active Project</p>
-                        <p class="project-name">E-Commerce App</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+          <!-- Stats Row -->
+          <div
+            class="hero-stats-luxury"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div class="stat-item-luxury">
+              <div class="stat-icon-box">
+                <i class="fas fa-rocket"></i>
+              </div>
+              <div class="stat-content">
+                <span class="stat-number" data-count="50">0</span>
+                <span class="stat-label">Projects Delivered</span>
               </div>
             </div>
-
-            <!-- Service Icons Grid -->
-            <div class="services-grid reveal-up delay-500">
-              <div class="service-card" onclick="scrollToSection('services')">
-                <div class="service-icon icon-cyan">
-                  <i data-lucide="layout" class="icon-24"></i>
-                </div>
-                <p class="service-name">Web Dev</p>
+            <div class="stat-divider"></div>
+            <div class="stat-item-luxury">
+              <div class="stat-icon-box">
+                <i class="fas fa-users"></i>
               </div>
-              <div class="service-card" onclick="scrollToSection('services')">
-                <div class="service-icon icon-emerald">
-                  <i data-lucide="palette" class="icon-24"></i>
-                </div>
-                <p class="service-name">UI/UX</p>
+              <div class="stat-content">
+                <span class="stat-number" data-count="25">0</span>
+                <span class="stat-label">Happy Clients</span>
               </div>
-              <div class="service-card" onclick="scrollToSection('services')">
-                <div class="service-icon icon-teal">
-                  <i data-lucide="megaphone" class="icon-24"></i>
-                </div>
-                <p class="service-name">Marketing</p>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item-luxury">
+              <div class="stat-icon-box">
+                <i class="fas fa-award"></i>
+              </div>
+              <div class="stat-content">
+                <span class="stat-number" data-count="10">0</span>
+                <span class="stat-label">Awards Won</span>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Tech Stack Marquee -->
-        <div class="tech-marquee reveal-up delay-500">
-          <p class="marquee-label">Trusted Technologies</p>
-          <div class="marquee-wrapper">
-            <div class="marquee-content">
-              <span class="tech-name">React</span>
-              <span class="tech-name">Next.js</span>
-              <span class="tech-name">Node.js</span>
-              <span class="tech-name">Python</span>
-              <span class="tech-name">AWS</span>
-              <span class="tech-name">Flutter</span>
-              <span class="tech-name">Figma</span>
-              <span class="tech-name">Shopify</span>
-              <span class="tech-name">React</span>
-              <span class="tech-name">Next.js</span>
-              <span class="tech-name">Node.js</span>
-              <span class="tech-name">Python</span>
-              <span class="tech-name">AWS</span>
-              <span class="tech-name">Flutter</span>
-              <span class="tech-name">Figma</span>
-              <span class="tech-name">Shopify</span>
+        <!-- Floating Elements -->
+        <div class="floating-elements">
+          <!-- Code Icon -->
+          <div
+            class="float-card card-1"
+            data-aos="zoom-in"
+            data-aos-delay="500"
+          >
+            <div class="card-glow"></div>
+            <div class="card-content">
+              <i class="fas fa-code"></i>
+              <span>Development</span>
+            </div>
+          </div>
+
+          <!-- Design Icon -->
+          <div
+            class="float-card card-2"
+            data-aos="zoom-in"
+            data-aos-delay="600"
+          >
+            <div class="card-glow"></div>
+            <div class="card-content">
+              <i class="fas fa-palette"></i>
+              <span>Design</span>
+            </div>
+          </div>
+
+          <!-- Marketing Icon -->
+          <div
+            class="float-card card-3"
+            data-aos="zoom-in"
+            data-aos-delay="700"
+          >
+            <div class="card-glow"></div>
+            <div class="card-content">
+              <i class="fas fa-chart-line"></i>
+              <span>Growth</span>
+            </div>
+          </div>
+
+          <!-- Shopify Icon -->
+          <div
+            class="float-card card-4"
+            data-aos="zoom-in"
+            data-aos-delay="800"
+          >
+            <div class="card-glow"></div>
+            <div class="card-content">
+              <i class="fab fa-shopify"></i>
+              <span>E-Commerce</span>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- Decorative Lines -->
+      <div class="deco-line line-1"></div>
+      <div class="deco-line line-2"></div>
+      <div class="deco-line line-3"></div>
     </section>
 
     <!-- Projects Section -->
@@ -559,13 +561,19 @@
 
         <!-- Show More Button -->
         <div class="show-more-container" data-aos="fade-up">
-          <button class="btn-show-more" id="showMoreBtn">
+          <a
+            href="services.html"
+            class="btn-show-more"
+            id="showMoreBtn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <span class="btn-text">Show More Services</span>
             <span class="btn-icon">
               <i class="fas fa-arrow-down"></i>
             </span>
             <div class="btn-glow-effect"></div>
-          </button>
+          </a>
         </div>
 
         <!-- Hidden Services (Initially Hidden) -->
@@ -905,288 +913,237 @@
       </div>
     </section>
 
-    <!-- Team Section - Ultra Modern Luxury Design -->
-    <section class="team-luxury" id="team">
-      <!-- Background Elements -->
-      <div class="team-bg-luxury">
-        <div class="gradient-mesh"></div>
-        <div class="floating-blobs">
-          <div class="blob blob-1"></div>
-          <div class="blob blob-2"></div>
-          <div class="blob blob-3"></div>
-        </div>
-        <div class="noise-overlay"></div>
+    <!-- ----Team Section---- -->
+
+    <section class="team-modern-section" id="team">
+      <!-- Animated Background -->
+      <div class="team-bg-elements">
+        <div class="gradient-orb-team orb-1"></div>
+        <div class="gradient-orb-team orb-2"></div>
+        <div class="gradient-orb-team orb-3"></div>
+        <div class="grid-pattern-team"></div>
+        <div class="floating-particles" id="teamParticles"></div>
       </div>
 
-      <div class="container-team-luxury">
+      <div class="container-team-modern">
         <!-- Section Header -->
-        <div class="team-header-luxury" data-aos="fade-up">
-          <div class="header-badge-luxury">
-            <span class="badge-icon"><i class="fas fa-users"></i></span>
-            <span>Our Team</span>
+        <div class="team-header-modern" data-aos="fade-up">
+          <div class="section-tag-team">
+            <span class="tag-line-left"></span>
+            <span class="tag-text"><i class="fas fa-users"></i> Our Team</span>
+            <span class="tag-line-right"></span>
           </div>
-          <h2 class="team-title-luxury">
-            Meet The <span class="gradient-text-team">Experts</span>
+          <h2 class="team-title-modern">
+            Meet the <span class="gradient-text-team">Dream Team</span>
           </h2>
-          <p class="team-subtitle-luxury">
-            A passionate team of innovators, creators, and problem-solvers
-            dedicated to transforming your digital vision into reality
+          <p class="team-subtitle-modern">
+            Three passionate experts dedicated to transforming your digital
+            vision into reality
           </p>
         </div>
 
-        <!-- Team Grid -->
-        <div class="team-grid-luxury">
-          <!-- Member 1: CEO -->
-          <div class="team-card-luxury" data-aos="fade-up" data-aos-delay="0">
-            <div class="card-inner">
-              <div class="card-front">
-                <div class="image-container-luxury">
-                  <div class="image-frame">
-                    <img
-                      src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=500&fit=crop"
-                      alt="CEO - Muhammad Ahmed"
-                      class="team-image-luxury"
-                    />
-                    <div class="image-overlay"></div>
-                    <div class="social-trigger">
-                      <i class="fas fa-plus"></i>
-                    </div>
+        <!-- Team Grid - 3 Modern Cards -->
+        <div class="team-grid-modern">
+          <!-- Member 1 -->
+          <div class="team-card-modern" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-border-gradient"></div>
+            <div class="card-content">
+              <div class="member-image-container">
+                <div class="image-bg-blob blob-1"></div>
+                <div class="member-image">
+                  <img src="assets/Falak Img.jpeg" alt="Falak Husasin" />
+                  <div class="image-overlay">
+                    <!-- <div class="social-links">
+                  <a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+                  <a href="#" class="social-btn"><i class="fab fa-github"></i></a>
+                  <a href="#" class="social-btn"><i class="fas fa-envelope"></i></a>
+                </div> -->
                   </div>
-                  <div class="glow-ring"></div>
-                  <div class="decoration-ring ring-1"></div>
-                  <div class="decoration-ring ring-2"></div>
                 </div>
-                <div class="member-info-luxury">
-                  <h3 class="member-name">Muhammad Ahmed</h3>
-
-                  <p class="member-bio">
-                    Visionary leader with 8+ years of experience in digital
-                    transformation and business strategy.
-                  </p>
+                <div class="experience-badge">
+                  <span class="exp-number">5+</span>
+                  <span class="exp-text">Years</span>
                 </div>
               </div>
-              <div class="card-back">
-                <div class="back-content">
-                  <h4>Expertise</h4>
-                  <ul class="expertise-list">
-                    <li><i class="fas fa-check"></i> Business Strategy</li>
-                    <li><i class="fas fa-check"></i> Team Leadership</li>
-                    <li><i class="fas fa-check"></i> Client Relations</li>
-                    <li><i class="fas fa-check"></i> Innovation</li>
-                  </ul>
-                  <div class="social-links-luxury">
-                    <a href="#" class="social-luxury-link"
-                      ><i class="fab fa-linkedin-in"></i
-                    ></a>
-                    <a href="#" class="social-luxury-link"
-                      ><i class="fab fa-twitter"></i
-                    ></a>
-                    <a href="#" class="social-luxury-link"
-                      ><i class="fas fa-envelope"></i
-                    ></a>
-                  </div>
+
+              <div class="member-details">
+                <h3 class="member-name">Falak Husasin</h3>
+                <p class="member-role">UI/UX Designer</p>
+                <p class="member-desc">
+                  Award-winning designer creating beautiful, user-centered
+                  digital experiences.
+                </p>
+
+                <div class="skills-container">
+                  <span class="skill-pill">React</span>
+                  <span class="skill-pill">Node.js</span>
+                  <span class="skill-pill">Python</span>
                 </div>
               </div>
             </div>
             <div class="card-shine"></div>
           </div>
 
-          <!-- Member 2: Lead Developer -->
-          <div class="team-card-luxury" data-aos="fade-up" data-aos-delay="100">
-            <div class="card-inner">
-              <div class="card-front">
-                <div class="image-container-luxury">
-                  <div class="image-frame">
-                    <img
-                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=500&fit=crop"
-                      alt="Lead Developer - Ali Hassan"
-                      class="team-image-luxury"
-                    />
-                    <div class="image-overlay"></div>
-                    <div class="social-trigger">
-                      <i class="fas fa-plus"></i>
-                    </div>
+          <!-- Member 2 - Center Highlighted -->
+          <div
+            class="team-card-modern card-highlighted"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="card-border-gradient"></div>
+            <div class="featured-tag">
+              <i class="fas fa-star"></i>
+              <span>Creative Lead</span>
+            </div>
+            <div class="card-content">
+              <div class="member-image-container">
+                <div class="image-bg-blob blob-2"></div>
+                <div class="member-image">
+                  <img src="assets/Shoaib Img.png" alt="Shoaib Hanif" />
+                  <div class="image-overlay">
+                    <!-- <div class="social-links">
+                      <a href="#" class="social-btn"
+                        ><i class="fab fa-linkedin-in"></i
+                      ></a>
+                      <a href="#" class="social-btn"
+                        ><i class="fab fa-dribbble"></i
+                      ></a>
+                      <a href="#" class="social-btn"
+                        ><i class="fab fa-behance"></i
+                      ></a>
+                    </div> -->
                   </div>
-                  <div class="glow-ring"></div>
-                  <div class="decoration-ring ring-1"></div>
-                  <div class="decoration-ring ring-2"></div>
                 </div>
-                <div class="member-info-luxury">
-                  <h3 class="member-name">Ali Hassan</h3>
-                  <div class="member-role">
-                    <span class="role-badge role-dev">Lead Developer</span>
-                  </div>
-                  <p class="member-bio">
-                    Full-stack wizard specializing in React, Node.js, and cloud
-                    architecture solutions.
-                  </p>
+                <div class="experience-badge">
+                  <span class="exp-number">4+</span>
+                  <span class="exp-text">Years</span>
                 </div>
               </div>
-              <div class="card-back">
-                <div class="back-content">
-                  <h4>Expertise</h4>
-                  <ul class="expertise-list">
-                    <li><i class="fas fa-check"></i> React & Next.js</li>
-                    <li><i class="fas fa-check"></i> Node.js & Python</li>
-                    <li><i class="fas fa-check"></i> AWS & DevOps</li>
-                    <li><i class="fas fa-check"></i> Database Design</li>
-                  </ul>
-                  <div class="social-links-luxury">
-                    <a href="#" class="social-luxury-link"
-                      ><i class="fab fa-github"></i
-                    ></a>
-                    <a href="#" class="social-luxury-link"
-                      ><i class="fab fa-stack-overflow"></i
-                    ></a>
-                    <a href="#" class="social-luxury-link"
-                      ><i class="fas fa-envelope"></i
-                    ></a>
+
+              <div class="member-details">
+                <h3 class="member-name">Shoaib Hanif</h3>
+                <p class="member-role">UI/UX Designer</p>
+                <p class="member-desc">
+                  Award-winning designer creating beautiful, user-centered
+                  digital experiences.
+                </p>
+
+                <div class="skills-container">
+                  <span class="skill-pill">Figma</span>
+                  <span class="skill-pill">Adobe XD</span>
+                  <span class="skill-pill">Prototyping</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-shine"></div>
+            <div class="glow-effect"></div>
+          </div>
+
+          <!-- Member 3 -->
+          <div class="team-card-modern" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-border-gradient"></div>
+            <div class="card-content">
+              <div class="member-image-container">
+                <div class="image-bg-blob blob-3"></div>
+                <div class="member-image">
+                  <img src="assets/Salman Img.jpeg" alt="Salman Aslam" />
+                  <div class="image-overlay">
+                    <!-- <div class="social-links">
+                      <a href="#" class="social-btn"
+                        ><i class="fab fa-linkedin-in"></i
+                      ></a>
+                      <a href="#" class="social-btn"
+                        ><i class="fab fa-github"></i
+                      ></a>
+                      <a href="#" class="social-btn"
+                        ><i class="fas fa-envelope"></i
+                      ></a>
+                    </div> -->
                   </div>
+                </div>
+                <div class="experience-badge">
+                  <span class="exp-number">3+</span>
+                  <span class="exp-text">Years</span>
+                </div>
+              </div>
+
+              <div class="member-details">
+                <h3 class="member-name">Salman Aslam</h3>
+                <p class="member-role">Mobile Developer</p>
+                <p class="member-desc">
+                  Flutter & React Native expert building cross-platform mobile
+                  applications.
+                </p>
+
+                <div class="skills-container">
+                  <span class="skill-pill">Flutter</span>
+                  <span class="skill-pill">Firebase</span>
+                  <span class="skill-pill">Dart</span>
                 </div>
               </div>
             </div>
             <div class="card-shine"></div>
           </div>
+        </div>
 
-          <!-- Member 3: UI/UX Designer -->
-          <div class="team-card-luxury" data-aos="fade-up" data-aos-delay="200">
-            <div class="card-inner">
-              <div class="card-front">
-                <div class="image-container-luxury">
-                  <div class="image-frame">
-                    <img
-                      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=500&fit=crop"
-                      alt="Designer - Fatima Zahra"
-                      class="team-image-luxury"
-                    />
-                    <div class="image-overlay"></div>
-                    <div class="social-trigger">
-                      <i class="fas fa-plus"></i>
-                    </div>
-                  </div>
-                  <div class="glow-ring"></div>
-                  <div class="decoration-ring ring-1"></div>
-                  <div class="decoration-ring ring-2"></div>
-                </div>
-                <div class="member-info-luxury">
-                  <h3 class="member-name">Fatima Zahra</h3>
-                  <div class="member-role">
-                    <span class="role-badge role-design">UI/UX Designer</span>
-                  </div>
-                  <p class="member-bio">
-                    Creative mind crafting beautiful, user-centered designs that
-                    delight and convert.
-                  </p>
-                </div>
-              </div>
-              <div class="card-back">
-                <div class="back-content">
-                  <h4>Expertise</h4>
-                  <ul class="expertise-list">
-                    <li><i class="fas fa-check"></i> Figma & Adobe XD</li>
-                    <li><i class="fas fa-check"></i> User Research</li>
-                    <li><i class="fas fa-check"></i> Prototyping</li>
-                    <li><i class="fas fa-check"></i> Design Systems</li>
-                  </ul>
-                  <div class="social-links-luxury">
-                    <a href="#" class="social-luxury-link"
-                      ><i class="fab fa-dribbble"></i
-                    ></a>
-                    <a href="#" class="social-luxury-link"
-                      ><i class="fab fa-behance"></i
-                    ></a>
-                    <a href="#" class="social-luxury-link"
-                      ><i class="fas fa-envelope"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
+        <!-- Team Stats Bar -->
+        <div class="team-stats-bar" data-aos="fade-up" data-aos-delay="400">
+          <div class="stat-box">
+            <div class="stat-icon"><i class="fas fa-code"></i></div>
+            <div class="stat-info">
+              <span class="stat-number counter-team" data-target="150">0</span>
+              <span class="stat-label">Projects</span>
             </div>
-            <div class="card-shine"></div>
           </div>
-
-          <!-- Member 4: Marketing Head -->
-          <div class="team-card-luxury" data-aos="fade-up" data-aos-delay="300">
-            <div class="card-inner">
-              <div class="card-front">
-                <div class="image-container-luxury">
-                  <div class="image-frame">
-                    <img
-                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop"
-                      alt="Marketing Head - Usman Khan"
-                      class="team-image-luxury"
-                    />
-                    <div class="image-overlay"></div>
-                    <div class="social-trigger">
-                      <i class="fas fa-plus"></i>
-                    </div>
-                  </div>
-                  <div class="glow-ring"></div>
-                  <div class="decoration-ring ring-1"></div>
-                  <div class="decoration-ring ring-2"></div>
-                </div>
-                <div class="member-info-luxury">
-                  <h3 class="member-name">Usman Khan</h3>
-                  <div class="member-role">
-                    <span class="role-badge role-marketing"
-                      >Marketing Head</span
-                    >
-                  </div>
-                  <p class="member-bio">
-                    Growth hacker driving results through data-driven strategies
-                    and creative campaigns.
-                  </p>
-                </div>
-              </div>
-              <div class="card-back">
-                <div class="back-content">
-                  <h4>Expertise</h4>
-                  <ul class="expertise-list">
-                    <li><i class="fas fa-check"></i> Digital Marketing</li>
-                    <li><i class="fas fa-check"></i> SEO & Content</li>
-                    <li><i class="fas fa-check"></i> Paid Advertising</li>
-                    <li><i class="fas fa-check"></i> Analytics</li>
-                  </ul>
-                  <div class="social-links-luxury">
-                    <a href="#" class="social-luxury-link"
-                      ><i class="fab fa-linkedin-in"></i
-                    ></a>
-                    <a href="#" class="social-luxury-link"
-                      ><i class="fab fa-twitter"></i
-                    ></a>
-                    <a href="#" class="social-luxury-link"
-                      ><i class="fas fa-envelope"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
+          <div class="stat-divider"></div>
+          <div class="stat-box">
+            <div class="stat-icon"><i class="fas fa-coffee"></i></div>
+            <div class="stat-info">
+              <span class="stat-number counter-team" data-target="1200">0</span>
+              <span class="stat-label">Cups of Coffee</span>
             </div>
-            <div class="card-shine"></div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-box">
+            <div class="stat-icon"><i class="fas fa-smile"></i></div>
+            <div class="stat-info">
+              <span class="stat-number counter-team" data-target="50">0</span>
+              <span class="stat-label">Happy Clients</span>
+            </div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-box">
+            <div class="stat-icon"><i class="fas fa-award"></i></div>
+            <div class="stat-info">
+              <span class="stat-number">24/7</span>
+              <span class="stat-label">Support</span>
+            </div>
           </div>
         </div>
 
         <!-- Join Team CTA -->
-        <div class="team-cta-luxury" data-aos="fade-up">
-          <div class="cta-box">
-            <div class="cta-content">
-              <h3>Want to Join Our Team?</h3>
-              <p>
-                We're always looking for talented individuals to join our
-                growing team.
-              </p>
+        <div class="join-team-section" data-aos="fade-up" data-aos-delay="500">
+          <div class="join-card">
+            <div class="join-visual">
+              <div class="join-icon-pulse">
+                <i class="fas fa-user-plus"></i>
+              </div>
+              <div class="join-avatars">
+                <div class="avatar avatar-1"></div>
+                <div class="avatar avatar-2"></div>
+                <div class="avatar avatar-3"></div>
+                <div class="avatar avatar-plus">+</div>
+              </div>
             </div>
-            <a
-              href="#contact"
-              class="btn-join-team"
-              onclick="
-                scrollToSection('contact');
-                return false;
-              "
-            >
-              <span>View Openings</span>
+            <div class="join-content">
+              <h4>Want to Join Our Squad?</h4>
+              <p>We're always looking for talented individuals</p>
+            </div>
+            <a href="#careers" class="btn-join-modern">
+              <span>Join Us</span>
               <i class="fas fa-arrow-right"></i>
-              <div class="btn-glow"></div>
             </a>
+            <div class="join-bg-glow"></div>
           </div>
         </div>
       </div>
@@ -1933,8 +1890,14 @@
         <div class="footer-content">
           <div class="footer-section">
             <div class="footer-logo">
-              <span class="logo-icon">G</span>
-              <span class="logo-text">Globaxify</span>
+              <a href="#home">
+                <img
+                  src="assets/fav icon.png"
+                  alt="Globaxify Logo"
+                  class="footer-logo-img"
+                />
+                <span class="logo-text">Globaxify</span>
+              </a>
             </div>
             <p class="footer-desc">
               Transforming businesses through innovative digital solutions in
