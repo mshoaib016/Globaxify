@@ -1,5 +1,5 @@
 // ===================================
-// GLOBAXIFY - MAIN JAVASCRIPT (FIXED)
+// GLOBAXIFY - MAIN JAVASCRIPT (COMPLETE & CLEAN)
 // ===================================
 
 (function () {
@@ -60,37 +60,147 @@
   };
 
   // ===================================
-  // COUNTER ANIMATION FUNCTION
+  // UNIFIED COUNTER ANIMATION SYSTEM
   // ===================================
 
-  function animateCounterElement(counter) {
-    if (state.animatedCounters.has(counter)) return;
-    state.animatedCounters.add(counter);
+  class CounterAnimator {
+    constructor(element, options = {}) {
+      this.element = element;
+      this.target = parseInt(
+        element.getAttribute("data-count") ||
+          element.getAttribute("data-target"),
+      );
+      this.duration = options.duration || 2000;
+      this.suffix = options.suffix || "";
+      this.prefix = options.prefix || "";
+      this.startTime = null;
+      this.startValue = 0;
+      this.isAnimating = false;
+      this.hasAnimated = false;
+    }
 
-    const target = parseInt(counter.getAttribute("data-count"));
-    if (isNaN(target)) return;
+    easeOutQuart(t) {
+      return 1 - Math.pow(1 - t, 4);
+    }
 
-    const duration = 2000;
-    const startTime = performance.now();
-    const suffix =
-      counter.classList.contains("stat-number-lux") && target !== 98 ? "+" : "";
+    animate(currentTime) {
+      if (!this.startTime) this.startTime = currentTime;
+      const elapsed = currentTime - this.startTime;
+      const progress = Math.min(elapsed / this.duration, 1);
+      const easedProgress = this.easeOutQuart(progress);
+      const currentValue = Math.floor(
+        this.startValue + (this.target - this.startValue) * easedProgress,
+      );
 
-    const updateCounter = (currentTime) => {
-      const elapsed = currentTime - startTime;
-      const progress = Math.min(elapsed / duration, 1);
-      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-      const current = Math.floor(target * easeOutQuart);
-
-      counter.textContent = current;
+      this.element.textContent = this.prefix + currentValue + this.suffix;
 
       if (progress < 1) {
-        requestAnimationFrame(updateCounter);
+        requestAnimationFrame((time) => this.animate(time));
       } else {
-        counter.textContent = target + suffix;
-      }
-    };
+        this.element.textContent = this.prefix + this.target + this.suffix;
+        this.isAnimating = false;
+        this.hasAnimated = true;
+        this.element.classList.add("counted");
 
-    requestAnimationFrame(updateCounter);
+        // Scale effect on complete
+        this.element.style.transform = "scale(1.1)";
+        setTimeout(() => {
+          this.element.style.transform = "scale(1)";
+        }, 200);
+      }
+    }
+
+    start() {
+      if (!this.isAnimating && !this.hasAnimated) {
+        // Check if target is valid number
+        if (isNaN(this.target)) {
+          console.warn("Invalid counter target:", this.element);
+          return;
+        }
+
+        this.isAnimating = true;
+        this.startTime = null;
+        requestAnimationFrame((time) => this.animate(time));
+      }
+    }
+
+    reset() {
+      this.hasAnimated = false;
+      this.isAnimating = false;
+      this.element.textContent = this.prefix + "0" + this.suffix;
+      this.element.classList.remove("counted");
+    }
+  }
+
+  // Initialize all counters on the page
+  function initAllCounters() {
+    const counterConfigs = [
+      // Hero section counters (data-count)
+      { selector: ".stat-number[data-count]", options: { suffix: "+" } },
+      // About section counters (data-count)
+      { selector: ".counter-about[data-count]", options: {} },
+      // Team section counters (data-target)
+      { selector: ".counter-team[data-target]", options: { suffix: "+" } },
+      // Luxury stats counters
+      { selector: ".stat-number-lux[data-count]", options: { suffix: "+" } },
+      // Any other counter with data-count
+      {
+        selector:
+          "[data-count]:not(.stat-number):not(.counter-about):not(.stat-number-lux)",
+        options: {},
+      },
+      // Any other counter with data-target
+      { selector: "[data-target]:not(.counter-team)", options: {} },
+    ];
+
+    const allCounters = new Map();
+
+    counterConfigs.forEach(({ selector, options }) => {
+      const elements = document.querySelectorAll(selector);
+
+      elements.forEach((el) => {
+        // Skip if already initialized
+        if (allCounters.has(el)) return;
+
+        // Special handling for different types
+        let config = { ...options };
+
+        // Check if it's the 24/7 text (non-numeric)
+        const target = parseInt(
+          el.getAttribute("data-count") || el.getAttribute("data-target"),
+        );
+        if (isNaN(target) && el.textContent.includes("24/7")) {
+          return; // Skip static text like "24/7"
+        }
+
+        const animator = new CounterAnimator(el, config);
+        allCounters.set(el, animator);
+      });
+    });
+
+    // Single observer for all counters
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const animator = allCounters.get(entry.target);
+            if (animator) {
+              animator.start();
+            }
+          }
+        });
+      },
+      { threshold: 0.3, rootMargin: "0px" },
+    );
+
+    allCounters.forEach((animator, element) => {
+      observer.observe(element);
+    });
+
+    state.observers.push(observer);
+
+    // Store globally for re-init
+    window.counterAnimators = allCounters;
   }
 
   // ===================================
@@ -162,16 +272,6 @@
       document.querySelectorAll("[data-aos]").forEach((el) => {
         el.classList.add("aos-animate");
       });
-      document.querySelectorAll("[data-count]").forEach((counter) => {
-        const target = parseInt(counter.getAttribute("data-count"));
-        if (!isNaN(target)) {
-          counter.textContent =
-            target +
-            (counter.classList.contains("stat-number-lux") && target !== 98
-              ? "+"
-              : "");
-        }
-      });
       return;
     }
 
@@ -185,12 +285,6 @@
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("aos-animate");
-
-          const counters = entry.target.querySelectorAll("[data-count]");
-          counters.forEach((counter, index) => {
-            setTimeout(() => animateCounterElement(counter), index * 150);
-          });
-
           observer.unobserve(entry.target);
         }
       });
@@ -198,8 +292,9 @@
 
     document.querySelectorAll("[data-aos]").forEach((el) => {
       observer.observe(el);
-      state.observers.push(observer);
     });
+
+    state.observers.push(observer);
   }
 
   // ===================================
@@ -276,13 +371,11 @@
     });
 
     // Touch support
-    let isDragging = false;
     let startPos = 0;
 
     track.addEventListener(
       "touchstart",
       (e) => {
-        isDragging = true;
         startPos = e.touches[0].clientX;
         clearInterval(autoSlideInterval);
       },
@@ -292,7 +385,6 @@
     track.addEventListener(
       "touchend",
       (e) => {
-        isDragging = false;
         const endPos = e.changedTouches[0].clientX;
         const diff = startPos - endPos;
 
@@ -314,45 +406,33 @@
   }
 
   // ===================================
-  // SERVICES SHOW MORE
+  // SERVICES TOGGLE
   // ===================================
 
   function initServicesToggle() {
-    const showMoreBtn = document.getElementById("showMoreBtn");
-    const hiddenServices = document.getElementById("hiddenServices");
+    const serviceCards = document.querySelectorAll(".service-card-luxury");
 
-    if (!showMoreBtn || !hiddenServices) return;
+    serviceCards.forEach((card) => {
+      const header = card.querySelector(".service-header-luxury");
+      const content = card.querySelector(".service-content-luxury");
 
-    showMoreBtn.addEventListener("click", () => {
-      const isExpanded = hiddenServices.classList.contains("show");
+      if (header && content) {
+        header.addEventListener("click", () => {
+          const isActive = card.classList.contains("active");
 
-      if (!isExpanded) {
-        hiddenServices.classList.add("show");
-        showMoreBtn.classList.add("active");
-        showMoreBtn.querySelector(".btn-text").textContent =
-          "Show Less Services";
-        showMoreBtn
-          .querySelector(".btn-icon i")
-          .classList.replace("fa-arrow-down", "fa-arrow-up");
-
-        setTimeout(() => {
-          hiddenServices.scrollIntoView({
-            behavior: "smooth",
-            block: "nearest",
+          // Close all others
+          serviceCards.forEach((c) => {
+            c.classList.remove("active");
+            const content = c.querySelector(".service-content-luxury");
+            if (content) content.style.maxHeight = null;
           });
-        }, 300);
-      } else {
-        hiddenServices.classList.remove("show");
-        showMoreBtn.classList.remove("active");
-        showMoreBtn.querySelector(".btn-text").textContent =
-          "Show More Services";
-        showMoreBtn
-          .querySelector(".btn-icon i")
-          .classList.replace("fa-arrow-up", "fa-arrow-down");
 
-        document
-          .getElementById("services")
-          .scrollIntoView({ behavior: "smooth", block: "start" });
+          // Toggle current
+          if (!isActive) {
+            card.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+          }
+        });
       }
     });
   }
@@ -366,7 +446,6 @@
 
     elements.contactForm.addEventListener("submit", (e) => {
       e.preventDefault();
-
       showNotification(
         "Thank you! Your message has been sent successfully.",
         "success",
@@ -508,12 +587,19 @@
   }
 
   // ===================================
-  // LUCIDE ICONS
+  // BUTTON RIPPLE EFFECT
   // ===================================
 
-  function initLucideIcons() {
-    if (typeof lucide !== "undefined") {
-      lucide.createIcons();
+  function initRippleEffect() {
+    const btn = document.querySelector(".btn-ceo-cta");
+    if (btn) {
+      btn.addEventListener("mousemove", (e) => {
+        const rect = btn.getBoundingClientRect();
+        const x = ((e.clientX - rect.left) / rect.width) * 100;
+        const y = ((e.clientY - rect.top) / rect.height) * 100;
+        btn.style.setProperty("--x", `${x}%`);
+        btn.style.setProperty("--y", `${y}%`);
+      });
     }
   }
 
@@ -530,6 +616,11 @@
 
   window.showComingSoon = function () {
     showNotification("Coming soon!", "success");
+  };
+
+  // Re-initialize counters (for dynamic content)
+  window.reinitCounters = function () {
+    initAllCounters();
   };
 
   // ===================================
@@ -564,6 +655,7 @@
     initHeader();
     initMobileNav();
     initAOS();
+    initAllCounters(); // Unified counter system
     initReviewsSlider();
     initServicesToggle();
     initContactForm();
@@ -571,7 +663,7 @@
     initBackToTop();
     initNewsletterForms();
     initTypingEffect();
-    initLucideIcons();
+    initRippleEffect();
 
     // Cleanup on unload
     window.addEventListener("beforeunload", cleanup);
@@ -584,307 +676,3 @@
     init();
   }
 })();
-// Counter Animation Class
-class CounterAnimation {
-  constructor(element, target, duration = 2000) {
-    this.element = element;
-    this.target = parseInt(target);
-    this.duration = duration;
-    this.startTime = null;
-    this.startValue = 0;
-    this.isAnimating = false;
-  }
-
-  easeOutQuart(t) {
-    return 1 - Math.pow(1 - t, 4);
-  }
-
-  animate(currentTime) {
-    if (!this.startTime) this.startTime = currentTime;
-    const elapsed = currentTime - this.startTime;
-    const progress = Math.min(elapsed / this.duration, 1);
-
-    const easedProgress = this.easeOutQuart(progress);
-    const currentValue = Math.floor(
-      this.startValue + (this.target - this.startValue) * easedProgress,
-    );
-
-    this.element.textContent = currentValue;
-
-    if (progress < 1) {
-      requestAnimationFrame((time) => this.animate(time));
-    } else {
-      this.element.textContent = this.target;
-      this.element.classList.add("counted");
-      this.isAnimating = false;
-    }
-  }
-
-  start() {
-    if (!this.isAnimating) {
-      this.isAnimating = true;
-      this.startTime = null;
-      requestAnimationFrame((time) => this.animate(time));
-    }
-  }
-}
-
-// Initialize Counters
-function initCounters() {
-  const counters = document.querySelectorAll(".counter");
-  const counterAnimations = new Map();
-
-  // Create observer for each counter
-  const observerOptions = {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.5,
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const counter = entry.target;
-        const target = counter.getAttribute("data-target");
-
-        if (!counterAnimations.has(counter)) {
-          const animation = new CounterAnimation(counter, target, 2000);
-          counterAnimations.set(counter, animation);
-          animation.start();
-        } else {
-          const animation = counterAnimations.get(counter);
-          if (!animation.isAnimating) {
-            animation.start();
-          }
-        }
-
-        // Uncomment below if you want animation only once
-        // observer.unobserve(counter);
-      }
-    });
-  }, observerOptions);
-
-  counters.forEach((counter) => {
-    observer.observe(counter);
-  });
-}
-
-// Button Ripple Effect
-function initRippleEffect() {
-  const btn = document.querySelector(".btn-ceo-cta");
-  if (btn) {
-    btn.addEventListener("mousemove", (e) => {
-      const rect = btn.getBoundingClientRect();
-      const x = ((e.clientX - rect.left) / rect.width) * 100;
-      const y = ((e.clientY - rect.top) / rect.height) * 100;
-      btn.style.setProperty("--x", `${x}%`);
-      btn.style.setProperty("--y", `${y}%`);
-    });
-  }
-}
-
-// Initialize everything when DOM is loaded
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", () => {
-    initCounters();
-    initRippleEffect();
-  });
-} else {
-  initCounters();
-  initRippleEffect();
-}
-
-// Re-initialize on dynamic content changes (if using AJAX)
-window.reinitCounters = function () {
-  initCounters();
-};
-
-// About Section Counter Animation
-class AboutCounterAnimation {
-  constructor(element, target, duration = 2000) {
-    this.element = element;
-    this.target = parseInt(target);
-    this.duration = duration;
-    this.startTime = null;
-    this.startValue = 0;
-    this.isAnimating = false;
-    this.hasAnimated = false;
-  }
-
-  easeOutQuart(t) {
-    return 1 - Math.pow(1 - t, 4);
-  }
-
-  animate(currentTime) {
-    if (!this.startTime) this.startTime = currentTime;
-    const elapsed = currentTime - this.startTime;
-    const progress = Math.min(elapsed / this.duration, 1);
-
-    const easedProgress = this.easeOutQuart(progress);
-    const currentValue = Math.floor(
-      this.startValue + (this.target - this.startValue) * easedProgress,
-    );
-
-    this.element.textContent = currentValue;
-
-    if (progress < 1) {
-      requestAnimationFrame((time) => this.animate(time));
-    } else {
-      this.element.textContent = this.target;
-      this.element.style.transform = "scale(1.1)";
-      setTimeout(() => {
-        this.element.style.transform = "scale(1)";
-      }, 200);
-      this.isAnimating = false;
-      this.hasAnimated = true;
-    }
-  }
-
-  start() {
-    if (!this.isAnimating && !this.hasAnimated) {
-      this.isAnimating = true;
-      this.startTime = null;
-      requestAnimationFrame((time) => this.animate(time));
-    }
-  }
-
-  // Reset for re-animation if needed
-  reset() {
-    this.hasAnimated = false;
-    this.isAnimating = false;
-    this.element.textContent = "0";
-  }
-}
-
-// Initialize About Section Counters
-function initAboutCounters() {
-  const counters = document.querySelectorAll(".counter-about");
-  const counterAnimations = new Map();
-
-  const observerOptions = {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.3,
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const counter = entry.target;
-        const target = counter.getAttribute("data-count");
-
-        if (!counterAnimations.has(counter)) {
-          const animation = new AboutCounterAnimation(counter, target, 2500);
-          counterAnimations.set(counter, animation);
-          animation.start();
-        } else {
-          const animation = counterAnimations.get(counter);
-          animation.start();
-        }
-      }
-    });
-  }, observerOptions);
-
-  counters.forEach((counter) => {
-    observer.observe(counter);
-  });
-
-  // Store globally for potential re-init
-  window.aboutCounterAnimations = counterAnimations;
-}
-
-// Smooth scroll helper
-function scrollToSection(sectionId) {
-  const element = document.getElementById(sectionId);
-  if (element) {
-    element.scrollIntoView({ behavior: "smooth" });
-  }
-}
-
-// Initialize when DOM is ready
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", initAboutCounters);
-} else {
-  initAboutCounters();
-}
-
-// Re-initialize function for dynamic content
-window.reinitAboutCounters = function () {
-  initAboutCounters();
-};
-
-function initTeamCounters() {
-  const counters = document.querySelectorAll(".counter-team");
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const counter = entry.target;
-          const target = parseInt(counter.getAttribute("data-target"));
-          const duration = 2000;
-          const step = target / (duration / 16);
-          let current = 0;
-
-          const timer = setInterval(() => {
-            current += step;
-            if (current >= target) {
-              counter.textContent = target + (target === 1200 ? "+" : "");
-              clearInterval(timer);
-            } else {
-              counter.textContent = Math.floor(current);
-            }
-          }, 16);
-
-          observer.unobserve(counter);
-        }
-      });
-    },
-    { threshold: 0.5 },
-  );
-
-  counters.forEach((counter) => observer.observe(counter));
-}
-
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", initTeamCounters);
-} else {
-  initTeamCounters();
-}
-
-// Hero Section Counter Animation
-document.addEventListener("DOMContentLoaded", function () {
-  const counters = document.querySelectorAll(".stat-number");
-
-  const animateCounter = (counter) => {
-    const target = parseInt(counter.getAttribute("data-count"));
-    const duration = 2000;
-    const step = target / (duration / 16);
-    let current = 0;
-
-    const timer = setInterval(() => {
-      current += step;
-      if (current >= target) {
-        counter.textContent = target + "+";
-        clearInterval(timer);
-      } else {
-        counter.textContent = Math.floor(current);
-      }
-    }, 16);
-  };
-
-  // Intersection Observer for counters
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          animateCounter(entry.target);
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.5 },
-  );
-
-  counters.forEach((counter) => observer.observe(counter));
-});

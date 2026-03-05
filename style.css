@@ -177,21 +177,27 @@ body {
    =================================== */
 .header {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95%;
   z-index: 1000;
   padding: 20px 0;
   transition: var(--transition-medium);
-  background: transparent;
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  backdrop-filter: blur(20px);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--light-blue-200);
+  border-radius: 50px;
 }
 
 .header.scrolled {
-  background: var(--bg-glass);
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
   backdrop-filter: blur(20px);
   box-shadow: var(--shadow-md);
   padding: 15px 0;
-  border-bottom: 1px solid var(--light-blue-200);
+  border: 1px solid var(--light-blue-200);
+  border-radius: 50px;
 }
 
 .navbar {
@@ -488,18 +494,6 @@ body {
   color: #2563eb;
   text-transform: uppercase;
   letter-spacing: 2px;
-}
-
-.badge-line {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #2563eb, transparent);
-  transform: scaleX(0);
-  animation: lineExpand 2s ease-out forwards;
-  animation-delay: 0.5s;
 }
 
 @keyframes lineExpand {
@@ -1676,12 +1670,6 @@ body {
   margin-bottom: 20px;
 }
 
-.badge-line {
-  width: 50px;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, #2563eb, transparent);
-}
-
 .header-badge span:nth-child(2) {
   color: #2563eb;
   font-size: 0.9rem;
@@ -2028,39 +2016,10 @@ body {
   transform: translateY(-3px);
 }
 
-/* Hidden Services */
-.hidden-services {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.hidden-services.show {
-  max-height: 1000px;
-  margin-top: 40px;
-}
-
-.secondary-grid {
-  margin-bottom: 0;
-}
-
 .card-secondary {
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInUp 0.6s ease forwards;
-}
-
-.hidden-services.show .card-secondary:nth-child(1) {
-  animation-delay: 0.1s;
-}
-.hidden-services.show .card-secondary:nth-child(2) {
-  animation-delay: 0.2s;
-}
-.hidden-services.show .card-secondary:nth-child(3) {
-  animation-delay: 0.3s;
-}
-.hidden-services.show .card-secondary:nth-child(4) {
-  animation-delay: 0.4s;
 }
 
 @keyframes fadeInUp {
@@ -2685,16 +2644,68 @@ body {
 
 .social-link-ceo i {
   font-size: 1.1rem;
-  color: #2563eb;
   transition: color 0.3s ease;
 }
 
+/* Facebook - Original Blue #1877F2 */
+.social-link-ceo[href*="facebook"] i {
+  color: #1877f2;
+}
+
+/* TikTok - Original Black (or use their brand colors) */
+.social-link-ceo[href*="tiktok"] i {
+  color: #000000;
+}
+
+/* Instagram - Original Gradient colors (using purple/pink as base) */
+.social-link-ceo[href*="instagram"] i {
+  color: #e4405f;
+}
+
+/* Gmail/Email - Original Red #EA4335 */
+.social-link-ceo[href*="mailto"] i,
+.social-link-ceo[href*="gmail"] i {
+  color: #ea4335;
+}
+
+/* Hover Effects */
 .social-link-ceo:hover {
-  background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
-  color: white;
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
   border-color: transparent;
+  color: white;
+}
+
+/* Facebook Hover */
+.social-link-ceo[href*="facebook"]:hover {
+  background: #1877f2;
+  box-shadow: 0 10px 25px rgba(24, 119, 242, 0.4);
+}
+
+/* TikTok Hover */
+.social-link-ceo[href*="tiktok"]:hover {
+  background: #000000;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Instagram Hover */
+.social-link-ceo[href*="instagram"]:hover {
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  box-shadow: 0 10px 25px rgba(228, 64, 95, 0.4);
+}
+
+/* Gmail/Email Hover */
+.social-link-ceo[href*="mailto"]:hover,
+.social-link-ceo[href*="gmail"]:hover {
+  background: #ea4335;
+  box-shadow: 0 10px 25px rgba(234, 67, 53, 0.4);
 }
 
 .social-link-ceo:hover i {
@@ -2712,7 +2723,11 @@ body {
   align-items: center;
   gap: 15px;
   padding: 18px 40px;
-  background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+  background: linear-gradient(
+    135deg,
+    #25d366 0%,
+    #128c7e 100%
+  ); /* WhatsApp Green Gradient */
   color: white;
   font-size: 1.1rem;
   font-weight: 600;
@@ -2720,14 +2735,14 @@ body {
   border-radius: 50px;
   overflow: hidden;
   transition: all 0.4s ease;
-  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.4);
+  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4); /* WhatsApp green shadow */
   border: none;
   cursor: pointer;
 }
 
 .btn-ceo-cta:hover {
   transform: translateY(-3px);
-  box-shadow: 0 20px 40px rgba(37, 99, 235, 0.5);
+  box-shadow: 0 20px 40px rgba(37, 211, 102, 0.5); /* WhatsApp green hover shadow */
   gap: 20px;
 }
 
@@ -2955,6 +2970,7 @@ body {
 /* ===================================
    TEAM SECTION - LIGHT THEME
    =================================== */
+/* Team Section - Complete CSS with Working Counter */
 .team-modern-section {
   padding: 100px 0;
   position: relative;
@@ -3080,7 +3096,7 @@ body {
 .team-title-modern {
   font-size: 3rem;
   font-weight: 800;
-  color: var(--text-dark);
+  color: #1e293b;
   margin-bottom: 15px;
   line-height: 1.2;
 }
@@ -3094,7 +3110,7 @@ body {
 
 .team-subtitle-modern {
   font-size: 1.1rem;
-  color: var(--text-light);
+  color: #64748b;
   max-width: 500px;
   margin: 0 auto;
   line-height: 1.7;
@@ -3115,7 +3131,7 @@ body {
   border-radius: 24px;
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  border: 1px solid var(--light-blue-200);
+  border: 1px solid #dbeafe;
   box-shadow: 0 4px 20px rgba(37, 99, 235, 0.08);
 }
 
@@ -3185,6 +3201,11 @@ body {
   box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
 }
 
+.featured-tag i {
+  color: #FFD700; /* Yellow star */
+  font-size: 0.7rem;
+}
+
 .glow-effect {
   position: absolute;
   inset: -2px;
@@ -3248,7 +3269,7 @@ body {
   margin: 0 auto;
   border-radius: 50%;
   overflow: hidden;
-  border: 3px solid var(--light-blue-200);
+  border: 3px solid #dbeafe;
   box-shadow: 0 15px 35px rgba(37, 99, 235, 0.15);
   z-index: 1;
 }
@@ -3303,7 +3324,7 @@ body {
   color: #2563eb;
   font-size: 14px;
   transition: all 0.3s;
-  border: 1px solid var(--light-blue-200);
+  border: 1px solid #dbeafe;
 }
 
 .social-btn:hover {
@@ -3362,7 +3383,7 @@ body {
 .member-name {
   font-size: 1.4rem;
   font-weight: 700;
-  color: var(--text-dark);
+  color: #1e293b;
   margin-bottom: 5px;
 }
 
@@ -3377,7 +3398,7 @@ body {
 
 .member-desc {
   font-size: 0.9rem;
-  color: var(--text-light);
+  color: #64748b;
   line-height: 1.6;
   margin-bottom: 20px;
   flex: 1;
@@ -3428,7 +3449,7 @@ body {
   left: 100%;
 }
 
-/* Stats Bar */
+/* Stats Bar - FIXED COUNTER STYLES */
 .team-stats-bar {
   display: flex;
   align-items: center;
@@ -3437,7 +3458,7 @@ body {
   border-radius: 20px;
   padding: 30px;
   margin-bottom: 50px;
-  border: 1px solid var(--light-blue-200);
+  border: 1px solid #dbeafe;
   box-shadow: 0 4px 20px rgba(37, 99, 235, 0.08);
 }
 
@@ -3464,16 +3485,29 @@ body {
   flex-direction: column;
 }
 
+/* Counter Number - Fixed for NaN issue */
 .stat-number {
   font-size: 1.5rem;
   font-weight: 800;
-  color: var(--text-dark);
+  color: #1e293b;
   line-height: 1;
+  min-width: 60px; /* Prevent layout shift */
+}
+
+/* Static number styling (for 24/7) */
+.stat-number:not(.counter-team) {
+  color: #2563eb;
+}
+
+/* Counter animation class */
+.counter-team {
+  display: inline-block;
+  color: #2563eb;
 }
 
 .stat-label {
   font-size: 0.85rem;
-  color: var(--text-light);
+  color: #64748b;
 }
 
 .stat-divider {
@@ -3500,7 +3534,7 @@ body {
   display: flex;
   align-items: center;
   gap: 30px;
-  border: 1px solid var(--light-blue-200);
+  border: 1px solid #dbeafe;
   overflow: hidden;
   transition: all 0.4s;
 }
@@ -3552,7 +3586,6 @@ body {
   border-radius: 50%;
   border: 2px solid white;
   margin-left: -10px;
-  background: linear-gradient(135deg, #2563eb, #3b82f6);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3573,19 +3606,19 @@ body {
 
 .avatar-plus {
   background: rgba(37, 99, 235, 0.1);
-  border-color: var(--light-blue-200);
+  border-color: #dbeafe;
   color: #2563eb;
 }
 
 .join-content h4 {
-  color: var(--text-dark);
+  color: #1e293b;
   font-size: 1.3rem;
   font-weight: 700;
   margin-bottom: 5px;
 }
 
 .join-content p {
-  color: var(--text-light);
+  color: #64748b;
   font-size: 0.95rem;
 }
 
@@ -3647,6 +3680,11 @@ body {
     display: none;
   }
 
+  .stat-box {
+    width: 45%;
+    justify-content: center;
+  }
+
   .join-card {
     flex-direction: column;
     text-align: center;
@@ -3667,13 +3705,19 @@ body {
     font-size: 1rem;
   }
 
-  .stat-box {
-    width: 45%;
-    justify-content: center;
-  }
-
   .team-stats-bar {
     padding: 20px;
+  }
+
+  .stat-box {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-stats-bar {
+    flex-direction: column;
+    gap: 25px;
   }
 }
 
@@ -4635,7 +4679,7 @@ body {
   width: 100%;
   height: 100%;
   opacity: 0.02;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg '%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 
 /* Container */
@@ -4671,6 +4715,7 @@ body {
 
 .badge-star {
   animation: starPulse 2s infinite;
+  color: #ffd700; /* Yellow star */
 }
 
 @keyframes starPulse {
@@ -4737,7 +4782,7 @@ body {
 }
 
 .rating-stars-big {
-  color: #2563eb;
+  color: #ffd700; /* Yellow stars */
   font-size: 1.2rem;
   display: flex;
   gap: 5px;
@@ -4873,7 +4918,7 @@ body {
 .review-rating {
   display: flex;
   gap: 8px;
-  color: #2563eb;
+  color: #ffd700; /* Yellow stars */
   font-size: 1.3rem;
 }
 
@@ -4911,6 +4956,15 @@ body {
   animation: rotateRing 15s linear infinite;
 }
 
+@keyframes rotateRing {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .reviewer-details {
   flex: 1;
 }
@@ -4943,6 +4997,7 @@ body {
 
 .verified-badge i {
   font-size: 0.9rem;
+  color: #ffd700; /* Yellow checkmark */
 }
 
 .company-logo {
@@ -4954,7 +5009,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #2563eb;
+  color: #ffd700; /* Yellow icon */
   font-size: 1.8rem;
 }
 
@@ -5036,7 +5091,11 @@ body {
   transform: translate(-50%, -50%);
   width: 0;
   height: 0;
-  background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+  background: linear-gradient(
+    135deg,
+    #ffd700 0%,
+    #ffa500 100%
+  ); /* Yellow/Orange gradient */
   border-radius: 50%;
   transition: all 0.4s ease;
 }
@@ -5067,7 +5126,11 @@ body {
 
 .progress-bar {
   height: 100%;
-  background: linear-gradient(90deg, #2563eb 0%, #3b82f6 100%);
+  background: linear-gradient(
+    90deg,
+    #ffd700 0%,
+    #ffa500 100%
+  ); /* Yellow/Orange gradient */
   border-radius: 2px;
   transition: width 0.3s ease;
   width: 20%;
@@ -5096,15 +5159,42 @@ body {
 
 .trust-logo {
   font-size: 2.5rem;
-  color: var(--text-light);
-  opacity: 0.5;
   transition: all 0.4s ease;
   cursor: pointer;
+  padding: 15px;
+  border-radius: 15px;
+  position: relative;
 }
 
+/* Google - Original Color #4285F4 */
+.trust-logo .fa-google {
+  color: #4285f4;
+}
+
+/* Microsoft - Original Color #00A4EF */
+.trust-logo .fa-microsoft {
+  color: #00a4ef;
+}
+
+/* Amazon - Original Color #FF9900 */
+.trust-logo .fa-amazon {
+  color: #ff9900;
+}
+
+/* Shopify - Original Color #95BF47 */
+.trust-logo .fa-shopify {
+  color: #95bf47;
+}
+
+/* WordPress - Original Color #21759b */
+.trust-logo .fa-wordpress {
+  color: #21759b;
+}
+
+/* Hover effect - Only background glow, icon color remains same */
 .trust-logo:hover {
-  color: #2563eb;
-  opacity: 1;
+  background: rgba(255, 215, 0, 0.1); /* Light yellow glow */
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.3); /* Yellow glow effect */
   transform: translateY(-5px);
 }
 
@@ -5327,6 +5417,7 @@ body {
 /* ===================================
    CONTACT SECTION
    =================================== */
+/* ===== CONTACT SECTION ===== */
 .contact {
   padding: 120px 0;
   background: linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #eff6ff 100%);
@@ -5368,12 +5459,12 @@ body {
 .contact .section-title {
   font-size: 3rem;
   font-weight: 700;
-  color: var(--text-dark);
+  color: #1f2937;
   margin-bottom: 15px;
 }
 
 .contact .section-subtitle {
-  color: var(--text-light);
+  color: #6b7280;
   font-size: 1.1rem;
 }
 
@@ -5386,51 +5477,69 @@ body {
   padding: 0 20px;
 }
 
+/* ===== CONTACT CARDS WITH ORIGINAL COLORS ===== */
 .contact-card {
   display: flex;
   align-items: center;
   gap: 20px;
   padding: 25px;
-  background: var(--bg-glass);
-  backdrop-filter: blur(10px);
-  border-radius: var(--radius-md);
-  border: 1px solid var(--light-blue-200);
+  background: white;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
   margin-bottom: 20px;
-  transition: var(--transition-fast);
-  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.08);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 .contact-card:hover {
   transform: translateX(10px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--primary-blue);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  border-color: #d1d5db;
+}
+
+/* Location - Blue */
+.contact-card:nth-child(1) .contact-icon {
+  background: linear-gradient(135deg, #4285f4 0%, #1a73e8 100%);
+  box-shadow: 0 4px 15px rgba(66, 133, 244, 0.3);
+}
+
+/* Email - Red */
+.contact-card:nth-child(2) .contact-icon {
+  background: linear-gradient(135deg, #ea4335 0%, #c5221f 100%);
+  box-shadow: 0 4px 15px rgba(234, 67, 53, 0.3);
+}
+
+/* Phone - Green */
+.contact-card:nth-child(3) .contact-icon {
+  background: linear-gradient(135deg, #34a853 0%, #137333 100%);
+  box-shadow: 0 4px 15px rgba(52, 168, 83, 0.3);
 }
 
 .contact-icon {
   width: 60px;
   height: 60px;
-  background: var(--gradient-primary);
-  border-radius: var(--radius-md);
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   font-size: 1.5rem;
-  box-shadow: var(--shadow-glow-blue);
   flex-shrink: 0;
 }
 
 .contact-details h3 {
   font-size: 1.1rem;
   margin-bottom: 5px;
-  color: var(--text-dark);
+  color: #1f2937;
+  font-weight: 600;
 }
 
 .contact-details p {
-  color: var(--text-medium);
+  color: #6b7280;
   font-size: 0.95rem;
 }
 
+/* ===== SOCIAL BUTTONS WITH ORIGINAL COLORS ===== */
 .contact-social {
   display: flex;
   gap: 15px;
@@ -5440,137 +5549,191 @@ body {
 .social-btn {
   width: 45px;
   height: 45px;
-  background: var(--bg-glass);
-  border: 1px solid rgba(37, 99, 235, 0.3);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--primary-blue);
-  text-decoration: none;
-  transition: var(--transition-fast);
-  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.1);
-}
-
-.social-btn:hover {
-  background: var(--gradient-primary);
   color: white;
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-glow-blue);
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
+/* Facebook */
+.social-btn:nth-child(1) {
+  background: #1877f2;
+}
+
+.social-btn:nth-child(1):hover {
+  background: #166fe5;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(24, 119, 242, 0.4);
+}
+
+/* TikTok */
+.social-btn:nth-child(2) {
+  background: #000000;
+}
+
+.social-btn:nth-child(2):hover {
+  background: #1a1a1a;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Instagram */
+.social-btn:nth-child(3) {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.social-btn:nth-child(3):hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(220, 39, 67, 0.4);
+}
+
+/* ===== CONTACT FORM - FIXED ===== */
 .contact-form-wrapper {
   position: relative;
 }
 
 .contact-form {
-  background: var(--bg-glass);
-  backdrop-filter: blur(10px);
-  border-radius: var(--radius-lg);
+  background: white;
+  border-radius: 20px;
   padding: 40px;
-  border: 1px solid var(--light-blue-200);
-  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.08);
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
 }
 
-.glow-form:focus-within {
-  box-shadow: var(--shadow-lg), var(--shadow-glow-blue);
-  border-color: rgba(37, 99, 235, 0.3);
-}
-
+/* Form Group - Fixed Layout */
 .form-group {
   position: relative;
   margin-bottom: 25px;
 }
 
+/* Input, Select, Textarea - Fixed Styling */
 .form-group input,
 .form-group select,
 .form-group textarea {
   width: 100%;
   padding: 15px 20px;
-  border: 2px solid rgba(37, 99, 235, 0.2);
-  border-radius: var(--radius-md);
-  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  background: white;
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
-  transition: var(--transition-fast);
+  color: #1f2937;
+  transition: all 0.3s ease;
   outline: none;
 }
 
+/* Padding right for icons */
+.form-group input,
+.form-group select {
+  padding-right: 45px;
+}
+
 .form-group textarea {
+  padding-right: 45px;
   resize: vertical;
   min-height: 120px;
 }
 
+/* Floating Labels - Fixed */
 .form-group label {
   position: absolute;
   left: 20px;
   top: 50%;
   transform: translateY(-50%);
-  color: var(--text-light);
-  transition: var(--transition-fast);
+  color: #9ca3af;
+  font-size: 1rem;
+  font-weight: 400;
   pointer-events: none;
-  background: transparent;
+  transition: all 0.3s ease;
+  background: white;
   padding: 0 5px;
 }
 
+/* Textarea label position fix */
 .form-group textarea ~ label {
   top: 20px;
   transform: translateY(0);
 }
 
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus,
-.form-group input:valid,
-.form-group textarea:valid {
-  border-color: var(--primary-blue);
-  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
-}
-
+/* Label animation on focus/valid */
 .form-group input:focus ~ label,
 .form-group input:valid ~ label,
 .form-group textarea:focus ~ label,
 .form-group textarea:valid ~ label {
   top: -10px;
   font-size: 0.85rem;
-  color: var(--primary-blue);
-  background: white;
+  color: #2563eb;
+  font-weight: 500;
 }
 
+/* Focus States */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+/* Icons inside inputs - Fixed Position */
 .form-group i {
   position: absolute;
   right: 20px;
   top: 50%;
   transform: translateY(-50%);
-  color: var(--primary-blue);
-  opacity: 0.5;
+  color: #9ca3af;
+  font-size: 1rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
 }
 
+/* Textarea icon position */
+.form-group textarea ~ i {
+  top: 20px;
+  transform: translateY(0);
+}
+
+/* Icon color change on focus */
+.form-group input:focus ~ i,
+.form-group select:focus ~ i,
+.form-group textarea:focus ~ i {
+  color: #2563eb;
+}
+
+/* Select Dropdown - Fixed */
 .form-group select {
   cursor: pointer;
   appearance: none;
+  background-image: none; /* Remove default arrow */
 }
 
-.form-group select ~ i {
-  opacity: 1;
+/* Select label hide when selected */
+.form-group select:valid {
+  color: #1f2937;
 }
 
+/* Submit Button */
 .submit-btn {
   width: 100%;
-  justify-content: center;
+  padding: 18px 30px;
   font-size: 1.1rem;
-  border-radius: 50px;
-  background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+  font-weight: 600;
   color: white;
-  padding: 18px;
+  background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
   border: none;
+  border-radius: 50px;
   cursor: pointer;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   transition: all 0.4s ease;
-  font-weight: 600;
   box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3);
+  margin-top: 10px;
 }
 
 .submit-btn:hover {
@@ -5579,7 +5742,12 @@ body {
   gap: 15px;
 }
 
-/* Responsive */
+/* Glow Effect */
+.glow-form:focus-within {
+  box-shadow: 0 20px 60px rgba(37, 99, 235, 0.15);
+}
+
+/* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
   .contact-container {
     grid-template-columns: 1fr;
@@ -5598,6 +5766,10 @@ body {
 
   .contact-form {
     padding: 25px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
   }
 }
 
@@ -5668,6 +5840,7 @@ body {
   margin-bottom: 20px;
 }
 
+/* ===== FOOTER SOCIAL LINKS - ORIGINAL BRAND COLORS ===== */
 .footer-social {
   display: flex;
   gap: 15px;
@@ -5676,20 +5849,80 @@ body {
 .footer-social a {
   width: 40px;
   height: 40px;
-  background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   text-decoration: none;
-  transition: var(--transition-fast);
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-.footer-social a:hover {
-  background: var(--gradient-primary);
+/* Facebook - Blue */
+.footer-social a:nth-child(1) {
+  background: #1877f2;
+}
+
+.footer-social a:nth-child(1):hover {
+  background: #166fe5;
   transform: translateY(-3px);
-  box-shadow: 0 0 20px rgba(37, 99, 235, 0.5);
+  box-shadow: 0 8px 25px rgba(24, 119, 242, 0.5);
+}
+
+/* TikTok - Black */
+.footer-social a:nth-child(2) {
+  background: #000000;
+}
+
+.footer-social a:nth-child(2):hover {
+  background: #1a1a1a;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Instagram - Gradient */
+.footer-social a:nth-child(3) {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.footer-social a:nth-child(3):hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(220, 39, 67, 0.5);
+}
+
+/* Twitter/X - Black (if added later) */
+.footer-social a:nth-child(4) {
+  background: #000000;
+}
+
+.footer-social a:nth-child(4):hover {
+  background: #1a1a1a;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* LinkedIn - Blue (if added later) */
+.footer-social a:nth-child(5) {
+  background: #0a66c2;
+}
+
+.footer-social a:nth-child(5):hover {
+  background: #0958a8;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(10, 102, 194, 0.5);
+}
+
+/* YouTube - Red (if added later) */
+.footer-social a:nth-child(6) {
+  background: #ff0000;
+}
+
+.footer-social a:nth-child(6):hover {
+  background: #cc0000;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 0, 0, 0.5);
 }
 
 .footer-section h3 {
@@ -5820,7 +6053,6 @@ body {
   transform: translateY(-5px);
   box-shadow: 0 0 30px rgba(37, 99, 235, 0.6);
 }
-
 /* ===================================
    AOS ANIMATION CLASSES
    =================================== */

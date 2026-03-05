@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projects Showcase - Premium Portfolio</title>
+    <title>Modern Projects Showcase</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -20,98 +20,108 @@
       }
 
       :root {
-        --primary-bg: #050505;
-        --card-bg: rgba(255, 255, 255, 0.03);
-        --card-border: rgba(255, 255, 255, 0.08);
-        --accent-cyan: #00f5ff;
-        --accent-purple: #b026ff;
-        --accent-pink: #ff2a6d;
-        --accent-blue: #0055ff;
-        --text-primary: #ffffff;
-        --text-secondary: rgba(255, 255, 255, 0.6);
-        --text-muted: rgba(255, 255, 255, 0.4);
+        --primary-blue: #0066ff;
+        --light-blue: #e8f4ff;
+        --accent-blue: #00d4ff;
+        --dark-blue: #0a1628;
+        --navy: #1e3a8a;
+        --text-primary: #0f172a;
+        --text-secondary: #64748b;
+        --text-muted: #94a3b8;
+        --white: #ffffff;
+        --gray-50: #f8fafc;
+        --gray-100: #f1f5f9;
+        --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        --shadow-md:
+          0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        --shadow-lg:
+          0 10px 15px -3px rgba(0, 0, 0, 0.1),
+          0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        --shadow-xl:
+          0 20px 25px -5px rgba(0, 0, 0, 0.1),
+          0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        --shadow-blue: 0 0 40px rgba(0, 102, 255, 0.15);
       }
 
       body {
-        font-family: "Plus Jakarta Sans", sans-serif;
-        background: var(--primary-bg);
+        font-family: "Inter", sans-serif;
+        background: var(--white);
         color: var(--text-primary);
+        line-height: 1.6;
         overflow-x: hidden;
       }
 
-      /* Projects Section */
-      .projects-section {
+      /* Modern Projects Section */
+      .projects-showcase {
         position: relative;
         padding: 8rem 5%;
-        min-height: 100vh;
-        background:
-          radial-gradient(
-            ellipse at 20% 20%,
-            rgba(0, 245, 255, 0.1) 0%,
-            transparent 50%
-          ),
-          radial-gradient(
-            ellipse at 80% 80%,
-            rgba(176, 38, 255, 0.1) 0%,
-            transparent 50%
-          ),
-          radial-gradient(
-            ellipse at 50% 50%,
-            rgba(255, 42, 109, 0.05) 0%,
-            transparent 70%
-          ),
-          #050505;
+        background: linear-gradient(
+          180deg,
+          var(--white) 0%,
+          var(--gray-50) 100%
+        );
         overflow: hidden;
       }
 
-      /* Animated Grid Background */
-      .grid-bg {
+      /* Subtle Background Pattern */
+      .bg-pattern {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
         background-image:
-          linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-        background-size: 50px 50px;
-        animation: gridMove 20s linear infinite;
+          radial-gradient(
+            circle at 20% 80%,
+            rgba(0, 102, 255, 0.03) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 80% 20%,
+            rgba(0, 212, 255, 0.03) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 40% 40%,
+            rgba(30, 58, 138, 0.02) 0%,
+            transparent 50%
+          );
         pointer-events: none;
       }
 
-      @keyframes gridMove {
-        0% {
-          transform: translate(0, 0);
-        }
-        100% {
-          transform: translate(50px, 50px);
-        }
-      }
-
-      /* Floating Elements */
-      .float-element {
+      /* Floating Orbs */
+      .orb {
         position: absolute;
         border-radius: 50%;
-        filter: blur(60px);
-        opacity: 0.3;
-        animation: float 15s infinite ease-in-out;
+        filter: blur(80px);
+        opacity: 0.4;
+        animation: float 20s infinite ease-in-out;
       }
 
-      .float-1 {
+      .orb-1 {
+        width: 400px;
+        height: 400px;
+        background: linear-gradient(
+          135deg,
+          var(--primary-blue),
+          var(--accent-blue)
+        );
+        top: -10%;
+        right: -10%;
+        animation-delay: 0s;
+      }
+
+      .orb-2 {
         width: 300px;
         height: 300px;
-        background: var(--accent-cyan);
-        top: 10%;
-        left: -5%;
-      }
-
-      .float-2 {
-        width: 250px;
-        height: 250px;
-        background: var(--accent-purple);
+        background: linear-gradient(
+          135deg,
+          var(--light-blue),
+          var(--accent-blue)
+        );
         bottom: 10%;
-        right: -5%;
-        animation-delay: -5s;
+        left: -5%;
+        animation-delay: -10s;
       }
 
       @keyframes float {
@@ -119,8 +129,11 @@
         100% {
           transform: translate(0, 0) scale(1);
         }
-        50% {
+        33% {
           transform: translate(30px, -30px) scale(1.1);
+        }
+        66% {
+          transform: translate(-20px, 20px) scale(0.9);
         }
       }
 
@@ -132,112 +145,104 @@
         z-index: 1;
       }
 
-      .section-tag {
+      .section-badge {
         display: inline-flex;
         align-items: center;
         gap: 0.5rem;
-        padding: 0.6rem 1.5rem;
+        padding: 0.75rem 1.5rem;
         background: linear-gradient(
           135deg,
-          rgba(0, 245, 255, 0.1),
-          rgba(176, 38, 255, 0.1)
+          var(--light-blue),
+          rgba(0, 212, 255, 0.1)
         );
-        border: 1px solid rgba(0, 245, 255, 0.2);
+        border: 1px solid rgba(0, 102, 255, 0.2);
         border-radius: 50px;
-        font-size: 0.85rem;
-        color: var(--accent-cyan);
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        margin-bottom: 1.5rem;
+        font-size: 0.875rem;
         font-weight: 600;
+        color: var(--primary-blue);
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        margin-bottom: 1.5rem;
+        box-shadow: var(--shadow-sm);
+      }
+
+      .section-badge i {
+        font-size: 1rem;
       }
 
       .section-title {
-        font-family: "Playfair Display", serif;
-        font-size: clamp(3rem, 6vw, 5rem);
+        font-family: "Space Grotesk", sans-serif;
+        font-size: clamp(2.5rem, 5vw, 4rem);
         font-weight: 700;
-        margin-bottom: 1rem;
+        line-height: 1.1;
+        margin-bottom: 1.25rem;
+        color: var(--text-primary);
+      }
+
+      .section-title span {
         background: linear-gradient(
           135deg,
-          #fff 0%,
-          var(--accent-cyan) 50%,
-          var(--accent-purple) 100%
+          var(--primary-blue),
+          var(--accent-blue)
         );
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
-        line-height: 1.1;
       }
 
       .section-subtitle {
+        font-size: 1.25rem;
         color: var(--text-secondary);
-        font-size: 1.2rem;
         max-width: 600px;
         margin: 0 auto;
-        font-weight: 300;
+        font-weight: 400;
       }
 
-      /* Filter Buttons */
-      .filter-container {
+      /* Filter Tabs */
+      .filter-wrapper {
         display: flex;
         justify-content: center;
-        gap: 1rem;
         margin-bottom: 4rem;
-        flex-wrap: wrap;
         position: relative;
         z-index: 1;
       }
 
-      .filter-btn {
-        padding: 0.9rem 2rem;
-        background: rgba(255, 255, 255, 0.02);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 50px;
+      .filter-tabs {
+        display: inline-flex;
+        background: var(--gray-100);
+        padding: 0.5rem;
+        border-radius: 16px;
+        gap: 0.5rem;
+        box-shadow: var(--shadow-sm);
+      }
+
+      .filter-tab {
+        padding: 0.875rem 1.75rem;
+        border: none;
+        background: transparent;
         color: var(--text-secondary);
-        font-size: 0.9rem;
-        cursor: pointer;
-        transition: all 0.4s ease;
-        font-family: inherit;
+        font-size: 0.95rem;
         font-weight: 500;
-        position: relative;
-        overflow: hidden;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        font-family: inherit;
       }
 
-      .filter-btn::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-          90deg,
-          transparent,
-          rgba(255, 255, 255, 0.1),
-          transparent
-        );
-        transition: left 0.5s;
+      .filter-tab:hover {
+        color: var(--primary-blue);
+        background: rgba(255, 255, 255, 0.5);
       }
 
-      .filter-btn:hover::before {
-        left: 100%;
-      }
-
-      .filter-btn:hover,
-      .filter-btn.active {
-        background: linear-gradient(
-          135deg,
-          rgba(0, 245, 255, 0.15),
-          rgba(176, 38, 255, 0.15)
-        );
-        border-color: var(--accent-cyan);
-        color: var(--text-primary);
-        box-shadow: 0 0 30px rgba(0, 245, 255, 0.2);
-        transform: translateY(-2px);
+      .filter-tab.active {
+        background: var(--white);
+        color: var(--primary-blue);
+        box-shadow: var(--shadow-md);
+        font-weight: 600;
       }
 
       /* Projects Grid */
-      .projects-grid {
+      .projects-container {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
         gap: 2.5rem;
@@ -247,166 +252,170 @@
         z-index: 1;
       }
 
-      /* Project Card */
+      /* Modern Project Card */
       .project-card {
-        position: relative;
-        background: var(--card-bg);
-        backdrop-filter: blur(20px);
-        border: 1px solid var(--card-border);
+        background: var(--white);
         border-radius: 24px;
         overflow: hidden;
+        box-shadow: var(--shadow-lg);
         transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        border: 1px solid rgba(0, 102, 255, 0.08);
+        position: relative;
         cursor: pointer;
-        transform-style: preserve-3d;
+      }
+
+      .project-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(
+          90deg,
+          var(--primary-blue),
+          var(--accent-blue)
+        );
+        transform: scaleX(0);
+        transition: transform 0.4s ease;
       }
 
       .project-card:hover {
-        transform: translateY(-15px) scale(1.02);
-        border-color: rgba(0, 245, 255, 0.3);
-        box-shadow:
-          0 30px 60px rgba(0, 0, 0, 0.4),
-          0 0 50px rgba(0, 245, 255, 0.1);
+        transform: translateY(-8px);
+        box-shadow: var(--shadow-xl), var(--shadow-blue);
+        border-color: rgba(0, 102, 255, 0.2);
+      }
+
+      .project-card:hover::before {
+        transform: scaleX(1);
       }
 
       /* Image Container */
-      .project-image-container {
+      .card-image-wrapper {
         position: relative;
-        height: 260px;
+        height: 280px;
         overflow: hidden;
-        background: linear-gradient(
-          135deg,
-          rgba(0, 245, 255, 0.05),
-          rgba(176, 38, 255, 0.05)
-        );
+        background: linear-gradient(135deg, var(--gray-100), var(--light-blue));
       }
 
-      .project-image {
+      .card-image {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        transition: transform 0.8s ease;
+        transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
       }
 
-      .project-card:hover .project-image {
-        transform: scale(1.15);
+      .project-card:hover .card-image {
+        transform: scale(1.08);
       }
 
-      /* Overlay */
-      .project-overlay {
+      /* Image Overlay */
+      .image-overlay {
         position: absolute;
         inset: 0;
         background: linear-gradient(
           to top,
-          rgba(5, 5, 5, 0.95) 0%,
-          rgba(5, 5, 5, 0.5) 50%,
+          rgba(10, 22, 40, 0.9) 0%,
+          rgba(10, 22, 40, 0.3) 50%,
           transparent 100%
         );
-        opacity: 0.8;
-        transition: opacity 0.4s ease;
-      }
-
-      .project-card:hover .project-overlay {
-        opacity: 0.9;
-      }
-
-      /* View Project Button */
-      .view-project {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) scale(0.8);
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        background: linear-gradient(
-          135deg,
-          var(--accent-cyan),
-          var(--accent-purple)
-        );
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 0.9rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        color: #000;
         opacity: 0;
-        transition: all 0.4s ease;
-        cursor: pointer;
-        border: none;
-        box-shadow: 0 0 40px rgba(0, 245, 255, 0.4);
+        transition: opacity 0.4s ease;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding-bottom: 2rem;
       }
 
-      .project-card:hover .view-project {
+      .project-card:hover .image-overlay {
         opacity: 1;
-        transform: translate(-50%, -50%) scale(1);
       }
 
-      .view-project:hover {
-        transform: translate(-50%, -50%) scale(1.1);
-        box-shadow: 0 0 60px rgba(0, 245, 255, 0.6);
+      .view-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 1rem 2rem;
+        background: var(--white);
+        color: var(--primary-blue);
+        border: none;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        cursor: pointer;
+        transform: translateY(20px);
+        opacity: 0;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: var(--shadow-lg);
+      }
+
+      .project-card:hover .view-btn {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      .view-btn:hover {
+        background: var(--primary-blue);
+        color: var(--white);
+        transform: scale(1.05);
       }
 
       /* Category Tag */
-      .category-tag {
+      .category-pill {
         position: absolute;
-        top: 1.5rem;
-        left: 1.5rem;
+        top: 1.25rem;
+        left: 1.25rem;
         padding: 0.5rem 1rem;
-        background: rgba(0, 0, 0, 0.6);
+        background: rgba(255, 255, 255, 0.95);
         backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
         border-radius: 50px;
         font-size: 0.75rem;
-        color: var(--accent-cyan);
+        font-weight: 600;
+        color: var(--primary-blue);
         text-transform: uppercase;
         letter-spacing: 1px;
-        font-weight: 600;
+        box-shadow: var(--shadow-md);
         z-index: 2;
       }
 
-      /* Project Content */
-      .project-content {
+      /* Card Content */
+      .card-content {
         padding: 2rem;
-        position: relative;
       }
 
-      .project-meta {
+      .card-meta {
         display: flex;
+        align-items: center;
         gap: 1.5rem;
         margin-bottom: 1rem;
-        font-size: 0.85rem;
+        font-size: 0.875rem;
         color: var(--text-muted);
       }
 
-      .meta-item {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
+      .meta-dot {
+        width: 4px;
+        height: 4px;
+        background: var(--text-muted);
+        border-radius: 50%;
       }
 
-      .meta-item i {
-        color: var(--accent-cyan);
-        font-size: 0.9rem;
-      }
-
-      .project-title {
+      .card-title {
+        font-family: "Space Grotesk", sans-serif;
         font-size: 1.5rem;
         font-weight: 700;
-        margin-bottom: 0.75rem;
         color: var(--text-primary);
+        margin-bottom: 0.75rem;
         line-height: 1.3;
         transition: color 0.3s ease;
       }
 
-      .project-card:hover .project-title {
-        color: var(--accent-cyan);
+      .project-card:hover .card-title {
+        color: var(--primary-blue);
       }
 
-      .project-description {
+      .card-description {
         color: var(--text-secondary);
-        font-size: 0.95rem;
+        font-size: 1rem;
         line-height: 1.7;
         margin-bottom: 1.5rem;
         display: -webkit-box;
@@ -416,7 +425,7 @@
       }
 
       /* Tech Stack */
-      .tech-stack {
+      .tech-tags {
         display: flex;
         flex-wrap: wrap;
         gap: 0.5rem;
@@ -424,128 +433,142 @@
       }
 
       .tech-tag {
-        padding: 0.4rem 0.8rem;
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 6px;
-        font-size: 0.75rem;
-        color: var(--text-secondary);
+        padding: 0.4rem 1rem;
+        background: var(--light-blue);
+        color: var(--primary-blue);
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 600;
         transition: all 0.3s ease;
       }
 
       .tech-tag:hover {
-        background: rgba(0, 245, 255, 0.1);
-        border-color: rgba(0, 245, 255, 0.3);
-        color: var(--accent-cyan);
+        background: var(--primary-blue);
+        color: var(--white);
         transform: translateY(-2px);
       }
 
-      /* Project Stats */
-      .project-stats {
+      /* Card Footer */
+      .card-footer {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding-top: 1.5rem;
-        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        border-top: 1px solid var(--gray-100);
       }
 
-      .stat-item {
+      .project-stat {
         display: flex;
         align-items: center;
         gap: 0.5rem;
         color: var(--text-muted);
-        font-size: 0.85rem;
+        font-size: 0.9rem;
+        font-weight: 500;
       }
 
-      .stat-item i {
-        color: var(--accent-purple);
+      .project-stat i {
+        color: var(--accent-blue);
       }
 
-      .project-links {
+      .card-actions {
         display: flex;
         gap: 0.75rem;
       }
 
-      .link-btn {
-        width: 36px;
-        height: 36px;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+      .action-btn {
+        width: 40px;
+        height: 40px;
+        border-radius: 12px;
+        background: var(--gray-100);
+        border: none;
         color: var(--text-secondary);
         display: flex;
         align-items: center;
         justify-content: center;
-        text-decoration: none;
+        cursor: pointer;
         transition: all 0.3s ease;
-        font-size: 0.9rem;
+        text-decoration: none;
       }
 
-      .link-btn:hover {
-        background: var(--accent-cyan);
-        border-color: var(--accent-cyan);
-        color: #000;
+      .action-btn:hover {
+        background: var(--primary-blue);
+        color: var(--white);
         transform: translateY(-3px);
-        box-shadow: 0 5px 15px rgba(0, 245, 255, 0.3);
+        box-shadow: 0 10px 20px rgba(0, 102, 255, 0.2);
       }
 
-      /* Featured Project (Large) */
+      /* Featured Card */
       .project-card.featured {
         grid-column: span 2;
       }
 
-      .project-card.featured .project-image-container {
+      .project-card.featured .card-image-wrapper {
         height: 400px;
       }
 
-      .project-card.featured .project-title {
+      .project-card.featured .card-title {
         font-size: 2rem;
       }
 
       /* Stats Section */
-      .stats-section {
+      .achievements-section {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
         gap: 2rem;
-        max-width: 1000px;
+        max-width: 1100px;
         margin: 6rem auto 0;
         position: relative;
         z-index: 1;
       }
 
-      .stat-card {
+      .achievement-card {
         text-align: center;
-        padding: 2rem;
-        background: rgba(255, 255, 255, 0.02);
-        border: 1px solid rgba(255, 255, 255, 0.05);
-        border-radius: 16px;
-        backdrop-filter: blur(10px);
+        padding: 2.5rem 2rem;
+        background: var(--white);
+        border-radius: 20px;
+        box-shadow: var(--shadow-lg);
+        border: 1px solid rgba(0, 102, 255, 0.08);
         transition: all 0.4s ease;
       }
 
-      .stat-card:hover {
+      .achievement-card:hover {
         transform: translateY(-5px);
-        border-color: rgba(0, 245, 255, 0.2);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        box-shadow: var(--shadow-xl), var(--shadow-blue);
+        border-color: rgba(0, 102, 255, 0.2);
       }
 
-      .stat-number {
-        font-size: 3rem;
-        font-weight: 800;
+      .achievement-icon {
+        width: 60px;
+        height: 60px;
         background: linear-gradient(
           135deg,
-          var(--accent-cyan),
-          var(--accent-purple)
+          var(--light-blue),
+          rgba(0, 212, 255, 0.2)
         );
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.25rem;
+        color: var(--primary-blue);
+        font-size: 1.5rem;
+      }
+
+      .achievement-number {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 2.5rem;
+        font-weight: 700;
+        background: linear-gradient(135deg, var(--primary-blue), var(--navy));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
         margin-bottom: 0.5rem;
       }
 
-      .stat-label {
+      .achievement-label {
         color: var(--text-secondary);
-        font-size: 0.9rem;
+        font-size: 0.95rem;
+        font-weight: 500;
         text-transform: uppercase;
         letter-spacing: 1px;
       }
@@ -556,35 +579,39 @@
           grid-column: span 1;
         }
 
-        .project-card.featured .project-image-container {
-          height: 260px;
+        .project-card.featured .card-image-wrapper {
+          height: 280px;
         }
 
-        .projects-grid {
+        .projects-container {
           grid-template-columns: 1fr;
         }
       }
 
-      @media (max-width: 768px) {
-        .projects-section {
-          padding: 5rem 5%;
+      @media (max-width: 640px) {
+        .projects-showcase {
+          padding: 5rem 4%;
         }
 
-        .view-project {
-          width: 100px;
-          height: 100px;
-          font-size: 0.8rem;
+        .filter-tabs {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        .filter-tab {
+          padding: 0.75rem 1.25rem;
+          font-size: 0.875rem;
         }
       }
 
-      /* Loading Animation */
+      /* Animation */
       .project-card {
         opacity: 0;
         transform: translateY(30px);
-        animation: fadeInUp 0.6s ease forwards;
+        animation: slideUp 0.6s ease forwards;
       }
 
-      @keyframes fadeInUp {
+      @keyframes slideUp {
         to {
           opacity: 1;
           transform: translateY(0);
@@ -612,88 +639,89 @@
     </style>
   </head>
   <body>
-    <section class="projects-section">
+    <section class="projects-showcase">
       <!-- Background Elements -->
-      <div class="grid-bg"></div>
-      <div class="float-element float-1"></div>
-      <div class="float-element float-2"></div>
+      <div class="bg-pattern"></div>
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
 
       <!-- Section Header -->
       <div class="section-header">
-        <div class="section-tag">
-          <i class="fas fa-code"></i>
-          Portfolio
+        <div class="section-badge">
+          <i class="fas fa-rocket"></i>
+          Our Work
         </div>
-        <h2 class="section-title">Featured Projects</h2>
+        <h2 class="section-title">Featured <span>Projects</span></h2>
         <p class="section-subtitle">
-          Explore our latest work across web development, mobile apps, and
-          digital design
+          Discover our latest innovations in web development, mobile
+          applications, and digital experiences
         </p>
       </div>
 
-      <!-- Filter Buttons -->
-      <div class="filter-container">
-        <button class="filter-btn active" data-filter="all">
-          All Projects
-        </button>
-        <button class="filter-btn" data-filter="web">Web Development</button>
-        <button class="filter-btn" data-filter="app">Mobile Apps</button>
-        <button class="filter-btn" data-filter="design">UI/UX Design</button>
-        <button class="filter-btn" data-filter="ecommerce">E-Commerce</button>
+      <!-- Filter Tabs -->
+      <div class="filter-wrapper">
+        <div class="filter-tabs">
+          <button class="filter-tab active" data-filter="all">
+            All Projects
+          </button>
+          <button class="filter-tab" data-filter="web">Web Development</button>
+          <button class="filter-tab" data-filter="app">Mobile Apps</button>
+          <button class="filter-tab" data-filter="design">UI/UX Design</button>
+          <button class="filter-tab" data-filter="ecommerce">E-Commerce</button>
+        </div>
       </div>
 
       <!-- Projects Grid -->
-      <div class="projects-grid">
+      <div class="projects-container">
         <!-- Project 1: Featured -->
         <div class="project-card featured" data-category="web ecommerce">
-          <div class="project-image-container">
+          <div class="card-image-wrapper">
             <img
               src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80"
               alt="E-Commerce Platform"
-              class="project-image"
+              class="card-image"
             />
-            <div class="project-overlay"></div>
-            <span class="category-tag">E-Commerce</span>
-            <button class="view-project">View<br />Project</button>
-          </div>
-          <div class="project-content">
-            <div class="project-meta">
-              <span class="meta-item"
-                ><i class="far fa-calendar"></i> 2024</span
-              >
-              <span class="meta-item"
-                ><i class="far fa-clock"></i> 3 Months</span
-              >
-              <span class="meta-item"
-                ><i class="fas fa-user"></i> Client Project</span
-              >
+            <span class="category-pill">E-Commerce</span>
+            <div class="image-overlay">
+              <button class="view-btn">
+                View Project <i class="fas fa-arrow-right"></i>
+              </button>
             </div>
-            <h3 class="project-title">Luxury E-Commerce Platform</h3>
-            <p class="project-description">
+          </div>
+          <div class="card-content">
+            <div class="card-meta">
+              <span>2024</span>
+              <span class="meta-dot"></span>
+              <span>3 Months</span>
+              <span class="meta-dot"></span>
+              <span>Client Project</span>
+            </div>
+            <h3 class="card-title">Luxury E-Commerce Platform</h3>
+            <p class="card-description">
               A premium online shopping experience built with Next.js and
               Node.js, featuring AI-powered recommendations and seamless payment
               integration.
             </p>
-            <div class="tech-stack">
+            <div class="tech-tags">
               <span class="tech-tag">Next.js</span>
               <span class="tech-tag">Node.js</span>
               <span class="tech-tag">MongoDB</span>
               <span class="tech-tag">Stripe</span>
               <span class="tech-tag">Tailwind</span>
             </div>
-            <div class="project-stats">
-              <div class="stat-item">
+            <div class="card-footer">
+              <div class="project-stat">
                 <i class="fas fa-eye"></i>
                 <span>12.5K Views</span>
               </div>
-              <div class="project-links">
-                <a href="#" class="link-btn" title="Live Demo"
+              <div class="card-actions">
+                <a href="#" class="action-btn" title="Live Demo"
                   ><i class="fas fa-external-link-alt"></i
                 ></a>
-                <a href="#" class="link-btn" title="GitHub"
+                <a href="#" class="action-btn" title="GitHub"
                   ><i class="fab fa-github"></i
                 ></a>
-                <a href="#" class="link-btn" title="Case Study"
+                <a href="#" class="action-btn" title="Case Study"
                   ><i class="fas fa-file-alt"></i
                 ></a>
               </div>
@@ -703,45 +731,45 @@
 
         <!-- Project 2 -->
         <div class="project-card" data-category="app">
-          <div class="project-image-container">
+          <div class="card-image-wrapper">
             <img
               src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&q=80"
               alt="Fitness App"
-              class="project-image"
+              class="card-image"
             />
-            <div class="project-overlay"></div>
-            <span class="category-tag">Mobile App</span>
-            <button class="view-project">View<br />Project</button>
-          </div>
-          <div class="project-content">
-            <div class="project-meta">
-              <span class="meta-item"
-                ><i class="far fa-calendar"></i> 2024</span
-              >
-              <span class="meta-item"
-                ><i class="far fa-clock"></i> 2 Months</span
-              >
+            <span class="category-pill">Mobile App</span>
+            <div class="image-overlay">
+              <button class="view-btn">
+                View Project <i class="fas fa-arrow-right"></i>
+              </button>
             </div>
-            <h3 class="project-title">FitTrack Pro Mobile App</h3>
-            <p class="project-description">
+          </div>
+          <div class="card-content">
+            <div class="card-meta">
+              <span>2024</span>
+              <span class="meta-dot"></span>
+              <span>2 Months</span>
+            </div>
+            <h3 class="card-title">FitTrack Pro Mobile App</h3>
+            <p class="card-description">
               Cross-platform fitness tracking application with real-time
               analytics and social features.
             </p>
-            <div class="tech-stack">
+            <div class="tech-tags">
               <span class="tech-tag">React Native</span>
               <span class="tech-tag">Firebase</span>
               <span class="tech-tag">Redux</span>
             </div>
-            <div class="project-stats">
-              <div class="stat-item">
+            <div class="card-footer">
+              <div class="project-stat">
                 <i class="fas fa-download"></i>
                 <span>50K+ Downloads</span>
               </div>
-              <div class="project-links">
-                <a href="#" class="link-btn"
+              <div class="card-actions">
+                <a href="#" class="action-btn"
                   ><i class="fas fa-external-link-alt"></i
                 ></a>
-                <a href="#" class="link-btn"><i class="fab fa-github"></i></a>
+                <a href="#" class="action-btn"><i class="fab fa-github"></i></a>
               </div>
             </div>
           </div>
@@ -749,45 +777,47 @@
 
         <!-- Project 3 -->
         <div class="project-card" data-category="design">
-          <div class="project-image-container">
+          <div class="card-image-wrapper">
             <img
               src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&q=80"
               alt="Brand Identity"
-              class="project-image"
+              class="card-image"
             />
-            <div class="project-overlay"></div>
-            <span class="category-tag">UI/UX Design</span>
-            <button class="view-project">View<br />Project</button>
-          </div>
-          <div class="project-content">
-            <div class="project-meta">
-              <span class="meta-item"
-                ><i class="far fa-calendar"></i> 2023</span
-              >
-              <span class="meta-item"
-                ><i class="far fa-clock"></i> 1 Month</span
-              >
+            <span class="category-pill">UI/UX Design</span>
+            <div class="image-overlay">
+              <button class="view-btn">
+                View Project <i class="fas fa-arrow-right"></i>
+              </button>
             </div>
-            <h3 class="project-title">TechStart Brand Identity</h3>
-            <p class="project-description">
+          </div>
+          <div class="card-content">
+            <div class="card-meta">
+              <span>2023</span>
+              <span class="meta-dot"></span>
+              <span>1 Month</span>
+            </div>
+            <h3 class="card-title">TechStart Brand Identity</h3>
+            <p class="card-description">
               Complete brand redesign including logo, design system, and
               marketing collateral.
             </p>
-            <div class="tech-stack">
+            <div class="tech-tags">
               <span class="tech-tag">Figma</span>
               <span class="tech-tag">Illustrator</span>
               <span class="tech-tag">After Effects</span>
             </div>
-            <div class="project-stats">
-              <div class="stat-item">
+            <div class="card-footer">
+              <div class="project-stat">
                 <i class="fas fa-heart"></i>
                 <span>2.3K Likes</span>
               </div>
-              <div class="project-links">
-                <a href="#" class="link-btn"
+              <div class="card-actions">
+                <a href="#" class="action-btn"
                   ><i class="fas fa-external-link-alt"></i
                 ></a>
-                <a href="#" class="link-btn"><i class="fab fa-dribbble"></i></a>
+                <a href="#" class="action-btn"
+                  ><i class="fab fa-dribbble"></i
+                ></a>
               </div>
             </div>
           </div>
@@ -795,46 +825,46 @@
 
         <!-- Project 4 -->
         <div class="project-card" data-category="web">
-          <div class="project-image-container">
+          <div class="card-image-wrapper">
             <img
               src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80"
               alt="Dashboard"
-              class="project-image"
+              class="card-image"
             />
-            <div class="project-overlay"></div>
-            <span class="category-tag">Web App</span>
-            <button class="view-project">View<br />Project</button>
-          </div>
-          <div class="project-content">
-            <div class="project-meta">
-              <span class="meta-item"
-                ><i class="far fa-calendar"></i> 2024</span
-              >
-              <span class="meta-item"
-                ><i class="far fa-clock"></i> 4 Months</span
-              >
+            <span class="category-pill">Web App</span>
+            <div class="image-overlay">
+              <button class="view-btn">
+                View Project <i class="fas fa-arrow-right"></i>
+              </button>
             </div>
-            <h3 class="project-title">Analytics Dashboard Pro</h3>
-            <p class="project-description">
+          </div>
+          <div class="card-content">
+            <div class="card-meta">
+              <span>2024</span>
+              <span class="meta-dot"></span>
+              <span>4 Months</span>
+            </div>
+            <h3 class="card-title">Analytics Dashboard Pro</h3>
+            <p class="card-description">
               Real-time data visualization platform with customizable widgets
               and reporting tools.
             </p>
-            <div class="tech-stack">
+            <div class="tech-tags">
               <span class="tech-tag">Vue.js</span>
               <span class="tech-tag">D3.js</span>
               <span class="tech-tag">Python</span>
               <span class="tech-tag">PostgreSQL</span>
             </div>
-            <div class="project-stats">
-              <div class="stat-item">
+            <div class="card-footer">
+              <div class="project-stat">
                 <i class="fas fa-users"></i>
                 <span>5K Users</span>
               </div>
-              <div class="project-links">
-                <a href="#" class="link-btn"
+              <div class="card-actions">
+                <a href="#" class="action-btn"
                   ><i class="fas fa-external-link-alt"></i
                 ></a>
-                <a href="#" class="link-btn"><i class="fab fa-github"></i></a>
+                <a href="#" class="action-btn"><i class="fab fa-github"></i></a>
               </div>
             </div>
           </div>
@@ -842,46 +872,48 @@
 
         <!-- Project 5 -->
         <div class="project-card" data-category="ecommerce web">
-          <div class="project-image-container">
+          <div class="card-image-wrapper">
             <img
               src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80"
               alt="Fashion Store"
-              class="project-image"
+              class="card-image"
             />
-            <div class="project-overlay"></div>
-            <span class="category-tag">E-Commerce</span>
-            <button class="view-project">View<br />Project</button>
-          </div>
-          <div class="project-content">
-            <div class="project-meta">
-              <span class="meta-item"
-                ><i class="far fa-calendar"></i> 2023</span
-              >
-              <span class="meta-item"
-                ><i class="far fa-clock"></i> 2.5 Months</span
-              >
+            <span class="category-pill">E-Commerce</span>
+            <div class="image-overlay">
+              <button class="view-btn">
+                View Project <i class="fas fa-arrow-right"></i>
+              </button>
             </div>
-            <h3 class="project-title">Fashion Forward Store</h3>
-            <p class="project-description">
+          </div>
+          <div class="card-content">
+            <div class="card-meta">
+              <span>2023</span>
+              <span class="meta-dot"></span>
+              <span>2.5 Months</span>
+            </div>
+            <h3 class="card-title">Fashion Forward Store</h3>
+            <p class="card-description">
               Modern fashion e-commerce with AR try-on features and AI styling
               assistant.
             </p>
-            <div class="tech-stack">
+            <div class="tech-tags">
               <span class="tech-tag">Shopify</span>
               <span class="tech-tag">Liquid</span>
               <span class="tech-tag">Three.js</span>
               <span class="tech-tag">AI</span>
             </div>
-            <div class="project-stats">
-              <div class="stat-item">
+            <div class="card-footer">
+              <div class="project-stat">
                 <i class="fas fa-shopping-bag"></i>
                 <span>$2M Sales</span>
               </div>
-              <div class="project-links">
-                <a href="#" class="link-btn"
+              <div class="card-actions">
+                <a href="#" class="action-btn"
                   ><i class="fas fa-external-link-alt"></i
                 ></a>
-                <a href="#" class="link-btn"><i class="fas fa-file-alt"></i></a>
+                <a href="#" class="action-btn"
+                  ><i class="fas fa-file-alt"></i
+                ></a>
               </div>
             </div>
           </div>
@@ -889,47 +921,47 @@
 
         <!-- Project 6 -->
         <div class="project-card" data-category="app design">
-          <div class="project-image-container">
+          <div class="card-image-wrapper">
             <img
               src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&q=80"
               alt="Social App"
-              class="project-image"
+              class="card-image"
             />
-            <div class="project-overlay"></div>
-            <span class="category-tag">Social App</span>
-            <button class="view-project">View<br />Project</button>
-          </div>
-          <div class="project-content">
-            <div class="project-meta">
-              <span class="meta-item"
-                ><i class="far fa-calendar"></i> 2024</span
-              >
-              <span class="meta-item"
-                ><i class="far fa-clock"></i> 5 Months</span
-              >
+            <span class="category-pill">Social App</span>
+            <div class="image-overlay">
+              <button class="view-btn">
+                View Project <i class="fas fa-arrow-right"></i>
+              </button>
             </div>
-            <h3 class="project-title">Connect Social Platform</h3>
-            <p class="project-description">
+          </div>
+          <div class="card-content">
+            <div class="card-meta">
+              <span>2024</span>
+              <span class="meta-dot"></span>
+              <span>5 Months</span>
+            </div>
+            <h3 class="card-title">Connect Social Platform</h3>
+            <p class="card-description">
               Next-gen social media app with video-first approach and creator
               monetization.
             </p>
-            <div class="tech-stack">
+            <div class="tech-tags">
               <span class="tech-tag">Flutter</span>
               <span class="tech-tag">AWS</span>
               <span class="tech-tag">WebRTC</span>
               <span class="tech-tag">GraphQL</span>
             </div>
-            <div class="project-stats">
-              <div class="stat-item">
+            <div class="card-footer">
+              <div class="project-stat">
                 <i class="fas fa-star"></i>
                 <span>4.9 Rating</span>
               </div>
-              <div class="project-links">
-                <a href="#" class="link-btn"
+              <div class="card-actions">
+                <a href="#" class="action-btn"
                   ><i class="fas fa-external-link-alt"></i
                 ></a>
-                <a href="#" class="link-btn"><i class="fab fa-github"></i></a>
-                <a href="#" class="link-btn"
+                <a href="#" class="action-btn"><i class="fab fa-github"></i></a>
+                <a href="#" class="action-btn"
                   ><i class="fab fa-app-store"></i
                 ></a>
               </div>
@@ -939,39 +971,51 @@
       </div>
 
       <!-- Stats Section -->
-      <div class="stats-section">
-        <div class="stat-card">
-          <div class="stat-number">150+</div>
-          <div class="stat-label">Projects Completed</div>
+      <div class="achievements-section">
+        <div class="achievement-card">
+          <div class="achievement-icon">
+            <i class="fas fa-briefcase"></i>
+          </div>
+          <div class="achievement-number">150+</div>
+          <div class="achievement-label">Projects Completed</div>
         </div>
-        <div class="stat-card">
-          <div class="stat-number">50+</div>
-          <div class="stat-label">Happy Clients</div>
+        <div class="achievement-card">
+          <div class="achievement-icon">
+            <i class="fas fa-smile"></i>
+          </div>
+          <div class="achievement-number">50+</div>
+          <div class="achievement-label">Happy Clients</div>
         </div>
-        <div class="stat-card">
-          <div class="stat-number">5+</div>
-          <div class="stat-label">Years Experience</div>
+        <div class="achievement-card">
+          <div class="achievement-icon">
+            <i class="fas fa-calendar-check"></i>
+          </div>
+          <div class="achievement-number">5+</div>
+          <div class="achievement-label">Years Experience</div>
         </div>
-        <div class="stat-card">
-          <div class="stat-number">20+</div>
-          <div class="stat-label">Awards Won</div>
+        <div class="achievement-card">
+          <div class="achievement-icon">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <div class="achievement-number">20+</div>
+          <div class="achievement-label">Awards Won</div>
         </div>
       </div>
     </section>
 
     <script>
       // Filter Functionality
-      const filterBtns = document.querySelectorAll(".filter-btn");
+      const filterTabs = document.querySelectorAll(".filter-tab");
       const projectCards = document.querySelectorAll(".project-card");
 
-      filterBtns.forEach((btn) => {
-        btn.addEventListener("click", () => {
-          // Remove active class from all buttons
-          filterBtns.forEach((b) => b.classList.remove("active"));
-          // Add active class to clicked button
-          btn.classList.add("active");
+      filterTabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          // Remove active class from all tabs
+          filterTabs.forEach((t) => t.classList.remove("active"));
+          // Add active class to clicked tab
+          tab.classList.add("active");
 
-          const filter = btn.getAttribute("data-filter");
+          const filter = tab.getAttribute("data-filter");
 
           projectCards.forEach((card) => {
             const categories = card.getAttribute("data-category").split(" ");
@@ -993,38 +1037,15 @@
         });
       });
 
-      // 3D Tilt Effect
-      document.querySelectorAll(".project-card").forEach((card) => {
-        card.addEventListener("mousemove", (e) => {
-          const rect = card.getBoundingClientRect();
-          const x = e.clientX - rect.left;
-          const y = e.clientY - rect.top;
-
-          const centerX = rect.width / 2;
-          const centerY = rect.height / 2;
-
-          const rotateX = (y - centerY) / 25;
-          const rotateY = (centerX - x) / 25;
-
-          card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-15px) scale(1.02)`;
-        });
-
-        card.addEventListener("mouseleave", () => {
-          card.style.transform =
-            "perspective(1000px) rotateX(0) rotateY(0) translateY(0) scale(1)";
-        });
-      });
-
-      // View Project Button Click
-      document.querySelectorAll(".view-project").forEach((btn) => {
+      // View Button Click
+      document.querySelectorAll(".view-btn").forEach((btn) => {
         btn.addEventListener("click", (e) => {
           e.stopPropagation();
-          // Add your project detail modal or navigation here
-          alert("Project detail view coming soon!");
+          alert("Project details coming soon!");
         });
       });
 
-      // Smooth Scroll Animation
+      // Intersection Observer for animations
       const observerOptions = {
         threshold: 0.1,
         rootMargin: "0px 0px -50px 0px",
@@ -1044,11 +1065,14 @@
       });
 
       // Stats Counter Animation
-      const statNumbers = document.querySelectorAll(".stat-number");
+      const achievementNumbers = document.querySelectorAll(
+        ".achievement-number",
+      );
 
       const animateCounter = (el) => {
-        const target = parseInt(el.innerText);
-        const suffix = el.innerText.replace(/[0-9]/g, "");
+        const text = el.innerText;
+        const target = parseInt(text);
+        const suffix = text.replace(/[0-9]/g, "");
         const duration = 2000;
         const step = target / (duration / 16);
         let current = 0;
@@ -1076,7 +1100,7 @@
         { threshold: 0.5 },
       );
 
-      statNumbers.forEach((stat) => statsObserver.observe(stat));
+      achievementNumbers.forEach((stat) => statsObserver.observe(stat));
     </script>
   </body>
 </html>
