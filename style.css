@@ -657,7 +657,7 @@ body {
   color: white;
 }
 
-/* Stats Row */
+/* ===== STATS ROW - ORIGINAL COLORS FOR ICONS ===== */
 .hero-stats-luxury {
   display: flex;
   justify-content: center;
@@ -684,17 +684,41 @@ body {
   border-color: rgba(37, 99, 235, 0.3);
 }
 
+/* Stat Icons - Original Colors */
 .stat-icon-box {
   width: 50px;
   height: 50px;
-  background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
   border-radius: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   font-size: 1.3rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Stat 1 - Projects Completed (Blue) */
+.stat-item-luxury:nth-child(1) .stat-icon-box {
+  background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
   box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+}
+
+/* Stat 2 - Happy Clients (Green) */
+.stat-item-luxury:nth-child(3) .stat-icon-box {
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+  box-shadow: 0 10px 20px rgba(34, 197, 94, 0.3);
+}
+
+/* Stat 3 - Years Experience (Orange/Amber) */
+.stat-item-luxury:nth-child(5) .stat-icon-box {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  box-shadow: 0 10px 20px rgba(245, 158, 11, 0.3);
+}
+
+/* Stat 4 - Support (Purple) - if added */
+.stat-item-luxury:nth-child(7) .stat-icon-box {
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  box-shadow: 0 10px 20px rgba(139, 92, 246, 0.3);
 }
 
 .stat-content {
@@ -779,11 +803,37 @@ body {
   gap: 12px;
 }
 
+/* ===== FLOATING CARDS - ORIGINAL ICON COLORS ===== */
 .card-content i {
   font-size: 1.5rem;
-  background: linear-gradient(135deg, #2563eb, #3b82f6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+}
+
+/* Card 1 - Shopify (Green) */
+.card-1 .card-content i {
+  color: #96bf48;
+  background: none;
+  -webkit-text-fill-color: #96bf48;
+}
+
+/* Card 2 - Web Development (Blue) */
+.card-2 .card-content i {
+  color: #2563eb;
+  background: none;
+  -webkit-text-fill-color: #2563eb;
+}
+
+/* Card 3 - Marketing (Red/Orange) */
+.card-3 .card-content i {
+  color: #ea4335;
+  background: none;
+  -webkit-text-fill-color: #ea4335;
+}
+
+/* Card 4 - Design (Purple/Pink) */
+.card-4 .card-content i {
+  color: #ff69b4;
+  background: none;
+  -webkit-text-fill-color: #ff69b4;
 }
 
 .card-content span {
@@ -1756,7 +1806,7 @@ body {
   z-index: 2;
 }
 
-/* Card Icon */
+/* ===== CARD ICONS - ORIGINAL BRAND COLORS ===== */
 .card-icon-wrapper {
   position: relative;
   width: 80px;
@@ -1771,11 +1821,10 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
   border-radius: 20px;
-  opacity: 0.1;
   transform: rotate(45deg);
   transition: all 0.4s ease;
+  opacity: 0.1;
 }
 
 .service-card-luxury:hover .icon-bg {
@@ -1784,12 +1833,144 @@ body {
   border-radius: 24px;
 }
 
+/* Card 1 - Shopify Store Design (Shopify Green) */
+.service-card-luxury:nth-child(1) .icon-bg {
+  background: linear-gradient(135deg, #96bf48 0%, #7ab55c 100%);
+}
+
+.service-card-luxury:nth-child(1) .card-icon-wrapper i {
+  color: #96bf48;
+  background: none;
+  -webkit-text-fill-color: #96bf48;
+}
+
+.service-card-luxury:nth-child(1):hover .card-title {
+  color: #96bf48;
+  background: none;
+  -webkit-text-fill-color: #96bf48;
+}
+
+/* Card 2 - Web Development (Blue) */
+.service-card-luxury:nth-child(2) .icon-bg {
+  background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+}
+
+.service-card-luxury:nth-child(2) .card-icon-wrapper i {
+  color: #2563eb;
+  background: none;
+  -webkit-text-fill-color: #2563eb;
+}
+
+.service-card-luxury:nth-child(2):hover .card-title {
+  color: #2563eb;
+  background: none;
+  -webkit-text-fill-color: #2563eb;
+}
+
+/* Card 3 - Product Hunting (Orange/Amber) */
+.service-card-luxury:nth-child(3) .icon-bg {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+}
+
+.service-card-luxury:nth-child(3) .card-icon-wrapper i {
+  color: #f59e0b;
+  background: none;
+  -webkit-text-fill-color: #f59e0b;
+}
+
+.service-card-luxury:nth-child(3):hover .card-title {
+  color: #f59e0b;
+  background: none;
+  -webkit-text-fill-color: #f59e0b;
+}
+
+/* Card 4 - Social Media Marketing (Pink/Red Gradient) */
+.service-card-luxury:nth-child(4) .icon-bg {
+  background: linear-gradient(135deg, #ec4899 0%, #dc2626 100%);
+}
+
+.service-card-luxury:nth-child(4) .card-icon-wrapper i {
+  color: #ec4899;
+  background: none;
+  -webkit-text-fill-color: #ec4899;
+}
+
+.service-card-luxury:nth-child(4):hover .card-title {
+  color: #ec4899;
+  background: none;
+  -webkit-text-fill-color: #ec4899;
+}
+
+/* Card 5 - SEO (Purple) */
+.service-card-luxury:nth-child(5) .icon-bg {
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+}
+
+.service-card-luxury:nth-child(5) .card-icon-wrapper i {
+  color: #8b5cf6;
+  background: none;
+  -webkit-text-fill-color: #8b5cf6;
+}
+
+.service-card-luxury:nth-child(5):hover .card-title {
+  color: #8b5cf6;
+  background: none;
+  -webkit-text-fill-color: #8b5cf6;
+}
+
+/* Card 6 - Content Writing (Teal) */
+.service-card-luxury:nth-child(6) .icon-bg {
+  background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+}
+
+.service-card-luxury:nth-child(6) .card-icon-wrapper i {
+  color: #14b8a6;
+  background: none;
+  -webkit-text-fill-color: #14b8a6;
+}
+
+.service-card-luxury:nth-child(6):hover .card-title {
+  color: #14b8a6;
+  background: none;
+  -webkit-text-fill-color: #14b8a6;
+}
+
+/* Card 7 - Graphic Design (Indigo) */
+.service-card-luxury:nth-child(7) .icon-bg {
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+}
+
+.service-card-luxury:nth-child(7) .card-icon-wrapper i {
+  color: #6366f1;
+  background: none;
+  -webkit-text-fill-color: #6366f1;
+}
+
+.service-card-luxury:nth-child(7):hover .card-title {
+  color: #6366f1;
+  background: none;
+  -webkit-text-fill-color: #6366f1;
+}
+
+/* Card 8 - Video Editing (Red) */
+.service-card-luxury:nth-child(8) .icon-bg {
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+}
+
+.service-card-luxury:nth-child(8) .card-icon-wrapper i {
+  color: #dc2626;
+  background: none;
+  -webkit-text-fill-color: #dc2626;
+}
+
+.service-card-luxury:nth-child(8):hover .card-title {
+  color: #dc2626;
+  background: none;
+  -webkit-text-fill-color: #dc2626;
+}
+
 .card-icon-wrapper i {
   font-size: 2.5rem;
-  background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
   position: relative;
   z-index: 2;
   transition: transform 0.4s ease;
@@ -1829,13 +2010,6 @@ body {
   transition: color 0.3s ease;
 }
 
-.service-card-luxury:hover .card-title {
-  background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
 /* Card Description */
 .card-description {
   font-size: 0.95rem;
@@ -1844,7 +2018,7 @@ body {
   margin-bottom: 25px;
 }
 
-/* Card Features */
+/* ===== CARD FEATURES - ORIGINAL COLORS ===== */
 .card-features {
   list-style: none;
   margin-bottom: 25px;
@@ -1867,18 +2041,92 @@ body {
 .feature-icon {
   width: 24px;
   height: 24px;
-  background: rgba(37, 99, 235, 0.1);
   border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #2563eb;
   font-size: 0.75rem;
   transition: all 0.3s ease;
 }
 
-.service-card-luxury:hover .feature-icon {
+/* Feature icons match card colors */
+.service-card-luxury:nth-child(1) .feature-icon {
+  background: rgba(150, 191, 72, 0.1);
+  color: #96bf48;
+}
+
+.service-card-luxury:nth-child(1):hover .feature-icon {
+  background: linear-gradient(135deg, #96bf48 0%, #7ab55c 100%);
+  color: white;
+}
+
+.service-card-luxury:nth-child(2) .feature-icon {
+  background: rgba(37, 99, 235, 0.1);
+  color: #2563eb;
+}
+
+.service-card-luxury:nth-child(2):hover .feature-icon {
   background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+  color: white;
+}
+
+.service-card-luxury:nth-child(3) .feature-icon {
+  background: rgba(245, 158, 11, 0.1);
+  color: #f59e0b;
+}
+
+.service-card-luxury:nth-child(3):hover .feature-icon {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: white;
+}
+
+.service-card-luxury:nth-child(4) .feature-icon {
+  background: rgba(236, 72, 153, 0.1);
+  color: #ec4899;
+}
+
+.service-card-luxury:nth-child(4):hover .feature-icon {
+  background: linear-gradient(135deg, #ec4899 0%, #dc2626 100%);
+  color: white;
+}
+
+.service-card-luxury:nth-child(5) .feature-icon {
+  background: rgba(139, 92, 246, 0.1);
+  color: #8b5cf6;
+}
+
+.service-card-luxury:nth-child(5):hover .feature-icon {
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  color: white;
+}
+
+.service-card-luxury:nth-child(6) .feature-icon {
+  background: rgba(20, 184, 166, 0.1);
+  color: #14b8a6;
+}
+
+.service-card-luxury:nth-child(6):hover .feature-icon {
+  background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+  color: white;
+}
+
+.service-card-luxury:nth-child(7) .feature-icon {
+  background: rgba(99, 102, 241, 0.1);
+  color: #6366f1;
+}
+
+.service-card-luxury:nth-child(7):hover .feature-icon {
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  color: white;
+}
+
+.service-card-luxury:nth-child(8) .feature-icon {
+  background: rgba(220, 38, 38, 0.1);
+  color: #dc2626;
+}
+
+.service-card-luxury:nth-child(8):hover .feature-icon {
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
   color: white;
 }
 
@@ -2458,6 +2706,7 @@ body {
   opacity: 0.15;
   border-radius: 4px;
 }
+
 /* Bio Text */
 .ceo-bio-attractive {
   margin-bottom: 40px;
@@ -2559,6 +2808,86 @@ body {
   font-size: 0.85rem;
   color: var(--text-light);
   font-weight: 500;
+}
+
+/* Achievement Cards Icons - Original Colors */
+
+/* First Card - Blue (Chart/Analytics) */
+.achieve-card:nth-child(1) .achieve-icon {
+  background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+}
+
+.achieve-card:nth-child(1) .achieve-number {
+  background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.achieve-card:nth-child(1):hover {
+  border-color: rgba(37, 99, 235, 0.3);
+  box-shadow: 0 20px 40px rgba(37, 99, 235, 0.15);
+}
+
+.achieve-card:nth-child(1) .achieve-glow {
+  background: radial-gradient(
+    circle at 50% 0%,
+    rgba(37, 99, 235, 0.1),
+    transparent 70%
+  );
+}
+
+/* Second Card - Green (Users/Team) */
+.achieve-card:nth-child(2) .achieve-icon {
+  background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+  box-shadow: 0 10px 20px rgba(5, 150, 105, 0.3);
+}
+
+.achieve-card:nth-child(2) .achieve-number {
+  background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.achieve-card:nth-child(2):hover {
+  border-color: rgba(5, 150, 105, 0.3);
+  box-shadow: 0 20px 40px rgba(5, 150, 105, 0.15);
+}
+
+.achieve-card:nth-child(2) .achieve-glow {
+  background: radial-gradient(
+    circle at 50% 0%,
+    rgba(5, 150, 105, 0.1),
+    transparent 70%
+  );
+}
+
+/* Third Card - Gold/Orange (Trophy/Award) */
+.achieve-card:nth-child(3) .achieve-icon {
+  background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+  box-shadow: 0 10px 20px rgba(245, 158, 11, 0.3);
+}
+
+.achieve-card:nth-child(3) .achieve-number {
+  background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.achieve-card:nth-child(3):hover {
+  border-color: rgba(245, 158, 11, 0.3);
+  box-shadow: 0 20px 40px rgba(245, 158, 11, 0.15);
+}
+
+.achieve-card:nth-child(3) .achieve-glow {
+  background: radial-gradient(
+    circle at 50% 0%,
+    rgba(245, 158, 11, 0.1),
+    transparent 70%
+  );
 }
 
 /* Quote Section */
@@ -3202,7 +3531,7 @@ body {
 }
 
 .featured-tag i {
-  color: #FFD700; /* Yellow star */
+  color: #ffd700; /* Yellow star */
   font-size: 0.7rem;
 }
 
@@ -3471,13 +3800,53 @@ body {
 .stat-icon {
   width: 50px;
   height: 50px;
-  background: linear-gradient(135deg, #2563eb, #3b82f6);
   border-radius: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   font-size: 1.2rem;
+  transition: all 0.3s;
+}
+
+/* Stat 1 - Blue (Team/People) */
+.stat-box:nth-child(1) .stat-icon {
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+}
+
+.stat-box:nth-child(1) .stat-number {
+  color: #2563eb;
+}
+
+/* Stat 2 - Green (Projects/Check) */
+.stat-box:nth-child(2) .stat-icon {
+  background: linear-gradient(135deg, #059669, #10b981);
+  box-shadow: 0 10px 20px rgba(5, 150, 105, 0.3);
+}
+
+.stat-box:nth-child(2) .stat-number {
+  color: #059669;
+}
+
+/* Stat 3 - Orange (Clock/Time) */
+.stat-box:nth-child(3) .stat-icon {
+  background: linear-gradient(135deg, #ea580c, #f97316);
+  box-shadow: 0 10px 20px rgba(234, 88, 12, 0.3);
+}
+
+.stat-box:nth-child(3) .stat-number {
+  color: #ea580c;
+}
+
+/* Stat 4 - Purple (Award/Star) */
+.stat-box:nth-child(4) .stat-icon {
+  background: linear-gradient(135deg, #7c3aed, #8b5cf6);
+  box-shadow: 0 10px 20px rgba(124, 58, 237, 0.3);
+}
+
+.stat-box:nth-child(4) .stat-number {
+  color: #7c3aed;
 }
 
 .stat-info {
@@ -3489,7 +3858,6 @@ body {
 .stat-number {
   font-size: 1.5rem;
   font-weight: 800;
-  color: #1e293b;
   line-height: 1;
   min-width: 60px; /* Prevent layout shift */
 }
@@ -3502,7 +3870,6 @@ body {
 /* Counter animation class */
 .counter-team {
   display: inline-block;
-  color: #2563eb;
 }
 
 .stat-label {
@@ -3905,7 +4272,6 @@ body {
 .card-icon-large {
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -3913,8 +4279,13 @@ body {
   color: white;
   font-size: 2rem;
   margin-bottom: 25px;
-  box-shadow: 0 15px 30px rgba(37, 99, 235, 0.3);
   animation: floatIcon 3s infinite ease-in-out;
+}
+
+/* Story Card Icon - Blue (Building/Company) */
+.story-card-luxury .card-icon-large {
+  background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+  box-shadow: 0 15px 30px rgba(37, 99, 235, 0.3);
 }
 
 @keyframes floatIcon {
@@ -4001,14 +4372,16 @@ body {
   color: white;
 }
 
+/* Mission Icon - Green (Target/Goal) */
 .mission .mv-icon {
-  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
-  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+  background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+  box-shadow: 0 10px 20px rgba(5, 150, 105, 0.3);
 }
 
+/* Vision Icon - Purple (Eye/View) */
 .vision .mv-icon {
-  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
-  box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+  background: linear-gradient(135deg, #7c3aed 0%, #8b5cf6 100%);
+  box-shadow: 0 10px 20px rgba(124, 58, 237, 0.3);
 }
 
 .mv-card h4 {
@@ -4079,7 +4452,6 @@ body {
 .stat-icon-wrap {
   width: 70px;
   height: 70px;
-  background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -4087,7 +4459,6 @@ body {
   margin: 0 auto 20px;
   color: white;
   font-size: 1.8rem;
-  box-shadow: 0 15px 30px rgba(37, 99, 235, 0.3);
   transition: transform 0.4s ease;
 }
 
@@ -4095,14 +4466,62 @@ body {
   transform: scale(1.1) rotate(5deg);
 }
 
-.stat-number-about {
-  display: block;
-  font-size: 2.5rem;
-  font-weight: 800;
+/* Stat 1 - Blue (Users/Team) */
+.stat-card-large:nth-child(1) .stat-icon-wrap {
+  background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+  box-shadow: 0 15px 30px rgba(37, 99, 235, 0.3);
+}
+
+.stat-card-large:nth-child(1) .stat-number-about {
   background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+/* Stat 2 - Orange (Projects/Briefcase) */
+.stat-card-large:nth-child(2) .stat-icon-wrap {
+  background: linear-gradient(135deg, #ea580c 0%, #f97316 100%);
+  box-shadow: 0 15px 30px rgba(234, 88, 12, 0.3);
+}
+
+.stat-card-large:nth-child(2) .stat-number-about {
+  background: linear-gradient(135deg, #ea580c 0%, #f97316 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Stat 3 - Green (Award/Trophy) */
+.stat-card-large:nth-child(3) .stat-icon-wrap {
+  background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+  box-shadow: 0 15px 30px rgba(5, 150, 105, 0.3);
+}
+
+.stat-card-large:nth-child(3) .stat-number-about {
+  background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Stat 4 - Purple (Heart/Clients) */
+.stat-card-large:nth-child(4) .stat-icon-wrap {
+  background: linear-gradient(135deg, #7c3aed 0%, #8b5cf6 100%);
+  box-shadow: 0 15px 30px rgba(124, 58, 237, 0.3);
+}
+
+.stat-card-large:nth-child(4) .stat-number-about {
+  background: linear-gradient(135deg, #7c3aed 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.stat-number-about {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 800;
   line-height: 1;
   margin-bottom: 8px;
 }
@@ -4158,7 +4577,6 @@ body {
 .value-icon-box {
   width: 50px;
   height: 50px;
-  background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -4166,6 +4584,30 @@ body {
   color: white;
   font-size: 1.2rem;
   flex-shrink: 0;
+}
+
+/* Value 1 - Blue (Shield/Trust) */
+.value-item:nth-child(1) .value-icon-box {
+  background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+  box-shadow: 0 8px 16px rgba(37, 99, 235, 0.3);
+}
+
+/* Value 2 - Green (Leaf/Sustainability) */
+.value-item:nth-child(2) .value-icon-box {
+  background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+  box-shadow: 0 8px 16px rgba(5, 150, 105, 0.3);
+}
+
+/* Value 3 - Orange (Lightbulb/Innovation) */
+.value-item:nth-child(3) .value-icon-box {
+  background: linear-gradient(135deg, #ea580c 0%, #f97316 100%);
+  box-shadow: 0 8px 16px rgba(234, 88, 12, 0.3);
+}
+
+/* Value 4 - Purple (Users/Community) */
+.value-item:nth-child(4) .value-icon-box {
+  background: linear-gradient(135deg, #7c3aed 0%, #8b5cf6 100%);
+  box-shadow: 0 8px 16px rgba(124, 58, 237, 0.3);
 }
 
 .value-content h5 {
@@ -4300,7 +4742,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: #ea4335; /* Google Maps Red */
   font-size: 2rem;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
   position: relative;
@@ -4360,7 +4802,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: #ea4335; /* Google Maps Red */
   font-size: 1.5rem;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -5584,7 +6026,14 @@ body {
 
 /* Instagram */
 .social-btn:nth-child(3) {
-  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
 }
 
 .social-btn:nth-child(3):hover {
@@ -5884,7 +6333,14 @@ body {
 
 /* Instagram - Gradient */
 .footer-social a:nth-child(3) {
-  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
 }
 
 .footer-social a:nth-child(3):hover {
@@ -6021,14 +6477,13 @@ body {
   }
 }
 
-/* Back to Top Button */
+/* ===== BACK TO TOP BUTTON - COLOR CHANGING EVERY 2 SECONDS ===== */
 .back-to-top {
   position: fixed;
   bottom: 30px;
   right: 30px;
   width: 50px;
   height: 50px;
-  background: var(--gradient-primary);
   border: none;
   border-radius: 50%;
   color: white;
@@ -6036,12 +6491,14 @@ body {
   cursor: pointer;
   opacity: 0;
   visibility: hidden;
-  transition: var(--transition-fast);
-  box-shadow: var(--shadow-glow-blue);
+  transition: all 0.3s ease;
   z-index: 999;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  /* Color changing animation - 4 colors, 2 seconds each = 8s total */
+  animation: colorChange 8s infinite;
 }
 
 .back-to-top.visible {
@@ -6050,8 +6507,93 @@ body {
 }
 
 .back-to-top:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 30px rgba(37, 99, 235, 0.6);
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+  animation-play-state: paused; /* Pause animation on hover */
+}
+
+/* Color changing keyframes */
+@keyframes colorChange {
+  0% {
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.6);
+  }
+  25% {
+    background: linear-gradient(135deg, #7c3aed, #a855f7);
+    box-shadow: 0 0 20px rgba(124, 58, 237, 0.6);
+  }
+  50% {
+    background: linear-gradient(135deg, #dc2626, #ef4444);
+    box-shadow: 0 0 20px rgba(220, 38, 38, 0.6);
+  }
+  75% {
+    background: linear-gradient(135deg, #059669, #10b981);
+    box-shadow: 0 0 20px rgba(5, 150, 105, 0.6);
+  }
+  100% {
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.6);
+  }
+}
+
+/* Alternative: 5 colors version (2s each = 10s total) */
+@keyframes colorChangeFive {
+  0% {
+    background: #2563eb;
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.6);
+  }
+  20% {
+    background: #7c3aed;
+    box-shadow: 0 0 20px rgba(124, 58, 237, 0.6);
+  }
+  40% {
+    background: #dc2626;
+    box-shadow: 0 0 20px rgba(220, 38, 38, 0.6);
+  }
+  60% {
+    background: #059669;
+    box-shadow: 0 0 20px rgba(5, 150, 105, 0.6);
+  }
+  80% {
+    background: #f59e0b;
+    box-shadow: 0 0 20px rgba(245, 158, 11, 0.6);
+  }
+  100% {
+    background: #2563eb;
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.6);
+  }
+}
+
+/* Rainbow version - 6 colors */
+@keyframes colorChangeRainbow {
+  0% {
+    background: #ef4444;
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.6);
+  }
+  16.66% {
+    background: #f97316;
+    box-shadow: 0 0 20px rgba(249, 115, 22, 0.6);
+  }
+  33.33% {
+    background: #eab308;
+    box-shadow: 0 0 20px rgba(234, 179, 8, 0.6);
+  }
+  50% {
+    background: #22c55e;
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.6);
+  }
+  66.66% {
+    background: #3b82f6;
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.6);
+  }
+  83.33% {
+    background: #a855f7;
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.6);
+  }
+  100% {
+    background: #ef4444;
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.6);
+  }
 }
 /* ===================================
    AOS ANIMATION CLASSES
