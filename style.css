@@ -2524,7 +2524,7 @@ body {
 
 .ceo-image-attractive {
   width: 100%;
-  height: 100%;
+  height: 115%;
   object-fit: cover;
   transition: transform 0.5s ease;
 }
@@ -3584,7 +3584,6 @@ body {
 .image-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(37, 99, 235, 0.8), transparent);
   opacity: 0;
   transition: all 0.3s;
   display: flex;
