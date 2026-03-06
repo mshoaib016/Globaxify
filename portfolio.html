@@ -134,7 +134,7 @@
         align-items: center;
         z-index: 1000;
         box-shadow: var(--shadow);
-        border: 1px solid rgba(255, 255, 255, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.1);
       }
 
       .logo img {
@@ -150,7 +150,7 @@
 
       .nav-menu a {
         text-decoration: none;
-        color: #336df7;
+        color: #94a3b8;
         font-size: 14px;
         font-weight: 600;
         transition: color 0.3s ease;
@@ -173,6 +173,11 @@
         width: 100%;
       }
 
+      .nav-menu a:hover,
+      .nav-menu a.active {
+        color: var(--primary-light);
+      }
+
       .nav-cta {
         padding: 10px 24px;
         background: linear-gradient(135deg, var(--primary), var(--accent));
@@ -192,7 +197,7 @@
         box-shadow: var(--glow);
       }
 
-      /* Mobile Menu Button */
+      /* Mobile Menu Button - FIXED */
       .menu-btn {
         display: none;
         flex-direction: column;
@@ -205,11 +210,12 @@
       }
 
       .menu-btn span {
-        width: 22px;
+        width: 24px;
         height: 2px;
-        background: var(--navy);
+        background: white;
         border-radius: 2px;
         transition: 0.3s ease;
+        display: block;
       }
 
       .menu-btn.active span:nth-child(1) {
@@ -799,6 +805,7 @@
         text-decoration: none;
         color: inherit;
         display: block;
+        z-index: 1;
       }
 
       .hex-card:hover {
@@ -809,6 +816,7 @@
       .hex-image {
         height: 160px;
         overflow: hidden;
+        position: relative;
       }
 
       .hex-image img {
@@ -824,6 +832,9 @@
 
       .hex-content {
         padding: 20px;
+        position: relative;
+        z-index: 2;
+        background: white;
       }
 
       .hex-content h3 {
@@ -853,6 +864,8 @@
         color: white;
         font-size: 16px;
         box-shadow: var(--glow);
+        z-index: 3;
+        pointer-events: none;
       }
 
       /* ==================== ACCORDION SECTION ==================== */
@@ -1283,7 +1296,7 @@
         left: 0;
         right: 0;
         height: 3px;
-        background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+        background: linear-gradient(135deg, var(--primary), var(--accent));
       }
 
       .footer-content {
@@ -1301,12 +1314,9 @@
       }
 
       .footer-logo-img {
-        height: 150px;
+        height: 60px;
         width: auto;
         filter: brightness(1);
-        margin-bottom: -25px;
-        margin-top: -50px;
-        max-width: 100%;
       }
 
       .footer-logo a {
@@ -1568,12 +1578,12 @@
       }
 
       /* ==========================================================================
-         RESPONSIVE MEDIA QUERIES - MOBILE (< 768px)
+         RESPONSIVE MEDIA QUERIES - MOBILE (< 768px) - FIXED HAMBURGER MENU
          ========================================================================== */
       @media (max-width: 767px) {
-        /* Navigation Mobile */
+        /* Navigation Mobile - FIXED */
         .menu-btn {
-          display: flex;
+          display: flex !important;
         }
 
         .nav-menu {
@@ -1582,14 +1592,14 @@
           left: 50%;
           transform: translateX(-50%) translateY(-150%);
           width: 92%;
-          background: rgba(255, 255, 255, 0.98);
+          background: rgba(15, 23, 42, 0.98);
           backdrop-filter: blur(12px);
           border-radius: 16px;
           flex-direction: column;
           padding: 24px;
           gap: 16px;
-          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-          border: 1px solid var(--border);
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+          border: 1px solid rgba(255, 255, 255, 0.1);
           opacity: 0;
           visibility: hidden;
           transition: all 0.4s ease;
@@ -1605,7 +1615,10 @@
         .nav-menu a {
           font-size: 16px;
           padding: 12px 0;
-          border-bottom: 1px solid var(--border);
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+          color: white;
+          display: block;
+          width: 100%;
         }
 
         .nav-menu a::after {
@@ -1614,6 +1627,11 @@
 
         .nav-menu li:last-child a {
           border-bottom: none;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a.active {
+          color: var(--primary-light);
         }
 
         .nav-cta {
@@ -1824,9 +1842,7 @@
         }
 
         .footer-logo-img {
-          height: 120px;
-          margin-top: -30px;
-          margin-bottom: -15px;
+          height: 50px;
         }
 
         .footer-social {
@@ -1871,10 +1887,11 @@
         .navbar {
           top: 10px;
           height: 56px;
+          padding: 0 12px;
         }
 
         .logo img {
-          height: 30px;
+          height: 62px;
         }
 
         .hero-tag {
@@ -2384,7 +2401,12 @@
           </div>
 
           <div class="hex-grid">
-            <a href="https://www.orbitkey.com/" class="hex-card">
+            <a
+              href="https://www.orbitkey.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hex-card"
+            >
               <div class="hex-image">
                 <img src="assets/Orbit Key.png" alt="Luxury Watches" />
               </div>
@@ -2401,7 +2423,12 @@
               </div>
             </a>
 
-            <a href="https://corkcicle.com/" class="hex-card">
+            <a
+              href="https://corkcicle.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hex-card"
+            >
               <div class="hex-image">
                 <img src="assets/corkcicle.png" alt="Organic Foods" />
               </div>
@@ -2419,7 +2446,12 @@
               </div>
             </a>
 
-            <a href="https://www.mvmt.com/home" class="hex-card">
+            <a
+              href="https://www.mvmt.com/home"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hex-card"
+            >
               <div class="hex-image">
                 <img src="assets/MVMT.png" alt="Fitness Gear" />
               </div>
@@ -2436,7 +2468,12 @@
               </div>
             </a>
 
-            <a href="https://www.astridandmiyu.com/" class="hex-card">
+            <a
+              href="https://www.astridandmiyu.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hex-card"
+            >
               <div class="hex-image">
                 <img src="assets/astridandmiyu.png" alt="Home Decor" />
               </div>
@@ -2453,7 +2490,12 @@
               </div>
             </a>
 
-            <a href="https://fablepets.com/" class="hex-card">
+            <a
+              href="https://fablepets.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hex-card"
+            >
               <div class="hex-image">
                 <img
                   src="assets/fablepets.png"
@@ -2515,34 +2557,34 @@
               </div>
             </a>
 
-            <a href="#" class="accordion-item">
+            <a href="https://scentsnstories.pk/" class="accordion-item">
               <div class="accordion-image">
-                <img src="assets/Fazwidawakha.png" alt="Vitamin Plus" />
+                <img src="assets/scentsnstories.png" alt="Vitamin Plus" />
               </div>
               <span class="accordion-tag">Shopify</span>
               <div class="accordion-overlay">
                 <div class="accordion-content">
-                  <h3>Vitamin Plus</h3>
+                  <h3>Scentsn Stories</h3>
                 </div>
               </div>
             </a>
 
-            <a href="#" class="accordion-item">
+            <a href="https://www.calyanwaxco.com/" class="accordion-item">
               <div class="accordion-image">
-                <img src="assets/Portfolio img.jpeg" alt="Gadget Zone" />
+                <img src="assets/calyanwaxco.png" alt="Gadget Zone" />
               </div>
               <span class="accordion-tag">Shopify</span>
               <div class="accordion-overlay">
                 <div class="accordion-content">
-                  <h3>Gadget Zone</h3>
+                  <h3>Calyanwaxco</h3>
                 </div>
               </div>
             </a>
 
-            <a href="#" class="accordion-item">
+            <a href="https://byltbasics.com/" class="accordion-item">
               <div class="accordion-image">
                 <img
-                  src="assets/Logo.png"
+                  src="assets/byltbasics.png"
                   alt="Creative Studio"
                   style="object-fit: contain; background: var(--bg)"
                 />
@@ -2550,7 +2592,7 @@
               <span class="accordion-tag">Shopify</span>
               <div class="accordion-overlay">
                 <div class="accordion-content">
-                  <h3>Creative Studio</h3>
+                  <h3>BYLT Basics</h3>
                 </div>
               </div>
             </a>
