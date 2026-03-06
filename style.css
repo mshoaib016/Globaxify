@@ -257,7 +257,7 @@ body {
 
 .nav-link {
   text-decoration: none;
-  color: var(--text-medium);
+  color: #336df7;
   font-weight: 500;
   position: relative;
   padding: 5px 0;
