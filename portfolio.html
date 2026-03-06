@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
+    />
     <title>Ahmad Iqbal | Shopify Expert & E-commerce Architect</title>
 
     <link
@@ -30,10 +33,8 @@
         --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
         --glow: 0 0 30px rgba(14, 165, 233, 0.3);
-
         --shopify: #95bf47;
         --upwork: #14a800;
-
         --ease: cubic-bezier(0.4, 0, 0.2, 1);
       }
 
@@ -45,6 +46,7 @@
 
       html {
         scroll-behavior: smooth;
+        font-size: 16px;
       }
 
       body {
@@ -114,7 +116,7 @@
         padding: 0 20px;
       }
 
-      /* Navbar */
+      /* ==================== NAVBAR ==================== */
       .navbar {
         position: fixed;
         top: 16px;
@@ -124,7 +126,7 @@
         max-width: 1100px;
         height: 64px;
         padding: 0 24px;
-        background: rgba(255, 255, 255, 0.9);
+        background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
         backdrop-filter: blur(12px);
         border-radius: 16px;
         display: flex;
@@ -137,6 +139,7 @@
 
       .logo img {
         height: 36px;
+        width: auto;
       }
 
       .nav-menu {
@@ -181,6 +184,7 @@
         transition:
           transform 0.3s ease,
           box-shadow 0.3s ease;
+        white-space: nowrap;
       }
 
       .nav-cta:hover {
@@ -188,6 +192,7 @@
         box-shadow: var(--glow);
       }
 
+      /* Mobile Menu Button */
       .menu-btn {
         display: none;
         flex-direction: column;
@@ -196,6 +201,7 @@
         border: none;
         cursor: pointer;
         padding: 8px;
+        z-index: 1001;
       }
 
       .menu-btn span {
@@ -206,7 +212,19 @@
         transition: 0.3s ease;
       }
 
-      /* Hero Section */
+      .menu-btn.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+
+      .menu-btn.active span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .menu-btn.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+      }
+
+      /* ==================== HERO SECTION ==================== */
       .hero {
         min-height: 100vh;
         display: flex;
@@ -241,7 +259,7 @@
       }
 
       .hero-title {
-        font-size: 3.5rem;
+        font-size: clamp(2rem, 5vw, 3.5rem);
         font-weight: 800;
         line-height: 1.1;
         margin-bottom: 20px;
@@ -254,7 +272,7 @@
 
       .hero-desc {
         color: var(--text);
-        font-size: 1.1rem;
+        font-size: clamp(1rem, 2vw, 1.1rem);
         margin-bottom: 32px;
         line-height: 1.7;
       }
@@ -263,6 +281,7 @@
         display: flex;
         gap: 16px;
         margin-bottom: 40px;
+        flex-wrap: wrap;
       }
 
       .btn-main {
@@ -279,6 +298,7 @@
         transition:
           transform 0.3s ease,
           box-shadow 0.3s ease;
+        white-space: nowrap;
       }
 
       .btn-main:hover {
@@ -298,6 +318,7 @@
         align-items: center;
         gap: 8px;
         transition: all 0.3s ease;
+        white-space: nowrap;
       }
 
       .btn-outline:hover {
@@ -308,6 +329,7 @@
       .hero-stats {
         display: flex;
         gap: 40px;
+        flex-wrap: wrap;
       }
 
       .stat-item {
@@ -316,7 +338,7 @@
       }
 
       .stat-value {
-        font-size: 2rem;
+        font-size: clamp(1.5rem, 4vw, 2rem);
         font-weight: 800;
         color: var(--primary);
         line-height: 1;
@@ -427,7 +449,7 @@
         color: var(--upwork);
       }
 
-      /* UPWORK SECTION - After Hero */
+      /* ==================== UPWORK SECTION ==================== */
       .upwork-section {
         padding: 0 0 80px;
         background: var(--white);
@@ -477,7 +499,7 @@
       }
 
       .upwork-content h2 {
-        font-size: 2.2rem;
+        font-size: clamp(1.5rem, 4vw, 2.2rem);
         font-weight: 800;
         margin-bottom: 12px;
         color: var(--navy);
@@ -503,6 +525,7 @@
         margin-bottom: 24px;
         position: relative;
         z-index: 1;
+        flex-wrap: wrap;
       }
 
       .upwork-stat {
@@ -511,7 +534,7 @@
 
       .upwork-stat strong {
         display: block;
-        font-size: 2rem;
+        font-size: clamp(1.5rem, 3vw, 2rem);
         font-weight: 800;
         color: var(--upwork);
         line-height: 1;
@@ -572,7 +595,7 @@
         color: var(--slate);
       }
 
-      /* PROJECTS SECTION 1: Stacked Cards */
+      /* ==================== PROJECTS STACK SECTION ==================== */
       .section-stack {
         padding: 100px 0;
         background: linear-gradient(180deg, var(--bg) 0%, var(--white) 100%);
@@ -597,7 +620,7 @@
       }
 
       .section-title {
-        font-size: 2.5rem;
+        font-size: clamp(1.8rem, 4vw, 2.5rem);
         font-weight: 800;
         color: var(--navy);
         margin-bottom: 12px;
@@ -733,7 +756,7 @@
         transform: translateX(5px);
       }
 
-      /* PROJECTS SECTION 2: Hexagon Grid */
+      /* ==================== HEX GRID SECTION ==================== */
       .section-hex {
         padding: 100px 0;
         background: var(--navy);
@@ -769,17 +792,16 @@
       }
 
       .hex-grid {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 30px;
         position: relative;
         z-index: 1;
+        max-width: 1200px;
+        margin: 0 auto;
       }
 
       .hex-card {
-        width: 280px;
-        height: 320px;
         background: white;
         border-radius: 24px;
         overflow: hidden;
@@ -787,10 +809,6 @@
         transition: all 0.4s ease;
         cursor: pointer;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-      }
-
-      .hex-card:nth-child(even) {
-        margin-top: 40px;
       }
 
       .hex-card:hover {
@@ -855,7 +873,7 @@
         box-shadow: var(--glow);
       }
 
-      /* PROJECTS SECTION 3: Accordion Expand */
+      /* ==================== ACCORDION SECTION ==================== */
       .section-accordion {
         padding: 100px 0;
         background: linear-gradient(180deg, var(--white) 0%, var(--bg) 100%);
@@ -879,6 +897,7 @@
         transition: flex 0.5s var(--ease);
         box-shadow: var(--shadow);
         border: 1px solid var(--border);
+        min-width: 80px;
       }
 
       .accordion-item:hover,
@@ -931,7 +950,7 @@
 
       .accordion-content h3 {
         color: white;
-        font-size: 1.5rem;
+        font-size: clamp(1rem, 2vw, 1.5rem);
         font-weight: 700;
         margin-bottom: 8px;
         white-space: nowrap;
@@ -964,7 +983,7 @@
         color: var(--navy);
       }
 
-      /* Services Section */
+      /* ==================== SERVICES SECTION ==================== */
       .section-services {
         padding: 100px 0;
         background: var(--white);
@@ -972,7 +991,7 @@
 
       .services-grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 24px;
       }
 
@@ -1026,7 +1045,7 @@
         line-height: 1.6;
       }
 
-      /* REVIEWS SECTION - 9 Reviews Grid */
+      /* ==================== REVIEWS SECTION ==================== */
       .reviews-section {
         padding: 100px 0;
         background: linear-gradient(180deg, var(--bg) 0%, var(--white) 100%);
@@ -1040,7 +1059,7 @@
 
       .reviews-grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
         gap: 24px;
       }
 
@@ -1054,34 +1073,10 @@
         position: relative;
       }
 
-      .review-card:nth-child(2),
-      .review-card:nth-child(5),
-      .review-card:nth-child(8) {
-        transform: translateY(20px);
-      }
-
-      .review-card:nth-child(3),
-      .review-card:nth-child(6),
-      .review-card:nth-child(9) {
-        transform: translateY(10px);
-      }
-
       .review-card:hover {
         transform: translateY(-10px);
         box-shadow: var(--shadow-lg);
         border-color: var(--primary-light);
-      }
-
-      .review-card:nth-child(2):hover,
-      .review-card:nth-child(5):hover,
-      .review-card:nth-child(8):hover {
-        transform: translateY(10px);
-      }
-
-      .review-card:nth-child(3):hover,
-      .review-card:nth-child(6):hover,
-      .review-card:nth-child(9):hover {
-        transform: translateY(0);
       }
 
       .review-stars {
@@ -1123,6 +1118,7 @@
         color: white;
         font-weight: 700;
         font-size: 18px;
+        flex-shrink: 0;
       }
 
       .review-info h4 {
@@ -1152,7 +1148,7 @@
         gap: 6px;
       }
 
-      /* FAQ SECTION - Unique Split Design */
+      /* ==================== FAQ SECTION ==================== */
       .faq-section {
         padding: 100px 0;
         background: var(--white);
@@ -1219,7 +1215,8 @@
         color: var(--primary);
         font-weight: 700;
         text-decoration: none;
-        font-size: 18px;
+        font-size: clamp(1rem, 2vw, 1.125rem);
+        word-break: break-word;
       }
 
       .faq-list {
@@ -1254,7 +1251,8 @@
         cursor: pointer;
         font-weight: 600;
         color: var(--navy);
-        font-size: 16px;
+        font-size: clamp(0.9rem, 2vw, 1rem);
+        gap: 16px;
       }
 
       .faq-icon {
@@ -1269,6 +1267,7 @@
         font-size: 12px;
         transition: all 0.3s ease;
         box-shadow: var(--shadow);
+        flex-shrink: 0;
       }
 
       .faq-item.active .faq-icon {
@@ -1286,7 +1285,7 @@
       }
 
       .faq-item.active .faq-answer {
-        max-height: 200px;
+        max-height: 300px;
         padding: 0 24px 24px;
       }
 
@@ -1296,9 +1295,7 @@
         line-height: 1.7;
       }
 
-      /* ===================================
-   FOOTER
-   =================================== */
+      /* ==================== FOOTER ==================== */
       .footer {
         background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
         color: white;
@@ -1314,7 +1311,7 @@
         left: 0;
         right: 0;
         height: 3px;
-        background: var(--gradient-primary);
+        background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
       }
 
       .footer-content {
@@ -1331,18 +1328,13 @@
         margin-bottom: 20px;
       }
 
-      .footer-logo .logo-icon {
-        width: 40px;
-        height: 40px;
-        font-size: 1.2rem;
-      }
-
       .footer-logo-img {
         height: 150px;
         width: auto;
         filter: brightness(1);
         margin-bottom: -25px;
         margin-top: -50px;
+        max-width: 100%;
       }
 
       .footer-logo a {
@@ -1355,12 +1347,13 @@
         color: #94a3b8;
         line-height: 1.8;
         margin-bottom: 20px;
+        font-size: clamp(0.9rem, 2vw, 1rem);
       }
 
-      /* ===== FOOTER SOCIAL LINKS - ORIGINAL BRAND COLORS ===== */
       .footer-social {
         display: flex;
         gap: 15px;
+        flex-wrap: wrap;
       }
 
       .footer-social a {
@@ -1377,29 +1370,22 @@
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
       }
 
-      /* Facebook - Blue */
       .footer-social a:nth-child(1) {
         background: #1877f2;
       }
-
       .footer-social a:nth-child(1):hover {
         background: #166fe5;
         transform: translateY(-3px);
         box-shadow: 0 8px 25px rgba(24, 119, 242, 0.5);
       }
-
-      /* TikTok - Black */
       .footer-social a:nth-child(2) {
         background: #000000;
       }
-
       .footer-social a:nth-child(2):hover {
         background: #1a1a1a;
         transform: translateY(-3px);
         box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
       }
-
-      /* Instagram - Gradient */
       .footer-social a:nth-child(3) {
         background: linear-gradient(
           45deg,
@@ -1410,43 +1396,9 @@
           #bc1888 100%
         );
       }
-
       .footer-social a:nth-child(3):hover {
         transform: translateY(-3px);
         box-shadow: 0 8px 25px rgba(220, 39, 67, 0.5);
-      }
-
-      /* Twitter/X - Black (if added later) */
-      .footer-social a:nth-child(4) {
-        background: #000000;
-      }
-
-      .footer-social a:nth-child(4):hover {
-        background: #1a1a1a;
-        transform: translateY(-3px);
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
-      }
-
-      /* LinkedIn - Blue (if added later) */
-      .footer-social a:nth-child(5) {
-        background: #0a66c2;
-      }
-
-      .footer-social a:nth-child(5):hover {
-        background: #0958a8;
-        transform: translateY(-3px);
-        box-shadow: 0 8px 25px rgba(10, 102, 194, 0.5);
-      }
-
-      /* YouTube - Red (if added later) */
-      .footer-social a:nth-child(6) {
-        background: #ff0000;
-      }
-
-      .footer-social a:nth-child(6):hover {
-        background: #cc0000;
-        transform: translateY(-3px);
-        box-shadow: 0 8px 25px rgba(255, 0, 0, 0.5);
       }
 
       .footer-section h3 {
@@ -1464,7 +1416,7 @@
         left: 0;
         width: 40px;
         height: 2px;
-        background: var(--gradient-primary);
+        background: linear-gradient(135deg, var(--primary), var(--accent));
       }
 
       .footer-links {
@@ -1478,8 +1430,9 @@
       .footer-links a {
         color: #94a3b8;
         text-decoration: none;
-        transition: var(--transition-fast);
+        transition: all 0.3s ease;
         display: inline-block;
+        font-size: clamp(0.875rem, 2vw, 1rem);
       }
 
       .footer-links a:hover {
@@ -1491,16 +1444,19 @@
         display: flex;
         gap: 10px;
         margin-top: 15px;
+        flex-wrap: wrap;
       }
 
       .newsletter-form input {
         flex: 1;
+        min-width: 200px;
         padding: 12px 15px;
         border: 1px solid rgba(255, 255, 255, 0.2);
-        border-radius: var(--radius-sm);
+        border-radius: 8px;
         background: rgba(255, 255, 255, 0.1);
         color: white;
         outline: none;
+        font-size: 14px;
       }
 
       .newsletter-form input::placeholder {
@@ -1509,12 +1465,13 @@
 
       .newsletter-form button {
         padding: 12px 20px;
-        background: var(--gradient-primary);
+        background: linear-gradient(135deg, var(--primary), var(--accent));
         border: none;
-        border-radius: var(--radius-sm);
+        border-radius: 8px;
         color: white;
         cursor: pointer;
-        transition: var(--transition-fast);
+        transition: all 0.3s ease;
+        white-space: nowrap;
       }
 
       .newsletter-form button:hover {
@@ -1527,7 +1484,7 @@
         padding-top: 30px;
         border-top: 1px solid rgba(255, 255, 255, 0.1);
         color: #94a3b8;
-        font-size: 0.9rem;
+        font-size: clamp(0.8rem, 2vw, 0.9rem);
       }
 
       .footer-bottom i {
@@ -1545,7 +1502,7 @@
         }
       }
 
-      /* ===== BACK TO TOP BUTTON - COLOR CHANGING EVERY 2 SECONDS ===== */
+      /* Back to Top Button */
       .back-to-top {
         position: fixed;
         bottom: 30px;
@@ -1564,8 +1521,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-
-        /* Color changing animation - 4 colors, 2 seconds each = 8s total */
         animation: colorChange 8s infinite;
       }
 
@@ -1577,10 +1532,9 @@
       .back-to-top:hover {
         transform: translateY(-5px) scale(1.1);
         box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
-        animation-play-state: paused; /* Pause animation on hover */
+        animation-play-state: paused;
       }
 
-      /* Color changing keyframes */
       @keyframes colorChange {
         0% {
           background: linear-gradient(135deg, #2563eb, #3b82f6);
@@ -1604,63 +1558,469 @@
         }
       }
 
-      /* Alternative: 5 colors version (2s each = 10s total) */
-      @keyframes colorChangeFive {
-        0% {
-          background: #2563eb;
-          box-shadow: 0 0 20px rgba(37, 99, 235, 0.6);
+      /* ==========================================================================
+         RESPONSIVE MEDIA QUERIES - TABLET (768px - 1023px)
+         ========================================================================== */
+      @media (max-width: 1023px) {
+        .navbar {
+          width: 95%;
+          padding: 0 16px;
         }
-        20% {
-          background: #7c3aed;
-          box-shadow: 0 0 20px rgba(124, 58, 237, 0.6);
+
+        .nav-menu {
+          gap: 20px;
         }
-        40% {
-          background: #dc2626;
-          box-shadow: 0 0 20px rgba(220, 38, 38, 0.6);
+
+        .nav-menu a {
+          font-size: 13px;
         }
-        60% {
-          background: #059669;
-          box-shadow: 0 0 20px rgba(5, 150, 105, 0.6);
+
+        .hero-wrapper {
+          gap: 40px;
         }
-        80% {
-          background: #f59e0b;
-          box-shadow: 0 0 20px rgba(245, 158, 11, 0.6);
+
+        .upwork-card {
+          grid-template-columns: 1fr;
+          gap: 32px;
         }
-        100% {
-          background: #2563eb;
-          box-shadow: 0 0 20px rgba(37, 99, 235, 0.6);
+
+        .upwork-visual {
+          order: -1;
+          max-width: 300px;
+          margin: 0 auto;
+        }
+
+        .faq-wrapper {
+          gap: 40px;
         }
       }
 
-      /* Rainbow version - 6 colors */
-      @keyframes colorChangeRainbow {
-        0% {
-          background: #ef4444;
-          box-shadow: 0 0 20px rgba(239, 68, 68, 0.6);
+      /* ==========================================================================
+         RESPONSIVE MEDIA QUERIES - MOBILE (< 768px)
+         ========================================================================== */
+      @media (max-width: 767px) {
+        /* Navigation Mobile */
+        .menu-btn {
+          display: flex;
         }
-        16.66% {
-          background: #f97316;
-          box-shadow: 0 0 20px rgba(249, 115, 22, 0.6);
+
+        .nav-menu {
+          position: fixed;
+          top: 80px;
+          left: 50%;
+          transform: translateX(-50%) translateY(-150%);
+          width: 92%;
+          background: rgba(255, 255, 255, 0.98);
+          backdrop-filter: blur(12px);
+          border-radius: 16px;
+          flex-direction: column;
+          padding: 24px;
+          gap: 16px;
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+          border: 1px solid var(--border);
+          opacity: 0;
+          visibility: hidden;
+          transition: all 0.4s ease;
+          z-index: 999;
         }
-        33.33% {
-          background: #eab308;
-          box-shadow: 0 0 20px rgba(234, 179, 8, 0.6);
+
+        .nav-menu.active {
+          transform: translateX(-50%) translateY(0);
+          opacity: 1;
+          visibility: visible;
         }
-        50% {
-          background: #22c55e;
-          box-shadow: 0 0 20px rgba(34, 197, 94, 0.6);
+
+        .nav-menu a {
+          font-size: 16px;
+          padding: 12px 0;
+          border-bottom: 1px solid var(--border);
         }
-        66.66% {
-          background: #3b82f6;
-          box-shadow: 0 0 20px rgba(59, 130, 246, 0.6);
+
+        .nav-menu a::after {
+          display: none;
         }
-        83.33% {
-          background: #a855f7;
-          box-shadow: 0 0 20px rgba(168, 85, 247, 0.6);
+
+        .nav-menu li:last-child a {
+          border-bottom: none;
         }
-        100% {
-          background: #ef4444;
-          box-shadow: 0 0 20px rgba(239, 68, 68, 0.6);
+
+        .nav-cta {
+          display: none;
+        }
+
+        /* Hero Mobile */
+        .hero {
+          padding: 100px 0 40px;
+          min-height: auto;
+        }
+
+        .hero-wrapper {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+
+        .hero-content {
+          max-width: 100%;
+          order: 2;
+        }
+
+        .hero-visual {
+          order: 1;
+          max-width: 300px;
+          margin: 0 auto;
+        }
+
+        .hero-image-box {
+          max-width: 100%;
+        }
+
+        .floating-tag {
+          display: none;
+        }
+
+        .hero-buttons {
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .btn-main,
+        .btn-outline {
+          width: 100%;
+          max-width: 280px;
+          justify-content: center;
+        }
+
+        .hero-stats {
+          justify-content: center;
+          gap: 24px;
+        }
+
+        /* Upwork Section Mobile */
+        .upwork-section {
+          padding: 0 0 60px;
+        }
+
+        .upwork-card {
+          padding: 32px 24px;
+        }
+
+        .upwork-stats {
+          justify-content: center;
+          gap: 24px;
+        }
+
+        .upwork-visual {
+          padding: 24px;
+        }
+
+        /* Stack Cards Mobile */
+        .section-stack {
+          padding: 60px 0;
+        }
+
+        .stack-card {
+          grid-template-columns: 1fr;
+        }
+
+        .stack-image {
+          min-height: 200px;
+          height: 200px;
+        }
+
+        .stack-content {
+          padding: 24px;
+        }
+
+        .stack-card:hover {
+          transform: translateY(-5px);
+        }
+
+        /* Hex Grid Mobile */
+        .section-hex {
+          padding: 60px 0;
+        }
+
+        .hex-grid {
+          grid-template-columns: 1fr;
+          max-width: 400px;
+          margin: 0 auto;
+        }
+
+        .hex-card:nth-child(even) {
+          margin-top: 0;
+        }
+
+        /* Accordion Mobile */
+        .section-accordion {
+          padding: 60px 0;
+        }
+
+        .accordion-container {
+          flex-direction: column;
+          height: auto;
+          gap: 16px;
+        }
+
+        .accordion-item {
+          min-height: 200px;
+          flex: none !important;
+        }
+
+        .accordion-item.active {
+          flex: none !important;
+          min-height: 300px;
+        }
+
+        .accordion-content h3 {
+          white-space: normal;
+          font-size: 1.2rem;
+        }
+
+        .accordion-content p {
+          opacity: 1;
+          transform: none;
+          font-size: 13px;
+        }
+
+        .accordion-number {
+          font-size: 2.5rem;
+        }
+
+        /* Services Mobile */
+        .section-services {
+          padding: 60px 0;
+        }
+
+        .services-grid {
+          grid-template-columns: 1fr;
+        }
+
+        /* Reviews Mobile */
+        .reviews-section {
+          padding: 60px 0;
+        }
+
+        .reviews-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .review-card:nth-child(2),
+        .review-card:nth-child(5),
+        .review-card:nth-child(8),
+        .review-card:nth-child(3),
+        .review-card:nth-child(6),
+        .review-card:nth-child(9) {
+          transform: none;
+        }
+
+        .review-card:hover {
+          transform: translateY(-5px);
+        }
+
+        /* FAQ Mobile */
+        .faq-section {
+          padding: 60px 0;
+        }
+
+        .faq-wrapper {
+          grid-template-columns: 1fr;
+        }
+
+        .faq-left {
+          position: static;
+          order: 2;
+        }
+
+        .faq-visual {
+          padding: 32px 24px;
+        }
+
+        .faq-list {
+          order: 1;
+        }
+
+        /* Footer Mobile */
+        .footer {
+          padding: 60px 0 20px;
+        }
+
+        .footer-content {
+          grid-template-columns: 1fr;
+          gap: 32px;
+          text-align: center;
+        }
+
+        .footer-logo {
+          justify-content: center;
+        }
+
+        .footer-logo-img {
+          height: 120px;
+          margin-top: -30px;
+          margin-bottom: -15px;
+        }
+
+        .footer-social {
+          justify-content: center;
+        }
+
+        .footer-section h3::after {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+
+        .newsletter-form {
+          flex-direction: column;
+        }
+
+        .newsletter-form input {
+          width: 100%;
+        }
+
+        .newsletter-form button {
+          width: 100%;
+        }
+
+        /* Back to Top Mobile */
+        .back-to-top {
+          width: 44px;
+          height: 44px;
+          bottom: 20px;
+          right: 20px;
+          font-size: 1rem;
+        }
+      }
+
+      /* ==========================================================================
+         RESPONSIVE MEDIA QUERIES - SMALL MOBILE (< 480px)
+         ========================================================================== */
+      @media (max-width: 479px) {
+        .container {
+          padding: 0 16px;
+        }
+
+        .navbar {
+          top: 10px;
+          height: 56px;
+        }
+
+        .logo img {
+          height: 30px;
+        }
+
+        .hero-tag {
+          font-size: 11px;
+          padding: 6px 12px;
+        }
+
+        .stat-value {
+          font-size: 1.5rem;
+        }
+
+        .stat-label {
+          font-size: 12px;
+        }
+
+        .upwork-card {
+          padding: 24px 16px;
+        }
+
+        .upwork-stats {
+          flex-direction: column;
+          gap: 16px;
+        }
+
+        .upwork-stat {
+          text-align: center;
+        }
+
+        .stack-badge {
+          font-size: 10px;
+          padding: 4px 8px;
+        }
+
+        .tech-pill {
+          font-size: 11px;
+          padding: 4px 10px;
+        }
+
+        .review-card {
+          padding: 24px;
+        }
+
+        .review-badge {
+          right: 16px;
+          font-size: 10px;
+          padding: 4px 10px;
+        }
+
+        .faq-question {
+          padding: 20px;
+          font-size: 0.9rem;
+        }
+
+        .faq-item.active .faq-answer {
+          padding: 0 20px 20px;
+        }
+
+        .accordion-tag {
+          font-size: 10px;
+          padding: 6px 12px;
+          top: 12px;
+          left: 12px;
+        }
+      }
+
+      /* ==========================================================================
+         RESPONSIVE MEDIA QUERIES - LARGE DESKTOP (> 1400px)
+         ========================================================================== */
+      @media (min-width: 1400px) {
+        .container {
+          max-width: 1320px;
+        }
+
+        .hex-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      /* Touch device optimizations */
+      @media (hover: none) and (pointer: coarse) {
+        .stack-card:hover {
+          transform: none;
+        }
+
+        .hex-card:hover {
+          transform: none;
+        }
+
+        .service-box:hover {
+          transform: none;
+        }
+
+        .review-card:hover {
+          transform: none;
+        }
+
+        .stack-card:active,
+        .hex-card:active,
+        .service-box:active,
+        .review-card:active {
+          transform: scale(0.98);
+        }
+      }
+
+      /* Reduced motion preference */
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+
+        html {
+          scroll-behavior: auto;
         }
       }
     </style>
@@ -1692,7 +2052,7 @@
 
       <div style="display: flex; align-items: center; gap: 16px">
         <a href="index.html#contact" class="nav-cta">Let's Talk</a>
-        <button class="menu-btn" id="menuBtn">
+        <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">
           <span></span>
           <span></span>
           <span></span>
@@ -1721,9 +2081,6 @@
               <div class="hero-buttons">
                 <a href="#projects" class="btn-main">
                   View Projects <i class="fas fa-arrow-right"></i>
-                </a>
-                <a href="#contact" class="btn-outline">
-                  <i class="fas fa-play"></i> Watch Showreel
                 </a>
               </div>
 
@@ -1785,7 +2142,7 @@
         </div>
       </section>
 
-      <!-- UPWORK SECTION - Right After Hero -->
+      <!-- UPWORK SECTION -->
       <section class="upwork-section">
         <div class="container">
           <div class="upwork-card">
@@ -1815,7 +2172,10 @@
                 </div>
               </div>
 
-              <a href="#" class="upwork-btn">
+              <a
+                href="https://www.upwork.com/freelancers/muhammadhaseebiqbal"
+                class="upwork-btn"
+              >
                 <i class="fab fa-upwork"></i> Hire Me on Upwork
               </a>
             </div>
@@ -1829,7 +2189,7 @@
         </div>
       </section>
 
-      <!-- PROJECTS SECTION 1: Stacked Cards (1-5) -->
+      <!-- PROJECTS SECTION 1: Stacked Cards -->
       <section class="section-stack" id="projects">
         <div class="container">
           <div class="section-header">
@@ -1841,7 +2201,6 @@
           </div>
 
           <div class="stack-container">
-            <!-- Projects 1-5 -->
             <div class="stack-card">
               <div class="stack-image">
                 <img src="assets/Taqwq.png" alt="Taqwa.Services" />
@@ -2024,7 +2383,7 @@
         </div>
       </section>
 
-      <!-- PROJECTS SECTION 2: Hexagon Grid (6-10) -->
+      <!-- PROJECTS SECTION 2: Hexagon Grid -->
       <section class="section-hex">
         <div class="container">
           <div class="hex-header">
@@ -2117,7 +2476,7 @@
         </div>
       </section>
 
-      <!-- PROJECTS SECTION 3: Accordion Expand (11-15) -->
+      <!-- PROJECTS SECTION 3: Accordion Expand -->
       <section class="section-accordion">
         <div class="container">
           <div class="section-header">
@@ -2276,7 +2635,7 @@
         </div>
       </section>
 
-      <!-- REVIEWS SECTION - 9 Reviews Grid -->
+      <!-- REVIEWS SECTION -->
       <section class="reviews-section" id="reviews">
         <div class="container">
           <div class="reviews-header">
@@ -2288,7 +2647,6 @@
           </div>
 
           <div class="reviews-grid">
-            <!-- Review 1 -->
             <div class="review-card">
               <span class="review-badge">
                 <i class="fab fa-upwork"></i> Upwork
@@ -2314,7 +2672,6 @@
               </div>
             </div>
 
-            <!-- Review 2 -->
             <div class="review-card">
               <span class="review-badge">
                 <i class="fab fa-upwork"></i> Upwork
@@ -2340,7 +2697,6 @@
               </div>
             </div>
 
-            <!-- Review 3 -->
             <div class="review-card">
               <span class="review-badge">
                 <i class="fab fa-upwork"></i> Upwork
@@ -2366,7 +2722,6 @@
               </div>
             </div>
 
-            <!-- Review 4 -->
             <div class="review-card">
               <span class="review-badge">
                 <i class="fab fa-upwork"></i> Upwork
@@ -2392,7 +2747,6 @@
               </div>
             </div>
 
-            <!-- Review 5 -->
             <div class="review-card">
               <span class="review-badge">
                 <i class="fab fa-upwork"></i> Upwork
@@ -2418,7 +2772,6 @@
               </div>
             </div>
 
-            <!-- Review 6 -->
             <div class="review-card">
               <span class="review-badge">
                 <i class="fab fa-upwork"></i> Upwork
@@ -2445,7 +2798,6 @@
               </div>
             </div>
 
-            <!-- Review 7 -->
             <div class="review-card">
               <span class="review-badge">
                 <i class="fab fa-upwork"></i> Upwork
@@ -2471,7 +2823,6 @@
               </div>
             </div>
 
-            <!-- Review 8 -->
             <div class="review-card">
               <span class="review-badge">
                 <i class="fab fa-upwork"></i> Upwork
@@ -2497,7 +2848,6 @@
               </div>
             </div>
 
-            <!-- Review 9 -->
             <div class="review-card">
               <span class="review-badge">
                 <i class="fab fa-upwork"></i> Upwork
@@ -2526,7 +2876,7 @@
         </div>
       </section>
 
-      <!-- FAQ SECTION - Unique Split Design -->
+      <!-- FAQ SECTION -->
       <section class="faq-section" id="faq">
         <div class="container">
           <div class="section-header">
@@ -2669,22 +3019,23 @@
                 href="https://www.facebook.com/share/17wXMTtAkC/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Facebook"
               >
                 <i class="fab fa-facebook-f"></i>
               </a>
-
               <a
                 href="https://www.tiktok.com/@fazwi.dawakhana.p"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="TikTok"
               >
                 <i class="fab fa-tiktok"></i>
               </a>
-
               <a
                 href="https://www.instagram.com/fazwidawakhanapk"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Instagram"
               >
                 <i class="fab fa-instagram"></i>
               </a>
@@ -2753,7 +3104,9 @@
             <p>Subscribe for latest updates and insights</p>
             <form class="newsletter-form">
               <input type="email" placeholder="Your email" required />
-              <button type="submit"><i class="fas fa-arrow-right"></i></button>
+              <button type="submit" aria-label="Subscribe">
+                <i class="fas fa-arrow-right"></i>
+              </button>
             </form>
           </div>
         </div>
@@ -2766,14 +3119,27 @@
       </div>
     </footer>
 
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
     <script>
-      // Mobile Menu
+      // Mobile Menu Toggle
       const menuBtn = document.getElementById("menuBtn");
       const navMenu = document.getElementById("navMenu");
 
       menuBtn.addEventListener("click", () => {
         navMenu.classList.toggle("active");
         menuBtn.classList.toggle("active");
+      });
+
+      // Close mobile menu when clicking on a link
+      document.querySelectorAll(".nav-menu a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navMenu.classList.remove("active");
+          menuBtn.classList.remove("active");
+        });
       });
 
       // FAQ Accordion
@@ -2795,15 +3161,18 @@
         });
       });
 
-      // Project Accordion Interaction
+      // Project Accordion Interaction (Desktop only)
       const accordionItems = document.querySelectorAll(".accordion-item");
 
-      accordionItems.forEach((item) => {
-        item.addEventListener("mouseenter", () => {
-          accordionItems.forEach((i) => i.classList.remove("active"));
-          item.classList.add("active");
+      // Only apply hover effects on non-touch devices
+      if (window.matchMedia("(hover: hover)").matches) {
+        accordionItems.forEach((item) => {
+          item.addEventListener("mouseenter", () => {
+            accordionItems.forEach((i) => i.classList.remove("active"));
+            item.classList.add("active");
+          });
         });
-      });
+      }
 
       // Smooth Scroll
       document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -2824,6 +3193,42 @@
         } else {
           navbar.style.boxShadow = "0 4px 6px -1px rgba(0,0,0,0.1)";
         }
+      });
+
+      // Back to Top Button
+      const backToTopBtn = document.getElementById("backToTop");
+
+      window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 300) {
+          backToTopBtn.classList.add("visible");
+        } else {
+          backToTopBtn.classList.remove("visible");
+        }
+      });
+
+      backToTopBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+
+      // Active Navigation Link on Scroll
+      const sections = document.querySelectorAll("section[id]");
+
+      window.addEventListener("scroll", () => {
+        let current = "";
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          if (pageYOffset >= sectionTop - 200) {
+            current = section.getAttribute("id");
+          }
+        });
+
+        document.querySelectorAll(".nav-menu a").forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href").includes(current)) {
+            link.classList.add("active");
+          }
+        });
       });
     </script>
   </body>
