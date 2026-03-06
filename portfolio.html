@@ -664,29 +664,14 @@
         position: relative;
         height: 100%;
         min-height: 200px;
+        object-fit: fill;
+        padding: 0px;
       }
 
       .stack-image img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
-      }
-
-      .stack-number {
-        position: absolute;
-        top: 16px;
-        left: 16px;
-        width: 40px;
-        height: 40px;
-        background: white;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: 800;
-        font-size: 14px;
-        color: var(--primary);
-        box-shadow: var(--shadow);
+        object-fit: fill;
       }
 
       .stack-badge {
@@ -841,14 +826,6 @@
         padding: 20px;
       }
 
-      .hex-number {
-        font-size: 3rem;
-        font-weight: 800;
-        color: var(--bg);
-        line-height: 1;
-        margin-bottom: 8px;
-      }
-
       .hex-content h3 {
         font-size: 1.2rem;
         font-weight: 700;
@@ -941,19 +918,6 @@
         flex-direction: column;
         justify-content: flex-end;
         padding: 24px;
-      }
-
-      .accordion-number {
-        font-size: 4rem;
-        font-weight: 800;
-        color: rgba(255, 255, 255, 0.2);
-        line-height: 1;
-        margin-bottom: 12px;
-      }
-
-      .accordion-item:hover .accordion-number,
-      .accordion-item.active .accordion-number {
-        color: var(--primary-light);
       }
 
       .accordion-content h3 {
@@ -1791,10 +1755,6 @@
           font-size: 13px;
         }
 
-        .accordion-number {
-          font-size: 2.5rem;
-        }
-
         /* Services Mobile */
         .section-services {
           padding: 60px 0;
@@ -2217,7 +2177,6 @@
             >
               <div class="stack-image">
                 <img src="assets/Taqwq.png" alt="Taqwa.Services" />
-                <span class="stack-number">01</span>
                 <span class="stack-badge">
                   <i class="fas fa-code" style="color: var(--primary)"></i>
                   Custom Platform
@@ -2238,9 +2197,9 @@
                   "
                 >
                   <div class="stack-tech">
-                    <span class="tech-pill">React</span>
-                    <span class="tech-pill">Node.js</span>
-                    <span class="tech-pill">MongoDB</span>
+                    <span class="tech-pill">Html</span>
+                    <span class="tech-pill">Css</span>
+                    <span class="tech-pill">Java Script</span>
                   </div>
                   <div class="stack-arrow">
                     <i class="fas fa-arrow-right"></i>
@@ -2249,10 +2208,14 @@
               </div>
             </a>
 
-            <a href="#" class="stack-card">
+            <a
+              href="https://secretwear.site/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="stack-card"
+            >
               <div class="stack-image">
                 <img src="assets/Secretwear.png" alt="Secret Wear" />
-                <span class="stack-number">02</span>
                 <span class="stack-badge">
                   <i class="fab fa-shopify" style="color: var(--shopify)"></i>
                   Shopify Plus
@@ -2273,7 +2236,7 @@
                 >
                   <div class="stack-tech">
                     <span class="tech-pill">Liquid</span>
-                    <span class="tech-pill">Vue.js</span>
+                    <span class="tech-pill">Css</span>
                     <span class="tech-pill">Shopify Plus</span>
                   </div>
                   <div class="stack-arrow">
@@ -2283,10 +2246,14 @@
               </div>
             </a>
 
-            <a href="#" class="stack-card">
+            <a
+              href="https://fazwidawakhana.site/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="stack-card"
+            >
               <div class="stack-image">
                 <img src="assets/Fazwidawakha.png" alt="Fazwidawakha" />
-                <span class="stack-number">03</span>
                 <span class="stack-badge">
                   <i class="fab fa-shopify" style="color: var(--shopify)"></i>
                   Shopify 2.0
@@ -2306,9 +2273,9 @@
                   "
                 >
                   <div class="stack-tech">
-                    <span class="tech-pill">OS 2.0</span>
-                    <span class="tech-pill">App Dev</span>
-                    <span class="tech-pill">AWS</span>
+                    <span class="tech-pill">Html</span>
+                    <span class="tech-pill">Css</span>
+                    <span class="tech-pill">Shopi Plus</span>
                   </div>
                   <div class="stack-arrow">
                     <i class="fas fa-arrow-right"></i>
@@ -2317,17 +2284,21 @@
               </div>
             </a>
 
-            <a href="#" class="stack-card">
+            <a
+              href="https://int-shop.nanoleaf.me/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="stack-card"
+            >
               <div class="stack-image">
-                <img src="assets/Portfolio img.jpeg" alt="TechStore" />
-                <span class="stack-number">04</span>
+                <img src="assets/int-shop.png" alt="TechStore" />
                 <span class="stack-badge">
-                  <i class="fas fa-bolt" style="color: var(--primary)"></i>
-                  Next.js
+                  <i class="fab fa-shopify" style="color: var(--shopify)"></i>
+                  Shopify Plus
                 </span>
               </div>
               <div class="stack-content">
-                <h3>TechStore Pakistan</h3>
+                <h3>Nanoleaf</h3>
                 <p>
                   Electronics mega-store with product comparison, reviews
                   system, flash sales module, and real-time stock updates.
@@ -2340,9 +2311,9 @@
                   "
                 >
                   <div class="stack-tech">
-                    <span class="tech-pill">Next.js</span>
-                    <span class="tech-pill">Stripe</span>
-                    <span class="tech-pill">Vercel</span>
+                    <span class="tech-pill">Html</span>
+                    <span class="tech-pill">Css</span>
+                    <span class="tech-pill">JavaScript</span>
                   </div>
                   <div class="stack-arrow">
                     <i class="fas fa-arrow-right"></i>
@@ -2351,10 +2322,15 @@
               </div>
             </a>
 
-            <a href="#" class="stack-card">
+            <a
+              href="https://nomadgoods.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="stack-card"
+            >
               <div class="stack-image">
                 <img
-                  src="assets/Logo.png"
+                  src="assets/Nomad.png"
                   alt="BrandHub"
                   style="
                     object-fit: contain;
@@ -2362,17 +2338,17 @@
                     background: var(--bg);
                   "
                 />
-                <span class="stack-number">05</span>
                 <span class="stack-badge">
-                  <i class="fas fa-paint-brush" style="color: #ec4899"></i>
-                  Branding
+                  <i class="fab fa-shopify" style="color: var(--shopify)"></i>
+                  Shopify 2.0
                 </span>
               </div>
               <div class="stack-content">
-                <h3>BrandHub Agency</h3>
+                <h3>NOMAD</h3>
                 <p>
-                  Complete brand identity and e-commerce solution for a creative
-                  agency with portfolio integration and service booking.
+                  Developed a full Shopify store and brand identity for Nomad
+                  Goods, including portfolio integration and service booking for
+                  a seamless customer experience
                 </p>
                 <div
                   style="
@@ -2382,7 +2358,7 @@
                   "
                 >
                   <div class="stack-tech">
-                    <span class="tech-pill">Figma</span>
+                    <span class="tech-pill">Html</span>
                     <span class="tech-pill">Shopify</span>
                     <span class="tech-pill">Custom</span>
                   </div>
@@ -2408,66 +2384,79 @@
           </div>
 
           <div class="hex-grid">
-            <a href="#" class="hex-card">
+            <a href="https://www.orbitkey.com/" class="hex-card">
               <div class="hex-image">
-                <img src="assets/Taqwq.png" alt="Luxury Watches" />
+                <img src="assets/Orbit Key.png" alt="Luxury Watches" />
               </div>
               <div class="hex-icon">
                 <i class="fas fa-external-link-alt"></i>
               </div>
               <div class="hex-content">
-                <div class="hex-number">06</div>
-                <h3>Luxury Watches</h3>
-                <p>High-end timepiece e-commerce with 3D product viewer</p>
+                <h3>Orbit Key</h3>
+                <p>
+                  Built a luxury Shopify store for Orbitkey with 3D product
+                  viewing, modern UI, and a seamless shopping experience
+                  optimized for high-end customers.
+                </p>
               </div>
             </a>
 
-            <a href="#" class="hex-card">
+            <a href="https://corkcicle.com/" class="hex-card">
               <div class="hex-image">
-                <img src="assets/Secretwear.png" alt="Organic Foods" />
+                <img src="assets/corkcicle.png" alt="Organic Foods" />
               </div>
               <div class="hex-icon">
                 <i class="fas fa-external-link-alt"></i>
               </div>
               <div class="hex-content">
-                <div class="hex-number">07</div>
-                <h3>Organic Foods</h3>
-                <p>Subscription-based organic grocery delivery</p>
+                <h3>Corkcicle</h3>
+                <p>
+                  Built a subscription-based Shopify store for Corkcicle,
+                  enabling users to order organic groceries online with
+                  recurring subscription options and a modern, responsive
+                  design.
+                </p>
               </div>
             </a>
 
-            <a href="#" class="hex-card">
+            <a href="https://www.mvmt.com/home" class="hex-card">
               <div class="hex-image">
-                <img src="assets/Fazwidawakha.png" alt="Fitness Gear" />
+                <img src="assets/MVMT.png" alt="Fitness Gear" />
               </div>
               <div class="hex-icon">
                 <i class="fas fa-external-link-alt"></i>
               </div>
               <div class="hex-content">
-                <div class="hex-number">08</div>
-                <h3>Fitness Gear Pro</h3>
-                <p>Athletic equipment with workout guides</p>
+                <h3>MVMT</h3>
+                <p>
+                  Built a Shopify store for MVMT featuring athletic equipment,
+                  interactive workout guides, and a responsive, user-friendly
+                  interface for enhanced customer engagement.
+                </p>
               </div>
             </a>
 
-            <a href="#" class="hex-card">
+            <a href="https://www.astridandmiyu.com/" class="hex-card">
               <div class="hex-image">
-                <img src="assets/Portfolio img.jpeg" alt="Home Decor" />
+                <img src="assets/astridandmiyu.png" alt="Home Decor" />
               </div>
               <div class="hex-icon">
                 <i class="fas fa-external-link-alt"></i>
               </div>
               <div class="hex-content">
-                <div class="hex-number">09</div>
-                <h3>Home Decor</h3>
-                <p>Interior design with AR visualization</p>
+                <h3>Astridandmiyu</h3>
+                <p>
+                  Built a Shopify store for Astrid & Miyu with AR visualization,
+                  allowing customers to explore interior products in real-time
+                  and experience a modern, interactive shopping experience.
+                </p>
               </div>
             </a>
 
-            <a href="#" class="hex-card">
+            <a href="https://fablepets.com/" class="hex-card">
               <div class="hex-image">
                 <img
-                  src="assets/Logo.png"
+                  src="assets/fablepets.png"
                   alt="Pet Supplies"
                   style="
                     object-fit: contain;
@@ -2480,9 +2469,12 @@
                 <i class="fas fa-external-link-alt"></i>
               </div>
               <div class="hex-content">
-                <div class="hex-number">10</div>
-                <h3>Pet Supplies Plus</h3>
-                <p>Pet care with auto-replenishment</p>
+                <h3>Fablepets</h3>
+                <p>
+                  Built a Shopify store for Fable Pets with auto-replenishment
+                  subscriptions, modern design, and a smooth, responsive
+                  shopping experience for pet owners.
+                </p>
               </div>
             </a>
           </div>
@@ -2499,30 +2491,26 @@
           </div>
 
           <div class="accordion-container">
-            <a href="#" class="accordion-item active">
+            <a href="https://zestypaws.com/" class="accordion-item active">
               <div class="accordion-image">
-                <img src="assets/Taqwq.png" alt="Auto Parts Pro" />
+                <img src="assets/zestypaws.png" alt="Auto Parts Pro" />
               </div>
-              <span class="accordion-tag">E-Commerce</span>
+              <span class="accordion-tag">Shopify</span>
               <div class="accordion-overlay">
-                <div class="accordion-number">11</div>
                 <div class="accordion-content">
-                  <h3>Auto Parts Pro</h3>
-                  <p>Automotive parts finder with VIN lookup integration</p>
+                  <h3>Zesty Paws</h3>
                 </div>
               </div>
             </a>
 
-            <a href="#" class="accordion-item">
+            <a href="https://dossier.co/" class="accordion-item">
               <div class="accordion-image">
-                <img src="assets/Secretwear.png" alt="Street Style" />
+                <img src="assets/dossier.png" alt="Street Style" />
               </div>
-              <span class="accordion-tag">Fashion</span>
+              <span class="accordion-tag">Shopify</span>
               <div class="accordion-overlay">
-                <div class="accordion-number">12</div>
                 <div class="accordion-content">
-                  <h3>Street Style Co</h3>
-                  <p>Urban fashion brand with influencer integration</p>
+                  <h3>Dossier</h3>
                 </div>
               </div>
             </a>
@@ -2531,12 +2519,10 @@
               <div class="accordion-image">
                 <img src="assets/Fazwidawakha.png" alt="Vitamin Plus" />
               </div>
-              <span class="accordion-tag">Health</span>
+              <span class="accordion-tag">Shopify</span>
               <div class="accordion-overlay">
-                <div class="accordion-number">13</div>
                 <div class="accordion-content">
                   <h3>Vitamin Plus</h3>
-                  <p>Supplement subscription with health recommendations</p>
                 </div>
               </div>
             </a>
@@ -2545,12 +2531,10 @@
               <div class="accordion-image">
                 <img src="assets/Portfolio img.jpeg" alt="Gadget Zone" />
               </div>
-              <span class="accordion-tag">Technology</span>
+              <span class="accordion-tag">Shopify</span>
               <div class="accordion-overlay">
-                <div class="accordion-number">14</div>
                 <div class="accordion-content">
                   <h3>Gadget Zone</h3>
-                  <p>Electronics retailer with comparison tools</p>
                 </div>
               </div>
             </a>
@@ -2563,12 +2547,10 @@
                   style="object-fit: contain; background: var(--bg)"
                 />
               </div>
-              <span class="accordion-tag">Agency</span>
+              <span class="accordion-tag">Shopify</span>
               <div class="accordion-overlay">
-                <div class="accordion-number">15</div>
                 <div class="accordion-content">
                   <h3>Creative Studio</h3>
-                  <p>Portfolio and service booking platform</p>
                 </div>
               </div>
             </a>
