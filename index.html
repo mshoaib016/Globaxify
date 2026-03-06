@@ -54,7 +54,14 @@
             <li><a href="#services" class="nav-link">Services</a></li>
             <li><a href="#team" class="nav-link">Team</a></li>
             <li>
-              <a href="portfolio.html" class="nav-link">Portfolio</a>
+              <a
+                href="portfolio.html"
+                class="nav-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Portfolio
+              </a>
             </li>
             <li><a href="#about" class="nav-link">About</a></li>
             <li><a href="#contact" class="nav-link">Contact Us</a></li>
@@ -630,7 +637,7 @@
             <!-- Name & Title -->
             <h2 class="ceo-name-attractive">
               <span class="name-line">Muhammad</span>
-              <span class="name-line gradient-name">Ahmed Iqbal</span>
+              <span class="name-line gradient-name">Ahmad Iqbal</span>
             </h2>
 
             <!-- Bio Text -->
@@ -694,7 +701,7 @@
               </blockquote>
               <div class="quote-author">
                 <div class="author-line"></div>
-                <span>Muhammad Ahmed Iqbal</span>
+                <span>Muhammad Ahmad Iqbal</span>
               </div>
             </div>
 
@@ -805,24 +812,20 @@
                 </div> -->
                   </div>
                 </div>
-                <div class="experience-badge">
-                  <span class="exp-number">5+</span>
-                  <span class="exp-text">Years</span>
-                </div>
               </div>
 
               <div class="member-details">
                 <h3 class="member-name">Falak Husasin</h3>
-                <p class="member-role">UI/UX Designer</p>
+                <p class="member-role">Shopify Developer</p>
                 <p class="member-desc">
                   Award-winning designer creating beautiful, user-centered
                   digital experiences.
                 </p>
 
                 <div class="skills-container">
-                  <span class="skill-pill">React</span>
-                  <span class="skill-pill">Node.js</span>
-                  <span class="skill-pill">Python</span>
+                  <span class="skill-pill">HTML</span>
+                  <span class="skill-pill">CSS</span>
+                  <span class="skill-pill">Shopify CLI</span>
                 </div>
               </div>
             </div>
@@ -836,10 +839,6 @@
             data-aos-delay="200"
           >
             <div class="card-border-gradient"></div>
-            <div class="featured-tag">
-              <i class="fas fa-star"></i>
-              <span>Creative Lead</span>
-            </div>
             <div class="card-content">
               <div class="member-image-container">
                 <div class="image-bg-blob blob-2"></div>
@@ -859,24 +858,20 @@
                     </div> -->
                   </div>
                 </div>
-                <div class="experience-badge">
-                  <span class="exp-number">4+</span>
-                  <span class="exp-text">Years</span>
-                </div>
               </div>
 
               <div class="member-details">
                 <h3 class="member-name">Shoaib Hanif</h3>
-                <p class="member-role">UI/UX Designer</p>
+                <p class="member-role">Full Stack Developer</p>
                 <p class="member-desc">
-                  Award-winning designer creating beautiful, user-centered
-                  digital experiences.
+                  Full Stack Developer building modern, scalable web
+                  applications with seamless user experiences.
                 </p>
 
                 <div class="skills-container">
-                  <span class="skill-pill">Figma</span>
-                  <span class="skill-pill">Adobe XD</span>
-                  <span class="skill-pill">Prototyping</span>
+                  <span class="skill-pill">JavaScript</span>
+                  <span class="skill-pill">Python</span>
+                  <span class="skill-pill">GitHub</span>
                 </div>
               </div>
             </div>
@@ -906,24 +901,20 @@
                     </div> -->
                   </div>
                 </div>
-                <div class="experience-badge">
-                  <span class="exp-number">3+</span>
-                  <span class="exp-text">Years</span>
-                </div>
               </div>
 
               <div class="member-details">
                 <h3 class="member-name">Salman Aslam</h3>
-                <p class="member-role">Mobile Developer</p>
+                <p class="member-role">Social Media Manager</p>
                 <p class="member-desc">
-                  Flutter & React Native expert building cross-platform mobile
-                  applications.
+                  Social Media Manager creating engaging content and growing
+                  brands across digital platforms.
                 </p>
 
                 <div class="skills-container">
-                  <span class="skill-pill">Flutter</span>
-                  <span class="skill-pill">Firebase</span>
-                  <span class="skill-pill">Dart</span>
+                  <span class="skill-pill">Content creation</span>
+                  <span class="skill-pill">Graphic design</span>
+                  <span class="skill-pill">Marketing strategy</span>
                 </div>
               </div>
             </div>
@@ -1373,7 +1364,7 @@
                   <div class="reviewer-image">
                     <img
                       src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop"
-                      alt="Ahmed Iqbal"
+                      alt="Ahmad Iqbal"
                     />
                     <div class="image-ring"></div>
                   </div>
@@ -1674,6 +1665,7 @@
                 class="social-btn"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Facebook"
               >
                 <i class="fab fa-facebook-f"></i>
               </a>
@@ -1682,6 +1674,7 @@
                 class="social-btn"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="TikTok"
               >
                 <i class="fab fa-tiktok"></i>
               </a>
@@ -1690,6 +1683,7 @@
                 class="social-btn"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Instagram"
               >
                 <i class="fab fa-instagram"></i>
               </a>
@@ -1698,18 +1692,18 @@
           <div class="contact-form-wrapper" data-aos="fade-left">
             <form class="contact-form glow-form" id="contactForm">
               <div class="form-group">
-                <input type="text" id="name" required />
+                <input type="text" id="name" placeholder=" " required />
                 <label for="name">Your Name</label>
                 <i class="fas fa-user"></i>
               </div>
               <div class="form-group">
-                <input type="email" id="email" required />
+                <input type="email" id="email" placeholder=" " required />
                 <label for="email">Your Email</label>
                 <i class="fas fa-envelope"></i>
               </div>
               <div class="form-group">
                 <select id="service" required>
-                  <option value="">Select Service</option>
+                  <option value="" disabled selected>Select Service</option>
                   <option value="shopify">Shopify Store Design</option>
                   <option value="product">Winning Product Hunting</option>
                   <option value="web">Web Development</option>
@@ -1718,11 +1712,16 @@
                 <i class="fas fa-chevron-down"></i>
               </div>
               <div class="form-group">
-                <textarea id="message" rows="4" required></textarea>
+                <textarea
+                  id="message"
+                  rows="4"
+                  placeholder=" "
+                  required
+                ></textarea>
                 <label for="message">Your Message</label>
                 <i class="fas fa-comment"></i>
               </div>
-              <button type="submit" class="btn btn-primary glow-btn submit-btn">
+              <button type="submit" class="submit-btn">
                 <span>Send Message</span>
                 <i class="fas fa-paper-plane"></i>
               </button>
@@ -1731,7 +1730,6 @@
         </div>
       </div>
     </section>
-
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
