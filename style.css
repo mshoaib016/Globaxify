@@ -1246,7 +1246,7 @@ body {
   width: 550px;
   height: 340px;
   border-radius: 20px 20px 0 0;
-  background-image: url("assets/Secretwear.png");
+  background-image: url("assets/Allbirds.png");
 }
 
 .laptop-base {
@@ -1280,7 +1280,7 @@ body {
   width: 220px;
   height: 300px;
   border-radius: 25px;
-  background-image: url("assets/Secreatwear tab img.png");
+  background-image: url("assets/big\ face\ tablet.png");
 }
 
 /* Mobile */
@@ -1288,7 +1288,7 @@ body {
   width: 140px;
   height: 280px;
   border-radius: 30px;
-  background-image: url("assets/Secreatwear mobile img.png");
+  background-image: url("assets/big\ face\ mobile.png");
 }
 
 /* Device Labels */
