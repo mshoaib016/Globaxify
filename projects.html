@@ -265,6 +265,9 @@
         border: 1px solid rgba(0, 102, 255, 0.08);
         position: relative;
         cursor: pointer;
+        text-decoration: none;
+        color: inherit;
+        display: block;
       }
 
       .project-card::before {
@@ -350,6 +353,7 @@
         opacity: 0;
         transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         box-shadow: var(--shadow-lg);
+        pointer-events: none;
       }
 
       .view-btn i {
@@ -359,16 +363,6 @@
       .project-card:hover .view-btn {
         transform: translateY(0);
         opacity: 1;
-      }
-
-      .view-btn:hover {
-        background: var(--primary-blue);
-        color: var(--white);
-        transform: scale(1.05);
-      }
-
-      .view-btn:hover i {
-        color: var(--white);
       }
 
       /* Category Tag */
@@ -771,18 +765,22 @@
       <!-- Projects Grid -->
       <div class="projects-container">
         <!-- Project 1: Featured -->
-        <div class="project-card featured" data-category="web ecommerce">
+        <div
+          class="project-card featured"
+          data-category="web ecommerce"
+          data-link="https://maisonlouismarie.com/"
+        >
           <div class="card-image-wrapper">
             <img
-              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80"
+              src="assets/maison louis marie.png"
               alt="E-Commerce Platform"
               class="card-image"
             />
             <span class="category-pill">E-Commerce</span>
             <div class="image-overlay">
-              <button class="view-btn">
+              <span class="view-btn">
                 View Project <i class="fas fa-arrow-right"></i>
-              </button>
+              </span>
             </div>
           </div>
           <div class="card-content">
@@ -793,25 +791,26 @@
               <span class="meta-dot"></span>
               <span>Client Project</span>
             </div>
-            <h3 class="card-title">Luxury E-Commerce Platform</h3>
+            <h3 class="card-title">Luxury Fragrance E-Commerce Platform</h3>
             <p class="card-description">
-              A premium online shopping experience built with Next.js and
-              Node.js, featuring AI-powered recommendations and seamless payment
-              integration.
+              A premium fragrance e-commerce experience inspired by Maison Louis
+              Marie, built with modern web technologies. The platform focuses on
+              elegant product presentation, smooth navigation, and a seamless
+              checkout experience for luxury perfume shoppers.
             </p>
             <div class="tech-tags">
-              <span class="tech-tag">Next.js</span>
+              <span class="tech-tag">Shopify</span>
+              <span class="tech-tag">Liquid</span>
+              <span class="tech-tag">React</span>
               <span class="tech-tag">Node.js</span>
-              <span class="tech-tag">MongoDB</span>
-              <span class="tech-tag">Stripe</span>
-              <span class="tech-tag">Tailwind</span>
+              <span class="tech-tag">waghera</span>
             </div>
             <div class="card-footer">
               <div class="project-stat">
                 <i class="fas fa-eye"></i>
-                <span>12.5K Views</span>
+                <span>50K+ Views</span>
               </div>
-              <div class="card-actions">
+              <!-- <div class="card-actions">
                 <a href="#" class="action-btn" title="Live Demo"
                   ><i class="fas fa-external-link-alt"></i
                 ></a>
@@ -821,24 +820,25 @@
                 <a href="#" class="action-btn" title="Case Study"
                   ><i class="fas fa-file-alt"></i
                 ></a>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
 
         <!-- Project 2 -->
-        <div class="project-card" data-category="app">
+        <div class="project-card" data-category="app" data-link="#">
           <div class="card-image-wrapper">
-            <img
-              src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&q=80"
-              alt="Fitness App"
-              class="card-image"
-            />
+            <img src="assets/Taqwq.png" alt="Fitness App" class="card-image" />
             <span class="category-pill">Web Development</span>
             <div class="image-overlay">
-              <button class="view-btn">
+              <a
+                href="https://taqwa.services/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="view-btn"
+              >
                 View Project <i class="fas fa-arrow-right"></i>
-              </button>
+              </a>
             </div>
           </div>
           <div class="card-content">
@@ -847,44 +847,41 @@
               <span class="meta-dot"></span>
               <span>2 Months</span>
             </div>
-            <h3 class="card-title">FitTrack Pro Mobile App</h3>
+            <h3 class="card-title">Home Services Booking Platform</h3>
             <p class="card-description">
-              Cross-platform fitness tracking application with real-time
-              analytics and social features.
+              A modern service booking platform developed for Taqwa Services,
+              designed to help users easily book professional home and
+              maintenance services online. The website focuses on smooth user
+              experience, fast service selection, and reliable customer
+              interaction.
             </p>
             <div class="tech-tags">
-              <span class="tech-tag">React Native</span>
-              <span class="tech-tag">Firebase</span>
-              <span class="tech-tag">Redux</span>
+              <span class="tech-tag">Html</span>
+              <span class="tech-tag">Css</span>
+              <span class="tech-tag">JavaScript</span>
             </div>
             <div class="card-footer">
               <div class="project-stat">
                 <i class="fas fa-download"></i>
                 <span>50K+ Downloads</span>
               </div>
-              <div class="card-actions">
-                <a href="#" class="action-btn"
-                  ><i class="fas fa-external-link-alt"></i
-                ></a>
-                <a href="#" class="action-btn"><i class="fab fa-github"></i></a>
-              </div>
             </div>
           </div>
         </div>
 
         <!-- Project 3 -->
-        <div class="project-card" data-category="design">
+        <div class="project-card" data-category="design" data-link="#">
           <div class="card-image-wrapper">
             <img
-              src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&q=80"
+              src="assets/Crave Nest.png"
               alt="Brand Identity"
               class="card-image"
             />
             <span class="category-pill">Shopify Design</span>
             <div class="image-overlay">
-              <button class="view-btn">
+              <span class="view-btn">
                 View Project <i class="fas fa-arrow-right"></i>
-              </button>
+              </span>
             </div>
           </div>
           <div class="card-content">
@@ -893,46 +890,41 @@
               <span class="meta-dot"></span>
               <span>1 Month</span>
             </div>
-            <h3 class="card-title">TechStart Brand Identity</h3>
+            <h3 class="card-title">Cravenest Shopify Store Development</h3>
             <p class="card-description">
-              Complete brand redesign including logo, design system, and
-              marketing collateral.
+              Developed a modern Shopify e-commerce store for Cravenest with a
+              clean product layout, optimized shopping experience, and
+              responsive design. The project focused on smooth navigation,
+              attractive product presentation, and secure checkout.
             </p>
             <div class="tech-tags">
-              <span class="tech-tag">Figma</span>
-              <span class="tech-tag">Illustrator</span>
-              <span class="tech-tag">After Effects</span>
+              <span class="tech-tag">Shopify</span>
+              <span class="tech-tag">Liquid</span>
+              <span class="tech-tag">CSS</span>
             </div>
             <div class="card-footer">
               <div class="project-stat">
                 <i class="fas fa-heart"></i>
                 <span>2.3K Likes</span>
               </div>
-              <div class="card-actions">
-                <a href="#" class="action-btn"
-                  ><i class="fas fa-external-link-alt"></i
-                ></a>
-                <a href="#" class="action-btn"
-                  ><i class="fab fa-dribbble"></i
-                ></a>
-              </div>
             </div>
           </div>
         </div>
 
         <!-- Project 4 -->
-        <div class="project-card" data-category="web">
+        <div class="project-card" data-category="web" data-link="#">
           <div class="card-image-wrapper">
-            <img
-              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80"
-              alt="Dashboard"
-              class="card-image"
-            />
+            <img src="assets/Bubulab.png" alt="Dashboard" class="card-image" />
             <span class="category-pill">Shopify Design</span>
             <div class="image-overlay">
-              <button class="view-btn">
+              <a
+                href="https://www.bubulabstore.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="view-btn"
+              >
                 View Project <i class="fas fa-arrow-right"></i>
-              </button>
+              </a>
             </div>
           </div>
           <div class="card-content">
@@ -941,45 +933,45 @@
               <span class="meta-dot"></span>
               <span>4 Months</span>
             </div>
-            <h3 class="card-title">Analytics Dashboard Pro</h3>
+            <h3 class="card-title">Bubulab Beauty E-Commerce Store</h3>
             <p class="card-description">
-              Real-time data visualization platform with customizable widgets
-              and reporting tools.
+              Developed a modern e-commerce platform for Bubulab Store focused
+              on beauty and skincare products. The website features elegant
+              product presentation, optimized product pages, smooth navigation,
+              and a secure checkout experience to enhance online shopping.
             </p>
             <div class="tech-tags">
-              <span class="tech-tag">Vue.js</span>
-              <span class="tech-tag">D3.js</span>
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">Shopify</span>
+              <span class="tech-tag">Liquid</span>
+              <span class="tech-tag">CSS</span>
             </div>
             <div class="card-footer">
               <div class="project-stat">
                 <i class="fas fa-users"></i>
                 <span>5K Users</span>
               </div>
-              <div class="card-actions">
-                <a href="#" class="action-btn"
-                  ><i class="fas fa-external-link-alt"></i
-                ></a>
-                <a href="#" class="action-btn"><i class="fab fa-github"></i></a>
-              </div>
             </div>
           </div>
         </div>
 
         <!-- Project 5 -->
-        <div class="project-card" data-category="ecommerce web">
+        <div class="project-card" data-category="ecommerce web" data-link="#">
           <div class="card-image-wrapper">
             <img
-              src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80"
+              src="assets/Glixxy.png"
               alt="Fashion Store"
               class="card-image"
             />
             <span class="category-pill">E-Commerce</span>
             <div class="image-overlay">
-              <button class="view-btn">
+              <a
+                href="https://glixxy.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="view-btn"
+              >
                 View Project <i class="fas fa-arrow-right"></i>
-              </button>
+              </a>
             </div>
           </div>
           <div class="card-content">
@@ -988,47 +980,42 @@
               <span class="meta-dot"></span>
               <span>2.5 Months</span>
             </div>
-            <h3 class="card-title">Fashion Forward Store</h3>
+            <h3 class="card-title">Glixxy Fashion E-Commerce Store</h3>
             <p class="card-description">
-              Modern fashion e-commerce with AR try-on features and AI styling
-              assistant.
+              Developed a modern Shopify fashion store for Glixxy focused on
+              stylish product presentation and a smooth online shopping
+              experience. The store includes responsive design, optimized
+              product pages, and seamless checkout to improve customer
+              engagement and conversions.
             </p>
             <div class="tech-tags">
               <span class="tech-tag">Shopify</span>
               <span class="tech-tag">Liquid</span>
-              <span class="tech-tag">Three.js</span>
-              <span class="tech-tag">AI</span>
+              <span class="tech-tag">CSS</span>
             </div>
             <div class="card-footer">
               <div class="project-stat">
                 <i class="fas fa-shopping-bag"></i>
-                <span>$2M Sales</span>
-              </div>
-              <div class="card-actions">
-                <a href="#" class="action-btn"
-                  ><i class="fas fa-external-link-alt"></i
-                ></a>
-                <a href="#" class="action-btn"
-                  ><i class="fas fa-file-alt"></i
-                ></a>
+                <span> 50K+ Sales</span>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Project 6 -->
-        <div class="project-card" data-category="app design">
+        <div class="project-card" data-category="app design" data-link="#">
           <div class="card-image-wrapper">
-            <img
-              src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&q=80"
-              alt="Social App"
-              class="card-image"
-            />
+            <img src="assets/No bull.png" alt="Social App" class="card-image" />
             <span class="category-pill">Shopify Design</span>
             <div class="image-overlay">
-              <button class="view-btn">
+              <a
+                href="https://nobullproject.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="view-btn"
+              >
                 View Project <i class="fas fa-arrow-right"></i>
-              </button>
+              </a>
             </div>
           </div>
           <div class="card-content">
@@ -1037,30 +1024,22 @@
               <span class="meta-dot"></span>
               <span>5 Months</span>
             </div>
-            <h3 class="card-title">Connect Social Platform</h3>
+            <h3 class="card-title">NoBull Social Platform</h3>
             <p class="card-description">
-              Next-gen social media app with video-first approach and creator
-              monetization.
+              Developed a next-gen social media platform for NoBull Project with
+              a video-first approach and integrated creator monetization. The
+              app offers real-time video streaming, seamless interactions, and a
+              scalable backend for high performance.
             </p>
             <div class="tech-tags">
               <span class="tech-tag">Flutter</span>
               <span class="tech-tag">AWS</span>
               <span class="tech-tag">WebRTC</span>
-              <span class="tech-tag">GraphQL</span>
             </div>
             <div class="card-footer">
               <div class="project-stat">
                 <i class="fas fa-star"></i>
                 <span>4.9 Rating</span>
-              </div>
-              <div class="card-actions">
-                <a href="#" class="action-btn"
-                  ><i class="fas fa-external-link-alt"></i
-                ></a>
-                <a href="#" class="action-btn"><i class="fab fa-github"></i></a>
-                <a href="#" class="action-btn"
-                  ><i class="fab fa-app-store"></i
-                ></a>
               </div>
             </div>
           </div>
@@ -1134,11 +1113,18 @@
         });
       });
 
-      // View Button Click
-      document.querySelectorAll(".view-btn").forEach((btn) => {
-        btn.addEventListener("click", (e) => {
-          e.stopPropagation();
-          alert("Project details coming soon!");
+      // Project Card Click - Navigate to link
+      projectCards.forEach((card) => {
+        card.addEventListener("click", (e) => {
+          // Agar action buttons ya links click hue toh card click nahi hoga
+          if (e.target.closest(".action-btn") || e.target.closest("a")) {
+            return;
+          }
+
+          const link = card.getAttribute("data-link");
+          if (link && link !== "#") {
+            window.open(link, "_blank");
+          }
         });
       });
 
