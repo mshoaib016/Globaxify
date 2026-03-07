@@ -6408,11 +6408,11 @@ body {
 }
 
 .footer-logo-img {
-  height: 150px;
-  width: auto;
-  filter: brightness(1);
-  margin-bottom: -25px;
-  margin-top: -50px;
+ height: 150px;
+    width: auto;
+    margin-top: -20px;
+    margin-left: 50px;
+    filter: brightness(1);
 }
 
 .footer-logo a {
@@ -6424,12 +6424,15 @@ body {
 .footer-desc {
   color: #94a3b8;
   line-height: 1.8;
+  margin-top: -25px;
+  margin-left: 70px;
   margin-bottom: 20px;
 }
 
 /* ===== FOOTER SOCIAL LINKS - ORIGINAL BRAND COLORS ===== */
 .footer-social {
   display: flex;
+  margin-left: 65px;
   gap: 15px;
 }
 
