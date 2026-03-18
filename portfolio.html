@@ -1,176 +1,1635 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
-    />
-    <title>Ahmad Iqbal | Shopify Expert & E-commerce Architect</title>
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" type="image/png" href="assets/fav icon.png" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Ahmad Iqbal | Shopify Expert & E-commerce Architect</title>
 
-    <style>
-      :root {
-        --primary: #0ea5e9;
-        --primary-light: #38bdf8;
-        --primary-dark: #0284c7;
-        --accent: #2563eb;
-        --navy: #0f172a;
-        --slate: #64748b;
-        --text: #475569;
-        --bg: #f8fafc;
-        --white: #ffffff;
-        --border: #e2e8f0;
-        --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-        --glow: 0 0 30px rgba(14, 165, 233, 0.3);
-        --shopify: #95bf47;
-        --upwork: #14a800;
-        --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="icon" type="image/png" href="assets/fav icon.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <style>
+    :root {
+      --primary: #0ea5e9;
+      --primary-light: #38bdf8;
+      --primary-dark: #0284c7;
+      --accent: #2563eb;
+      --navy: #0f172a;
+      --slate: #64748b;
+      --text: #475569;
+      --bg: #f8fafc;
+      --white: #ffffff;
+      --border: #e2e8f0;
+      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+      --glow: 0 0 30px rgba(14, 165, 233, 0.3);
+      --shopify: #95bf47;
+      --upwork: #14a800;
+      --ease: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      background: var(--white);
+      color: var(--navy);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Background Animation */
+    .bg-shapes {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .shape {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(60px);
+      opacity: 0.5;
+      animation: float 15s infinite ease-in-out;
+    }
+
+    .shape-1 {
+      width: 400px;
+      height: 400px;
+      background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+      top: -10%;
+      left: -5%;
+    }
+
+    .shape-2 {
+      width: 300px;
+      height: 300px;
+      background: linear-gradient(135deg, #818cf8, #6366f1);
+      top: 40%;
+      right: -5%;
+      animation-delay: -5s;
+    }
+
+    .shape-3 {
+      width: 250px;
+      height: 250px;
+      background: linear-gradient(135deg, #c084fc, #a855f7);
+      bottom: 10%;
+      left: 20%;
+      animation-delay: -10s;
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translate(0, 0) scale(1);
       }
 
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+      50% {
+        transform: translate(20px, -20px) scale(1.05);
+      }
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ==================== NAVBAR ==================== */
+    .navbar {
+      position: fixed;
+      top: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 92%;
+      max-width: 1100px;
+      height: 64px;
+      padding: 0 24px;
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      backdrop-filter: blur(12px);
+      border-radius: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .logo img {
+      height: 80px;
+      width: auto;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-menu a {
+      text-decoration: none;
+      color: #94a3b8;
+      font-size: 14px;
+      font-weight: 600;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+
+    .nav-menu a::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      transition: width 0.3s ease;
+    }
+
+    .nav-menu a:hover::after,
+    .nav-menu a.active::after {
+      width: 100%;
+    }
+
+    .nav-menu a:hover,
+    .nav-menu a.active {
+      color: var(--primary-light);
+    }
+
+    .nav-cta {
+      padding: 10px 24px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .nav-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--glow);
+    }
+
+    /* Mobile Menu Button - FIXED */
+    .menu-btn {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      z-index: 1001;
+    }
+
+    .menu-btn span {
+      width: 24px;
+      height: 2px;
+      background: white;
+      border-radius: 2px;
+      transition: 0.3s ease;
+      display: block;
+    }
+
+    .menu-btn.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-btn.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-btn.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* ==================== HERO SECTION ==================== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 120px 0 60px;
+    }
+
+    .hero-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero-content {
+      max-width: 540px;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: rgba(14, 165, 233, 0.1);
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 24px;
+    }
+
+    .hero-title {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      letter-spacing: -2px;
+    }
+
+    .hero-title span {
+      color: var(--primary);
+    }
+
+    .hero-desc {
+      color: var(--text);
+      font-size: clamp(1rem, 2vw, 1.1rem);
+      margin-bottom: 32px;
+      line-height: 1.7;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .btn-main {
+      padding: 14px 28px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .btn-main:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--glow);
+    }
+
+    .btn-outline {
+      padding: 14px 28px;
+      border: 2px solid var(--border);
+      color: var(--navy);
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .stat-value {
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 13px;
+      color: var(--slate);
+      margin-top: 4px;
+    }
+
+    .hero-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-image-box {
+      position: relative;
+      width: 100%;
+      max-width: 480px;
+    }
+
+    .hero-img {
+      width: 100%;
+      border-radius: 24px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      position: relative;
+      z-index: 2;
+      border: 4px solid white;
+    }
+
+    .hero-img-ring {
+      position: absolute;
+      inset: -20px;
+      border: 2px solid var(--primary-light);
+      border-radius: 32px;
+      opacity: 0.3;
+      animation: pulse-ring 3s infinite;
+    }
+
+    @keyframes pulse-ring {
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 0.3;
       }
 
-      html {
-        scroll-behavior: smooth;
-        font-size: 16px;
-      }
-
-      body {
-        font-family: "Plus Jakarta Sans", sans-serif;
-        background: var(--white);
-        color: var(--navy);
-        line-height: 1.6;
-        overflow-x: hidden;
-      }
-
-      /* Background Animation */
-      .bg-shapes {
-        position: fixed;
-        inset: 0;
-        z-index: -1;
-        overflow: hidden;
-        pointer-events: none;
-      }
-
-      .shape {
-        position: absolute;
-        border-radius: 50%;
-        filter: blur(60px);
+      50% {
+        transform: scale(1.02);
         opacity: 0.5;
-        animation: float 15s infinite ease-in-out;
+      }
+    }
+
+    .floating-tag {
+      position: absolute;
+      background: white;
+      padding: 12px 16px;
+      border-radius: 12px;
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      z-index: 3;
+      animation: float-tag 4s infinite ease-in-out;
+    }
+
+    .tag-1 {
+      top: 20px;
+      right: -20px;
+      animation-delay: 0s;
+    }
+
+    .tag-2 {
+      bottom: 40px;
+      left: -30px;
+      animation-delay: -2s;
+    }
+
+    @keyframes float-tag {
+
+      0%,
+      100% {
+        transform: translateY(0);
       }
 
-      .shape-1 {
-        width: 400px;
-        height: 400px;
-        background: linear-gradient(135deg, #38bdf8, #0ea5e9);
-        top: -10%;
-        left: -5%;
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .tag-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+    }
+
+    .tag-icon.green {
+      background: rgba(149, 191, 71, 0.1);
+      color: var(--shopify);
+    }
+
+    .tag-icon.blue {
+      background: rgba(20, 168, 0, 0.1);
+      color: var(--upwork);
+    }
+
+    /* ==================== UPWORK SECTION ==================== */
+    .upwork-section {
+      padding: 50px 0 50px;
+      background: var(--white);
+    }
+
+    .upwork-card {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 48px;
+      align-items: center;
+      background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+      border-radius: 24px;
+      padding: 48px;
+      border: 1px solid rgba(20, 168, 0, 0.2);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .upwork-card::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle,
+          rgba(20, 168, 0, 0.1) 0%,
+          transparent 70%);
+      border-radius: 50%;
+    }
+
+    .upwork-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: rgba(20, 168, 0, 0.1);
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--upwork);
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .upwork-content h2 {
+      font-size: clamp(1.5rem, 4vw, 2.2rem);
+      font-weight: 800;
+      margin-bottom: 12px;
+      color: var(--navy);
+      position: relative;
+      z-index: 1;
+    }
+
+    .upwork-content h2 span {
+      color: var(--shopify);
+    }
+
+    .upwork-content>p {
+      color: var(--text);
+      font-size: 15px;
+      margin-bottom: 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .upwork-stats {
+      display: flex;
+      gap: 32px;
+      margin-bottom: 24px;
+      position: relative;
+      z-index: 1;
+      flex-wrap: wrap;
+    }
+
+    .upwork-stat {
+      text-align: center;
+    }
+
+    .upwork-stat strong {
+      display: block;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 800;
+      color: var(--upwork);
+      line-height: 1;
+    }
+
+    .upwork-stat span {
+      font-size: 13px;
+      color: var(--slate);
+    }
+
+    .upwork-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      background: var(--upwork);
+      color: white;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+      position: relative;
+      z-index: 1;
+    }
+
+    .upwork-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(20, 168, 0, 0.3);
+    }
+
+    .upwork-visual {
+      text-align: center;
+      padding: 32px;
+      background: white;
+      border-radius: 20px;
+      border: 2px dashed var(--primary-light);
+      position: relative;
+      z-index: 1;
+      box-shadow: var(--shadow);
+    }
+
+    .upwork-visual i {
+      font-size: 3rem;
+      color: var(--primary);
+      margin-bottom: 16px;
+    }
+
+    .upwork-visual h4 {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+      color: var(--navy);
+    }
+
+    .upwork-visual p {
+      font-size: 14px;
+      color: var(--slate);
+    }
+
+    /* ==================== PROJECTS STACK SECTION ==================== */
+    .section-stack {
+      padding: 100px 0;
+      background: linear-gradient(180deg, var(--bg) 0%, var(--white) 100%);
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-tag {
+      display: inline-block;
+      padding: 6px 16px;
+      background: rgba(14, 165, 233, 0.1);
+      color: var(--primary);
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+
+    .section-subtitle {
+      color: var(--slate);
+      font-size: 1.1rem;
+    }
+
+    .stack-container {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .stack-card {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 32px;
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: all 0.4s ease;
+      border: 1px solid var(--border);
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .stack-card:hover {
+      transform: translateX(10px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary-light);
+    }
+
+    .stack-image {
+      position: relative;
+      height: 100%;
+      min-height: 200px;
+      object-fit: fill;
+      padding: 0px;
+    }
+
+    .stack-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+    }
+
+    .stack-badge {
+      position: absolute;
+      bottom: 16px;
+      left: 16px;
+      padding: 6px 12px;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .stack-content {
+      padding: 28px 28px 28px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .stack-content h3 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--navy);
+    }
+
+    .stack-content p {
+      color: var(--text);
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .stack-tech {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .tech-pill {
+      padding: 6px 14px;
+      background: var(--bg);
+      color: var(--primary);
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .stack-arrow {
+      margin-left: auto;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      transition: all 0.3s ease;
+    }
+
+    .stack-card:hover .stack-arrow {
+      background: var(--primary);
+      color: white;
+      transform: translateX(5px);
+    }
+
+    /* ==================== HEX GRID SECTION ==================== */
+    .section-hex {
+      padding: 100px 0;
+      background: var(--navy);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .section-hex::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230ea5e9' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    .hex-header {
+      text-align: center;
+      margin-bottom: 60px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hex-header .section-tag {
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--primary-light);
+    }
+
+    .hex-header .section-title {
+      color: white;
+    }
+
+    .hex-header .section-subtitle {
+      color: var(--slate);
+    }
+
+    .hex-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      position: relative;
+      z-index: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .hex-card {
+      background: white;
+      border-radius: 24px;
+      overflow: hidden;
+      position: relative;
+      transition: all 0.4s ease;
+      cursor: pointer;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      z-index: 1;
+    }
+
+    .hex-card:hover {
+      transform: translateY(-15px) rotate(2deg);
+      box-shadow: 0 30px 60px rgba(14, 165, 233, 0.2);
+    }
+
+    .hex-image {
+      height: 160px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hex-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .hex-card:hover .hex-image img {
+      transform: scale(1.1);
+    }
+
+    .hex-content {
+      padding: 20px;
+      position: relative;
+      z-index: 2;
+      background: white;
+    }
+
+    .hex-content h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .hex-content p {
+      font-size: 13px;
+      color: var(--slate);
+      line-height: 1.5;
+    }
+
+    .hex-icon {
+      position: absolute;
+      top: 140px;
+      right: 20px;
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 16px;
+      box-shadow: var(--glow);
+      z-index: 3;
+      pointer-events: none;
+    }
+
+    /* ==================== ACCORDION SECTION ==================== */
+    .section-accordion {
+      padding: 100px 0;
+      background: linear-gradient(180deg, var(--white) 0%, var(--bg) 100%);
+    }
+
+    .accordion-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      gap: 16px;
+      height: 500px;
+    }
+
+    .accordion-item {
+      flex: 1;
+      background: white;
+      border-radius: 24px;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      transition: flex 0.5s var(--ease);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      min-width: 80px;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .accordion-item:hover,
+    .accordion-item.active {
+      flex: 3;
+    }
+
+    .accordion-image {
+      position: absolute;
+      inset: 0;
+    }
+
+    .accordion-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .accordion-item:hover .accordion-image img {
+      transform: scale(1.05);
+    }
+
+    .accordion-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top,
+          rgba(15, 23, 42, 0.9) 0%,
+          transparent 60%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 24px;
+    }
+
+    .accordion-content h3 {
+      color: white;
+      font-size: clamp(1rem, 2vw, 1.5rem);
+      font-weight: 700;
+      margin-bottom: 8px;
+      white-space: nowrap;
+    }
+
+    .accordion-content p {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 14px;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.3s ease;
+      max-width: 300px;
+    }
+
+    .accordion-item:hover .accordion-content p,
+    .accordion-item.active .accordion-content p {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .accordion-tag {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      padding: 8px 16px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    /* ==================== SERVICES SECTION ==================== */
+    .section-services {
+      padding: 100px 0;
+      background: var(--white);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+
+    .service-box {
+      padding: 32px;
+      background: var(--bg);
+      border-radius: 20px;
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+    }
+
+    .service-box:hover {
+      background: white;
+      border-color: var(--primary-light);
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-5px);
+    }
+
+    .service-icon {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg,
+          var(--primary-light),
+          var(--primary));
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .service-box:hover .service-icon {
+      transform: scale(1.1) rotate(5deg);
+    }
+
+    .service-box h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--navy);
+    }
+
+    .service-box p {
+      font-size: 14px;
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* ==================== REVIEWS SECTION ==================== */
+    .reviews-section {
+      padding: 100px 0;
+      background: linear-gradient(180deg, var(--bg) 0%, var(--white) 100%);
+      overflow: hidden;
+    }
+
+    .reviews-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    .review-card {
+      background: white;
+      border-radius: 20px;
+      padding: 32px;
+      box-shadow: var(--shadow);
+      transition: all 0.4s ease;
+      border: 1px solid var(--border);
+      position: relative;
+    }
+
+    .review-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary-light);
+    }
+
+    .review-stars {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 16px;
+    }
+
+    .review-stars i {
+      color: #fbbf24;
+      font-size: 14px;
+    }
+
+    .review-text {
+      color: var(--text);
+      font-size: 15px;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .review-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .review-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg,
+          var(--primary-light),
+          var(--primary));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .review-info h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 2px;
+    }
+
+    .review-info span {
+      font-size: 13px;
+      color: var(--slate);
+    }
+
+    .review-badge {
+      position: absolute;
+      top: -12px;
+      right: 24px;
+      padding: 6px 14px;
+      background: var(--upwork);
+      color: white;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* ==================== FAQ SECTION ==================== */
+    .faq-section {
+      padding: 100px 0;
+      background: var(--white);
+    }
+
+    .faq-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .faq-left {
+      position: sticky;
+      top: 100px;
+    }
+
+    .faq-visual {
+      background: linear-gradient(135deg,
+          var(--primary-light),
+          var(--primary));
+      border-radius: 24px;
+      padding: 40px;
+      color: white;
+      text-align: center;
+      box-shadow: var(--glow);
+    }
+
+    .faq-visual i {
+      font-size: 4rem;
+      margin-bottom: 20px;
+      opacity: 0.9;
+    }
+
+    .faq-visual h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .faq-visual p {
+      font-size: 14px;
+      opacity: 0.9;
+      line-height: 1.6;
+    }
+
+    .faq-contact {
+      margin-top: 24px;
+      padding: 20px;
+      background: white;
+      border-radius: 16px;
+      text-align: center;
+    }
+
+    .faq-contact p {
+      color: var(--text);
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+
+    .faq-contact a {
+      color: var(--primary);
+      font-weight: 700;
+      text-decoration: none;
+      font-size: clamp(1rem, 2vw, 1.125rem);
+      word-break: break-word;
+    }
+
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .faq-item {
+      background: var(--bg);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+    }
+
+    .faq-item:hover {
+      border-color: var(--primary-light);
+    }
+
+    .faq-item.active {
+      background: white;
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary-light);
+    }
+
+    .faq-question {
+      padding: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--navy);
+      font-size: clamp(0.9rem, 2vw, 1rem);
+      gap: 16px;
+    }
+
+    .faq-icon {
+      width: 32px;
+      height: 32px;
+      background: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      font-size: 12px;
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow);
+      flex-shrink: 0;
+    }
+
+    .faq-item.active .faq-icon {
+      background: var(--primary);
+      color: white;
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition:
+        max-height 0.4s ease,
+        padding 0.4s ease;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 300px;
+      padding: 0 24px 24px;
+    }
+
+    .faq-answer p {
+      color: var(--text);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    /* ==================== FOOTER ==================== */
+    .footer {
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      color: white;
+      padding: 80px 0 30px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .footer::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .footer-logo-img {
+      height: 150px;
+      width: auto;
+      margin-top: -50px;
+      margin-left: 25px;
+      margin-bottom: -22px;
+      filter: brightness(1);
+    }
+
+    .footer-logo a {
+      text-decoration: none;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .footer-desc {
+      color: #94a3b8;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      font-size: clamp(0.9rem, 2vw, 1rem);
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 15px;
+      margin-left: 35px;
+      flex-wrap: wrap;
+    }
+
+    .footer-social a {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .footer-social a:nth-child(1) {
+      background: #1877f2;
+    }
+
+    .footer-social a:nth-child(1):hover {
+      background: #166fe5;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(24, 119, 242, 0.5);
+    }
+
+    .footer-social a:nth-child(2) {
+      background: #000000;
+    }
+
+    .footer-social a:nth-child(2):hover {
+      background: #1a1a1a;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    }
+
+    .footer-social a:nth-child(3) {
+      background: linear-gradient(45deg,
+          #f09433 0%,
+          #e6683c 25%,
+          #dc2743 50%,
+          #cc2366 75%,
+          #bc1888 100%);
+    }
+
+    .footer-social a:nth-child(3):hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(220, 39, 67, 0.5);
+    }
+
+    .footer-section h3 {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      color: white;
+      position: relative;
+      display: inline-block;
+    }
+
+    .footer-section h3::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 12px;
+    }
+
+    .footer-links a {
+      color: #94a3b8;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: inline-block;
+      font-size: clamp(0.875rem, 2vw, 1rem);
+    }
+
+    .footer-links a:hover {
+      color: #3b82f6;
+      transform: translateX(5px);
+    }
+
+    .newsletter-form {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+      flex-wrap: wrap;
+    }
+
+    .newsletter-form input {
+      flex: 1;
+      min-width: 200px;
+      padding: 12px 15px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      outline: none;
+      font-size: 14px;
+    }
+
+    .newsletter-form input::placeholder {
+      color: #94a3b8;
+    }
+
+    .newsletter-form button {
+      padding: 12px 20px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      border: none;
+      border-radius: 8px;
+      color: white;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .newsletter-form button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(37, 99, 235, 0.5);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: #94a3b8;
+      font-size: clamp(0.8rem, 2vw, 0.9rem);
+    }
+
+    .footer-bottom i {
+      color: #ef4444;
+      animation: heartbeat 1.5s infinite;
+    }
+
+    @keyframes heartbeat {
+
+      0%,
+      100% {
+        transform: scale(1);
       }
 
-      .shape-2 {
-        width: 300px;
-        height: 300px;
-        background: linear-gradient(135deg, #818cf8, #6366f1);
-        top: 40%;
-        right: -5%;
-        animation-delay: -5s;
+      50% {
+        transform: scale(1.2);
+      }
+    }
+
+    /* Back to Top Button */
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      border: none;
+      border-radius: 50%;
+      color: white;
+      font-size: 1.2rem;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: colorChange 8s infinite;
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-to-top:hover {
+      transform: translateY(-5px) scale(1.1);
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+      animation-play-state: paused;
+    }
+
+    @keyframes colorChange {
+      0% {
+        background: linear-gradient(135deg, #2563eb, #3b82f6);
+        box-shadow: 0 0 20px rgba(37, 99, 235, 0.6);
       }
 
-      .shape-3 {
-        width: 250px;
-        height: 250px;
-        background: linear-gradient(135deg, #c084fc, #a855f7);
-        bottom: 10%;
-        left: 20%;
-        animation-delay: -10s;
+      25% {
+        background: linear-gradient(135deg, #7c3aed, #a855f7);
+        box-shadow: 0 0 20px rgba(124, 58, 237, 0.6);
       }
 
-      @keyframes float {
-        0%,
-        100% {
-          transform: translate(0, 0) scale(1);
-        }
-        50% {
-          transform: translate(20px, -20px) scale(1.05);
-        }
+      50% {
+        background: linear-gradient(135deg, #dc2626, #ef4444);
+        box-shadow: 0 0 20px rgba(220, 38, 38, 0.6);
       }
 
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
+      75% {
+        background: linear-gradient(135deg, #059669, #10b981);
+        box-shadow: 0 0 20px rgba(5, 150, 105, 0.6);
       }
 
-      /* ==================== NAVBAR ==================== */
+      100% {
+        background: linear-gradient(135deg, #2563eb, #3b82f6);
+        box-shadow: 0 0 20px rgba(37, 99, 235, 0.6);
+      }
+    }
+
+    /* ==========================================================================
+         RESPONSIVE MEDIA QUERIES - TABLET (768px - 1023px)
+         ========================================================================== */
+    @media (max-width: 1023px) {
       .navbar {
-        position: fixed;
-        top: 16px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 92%;
-        max-width: 1100px;
-        height: 64px;
-        padding: 0 24px;
-        background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-        backdrop-filter: blur(12px);
-        border-radius: 16px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        z-index: 1000;
-        box-shadow: var(--shadow);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-      }
-
-      .logo img {
-        height: 80px;
-        width: auto;
+        width: 95%;
+        padding: 0 16px;
       }
 
       .nav-menu {
-        display: flex;
-        gap: 32px;
-        list-style: none;
+        gap: 20px;
       }
 
       .nav-menu a {
-        text-decoration: none;
-        color: #94a3b8;
-        font-size: 14px;
-        font-weight: 600;
-        transition: color 0.3s ease;
-        position: relative;
+        font-size: 13px;
+      }
+
+      .hero-wrapper {
+        gap: 40px;
+      }
+
+      .upwork-card {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .upwork-visual {
+        order: -1;
+        max-width: 300px;
+        margin: 0 auto;
+      }
+
+      .faq-wrapper {
+        gap: 40px;
+      }
+    }
+
+    /* ==========================================================================
+         RESPONSIVE MEDIA QUERIES - MOBILE (< 768px) - FIXED HAMBURGER MENU
+         ========================================================================== */
+    @media (max-width: 767px) {
+
+      /* Navigation Mobile - FIXED */
+      .menu-btn {
+        display: flex !important;
+      }
+
+      .nav-menu {
+        position: fixed;
+        top: 80px;
+        left: 50%;
+        transform: translateX(-50%) translateY(-150%);
+        width: 92%;
+        background: rgba(15, 23, 42, 0.98);
+        backdrop-filter: blur(12px);
+        border-radius: 16px;
+        flex-direction: column;
+        padding: 24px;
+        gap: 16px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s ease;
+        z-index: 999;
+      }
+
+      .nav-menu.active {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .nav-menu a {
+        font-size: 16px;
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        color: white;
+        display: block;
+        width: 100%;
       }
 
       .nav-menu a::after {
-        content: "";
-        position: absolute;
-        bottom: -4px;
-        left: 0;
-        width: 0;
-        height: 2px;
-        background: var(--primary);
-        transition: width 0.3s ease;
+        display: none;
       }
 
-      .nav-menu a:hover::after,
-      .nav-menu a.active::after {
-        width: 100%;
+      .nav-menu li:last-child a {
+        border-bottom: none;
       }
 
       .nav-menu a:hover,
@@ -179,3098 +1638,1514 @@
       }
 
       .nav-cta {
-        padding: 10px 24px;
-        background: linear-gradient(135deg, var(--primary), var(--accent));
-        color: white;
-        border-radius: 50px;
-        font-size: 13px;
-        font-weight: 600;
-        text-decoration: none;
-        transition:
-          transform 0.3s ease,
-          box-shadow 0.3s ease;
-        white-space: nowrap;
-      }
-
-      .nav-cta:hover {
-        transform: translateY(-2px);
-        box-shadow: var(--glow);
-      }
-
-      /* Mobile Menu Button - FIXED */
-      .menu-btn {
         display: none;
-        flex-direction: column;
-        gap: 5px;
-        background: none;
-        border: none;
-        cursor: pointer;
-        padding: 8px;
-        z-index: 1001;
       }
 
-      .menu-btn span {
-        width: 24px;
-        height: 2px;
-        background: white;
-        border-radius: 2px;
-        transition: 0.3s ease;
-        display: block;
-      }
-
-      .menu-btn.active span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-      }
-
-      .menu-btn.active span:nth-child(2) {
-        opacity: 0;
-      }
-
-      .menu-btn.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px);
-      }
-
-      /* ==================== HERO SECTION ==================== */
+      /* Hero Mobile */
       .hero {
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        padding: 120px 0 60px;
+        padding: 100px 0 40px;
+        min-height: auto;
       }
 
       .hero-wrapper {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 60px;
-        align-items: center;
+        grid-template-columns: 1fr;
+        text-align: center;
       }
 
       .hero-content {
-        max-width: 540px;
-      }
-
-      .hero-tag {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 8px 16px;
-        background: rgba(14, 165, 233, 0.1);
-        border-radius: 50px;
-        font-size: 12px;
-        font-weight: 700;
-        color: var(--primary);
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        margin-bottom: 24px;
-      }
-
-      .hero-title {
-        font-size: clamp(2rem, 5vw, 3.5rem);
-        font-weight: 800;
-        line-height: 1.1;
-        margin-bottom: 20px;
-        letter-spacing: -2px;
-      }
-
-      .hero-title span {
-        color: var(--primary);
-      }
-
-      .hero-desc {
-        color: var(--text);
-        font-size: clamp(1rem, 2vw, 1.1rem);
-        margin-bottom: 32px;
-        line-height: 1.7;
-      }
-
-      .hero-buttons {
-        display: flex;
-        gap: 16px;
-        margin-bottom: 40px;
-        flex-wrap: wrap;
-      }
-
-      .btn-main {
-        padding: 14px 28px;
-        background: linear-gradient(135deg, var(--primary), var(--accent));
-        color: white;
-        border-radius: 50px;
-        font-weight: 600;
-        font-size: 14px;
-        text-decoration: none;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        transition:
-          transform 0.3s ease,
-          box-shadow 0.3s ease;
-        white-space: nowrap;
-      }
-
-      .btn-main:hover {
-        transform: translateY(-3px);
-        box-shadow: var(--glow);
-      }
-
-      .btn-outline {
-        padding: 14px 28px;
-        border: 2px solid var(--border);
-        color: var(--navy);
-        border-radius: 50px;
-        font-weight: 600;
-        font-size: 14px;
-        text-decoration: none;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        transition: all 0.3s ease;
-        white-space: nowrap;
-      }
-
-      .btn-outline:hover {
-        border-color: var(--primary);
-        color: var(--primary);
-      }
-
-      .hero-stats {
-        display: flex;
-        gap: 40px;
-        flex-wrap: wrap;
-      }
-
-      .stat-item {
-        display: flex;
-        flex-direction: column;
-      }
-
-      .stat-value {
-        font-size: clamp(1.5rem, 4vw, 2rem);
-        font-weight: 800;
-        color: var(--primary);
-        line-height: 1;
-      }
-
-      .stat-label {
-        font-size: 13px;
-        color: var(--slate);
-        margin-top: 4px;
+        max-width: 100%;
+        order: 2;
       }
 
       .hero-visual {
-        position: relative;
-        display: flex;
-        justify-content: center;
+        order: 1;
+        max-width: 300px;
+        margin: 0 auto;
       }
 
       .hero-image-box {
-        position: relative;
-        width: 100%;
-        max-width: 480px;
-      }
-
-      .hero-img {
-        width: 100%;
-        border-radius: 24px;
-        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-        position: relative;
-        z-index: 2;
-        border: 4px solid white;
-      }
-
-      .hero-img-ring {
-        position: absolute;
-        inset: -20px;
-        border: 2px solid var(--primary-light);
-        border-radius: 32px;
-        opacity: 0.3;
-        animation: pulse-ring 3s infinite;
-      }
-
-      @keyframes pulse-ring {
-        0%,
-        100% {
-          transform: scale(1);
-          opacity: 0.3;
-        }
-        50% {
-          transform: scale(1.02);
-          opacity: 0.5;
-        }
+        max-width: 100%;
       }
 
       .floating-tag {
-        position: absolute;
-        background: white;
-        padding: 12px 16px;
-        border-radius: 12px;
-        box-shadow: var(--shadow-lg);
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        font-size: 13px;
-        font-weight: 600;
-        z-index: 3;
-        animation: float-tag 4s infinite ease-in-out;
+        display: none;
       }
 
-      .tag-1 {
-        top: 20px;
-        right: -20px;
-        animation-delay: 0s;
-      }
-
-      .tag-2 {
-        bottom: 40px;
-        left: -30px;
-        animation-delay: -2s;
-      }
-
-      @keyframes float-tag {
-        0%,
-        100% {
-          transform: translateY(0);
-        }
-        50% {
-          transform: translateY(-10px);
-        }
-      }
-
-      .tag-icon {
-        width: 32px;
-        height: 32px;
-        border-radius: 8px;
-        display: flex;
-        align-items: center;
+      .hero-buttons {
         justify-content: center;
-        font-size: 14px;
+        flex-direction: column;
+        align-items: center;
       }
 
-      .tag-icon.green {
-        background: rgba(149, 191, 71, 0.1);
-        color: var(--shopify);
+      .btn-main,
+      .btn-outline {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
       }
 
-      .tag-icon.blue {
-        background: rgba(20, 168, 0, 0.1);
-        color: var(--upwork);
+      .hero-stats {
+        justify-content: center;
+        gap: 24px;
       }
 
-      /* ==================== UPWORK SECTION ==================== */
+      /* Upwork Section Mobile */
       .upwork-section {
-        padding: 0 0 80px;
-        background: var(--white);
+        padding: 0 0 60px;
       }
 
       .upwork-card {
-        display: grid;
-        grid-template-columns: 1fr 300px;
-        gap: 48px;
-        align-items: center;
-        background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
-        border-radius: 24px;
-        padding: 48px;
-        border: 1px solid rgba(20, 168, 0, 0.2);
-        position: relative;
-        overflow: hidden;
-      }
-
-      .upwork-card::before {
-        content: "";
-        position: absolute;
-        top: -50%;
-        right: -10%;
-        width: 400px;
-        height: 400px;
-        background: radial-gradient(
-          circle,
-          rgba(20, 168, 0, 0.1) 0%,
-          transparent 70%
-        );
-        border-radius: 50%;
-      }
-
-      .upwork-tag {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 8px 16px;
-        background: rgba(20, 168, 0, 0.1);
-        border-radius: 50px;
-        font-size: 12px;
-        font-weight: 700;
-        color: var(--upwork);
-        margin-bottom: 16px;
-        position: relative;
-        z-index: 1;
-      }
-
-      .upwork-content h2 {
-        font-size: clamp(1.5rem, 4vw, 2.2rem);
-        font-weight: 800;
-        margin-bottom: 12px;
-        color: var(--navy);
-        position: relative;
-        z-index: 1;
-      }
-
-      .upwork-content h2 span {
-        color: var(--shopify);
-      }
-
-      .upwork-content > p {
-        color: var(--text);
-        font-size: 15px;
-        margin-bottom: 24px;
-        position: relative;
-        z-index: 1;
+        padding: 32px 24px;
       }
 
       .upwork-stats {
-        display: flex;
+        justify-content: center;
+        gap: 24px;
+      }
+
+      .upwork-visual {
+        padding: 24px;
+      }
+
+      /* Stack Cards Mobile */
+      .section-stack {
+        padding: 60px 0;
+      }
+
+      .stack-card {
+        grid-template-columns: 1fr;
+      }
+
+      .stack-image {
+        min-height: 200px;
+        height: 200px;
+      }
+
+      .stack-content {
+        padding: 24px;
+      }
+
+      .stack-card:hover {
+        transform: translateY(-5px);
+      }
+
+      /* Hex Grid Mobile */
+      .section-hex {
+        padding: 60px 0;
+      }
+
+      .hex-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      .hex-card:nth-child(even) {
+        margin-top: 0;
+      }
+
+      /* Accordion Mobile */
+      .section-accordion {
+        padding: 60px 0;
+      }
+
+      .accordion-container {
+        flex-direction: column;
+        height: auto;
+        gap: 16px;
+      }
+
+      .accordion-item {
+        min-height: 200px;
+        flex: none !important;
+      }
+
+      .accordion-item.active {
+        flex: none !important;
+        min-height: 300px;
+      }
+
+      .accordion-content h3 {
+        white-space: normal;
+        font-size: 1.2rem;
+      }
+
+      .accordion-content p {
+        opacity: 1;
+        transform: none;
+        font-size: 13px;
+      }
+
+      /* Services Mobile */
+      .section-services {
+        padding: 60px 0;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      /* Reviews Mobile */
+      .reviews-section {
+        padding: 60px 0;
+      }
+
+      .reviews-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .review-card:nth-child(2),
+      .review-card:nth-child(5),
+      .review-card:nth-child(8),
+      .review-card:nth-child(3),
+      .review-card:nth-child(6),
+      .review-card:nth-child(9) {
+        transform: none;
+      }
+
+      .review-card:hover {
+        transform: translateY(-5px);
+      }
+
+      /* FAQ Mobile */
+      .faq-section {
+        padding: 60px 0;
+      }
+
+      .faq-wrapper {
+        grid-template-columns: 1fr;
+      }
+
+      .faq-left {
+        position: static;
+        order: 2;
+      }
+
+      .faq-visual {
+        padding: 32px 24px;
+      }
+
+      .faq-list {
+        order: 1;
+      }
+
+      /* Footer Mobile */
+      .footer {
+        padding: 60px 0 20px;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
         gap: 32px;
-        margin-bottom: 24px;
-        position: relative;
-        z-index: 1;
-        flex-wrap: wrap;
+        text-align: center;
+      }
+
+      .footer-logo {
+        justify-content: center;
+      }
+
+      .footer-logo-img {
+        height: 50px;
+      }
+
+      .footer-social {
+        justify-content: center;
+      }
+
+      .footer-section h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .newsletter-form {
+        flex-direction: column;
+      }
+
+      .newsletter-form input {
+        width: 100%;
+      }
+
+      .newsletter-form button {
+        width: 100%;
+      }
+
+      /* Back to Top Mobile */
+      .back-to-top {
+        width: 44px;
+        height: 44px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 1rem;
+      }
+    }
+
+    /* ==========================================================================
+         RESPONSIVE MEDIA QUERIES - SMALL MOBILE (< 480px)
+         ========================================================================== */
+    @media (max-width: 479px) {
+      .container {
+        padding: 0 16px;
+      }
+
+      .navbar {
+        top: 10px;
+        height: 56px;
+        padding: 0 12px;
+      }
+
+      .logo img {
+        height: 62px;
+      }
+
+      .hero-tag {
+        font-size: 11px;
+        padding: 6px 12px;
+      }
+
+      .stat-value {
+        font-size: 1.5rem;
+      }
+
+      .stat-label {
+        font-size: 12px;
+      }
+
+      .upwork-card {
+        padding: 24px 16px;
+      }
+
+      .upwork-stats {
+        flex-direction: column;
+        gap: 16px;
       }
 
       .upwork-stat {
         text-align: center;
       }
 
-      .upwork-stat strong {
-        display: block;
-        font-size: clamp(1.5rem, 3vw, 2rem);
-        font-weight: 800;
-        color: var(--upwork);
-        line-height: 1;
-      }
-
-      .upwork-stat span {
-        font-size: 13px;
-        color: var(--slate);
-      }
-
-      .upwork-btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 14px 28px;
-        background: var(--upwork);
-        color: white;
-        border-radius: 50px;
-        font-weight: 600;
-        text-decoration: none;
-        transition:
-          transform 0.3s ease,
-          box-shadow 0.3s ease;
-        position: relative;
-        z-index: 1;
-      }
-
-      .upwork-btn:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 10px 30px rgba(20, 168, 0, 0.3);
-      }
-
-      .upwork-visual {
-        text-align: center;
-        padding: 32px;
-        background: white;
-        border-radius: 20px;
-        border: 2px dashed var(--primary-light);
-        position: relative;
-        z-index: 1;
-        box-shadow: var(--shadow);
-      }
-
-      .upwork-visual i {
-        font-size: 3rem;
-        color: var(--primary);
-        margin-bottom: 16px;
-      }
-
-      .upwork-visual h4 {
-        font-size: 1.2rem;
-        margin-bottom: 8px;
-        color: var(--navy);
-      }
-
-      .upwork-visual p {
-        font-size: 14px;
-        color: var(--slate);
-      }
-
-      /* ==================== PROJECTS STACK SECTION ==================== */
-      .section-stack {
-        padding: 100px 0;
-        background: linear-gradient(180deg, var(--bg) 0%, var(--white) 100%);
-      }
-
-      .section-header {
-        text-align: center;
-        margin-bottom: 60px;
-      }
-
-      .section-tag {
-        display: inline-block;
-        padding: 6px 16px;
-        background: rgba(14, 165, 233, 0.1);
-        color: var(--primary);
-        border-radius: 50px;
-        font-size: 12px;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        margin-bottom: 16px;
-      }
-
-      .section-title {
-        font-size: clamp(1.8rem, 4vw, 2.5rem);
-        font-weight: 800;
-        color: var(--navy);
-        margin-bottom: 12px;
-      }
-
-      .section-subtitle {
-        color: var(--slate);
-        font-size: 1.1rem;
-      }
-
-      .stack-container {
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-        max-width: 900px;
-        margin: 0 auto;
-      }
-
-      .stack-card {
-        display: grid;
-        grid-template-columns: 280px 1fr;
-        gap: 32px;
-        background: white;
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: var(--shadow);
-        transition: all 0.4s ease;
-        border: 1px solid var(--border);
-        cursor: pointer;
-        text-decoration: none;
-        color: inherit;
-      }
-
-      .stack-card:hover {
-        transform: translateX(10px);
-        box-shadow: var(--shadow-lg);
-        border-color: var(--primary-light);
-      }
-
-      .stack-image {
-        position: relative;
-        height: 100%;
-        min-height: 200px;
-        object-fit: fill;
-        padding: 0px;
-      }
-
-      .stack-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: fill;
-      }
-
       .stack-badge {
-        position: absolute;
-        bottom: 16px;
-        left: 16px;
-        padding: 6px 12px;
-        background: rgba(255, 255, 255, 0.95);
-        border-radius: 20px;
-        font-size: 11px;
-        font-weight: 700;
-        display: flex;
-        align-items: center;
-        gap: 6px;
-      }
-
-      .stack-content {
-        padding: 28px 28px 28px 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
-
-      .stack-content h3 {
-        font-size: 1.4rem;
-        font-weight: 700;
-        margin-bottom: 10px;
-        color: var(--navy);
-      }
-
-      .stack-content p {
-        color: var(--text);
-        font-size: 15px;
-        line-height: 1.6;
-        margin-bottom: 16px;
-      }
-
-      .stack-tech {
-        display: flex;
-        gap: 8px;
-        flex-wrap: wrap;
+        font-size: 10px;
+        padding: 4px 8px;
       }
 
       .tech-pill {
-        padding: 6px 14px;
-        background: var(--bg);
-        color: var(--primary);
-        border-radius: 20px;
-        font-size: 12px;
-        font-weight: 600;
-      }
-
-      .stack-arrow {
-        margin-left: auto;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background: var(--bg);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--primary);
-        transition: all 0.3s ease;
-      }
-
-      .stack-card:hover .stack-arrow {
-        background: var(--primary);
-        color: white;
-        transform: translateX(5px);
-      }
-
-      /* ==================== HEX GRID SECTION ==================== */
-      .section-hex {
-        padding: 100px 0;
-        background: var(--navy);
-        position: relative;
-        overflow: hidden;
-      }
-
-      .section-hex::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230ea5e9' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-      }
-
-      .hex-header {
-        text-align: center;
-        margin-bottom: 60px;
-        position: relative;
-        z-index: 1;
-      }
-
-      .hex-header .section-tag {
-        background: rgba(255, 255, 255, 0.1);
-        color: var(--primary-light);
-      }
-
-      .hex-header .section-title {
-        color: white;
-      }
-
-      .hex-header .section-subtitle {
-        color: var(--slate);
-      }
-
-      .hex-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 30px;
-        position: relative;
-        z-index: 1;
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-
-      .hex-card {
-        background: white;
-        border-radius: 24px;
-        overflow: hidden;
-        position: relative;
-        transition: all 0.4s ease;
-        cursor: pointer;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        text-decoration: none;
-        color: inherit;
-        display: block;
-        z-index: 1;
-      }
-
-      .hex-card:hover {
-        transform: translateY(-15px) rotate(2deg);
-        box-shadow: 0 30px 60px rgba(14, 165, 233, 0.2);
-      }
-
-      .hex-image {
-        height: 160px;
-        overflow: hidden;
-        position: relative;
-      }
-
-      .hex-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.6s ease;
-      }
-
-      .hex-card:hover .hex-image img {
-        transform: scale(1.1);
-      }
-
-      .hex-content {
-        padding: 20px;
-        position: relative;
-        z-index: 2;
-        background: white;
-      }
-
-      .hex-content h3 {
-        font-size: 1.2rem;
-        font-weight: 700;
-        color: var(--navy);
-        margin-bottom: 8px;
-      }
-
-      .hex-content p {
-        font-size: 13px;
-        color: var(--slate);
-        line-height: 1.5;
-      }
-
-      .hex-icon {
-        position: absolute;
-        top: 140px;
-        right: 20px;
-        width: 44px;
-        height: 44px;
-        background: linear-gradient(135deg, var(--primary), var(--accent));
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        font-size: 16px;
-        box-shadow: var(--glow);
-        z-index: 3;
-        pointer-events: none;
-      }
-
-      /* ==================== ACCORDION SECTION ==================== */
-      .section-accordion {
-        padding: 100px 0;
-        background: linear-gradient(180deg, var(--white) 0%, var(--bg) 100%);
-      }
-
-      .accordion-container {
-        max-width: 1000px;
-        margin: 0 auto;
-        display: flex;
-        gap: 16px;
-        height: 500px;
-      }
-
-      .accordion-item {
-        flex: 1;
-        background: white;
-        border-radius: 24px;
-        overflow: hidden;
-        position: relative;
-        cursor: pointer;
-        transition: flex 0.5s var(--ease);
-        box-shadow: var(--shadow);
-        border: 1px solid var(--border);
-        min-width: 80px;
-        text-decoration: none;
-        color: inherit;
-        display: block;
-      }
-
-      .accordion-item:hover,
-      .accordion-item.active {
-        flex: 3;
-      }
-
-      .accordion-image {
-        position: absolute;
-        inset: 0;
-      }
-
-      .accordion-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.6s ease;
-      }
-
-      .accordion-item:hover .accordion-image img {
-        transform: scale(1.05);
-      }
-
-      .accordion-overlay {
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(
-          to top,
-          rgba(15, 23, 42, 0.9) 0%,
-          transparent 60%
-        );
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        padding: 24px;
-      }
-
-      .accordion-content h3 {
-        color: white;
-        font-size: clamp(1rem, 2vw, 1.5rem);
-        font-weight: 700;
-        margin-bottom: 8px;
-        white-space: nowrap;
-      }
-
-      .accordion-content p {
-        color: rgba(255, 255, 255, 0.7);
-        font-size: 14px;
-        opacity: 0;
-        transform: translateY(10px);
-        transition: all 0.3s ease;
-        max-width: 300px;
-      }
-
-      .accordion-item:hover .accordion-content p,
-      .accordion-item.active .accordion-content p {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      .accordion-tag {
-        position: absolute;
-        top: 20px;
-        left: 20px;
-        padding: 8px 16px;
-        background: rgba(255, 255, 255, 0.9);
-        border-radius: 20px;
-        font-size: 12px;
-        font-weight: 700;
-        color: var(--navy);
-      }
-
-      /* ==================== SERVICES SECTION ==================== */
-      .section-services {
-        padding: 100px 0;
-        background: var(--white);
-      }
-
-      .services-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 24px;
-      }
-
-      .service-box {
-        padding: 32px;
-        background: var(--bg);
-        border-radius: 20px;
-        transition: all 0.3s ease;
-        border: 1px solid transparent;
-      }
-
-      .service-box:hover {
-        background: white;
-        border-color: var(--primary-light);
-        box-shadow: var(--shadow-lg);
-        transform: translateY(-5px);
-      }
-
-      .service-icon {
-        width: 56px;
-        height: 56px;
-        background: linear-gradient(
-          135deg,
-          var(--primary-light),
-          var(--primary)
-        );
-        border-radius: 16px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        font-size: 1.5rem;
-        margin-bottom: 20px;
-        transition: transform 0.3s ease;
-      }
-
-      .service-box:hover .service-icon {
-        transform: scale(1.1) rotate(5deg);
-      }
-
-      .service-box h3 {
-        font-size: 1.2rem;
-        font-weight: 700;
-        margin-bottom: 10px;
-        color: var(--navy);
-      }
-
-      .service-box p {
-        font-size: 14px;
-        color: var(--text);
-        line-height: 1.6;
-      }
-
-      /* ==================== REVIEWS SECTION ==================== */
-      .reviews-section {
-        padding: 100px 0;
-        background: linear-gradient(180deg, var(--bg) 0%, var(--white) 100%);
-        overflow: hidden;
-      }
-
-      .reviews-header {
-        text-align: center;
-        margin-bottom: 60px;
-      }
-
-      .reviews-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        gap: 24px;
+        font-size: 11px;
+        padding: 4px 10px;
       }
 
       .review-card {
-        background: white;
-        border-radius: 20px;
-        padding: 32px;
-        box-shadow: var(--shadow);
-        transition: all 0.4s ease;
-        border: 1px solid var(--border);
-        position: relative;
-      }
-
-      .review-card:hover {
-        transform: translateY(-10px);
-        box-shadow: var(--shadow-lg);
-        border-color: var(--primary-light);
-      }
-
-      .review-stars {
-        display: flex;
-        gap: 4px;
-        margin-bottom: 16px;
-      }
-
-      .review-stars i {
-        color: #fbbf24;
-        font-size: 14px;
-      }
-
-      .review-text {
-        color: var(--text);
-        font-size: 15px;
-        line-height: 1.7;
-        margin-bottom: 20px;
-      }
-
-      .review-author {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-      }
-
-      .review-avatar {
-        width: 48px;
-        height: 48px;
-        border-radius: 50%;
-        background: linear-gradient(
-          135deg,
-          var(--primary-light),
-          var(--primary)
-        );
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        font-weight: 700;
-        font-size: 18px;
-        flex-shrink: 0;
-      }
-
-      .review-info h4 {
-        font-size: 15px;
-        font-weight: 700;
-        color: var(--navy);
-        margin-bottom: 2px;
-      }
-
-      .review-info span {
-        font-size: 13px;
-        color: var(--slate);
+        padding: 24px;
       }
 
       .review-badge {
-        position: absolute;
-        top: -12px;
-        right: 24px;
-        padding: 6px 14px;
-        background: var(--upwork);
-        color: white;
-        border-radius: 20px;
-        font-size: 11px;
-        font-weight: 700;
-        display: flex;
-        align-items: center;
-        gap: 6px;
-      }
-
-      /* ==================== FAQ SECTION ==================== */
-      .faq-section {
-        padding: 100px 0;
-        background: var(--white);
-      }
-
-      .faq-wrapper {
-        display: grid;
-        grid-template-columns: 1fr 1.5fr;
-        gap: 60px;
-        align-items: start;
-      }
-
-      .faq-left {
-        position: sticky;
-        top: 100px;
-      }
-
-      .faq-visual {
-        background: linear-gradient(
-          135deg,
-          var(--primary-light),
-          var(--primary)
-        );
-        border-radius: 24px;
-        padding: 40px;
-        color: white;
-        text-align: center;
-        box-shadow: var(--glow);
-      }
-
-      .faq-visual i {
-        font-size: 4rem;
-        margin-bottom: 20px;
-        opacity: 0.9;
-      }
-
-      .faq-visual h3 {
-        font-size: 1.5rem;
-        font-weight: 700;
-        margin-bottom: 12px;
-      }
-
-      .faq-visual p {
-        font-size: 14px;
-        opacity: 0.9;
-        line-height: 1.6;
-      }
-
-      .faq-contact {
-        margin-top: 24px;
-        padding: 20px;
-        background: white;
-        border-radius: 16px;
-        text-align: center;
-      }
-
-      .faq-contact p {
-        color: var(--text);
-        font-size: 14px;
-        margin-bottom: 12px;
-      }
-
-      .faq-contact a {
-        color: var(--primary);
-        font-weight: 700;
-        text-decoration: none;
-        font-size: clamp(1rem, 2vw, 1.125rem);
-        word-break: break-word;
-      }
-
-      .faq-list {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-      }
-
-      .faq-item {
-        background: var(--bg);
-        border-radius: 16px;
-        overflow: hidden;
-        transition: all 0.3s ease;
-        border: 1px solid transparent;
-      }
-
-      .faq-item:hover {
-        border-color: var(--primary-light);
-      }
-
-      .faq-item.active {
-        background: white;
-        box-shadow: var(--shadow-lg);
-        border-color: var(--primary-light);
+        right: 16px;
+        font-size: 10px;
+        padding: 4px 10px;
       }
 
       .faq-question {
-        padding: 24px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        cursor: pointer;
-        font-weight: 600;
-        color: var(--navy);
-        font-size: clamp(0.9rem, 2vw, 1rem);
-        gap: 16px;
-      }
-
-      .faq-icon {
-        width: 32px;
-        height: 32px;
-        background: white;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--primary);
-        font-size: 12px;
-        transition: all 0.3s ease;
-        box-shadow: var(--shadow);
-        flex-shrink: 0;
-      }
-
-      .faq-item.active .faq-icon {
-        background: var(--primary);
-        color: white;
-        transform: rotate(180deg);
-      }
-
-      .faq-answer {
-        max-height: 0;
-        overflow: hidden;
-        transition:
-          max-height 0.4s ease,
-          padding 0.4s ease;
+        padding: 20px;
+        font-size: 0.9rem;
       }
 
       .faq-item.active .faq-answer {
-        max-height: 300px;
-        padding: 0 24px 24px;
+        padding: 0 20px 20px;
       }
 
-      .faq-answer p {
-        color: var(--text);
-        font-size: 15px;
-        line-height: 1.7;
+      .accordion-tag {
+        font-size: 10px;
+        padding: 6px 12px;
+        top: 12px;
+        left: 12px;
       }
+    }
 
-      /* ==================== FOOTER ==================== */
-      .footer {
-        background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-        color: white;
-        padding: 80px 0 30px;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .footer::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 3px;
-        background: linear-gradient(135deg, var(--primary), var(--accent));
-      }
-
-      .footer-content {
-        display: grid;
-        grid-template-columns: 2fr 1fr 1fr 1fr;
-        gap: 40px;
-        margin-bottom: 50px;
-      }
-
-      .footer-logo {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        margin-bottom: 20px;
-      }
-
-      .footer-logo-img {
-        height: 150px;
-        width: auto;
-        margin-top: -50px;
-        margin-left: 25px;
-        margin-bottom: -22px;
-        filter: brightness(1);
-      }
-
-      .footer-logo a {
-        text-decoration: none;
-        display: flex;
-        align-items: flex-start;
-      }
-
-      .footer-desc {
-        color: #94a3b8;
-        line-height: 1.8;
-        margin-bottom: 20px;
-        font-size: clamp(0.9rem, 2vw, 1rem);
-      }
-
-      .footer-social {
-        display: flex;
-        gap: 15px;
-        margin-left: 35px;
-        flex-wrap: wrap;
-      }
-
-      .footer-social a {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        text-decoration: none;
-        font-size: 1.1rem;
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-      }
-
-      .footer-social a:nth-child(1) {
-        background: #1877f2;
-      }
-      .footer-social a:nth-child(1):hover {
-        background: #166fe5;
-        transform: translateY(-3px);
-        box-shadow: 0 8px 25px rgba(24, 119, 242, 0.5);
-      }
-      .footer-social a:nth-child(2) {
-        background: #000000;
-      }
-      .footer-social a:nth-child(2):hover {
-        background: #1a1a1a;
-        transform: translateY(-3px);
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
-      }
-      .footer-social a:nth-child(3) {
-        background: linear-gradient(
-          45deg,
-          #f09433 0%,
-          #e6683c 25%,
-          #dc2743 50%,
-          #cc2366 75%,
-          #bc1888 100%
-        );
-      }
-      .footer-social a:nth-child(3):hover {
-        transform: translateY(-3px);
-        box-shadow: 0 8px 25px rgba(220, 39, 67, 0.5);
-      }
-
-      .footer-section h3 {
-        font-size: 1.2rem;
-        margin-bottom: 20px;
-        color: white;
-        position: relative;
-        display: inline-block;
-      }
-
-      .footer-section h3::after {
-        content: "";
-        position: absolute;
-        bottom: -5px;
-        left: 0;
-        width: 40px;
-        height: 2px;
-        background: linear-gradient(135deg, var(--primary), var(--accent));
-      }
-
-      .footer-links {
-        list-style: none;
-      }
-
-      .footer-links li {
-        margin-bottom: 12px;
-      }
-
-      .footer-links a {
-        color: #94a3b8;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        display: inline-block;
-        font-size: clamp(0.875rem, 2vw, 1rem);
-      }
-
-      .footer-links a:hover {
-        color: #3b82f6;
-        transform: translateX(5px);
-      }
-
-      .newsletter-form {
-        display: flex;
-        gap: 10px;
-        margin-top: 15px;
-        flex-wrap: wrap;
-      }
-
-      .newsletter-form input {
-        flex: 1;
-        min-width: 200px;
-        padding: 12px 15px;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        border-radius: 8px;
-        background: rgba(255, 255, 255, 0.1);
-        color: white;
-        outline: none;
-        font-size: 14px;
-      }
-
-      .newsletter-form input::placeholder {
-        color: #94a3b8;
-      }
-
-      .newsletter-form button {
-        padding: 12px 20px;
-        background: linear-gradient(135deg, var(--primary), var(--accent));
-        border: none;
-        border-radius: 8px;
-        color: white;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        white-space: nowrap;
-      }
-
-      .newsletter-form button:hover {
-        transform: scale(1.05);
-        box-shadow: 0 0 20px rgba(37, 99, 235, 0.5);
-      }
-
-      .footer-bottom {
-        text-align: center;
-        padding-top: 30px;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        color: #94a3b8;
-        font-size: clamp(0.8rem, 2vw, 0.9rem);
-      }
-
-      .footer-bottom i {
-        color: #ef4444;
-        animation: heartbeat 1.5s infinite;
-      }
-
-      @keyframes heartbeat {
-        0%,
-        100% {
-          transform: scale(1);
-        }
-        50% {
-          transform: scale(1.2);
-        }
-      }
-
-      /* Back to Top Button */
-      .back-to-top {
-        position: fixed;
-        bottom: 30px;
-        right: 30px;
-        width: 50px;
-        height: 50px;
-        border: none;
-        border-radius: 50%;
-        color: white;
-        font-size: 1.2rem;
-        cursor: pointer;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s ease;
-        z-index: 999;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        animation: colorChange 8s infinite;
-      }
-
-      .back-to-top.visible {
-        opacity: 1;
-        visibility: visible;
-      }
-
-      .back-to-top:hover {
-        transform: translateY(-5px) scale(1.1);
-        box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
-        animation-play-state: paused;
-      }
-
-      @keyframes colorChange {
-        0% {
-          background: linear-gradient(135deg, #2563eb, #3b82f6);
-          box-shadow: 0 0 20px rgba(37, 99, 235, 0.6);
-        }
-        25% {
-          background: linear-gradient(135deg, #7c3aed, #a855f7);
-          box-shadow: 0 0 20px rgba(124, 58, 237, 0.6);
-        }
-        50% {
-          background: linear-gradient(135deg, #dc2626, #ef4444);
-          box-shadow: 0 0 20px rgba(220, 38, 38, 0.6);
-        }
-        75% {
-          background: linear-gradient(135deg, #059669, #10b981);
-          box-shadow: 0 0 20px rgba(5, 150, 105, 0.6);
-        }
-        100% {
-          background: linear-gradient(135deg, #2563eb, #3b82f6);
-          box-shadow: 0 0 20px rgba(37, 99, 235, 0.6);
-        }
-      }
-
-      /* ==========================================================================
-         RESPONSIVE MEDIA QUERIES - TABLET (768px - 1023px)
-         ========================================================================== */
-      @media (max-width: 1023px) {
-        .navbar {
-          width: 95%;
-          padding: 0 16px;
-        }
-
-        .nav-menu {
-          gap: 20px;
-        }
-
-        .nav-menu a {
-          font-size: 13px;
-        }
-
-        .hero-wrapper {
-          gap: 40px;
-        }
-
-        .upwork-card {
-          grid-template-columns: 1fr;
-          gap: 32px;
-        }
-
-        .upwork-visual {
-          order: -1;
-          max-width: 300px;
-          margin: 0 auto;
-        }
-
-        .faq-wrapper {
-          gap: 40px;
-        }
-      }
-
-      /* ==========================================================================
-         RESPONSIVE MEDIA QUERIES - MOBILE (< 768px) - FIXED HAMBURGER MENU
-         ========================================================================== */
-      @media (max-width: 767px) {
-        /* Navigation Mobile - FIXED */
-        .menu-btn {
-          display: flex !important;
-        }
-
-        .nav-menu {
-          position: fixed;
-          top: 80px;
-          left: 50%;
-          transform: translateX(-50%) translateY(-150%);
-          width: 92%;
-          background: rgba(15, 23, 42, 0.98);
-          backdrop-filter: blur(12px);
-          border-radius: 16px;
-          flex-direction: column;
-          padding: 24px;
-          gap: 16px;
-          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-          border: 1px solid rgba(255, 255, 255, 0.1);
-          opacity: 0;
-          visibility: hidden;
-          transition: all 0.4s ease;
-          z-index: 999;
-        }
-
-        .nav-menu.active {
-          transform: translateX(-50%) translateY(0);
-          opacity: 1;
-          visibility: visible;
-        }
-
-        .nav-menu a {
-          font-size: 16px;
-          padding: 12px 0;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-          color: white;
-          display: block;
-          width: 100%;
-        }
-
-        .nav-menu a::after {
-          display: none;
-        }
-
-        .nav-menu li:last-child a {
-          border-bottom: none;
-        }
-
-        .nav-menu a:hover,
-        .nav-menu a.active {
-          color: var(--primary-light);
-        }
-
-        .nav-cta {
-          display: none;
-        }
-
-        /* Hero Mobile */
-        .hero {
-          padding: 100px 0 40px;
-          min-height: auto;
-        }
-
-        .hero-wrapper {
-          grid-template-columns: 1fr;
-          text-align: center;
-        }
-
-        .hero-content {
-          max-width: 100%;
-          order: 2;
-        }
-
-        .hero-visual {
-          order: 1;
-          max-width: 300px;
-          margin: 0 auto;
-        }
-
-        .hero-image-box {
-          max-width: 100%;
-        }
-
-        .floating-tag {
-          display: none;
-        }
-
-        .hero-buttons {
-          justify-content: center;
-          flex-direction: column;
-          align-items: center;
-        }
-
-        .btn-main,
-        .btn-outline {
-          width: 100%;
-          max-width: 280px;
-          justify-content: center;
-        }
-
-        .hero-stats {
-          justify-content: center;
-          gap: 24px;
-        }
-
-        /* Upwork Section Mobile */
-        .upwork-section {
-          padding: 0 0 60px;
-        }
-
-        .upwork-card {
-          padding: 32px 24px;
-        }
-
-        .upwork-stats {
-          justify-content: center;
-          gap: 24px;
-        }
-
-        .upwork-visual {
-          padding: 24px;
-        }
-
-        /* Stack Cards Mobile */
-        .section-stack {
-          padding: 60px 0;
-        }
-
-        .stack-card {
-          grid-template-columns: 1fr;
-        }
-
-        .stack-image {
-          min-height: 200px;
-          height: 200px;
-        }
-
-        .stack-content {
-          padding: 24px;
-        }
-
-        .stack-card:hover {
-          transform: translateY(-5px);
-        }
-
-        /* Hex Grid Mobile */
-        .section-hex {
-          padding: 60px 0;
-        }
-
-        .hex-grid {
-          grid-template-columns: 1fr;
-          max-width: 400px;
-          margin: 0 auto;
-        }
-
-        .hex-card:nth-child(even) {
-          margin-top: 0;
-        }
-
-        /* Accordion Mobile */
-        .section-accordion {
-          padding: 60px 0;
-        }
-
-        .accordion-container {
-          flex-direction: column;
-          height: auto;
-          gap: 16px;
-        }
-
-        .accordion-item {
-          min-height: 200px;
-          flex: none !important;
-        }
-
-        .accordion-item.active {
-          flex: none !important;
-          min-height: 300px;
-        }
-
-        .accordion-content h3 {
-          white-space: normal;
-          font-size: 1.2rem;
-        }
-
-        .accordion-content p {
-          opacity: 1;
-          transform: none;
-          font-size: 13px;
-        }
-
-        /* Services Mobile */
-        .section-services {
-          padding: 60px 0;
-        }
-
-        .services-grid {
-          grid-template-columns: 1fr;
-        }
-
-        /* Reviews Mobile */
-        .reviews-section {
-          padding: 60px 0;
-        }
-
-        .reviews-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .review-card:nth-child(2),
-        .review-card:nth-child(5),
-        .review-card:nth-child(8),
-        .review-card:nth-child(3),
-        .review-card:nth-child(6),
-        .review-card:nth-child(9) {
-          transform: none;
-        }
-
-        .review-card:hover {
-          transform: translateY(-5px);
-        }
-
-        /* FAQ Mobile */
-        .faq-section {
-          padding: 60px 0;
-        }
-
-        .faq-wrapper {
-          grid-template-columns: 1fr;
-        }
-
-        .faq-left {
-          position: static;
-          order: 2;
-        }
-
-        .faq-visual {
-          padding: 32px 24px;
-        }
-
-        .faq-list {
-          order: 1;
-        }
-
-        /* Footer Mobile */
-        .footer {
-          padding: 60px 0 20px;
-        }
-
-        .footer-content {
-          grid-template-columns: 1fr;
-          gap: 32px;
-          text-align: center;
-        }
-
-        .footer-logo {
-          justify-content: center;
-        }
-
-        .footer-logo-img {
-          height: 50px;
-        }
-
-        .footer-social {
-          justify-content: center;
-        }
-
-        .footer-section h3::after {
-          left: 50%;
-          transform: translateX(-50%);
-        }
-
-        .newsletter-form {
-          flex-direction: column;
-        }
-
-        .newsletter-form input {
-          width: 100%;
-        }
-
-        .newsletter-form button {
-          width: 100%;
-        }
-
-        /* Back to Top Mobile */
-        .back-to-top {
-          width: 44px;
-          height: 44px;
-          bottom: 20px;
-          right: 20px;
-          font-size: 1rem;
-        }
-      }
-
-      /* ==========================================================================
-         RESPONSIVE MEDIA QUERIES - SMALL MOBILE (< 480px)
-         ========================================================================== */
-      @media (max-width: 479px) {
-        .container {
-          padding: 0 16px;
-        }
-
-        .navbar {
-          top: 10px;
-          height: 56px;
-          padding: 0 12px;
-        }
-
-        .logo img {
-          height: 62px;
-        }
-
-        .hero-tag {
-          font-size: 11px;
-          padding: 6px 12px;
-        }
-
-        .stat-value {
-          font-size: 1.5rem;
-        }
-
-        .stat-label {
-          font-size: 12px;
-        }
-
-        .upwork-card {
-          padding: 24px 16px;
-        }
-
-        .upwork-stats {
-          flex-direction: column;
-          gap: 16px;
-        }
-
-        .upwork-stat {
-          text-align: center;
-        }
-
-        .stack-badge {
-          font-size: 10px;
-          padding: 4px 8px;
-        }
-
-        .tech-pill {
-          font-size: 11px;
-          padding: 4px 10px;
-        }
-
-        .review-card {
-          padding: 24px;
-        }
-
-        .review-badge {
-          right: 16px;
-          font-size: 10px;
-          padding: 4px 10px;
-        }
-
-        .faq-question {
-          padding: 20px;
-          font-size: 0.9rem;
-        }
-
-        .faq-item.active .faq-answer {
-          padding: 0 20px 20px;
-        }
-
-        .accordion-tag {
-          font-size: 10px;
-          padding: 6px 12px;
-          top: 12px;
-          left: 12px;
-        }
-      }
-
-      /* ==========================================================================
+    /* ==========================================================================
          RESPONSIVE MEDIA QUERIES - LARGE DESKTOP (> 1400px)
          ========================================================================== */
-      @media (min-width: 1400px) {
-        .container {
-          max-width: 1320px;
-        }
-
-        .hex-grid {
-          grid-template-columns: repeat(3, 1fr);
-        }
+    @media (min-width: 1400px) {
+      .container {
+        max-width: 1320px;
       }
 
-      /* Touch device optimizations */
-      @media (hover: none) and (pointer: coarse) {
-        .stack-card:hover {
-          transform: none;
-        }
+      .hex-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
 
-        .hex-card:hover {
-          transform: none;
-        }
-
-        .service-box:hover {
-          transform: none;
-        }
-
-        .review-card:hover {
-          transform: none;
-        }
-
-        .stack-card:active,
-        .hex-card:active,
-        .service-box:active,
-        .review-card:active {
-          transform: scale(0.98);
-        }
+    /* Touch device optimizations */
+    @media (hover: none) and (pointer: coarse) {
+      .stack-card:hover {
+        transform: none;
       }
 
-      /* Reduced motion preference */
-      @media (prefers-reduced-motion: reduce) {
-        * {
-          animation-duration: 0.01ms !important;
-          animation-iteration-count: 1 !important;
-          transition-duration: 0.01ms !important;
-        }
-
-        html {
-          scroll-behavior: auto;
-        }
+      .hex-card:hover {
+        transform: none;
       }
-    </style>
-  </head>
-  <body>
-    <!-- Background -->
-    <div class="bg-shapes">
-      <div class="shape shape-1"></div>
-      <div class="shape shape-2"></div>
-      <div class="shape shape-3"></div>
+
+      .service-box:hover {
+        transform: none;
+      }
+
+      .review-card:hover {
+        transform: none;
+      }
+
+      .stack-card:active,
+      .hex-card:active,
+      .service-box:active,
+      .review-card:active {
+        transform: scale(0.98);
+      }
+    }
+
+    /* Reduced motion preference */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Background -->
+  <div class="bg-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <a href="#" class="logo">
+      <img src="assets/Logo.png" alt="Globaxify" />
+    </a>
+
+    <nav>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html#home" class="active">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div style="display: flex; align-items: center; gap: 16px">
+      <a href="index.html#contact" class="nav-cta">Let's Talk</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
+  </header>
 
-    <!-- Navbar -->
-    <header class="navbar">
-      <a href="#" class="logo">
-        <img src="assets/Logo.png" alt="Globaxify" />
-      </a>
-
-      <nav>
-        <ul class="nav-menu" id="navMenu">
-          <li><a href="index.html#home" class="active">Home</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#reviews">Reviews</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
-        </ul>
-      </nav>
-
-      <div style="display: flex; align-items: center; gap: 16px">
-        <a href="index.html#contact" class="nav-cta">Let's Talk</a>
-        <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-    </header>
-
-    <main>
-      <!-- Hero Section -->
-      <section class="hero" id="home">
-        <div class="container">
-          <div class="hero-wrapper">
-            <div class="hero-content">
-              <div class="hero-tag">
-                <i class="fas fa-check-circle"></i> Verified Shopify Expert
-              </div>
-              <h1 class="hero-title">
-                Building High-Converting <span>Shopify Stores</span>
-              </h1>
-              <p class="hero-desc">
-                I'm Ahmad Iqbal, an E-commerce Specialist dedicated to driving
-                exponential growth for Shopify Plus brands through strategic
-                optimization and bespoke Liquid solutions.
-              </p>
-
-              <div class="hero-buttons">
-                <a href="#projects" class="btn-main">
-                  View Projects <i class="fas fa-arrow-right"></i>
-                </a>
-              </div>
-
-              <div class="hero-stats">
-                <div class="stat-item">
-                  <span class="stat-value">50+</span>
-                  <span class="stat-label">Stores Launched</span>
-                </div>
-                <div class="stat-item">
-                  <span class="stat-value">100%</span>
-                  <span class="stat-label">Success Rate</span>
-                </div>
-                <div class="stat-item">
-                  <span class="stat-value">5★</span>
-                  <span class="stat-label">Rating</span>
-                </div>
-              </div>
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-wrapper">
+          <div class="hero-content">
+            <div class="hero-tag">
+              <i class="fas fa-check-circle"></i> Verified Shopify Expert
             </div>
+            <h1 class="hero-title">
+              Building High-Converting <span>Shopify Stores</span>
+            </h1>
+            <p class="hero-desc">
+              I'm Ahmad Iqbal, an E-commerce Specialist dedicated to driving
+              exponential growth for Shopify Plus brands through strategic
+              optimization and bespoke Liquid solutions.
+            </p>
 
-            <div class="hero-visual">
-              <div class="hero-image-box">
-                <div class="hero-img-ring"></div>
-                <img
-                  src="assets/Portfolio img.jpeg"
-                  alt="Ahmad Iqbal"
-                  class="hero-img"
-                />
-
-                <div class="floating-tag tag-1">
-                  <div class="tag-icon green">
-                    <i class="fab fa-shopify"></i>
-                  </div>
-                  <div>
-                    <div style="font-weight: 700; font-size: 12px">
-                      Shopify Plus
-                    </div>
-                    <div style="font-size: 11px; color: var(--slate)">
-                      Certified Expert
-                    </div>
-                  </div>
-                </div>
-
-                <div class="floating-tag tag-2">
-                  <div class="tag-icon blue">
-                    <i class="fab fa-upwork"></i>
-                  </div>
-                  <div>
-                    <div style="font-weight: 700; font-size: 12px">
-                      Top Rated
-                    </div>
-                    <div style="font-size: 11px; color: var(--slate)">
-                      Freelancer
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- UPWORK SECTION -->
-      <section class="upwork-section">
-        <div class="container">
-          <div class="upwork-card">
-            <div class="upwork-content">
-              <div class="upwork-tag">
-                <i class="fab fa-upwork"></i> Top Rated Plus on Upwork
-              </div>
-              <h2>Hire a Trusted <span>Shopify Developer</span></h2>
-              <p>
-                Safe, secure, and professional handling of your Shopify
-                migration and custom theme development projects with guaranteed
-                satisfaction.
-              </p>
-
-              <div class="upwork-stats">
-                <div class="upwork-stat">
-                  <strong>100%</strong>
-                  <span>Job Success</span>
-                </div>
-                <div class="upwork-stat">
-                  <strong>$5k+</strong>
-                  <span>Earnings</span>
-                </div>
-                <div class="upwork-stat">
-                  <strong>12+</strong>
-                  <span>Clients</span>
-                </div>
-              </div>
-
-              <a
-                href="https://www.upwork.com/freelancers/muhammadhaseebiqbal"
-                class="upwork-btn"
-              >
-                <i class="fab fa-upwork"></i> Hire Me on Upwork
+            <div class="hero-buttons">
+              <a href="#projects" class="btn-main">
+                View Projects <i class="fas fa-arrow-right"></i>
               </a>
             </div>
 
-            <div class="upwork-visual">
-              <i class="fas fa-store"></i>
-              <h4>Store Launch Ready</h4>
-              <p>A-Z Shopify setup expert</p>
+            <div class="hero-stats">
+              <div class="stat-item">
+                <span class="stat-value">50+</span>
+                <span class="stat-label">Stores Launched</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-value">100%</span>
+                <span class="stat-label">Success Rate</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-value">5★</span>
+                <span class="stat-label">Rating</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="hero-image-box">
+              <div class="hero-img-ring"></div>
+              <img src="assets/Portfolio img.jpeg" alt="Ahmad Iqbal" class="hero-img" />
+
+              <div class="floating-tag tag-1">
+                <div class="tag-icon green">
+                  <i class="fab fa-shopify"></i>
+                </div>
+                <div>
+                  <div style="font-weight: 700; font-size: 12px">
+                    Shopify Plus
+                  </div>
+                  <div style="font-size: 11px; color: var(--slate)">
+                    Certified Expert
+                  </div>
+                </div>
+              </div>
+
+              <div class="floating-tag tag-2">
+                <div class="tag-icon blue">
+                  <i class="fab fa-upwork"></i>
+                </div>
+                <div>
+                  <div style="font-weight: 700; font-size: 12px">
+                    Top Rated
+                  </div>
+                  <div style="font-size: 11px; color: var(--slate)">
+                    Freelancer
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- PROJECTS SECTION 1: Stacked Cards -->
-      <section class="section-stack" id="projects">
-        <div class="container">
-          <div class="section-header">
-            <span class="section-tag">Featured Work</span>
-            <h2 class="section-title">Latest Store Launches</h2>
-            <p class="section-subtitle">
-              Recent e-commerce projects delivered with excellence
+    <!-- UPWORK SECTION -->
+    <section class="upwork-section">
+      <div class="container">
+        <div class="upwork-card">
+          <div class="upwork-content">
+            <div class="upwork-tag">
+              <i class="fab fa-upwork"></i> Top Rated Plus on Upwork
+            </div>
+            <h2>Hire a Trusted <span>Shopify Developer</span></h2>
+            <p>
+              Safe, secure, and professional handling of your Shopify
+              migration and custom theme development projects with guaranteed
+              satisfaction.
             </p>
+
+            <div class="upwork-stats">
+              <div class="upwork-stat">
+                <strong>100%</strong>
+                <span>Job Success</span>
+              </div>
+              <div class="upwork-stat">
+                <strong>$5k+</strong>
+                <span>Earnings</span>
+              </div>
+              <div class="upwork-stat">
+                <strong>12+</strong>
+                <span>Clients</span>
+              </div>
+            </div>
+
+            <a href="https://www.upwork.com/freelancers/muhammadhaseebiqbal" class="upwork-btn">
+              <i class="fab fa-upwork"></i> Hire Me on Upwork
+            </a>
           </div>
 
-          <div class="stack-container">
-            <a
-              href="https://taqwa.services/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="stack-card"
-            >
-              <div class="stack-image">
-                <img src="assets/Taqwq.png" alt="Taqwa.Services" />
-                <span class="stack-badge">
-                  <i class="fas fa-code" style="color: var(--primary)"></i>
-                  Custom Platform
-                </span>
-              </div>
-              <div class="stack-content">
-                <h3>Taqwa.Services</h3>
-                <p>
-                  Full-stack e-commerce platform with advanced filtering,
-                  real-time inventory management, and secure payment
-                  integration.
-                </p>
-                <div
-                  style="
+          <div class="upwork-visual">
+            <i class="fas fa-store"></i>
+            <h4>Store Launch Ready</h4>
+            <p>A-Z Shopify setup expert</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION 1: Stacked Cards -->
+    <section class="section-stack" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Featured Work</span>
+          <h2 class="section-title">Latest Store Launches</h2>
+          <p class="section-subtitle">
+            Recent e-commerce projects delivered with excellence
+          </p>
+        </div>
+
+        <div class="stack-container">
+          <a href="https://taqwa.services/" target="_blank" rel="noopener noreferrer" class="stack-card">
+            <div class="stack-image">
+              <img src="assets/Taqwq.png" alt="Taqwa.Services" />
+              <span class="stack-badge">
+                <i class="fas fa-code" style="color: var(--primary)"></i>
+                Custom Platform
+              </span>
+            </div>
+            <div class="stack-content">
+              <h3>Taqwa.Services</h3>
+              <p>
+                Full-stack e-commerce platform with advanced filtering,
+                real-time inventory management, and secure payment
+                integration.
+              </p>
+              <div style="
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                  "
-                >
-                  <div class="stack-tech">
-                    <span class="tech-pill">Html</span>
-                    <span class="tech-pill">Css</span>
-                    <span class="tech-pill">Java Script</span>
-                  </div>
-                  <div class="stack-arrow">
-                    <i class="fas fa-arrow-right"></i>
-                  </div>
+                  ">
+                <div class="stack-tech">
+                  <span class="tech-pill">Html</span>
+                  <span class="tech-pill">Css</span>
+                  <span class="tech-pill">Java Script</span>
+                </div>
+                <div class="stack-arrow">
+                  <i class="fas fa-arrow-right"></i>
                 </div>
               </div>
-            </a>
+            </div>
+          </a>
 
-            <a
-              href="https://secretwear.site/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="stack-card"
-            >
-              <div class="stack-image">
-                <img src="assets/Secretwear.png" alt="Secret Wear" />
-                <span class="stack-badge">
-                  <i class="fab fa-shopify" style="color: var(--shopify)"></i>
-                  Shopify Plus
-                </span>
-              </div>
-              <div class="stack-content">
-                <h3>Secret Wear</h3>
-                <p>
-                  Premium fashion storefront with AR try-on features, seamless
-                  checkout flow, and mobile-first responsive design.
-                </p>
-                <div
-                  style="
+          <a href="https://secretwear.site/" target="_blank" rel="noopener noreferrer" class="stack-card">
+            <div class="stack-image">
+              <img src="assets/Secretwear.png" alt="Secret Wear" />
+              <span class="stack-badge">
+                <i class="fab fa-shopify" style="color: var(--shopify)"></i>
+                Shopify Plus
+              </span>
+            </div>
+            <div class="stack-content">
+              <h3>Secret Wear</h3>
+              <p>
+                Premium fashion storefront with AR try-on features, seamless
+                checkout flow, and mobile-first responsive design.
+              </p>
+              <div style="
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                  "
-                >
-                  <div class="stack-tech">
-                    <span class="tech-pill">Liquid</span>
-                    <span class="tech-pill">Css</span>
-                    <span class="tech-pill">Shopify Plus</span>
-                  </div>
-                  <div class="stack-arrow">
-                    <i class="fas fa-arrow-right"></i>
-                  </div>
+                  ">
+                <div class="stack-tech">
+                  <span class="tech-pill">Liquid</span>
+                  <span class="tech-pill">Css</span>
+                  <span class="tech-pill">Shopify Plus</span>
+                </div>
+                <div class="stack-arrow">
+                  <i class="fas fa-arrow-right"></i>
                 </div>
               </div>
-            </a>
+            </div>
+          </a>
 
-            <a
-              href="https://fazwidawakhana.site/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="stack-card"
-            >
-              <div class="stack-image">
-                <img src="assets/Fazwidawakha.png" alt="Fazwidawakha" />
-                <span class="stack-badge">
-                  <i class="fab fa-shopify" style="color: var(--shopify)"></i>
-                  Shopify 2.0
-                </span>
-              </div>
-              <div class="stack-content">
-                <h3>Fazwidawakhana</h3>
-                <p>
-                  Traditional medicine marketplace with prescription management,
-                  consultation booking, and automated inventory alerts.
-                </p>
-                <div
-                  style="
+          <a href="https://fazwidawakhana.site/" target="_blank" rel="noopener noreferrer" class="stack-card">
+            <div class="stack-image">
+              <img src="assets/Fazwidawakha.png" alt="Fazwidawakha" />
+              <span class="stack-badge">
+                <i class="fab fa-shopify" style="color: var(--shopify)"></i>
+                Shopify 2.0
+              </span>
+            </div>
+            <div class="stack-content">
+              <h3>Fazwidawakhana</h3>
+              <p>
+                Traditional medicine marketplace with prescription management,
+                consultation booking, and automated inventory alerts.
+              </p>
+              <div style="
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                  "
-                >
-                  <div class="stack-tech">
-                    <span class="tech-pill">Html</span>
-                    <span class="tech-pill">Css</span>
-                    <span class="tech-pill">Shopi Plus</span>
-                  </div>
-                  <div class="stack-arrow">
-                    <i class="fas fa-arrow-right"></i>
-                  </div>
+                  ">
+                <div class="stack-tech">
+                  <span class="tech-pill">Html</span>
+                  <span class="tech-pill">Css</span>
+                  <span class="tech-pill">Shopi Plus</span>
+                </div>
+                <div class="stack-arrow">
+                  <i class="fas fa-arrow-right"></i>
                 </div>
               </div>
-            </a>
+            </div>
+          </a>
 
-            <a
-              href="https://int-shop.nanoleaf.me/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="stack-card"
-            >
-              <div class="stack-image">
-                <img src="assets/int-shop.png" alt="TechStore" />
-                <span class="stack-badge">
-                  <i class="fab fa-shopify" style="color: var(--shopify)"></i>
-                  Shopify Plus
-                </span>
-              </div>
-              <div class="stack-content">
-                <h3>Nanoleaf</h3>
-                <p>
-                  Electronics mega-store with product comparison, reviews
-                  system, flash sales module, and real-time stock updates.
-                </p>
-                <div
-                  style="
+          <a href="https://int-shop.nanoleaf.me/" target="_blank" rel="noopener noreferrer" class="stack-card">
+            <div class="stack-image">
+              <img src="assets/int-shop.png" alt="TechStore" />
+              <span class="stack-badge">
+                <i class="fab fa-shopify" style="color: var(--shopify)"></i>
+                Shopify Plus
+              </span>
+            </div>
+            <div class="stack-content">
+              <h3>Nanoleaf</h3>
+              <p>
+                Electronics mega-store with product comparison, reviews
+                system, flash sales module, and real-time stock updates.
+              </p>
+              <div style="
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                  "
-                >
-                  <div class="stack-tech">
-                    <span class="tech-pill">Html</span>
-                    <span class="tech-pill">Css</span>
-                    <span class="tech-pill">JavaScript</span>
-                  </div>
-                  <div class="stack-arrow">
-                    <i class="fas fa-arrow-right"></i>
-                  </div>
+                  ">
+                <div class="stack-tech">
+                  <span class="tech-pill">Html</span>
+                  <span class="tech-pill">Css</span>
+                  <span class="tech-pill">JavaScript</span>
+                </div>
+                <div class="stack-arrow">
+                  <i class="fas fa-arrow-right"></i>
                 </div>
               </div>
-            </a>
+            </div>
+          </a>
 
-            <a
-              href="https://nomadgoods.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="stack-card"
-            >
-              <div class="stack-image">
-                <img
-                  src="assets/Nomad.png"
-                  alt="BrandHub"
-                  style="
+          <a href="https://nomadgoods.com/" target="_blank" rel="noopener noreferrer" class="stack-card">
+            <div class="stack-image">
+              <img src="assets/Nomad.png" alt="BrandHub" style="
                     object-fit: contain;
                     padding: 40px;
                     background: var(--bg);
-                  "
-                />
-                <span class="stack-badge">
-                  <i class="fab fa-shopify" style="color: var(--shopify)"></i>
-                  Shopify 2.0
-                </span>
-              </div>
-              <div class="stack-content">
-                <h3>NOMAD</h3>
-                <p>
-                  Developed a full Shopify store and brand identity for Nomad
-                  Goods, including portfolio integration and service booking for
-                  a seamless customer experience
-                </p>
-                <div
-                  style="
+                  " />
+              <span class="stack-badge">
+                <i class="fab fa-shopify" style="color: var(--shopify)"></i>
+                Shopify 2.0
+              </span>
+            </div>
+            <div class="stack-content">
+              <h3>NOMAD</h3>
+              <p>
+                Developed a full Shopify store and brand identity for Nomad
+                Goods, including portfolio integration and service booking for
+                a seamless customer experience
+              </p>
+              <div style="
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                  "
-                >
-                  <div class="stack-tech">
-                    <span class="tech-pill">Html</span>
-                    <span class="tech-pill">Shopify</span>
-                    <span class="tech-pill">Custom</span>
-                  </div>
-                  <div class="stack-arrow">
-                    <i class="fas fa-arrow-right"></i>
-                  </div>
+                  ">
+                <div class="stack-tech">
+                  <span class="tech-pill">Html</span>
+                  <span class="tech-pill">Shopify</span>
+                  <span class="tech-pill">Custom</span>
+                </div>
+                <div class="stack-arrow">
+                  <i class="fas fa-arrow-right"></i>
                 </div>
               </div>
-            </a>
-          </div>
+            </div>
+          </a>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- PROJECTS SECTION 2: Hexagon Grid -->
-      <section class="section-hex">
-        <div class="container">
-          <div class="hex-header">
-            <span class="section-tag">Showcase</span>
-            <h2 class="section-title">Featured Projects</h2>
-            <p class="section-subtitle">
-              Highlighted work with unique perspective
-            </p>
-          </div>
+    <!-- PROJECTS SECTION 2: Hexagon Grid -->
+    <section class="section-hex">
+      <div class="container">
+        <div class="hex-header">
+          <span class="section-tag">Showcase</span>
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-subtitle">
+            Highlighted work with unique perspective
+          </p>
+        </div>
 
-          <div class="hex-grid">
-            <a
-              href="https://www.orbitkey.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="hex-card"
-            >
-              <div class="hex-image">
-                <img src="assets/Orbit Key.png" alt="Luxury Watches" />
-              </div>
-              <div class="hex-icon">
-                <i class="fas fa-external-link-alt"></i>
-              </div>
-              <div class="hex-content">
-                <h3>Orbit Key</h3>
-                <p>
-                  Built a luxury Shopify store for Orbitkey with 3D product
-                  viewing, modern UI, and a seamless shopping experience
-                  optimized for high-end customers.
-                </p>
-              </div>
-            </a>
+        <div class="hex-grid">
+          <a href="https://www.orbitkey.com/" target="_blank" rel="noopener noreferrer" class="hex-card">
+            <div class="hex-image">
+              <img src="assets/Orbit Key.png" alt="Luxury Watches" />
+            </div>
+            <div class="hex-icon">
+              <i class="fas fa-external-link-alt"></i>
+            </div>
+            <div class="hex-content">
+              <h3>Orbit Key</h3>
+              <p>
+                Built a luxury Shopify store for Orbitkey with 3D product
+                viewing, modern UI, and a seamless shopping experience
+                optimized for high-end customers.
+              </p>
+            </div>
+          </a>
 
-            <a
-              href="https://corkcicle.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="hex-card"
-            >
-              <div class="hex-image">
-                <img src="assets/corkcicle.png" alt="Organic Foods" />
-              </div>
-              <div class="hex-icon">
-                <i class="fas fa-external-link-alt"></i>
-              </div>
-              <div class="hex-content">
-                <h3>Corkcicle</h3>
-                <p>
-                  Built a subscription-based Shopify store for Corkcicle,
-                  enabling users to order organic groceries online with
-                  recurring subscription options and a modern, responsive
-                  design.
-                </p>
-              </div>
-            </a>
+          <a href="https://corkcicle.com/" target="_blank" rel="noopener noreferrer" class="hex-card">
+            <div class="hex-image">
+              <img src="assets/corkcicle.png" alt="Organic Foods" />
+            </div>
+            <div class="hex-icon">
+              <i class="fas fa-external-link-alt"></i>
+            </div>
+            <div class="hex-content">
+              <h3>Corkcicle</h3>
+              <p>
+                Built a subscription-based Shopify store for Corkcicle,
+                enabling users to order organic groceries online with
+                recurring subscription options and a modern, responsive
+                design.
+              </p>
+            </div>
+          </a>
 
-            <a
-              href="https://www.mvmt.com/home"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="hex-card"
-            >
-              <div class="hex-image">
-                <img src="assets/MVMT.png" alt="Fitness Gear" />
-              </div>
-              <div class="hex-icon">
-                <i class="fas fa-external-link-alt"></i>
-              </div>
-              <div class="hex-content">
-                <h3>MVMT</h3>
-                <p>
-                  Built a Shopify store for MVMT featuring athletic equipment,
-                  interactive workout guides, and a responsive, user-friendly
-                  interface for enhanced customer engagement.
-                </p>
-              </div>
-            </a>
+          <a href="https://www.mvmt.com/home" target="_blank" rel="noopener noreferrer" class="hex-card">
+            <div class="hex-image">
+              <img src="assets/MVMT.png" alt="Fitness Gear" />
+            </div>
+            <div class="hex-icon">
+              <i class="fas fa-external-link-alt"></i>
+            </div>
+            <div class="hex-content">
+              <h3>MVMT</h3>
+              <p>
+                Built a Shopify store for MVMT featuring athletic equipment,
+                interactive workout guides, and a responsive, user-friendly
+                interface for enhanced customer engagement.
+              </p>
+            </div>
+          </a>
 
-            <a
-              href="https://www.astridandmiyu.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="hex-card"
-            >
-              <div class="hex-image">
-                <img src="assets/astridandmiyu.png" alt="Home Decor" />
-              </div>
-              <div class="hex-icon">
-                <i class="fas fa-external-link-alt"></i>
-              </div>
-              <div class="hex-content">
-                <h3>Astridandmiyu</h3>
-                <p>
-                  Built a Shopify store for Astrid & Miyu with AR visualization,
-                  allowing customers to explore interior products in real-time
-                  and experience a modern, interactive shopping experience.
-                </p>
-              </div>
-            </a>
+          <a href="https://www.astridandmiyu.com/" target="_blank" rel="noopener noreferrer" class="hex-card">
+            <div class="hex-image">
+              <img src="assets/astridandmiyu.png" alt="Home Decor" />
+            </div>
+            <div class="hex-icon">
+              <i class="fas fa-external-link-alt"></i>
+            </div>
+            <div class="hex-content">
+              <h3>Astridandmiyu</h3>
+              <p>
+                Built a Shopify store for Astrid & Miyu with AR visualization,
+                allowing customers to explore interior products in real-time
+                and experience a modern, interactive shopping experience.
+              </p>
+            </div>
+          </a>
 
-            <a
-              href="https://fablepets.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="hex-card"
-            >
-              <div class="hex-image">
-                <img
-                  src="assets/fablepets.png"
-                  alt="Pet Supplies"
-                  style="
+          <a href="https://fablepets.com/" target="_blank" rel="noopener noreferrer" class="hex-card">
+            <div class="hex-image">
+              <img src="assets/fablepets.png" alt="Pet Supplies" style="
                     object-fit: contain;
                     padding: 20px;
                     background: var(--bg);
-                  "
-                />
-              </div>
-              <div class="hex-icon">
-                <i class="fas fa-external-link-alt"></i>
-              </div>
-              <div class="hex-content">
-                <h3>Fablepets</h3>
-                <p>
-                  Built a Shopify store for Fable Pets with auto-replenishment
-                  subscriptions, modern design, and a smooth, responsive
-                  shopping experience for pet owners.
-                </p>
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- PROJECTS SECTION 3: Accordion Expand -->
-      <section class="section-accordion">
-        <div class="container">
-          <div class="section-header">
-            <span class="section-tag">Gallery</span>
-            <h2 class="section-title">Complete Portfolio</h2>
-            <p class="section-subtitle">Hover to explore all projects</p>
-          </div>
-
-          <div class="accordion-container">
-            <a href="https://zestypaws.com/" class="accordion-item active">
-              <div class="accordion-image">
-                <img src="assets/zestypaws.png" alt="Auto Parts Pro" />
-              </div>
-              <span class="accordion-tag">Shopify</span>
-              <div class="accordion-overlay">
-                <div class="accordion-content">
-                  <h3>Zesty Paws</h3>
-                </div>
-              </div>
-            </a>
-
-            <a href="https://dossier.co/" class="accordion-item">
-              <div class="accordion-image">
-                <img src="assets/dossier.png" alt="Street Style" />
-              </div>
-              <span class="accordion-tag">Shopify</span>
-              <div class="accordion-overlay">
-                <div class="accordion-content">
-                  <h3>Dossier</h3>
-                </div>
-              </div>
-            </a>
-
-            <a href="https://scentsnstories.pk/" class="accordion-item">
-              <div class="accordion-image">
-                <img src="assets/scentsnstories.png" alt="Vitamin Plus" />
-              </div>
-              <span class="accordion-tag">Shopify</span>
-              <div class="accordion-overlay">
-                <div class="accordion-content">
-                  <h3>Scentsn Stories</h3>
-                </div>
-              </div>
-            </a>
-
-            <a href="https://www.calyanwaxco.com/" class="accordion-item">
-              <div class="accordion-image">
-                <img src="assets/calyanwaxco.png" alt="Gadget Zone" />
-              </div>
-              <span class="accordion-tag">Shopify</span>
-              <div class="accordion-overlay">
-                <div class="accordion-content">
-                  <h3>Calyanwaxco</h3>
-                </div>
-              </div>
-            </a>
-
-            <a href="https://byltbasics.com/" class="accordion-item">
-              <div class="accordion-image">
-                <img
-                  src="assets/byltbasics.png"
-                  alt="Creative Studio"
-                  style="object-fit: contain; background: var(--bg)"
-                />
-              </div>
-              <span class="accordion-tag">Shopify</span>
-              <div class="accordion-overlay">
-                <div class="accordion-content">
-                  <h3>BYLT Basics</h3>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- Services Section -->
-      <section class="section-services" id="services">
-        <div class="container">
-          <div class="section-header">
-            <span class="section-tag">What I Do</span>
-            <h2 class="section-title">My Expertise</h2>
-            <p class="section-subtitle">Comprehensive e-commerce solutions</p>
-          </div>
-
-          <div class="services-grid">
-            <div class="service-box">
-              <div class="service-icon">
-                <i class="fas fa-paint-brush"></i>
-              </div>
-              <h3>Custom Theme Design</h3>
+                  " />
+            </div>
+            <div class="hex-icon">
+              <i class="fas fa-external-link-alt"></i>
+            </div>
+            <div class="hex-content">
+              <h3>Fablepets</h3>
               <p>
-                Unique, high-speed Shopify themes tailored to your brand
-                identity.
+                Built a Shopify store for Fable Pets with auto-replenishment
+                subscriptions, modern design, and a smooth, responsive
+                shopping experience for pet owners.
               </p>
             </div>
-
-            <div class="service-box">
-              <div class="service-icon">
-                <i class="fas fa-code"></i>
-              </div>
-              <h3>Liquid Development</h3>
-              <p>
-                Advanced Liquid coding for custom sections and functionality.
-              </p>
-            </div>
-
-            <div class="service-box">
-              <div class="service-icon">
-                <i class="fas fa-sync-alt"></i>
-              </div>
-              <h3>App Integration</h3>
-              <p>Seamlessly connecting CRM, Inventory, and Marketing apps.</p>
-            </div>
-
-            <div class="service-box">
-              <div class="service-icon">
-                <i class="fas fa-tachometer-alt"></i>
-              </div>
-              <h3>Performance Optimization</h3>
-              <p>
-                Speed optimization, SEO enhancement, and conversion
-                improvements.
-              </p>
-            </div>
-
-            <div class="service-box">
-              <div class="service-icon">
-                <i class="fas fa-exchange-alt"></i>
-              </div>
-              <h3>Store Migration</h3>
-              <p>
-                Seamless migration from WooCommerce, Magento, or custom
-                platforms.
-              </p>
-            </div>
-
-            <div class="service-box">
-              <div class="service-icon">
-                <i class="fas fa-headset"></i>
-              </div>
-              <h3>Ongoing Support</h3>
-              <p>24/7 maintenance, updates, and technical support.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- REVIEWS SECTION -->
-      <section class="reviews-section" id="reviews">
-        <div class="container">
-          <div class="reviews-header">
-            <span class="section-tag">Testimonials</span>
-            <h2 class="section-title">Client Reviews</h2>
-            <p class="section-subtitle">
-              What my clients say about working with me
-            </p>
-          </div>
-
-          <div class="reviews-grid">
-            <div class="review-card">
-              <span class="review-badge">
-                <i class="fab fa-upwork"></i> Upwork
-              </span>
-              <div class="review-stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-              <p class="review-text">
-                "Ahmad delivered exceptional work on our Shopify store. His
-                attention to detail and technical expertise transformed our
-                online presence. Sales increased by 40% within the first month!"
-              </p>
-              <div class="review-author">
-                <div class="review-avatar">JD</div>
-                <div class="review-info">
-                  <h4>John Davidson</h4>
-                  <span>CEO, TechGear Inc.</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="review-card">
-              <span class="review-badge">
-                <i class="fab fa-upwork"></i> Upwork
-              </span>
-              <div class="review-stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-              <p class="review-text">
-                "Working with Ahmad was a game-changer for our business. He
-                understood our vision perfectly and delivered a stunning custom
-                theme that exceeded all expectations. Highly recommended!"
-              </p>
-              <div class="review-author">
-                <div class="review-avatar">SM</div>
-                <div class="review-info">
-                  <h4>Sarah Mitchell</h4>
-                  <span>Founder, StyleHub</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="review-card">
-              <span class="review-badge">
-                <i class="fab fa-upwork"></i> Upwork
-              </span>
-              <div class="review-stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-              <p class="review-text">
-                "The migration from WooCommerce to Shopify was seamless thanks
-                to Ahmad. Zero downtime, all data preserved, and the new store
-                performs incredibly fast. True professional!"
-              </p>
-              <div class="review-author">
-                <div class="review-avatar">RK</div>
-                <div class="review-info">
-                  <h4>Robert Kim</h4>
-                  <span>Director, Organic Foods Co.</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="review-card">
-              <span class="review-badge">
-                <i class="fab fa-upwork"></i> Upwork
-              </span>
-              <div class="review-stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-              <p class="review-text">
-                "Ahmad's expertise in Shopify Plus is unmatched. He optimized
-                our checkout process and increased our conversion rate by 35%.
-                His communication was excellent throughout the project."
-              </p>
-              <div class="review-author">
-                <div class="review-avatar">EW</div>
-                <div class="review-info">
-                  <h4>Emily Watson</h4>
-                  <span>Marketing Director, Luxe Brands</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="review-card">
-              <span class="review-badge">
-                <i class="fab fa-upwork"></i> Upwork
-              </span>
-              <div class="review-stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-              <p class="review-text">
-                "Globaxify transformed our e-commerce business completely. Their
-                Shopify expertise helped us increase sales by 300% in just 3
-                months. The team's dedication exceeded all expectations."
-              </p>
-              <div class="review-author">
-                <div class="review-avatar">AI</div>
-                <div class="review-info">
-                  <h4>Zarar Ali</h4>
-                  <span>CEO, TechStore Pakistan</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="review-card">
-              <span class="review-badge">
-                <i class="fab fa-upwork"></i> Upwork
-              </span>
-              <div class="review-stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-              <p class="review-text">
-                "Working with Globaxify was a game-changer for our startup.
-                Their web development team delivered a world-class platform that
-                helped us secure our first round of funding. Highly
-                recommended!"
-              </p>
-              <div class="review-author">
-                <div class="review-avatar">SA</div>
-                <div class="review-info">
-                  <h4>Sarah Ahmed</h4>
-                  <span>Founder, StartupX</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="review-card">
-              <span class="review-badge">
-                <i class="fab fa-upwork"></i> Upwork
-              </span>
-              <div class="review-stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-              <p class="review-text">
-                "The social media marketing strategy by Globaxify increased our
-                brand visibility by 500%. Their creative team understands
-                exactly what the audience wants. Best investment we ever made!"
-              </p>
-              <div class="review-author">
-                <div class="review-avatar">MA</div>
-                <div class="review-info">
-                  <h4>Muhammad Ali</h4>
-                  <span>Marketing Director, BrandCo</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="review-card">
-              <span class="review-badge">
-                <i class="fab fa-upwork"></i> Upwork
-              </span>
-              <div class="review-stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-              <p class="review-text">
-                "Product hunting service by Globaxify is exceptional. They found
-                winning products that generated $50k revenue in the first month.
-                Their research team is incredibly talented and data-driven."
-              </p>
-              <div class="review-author">
-                <div class="review-avatar">UT</div>
-                <div class="review-info">
-                  <h4>Usman Tariq</h4>
-                  <span>E-commerce Entrepreneur</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="review-card">
-              <span class="review-badge">
-                <i class="fab fa-upwork"></i> Upwork
-              </span>
-              <div class="review-stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-              <p class="review-text">
-                "From web development to digital marketing, Globaxify handled
-                everything professionally. Their 24/7 support and commitment to
-                quality makes them our go-to agency for all digital needs."
-              </p>
-              <div class="review-author">
-                <div class="review-avatar">FK</div>
-                <div class="review-info">
-                  <h4>Farhan Khan</h4>
-                  <span>Operations Manager, RetailMax</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- FAQ SECTION -->
-      <section class="faq-section" id="faq">
-        <div class="container">
-          <div class="section-header">
-            <span class="section-tag">Support</span>
-            <h2 class="section-title">Frequently Asked Questions</h2>
-            <p class="section-subtitle">
-              Everything you need to know about working with me
-            </p>
-          </div>
-
-          <div class="faq-wrapper">
-            <div class="faq-left">
-              <div class="faq-visual">
-                <i class="fas fa-comments"></i>
-                <h3>Still Have Questions?</h3>
-                <p>
-                  Can't find the answer you're looking for? Please chat with our
-                  friendly team.
-                </p>
-              </div>
-              <div class="faq-contact">
-                <p>Get in touch</p>
-                <a href="mailto:mahmadiqbal84@gmail.com"
-                  >mahmadiqbal84@gmail.com</a
-                >
-              </div>
-            </div>
-
-            <div class="faq-list">
-              <div class="faq-item active">
-                <div class="faq-question">
-                  <span>What is your typical project timeline?</span>
-                  <div class="faq-icon">
-                    <i class="fas fa-chevron-down"></i>
-                  </div>
-                </div>
-                <div class="faq-answer">
-                  <p>
-                    Most Shopify store projects take 2-4 weeks depending on
-                    complexity. Custom theme development typically requires 3-6
-                    weeks. I'll provide a detailed timeline during our initial
-                    consultation based on your specific requirements.
-                  </p>
-                </div>
-              </div>
-
-              <div class="faq-item">
-                <div class="faq-question">
-                  <span>Do you offer ongoing support after launch?</span>
-                  <div class="faq-icon">
-                    <i class="fas fa-chevron-down"></i>
-                  </div>
-                </div>
-                <div class="faq-answer">
-                  <p>
-                    Absolutely! I offer various maintenance packages including
-                    24/7 technical support, monthly updates, security
-                    monitoring, and performance optimization. Your store's
-                    success is my long-term priority.
-                  </p>
-                </div>
-              </div>
-
-              <div class="faq-item">
-                <div class="faq-question">
-                  <span>Can you migrate my existing store to Shopify?</span>
-                  <div class="faq-icon">
-                    <i class="fas fa-chevron-down"></i>
-                  </div>
-                </div>
-                <div class="faq-answer">
-                  <p>
-                    Yes, I specialize in seamless migrations from WooCommerce,
-                    Magento, BigCommerce, and custom platforms. I ensure zero
-                    data loss, preserve your SEO rankings, and minimize downtime
-                    during the transition.
-                  </p>
-                </div>
-              </div>
-
-              <div class="faq-item">
-                <div class="faq-question">
-                  <span>What makes your Shopify themes unique?</span>
-                  <div class="faq-icon">
-                    <i class="fas fa-chevron-down"></i>
-                  </div>
-                </div>
-                <div class="faq-answer">
-                  <p>
-                    My themes are built from scratch with clean, optimized code.
-                    They feature lightning-fast load times, mobile-first
-                    responsive design, conversion-focused layouts, and easy
-                    customization options—all tailored to your brand identity.
-                  </p>
-                </div>
-              </div>
-
-              <div class="faq-item">
-                <div class="faq-question">
-                  <span>How do we get started working together?</span>
-                  <div class="faq-icon">
-                    <i class="fas fa-chevron-down"></i>
-                  </div>
-                </div>
-                <div class="faq-answer">
-                  <p>
-                    Simply click the "Let's Talk" button or reach out via
-                    Upwork. We'll schedule a free consultation to discuss your
-                    project, goals, and timeline. I'll then provide a detailed
-                    proposal with transparent pricing.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-section">
-            <div class="footer-logo">
-              <a href="#home">
-                <img
-                  src="assets/Logo.png"
-                  alt="Globaxify Logo"
-                  class="footer-logo-img"
-                />
-              </a>
-            </div>
-            <p class="footer-desc">
-              Transforming businesses through innovative digital solutions in
-              Bahawalpur and beyond.
-            </p>
-            <div class="footer-social">
-              <a
-                href="https://www.facebook.com/share/1E2N7YbB3C/?mibextid=wwXIfr"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-              >
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a
-                href="https://www.tiktok.com/@ecom_with_globaxify?is_from_webapp=1&sender_device=pc"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="TikTok"
-              >
-                <i class="fab fa-tiktok"></i>
-              </a>
-              <a
-                href="https://www.instagram.com/ecom_with_globaxify/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-              >
-                <i class="fab fa-instagram"></i>
-              </a>
-            </div>
-          </div>
-          <div class="footer-section">
-            <h3>Quick Links</h3>
-            <ul class="footer-links">
-              <li>
-                <a
-                  href="portfolio.html"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Portfolio</a
-                >
-              </li>
-              <li>
-                <a
-                  href="projects.html"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Projects</a
-                >
-              </li>
-              <li>
-                <a
-                  href="services.html"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Services</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="footer-section">
-            <h3>Services</h3>
-            <ul class="footer-links">
-              <li>
-                <a
-                  href="Privacy Policy.html"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Privacy Policy</a
-                >
-              </li>
-              <li>
-                <a
-                  href="Terms of Service.html"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Terms of Service</a
-                >
-              </li>
-              <li>
-                <a
-                  href="Cookies Policy.html"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Cookies Policy</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="footer-section">
-            <h3>Newsletter</h3>
-            <p>Subscribe for latest updates and insights</p>
-            <form class="newsletter-form">
-              <input type="email" placeholder="Your email" required />
-              <button type="submit" aria-label="Subscribe">
-                <i class="fas fa-arrow-right"></i>
-              </button>
-            </form>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <p>
-            &copy; 2024 Globaxify. All rights reserved. | Designed with
-            <i class="fas fa-heart"></i> in Bahawalpur
-          </p>
+          </a>
         </div>
       </div>
-    </footer>
+    </section>
 
-    <!-- Back to Top Button -->
-    <button class="back-to-top" id="backToTop" aria-label="Back to top">
-      <i class="fas fa-arrow-up"></i>
-    </button>
+    <!-- PROJECTS SECTION 3: Accordion Expand -->
+    <section class="section-accordion">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Gallery</span>
+          <h2 class="section-title">Complete Portfolio</h2>
+          <p class="section-subtitle">Hover to explore all projects</p>
+        </div>
 
-    <script>
-      // Mobile Menu Toggle
-      const menuBtn = document.getElementById("menuBtn");
-      const navMenu = document.getElementById("navMenu");
+        <div class="accordion-container">
+          <a href="https://zestypaws.com/" class="accordion-item active">
+            <div class="accordion-image">
+              <img src="assets/zestypaws.png" alt="Auto Parts Pro" />
+            </div>
+            <span class="accordion-tag">Shopify</span>
+            <div class="accordion-overlay">
+              <div class="accordion-content">
+                <h3>Zesty Paws</h3>
+              </div>
+            </div>
+          </a>
 
-      menuBtn.addEventListener("click", () => {
-        navMenu.classList.toggle("active");
-        menuBtn.classList.toggle("active");
+          <a href="https://dossier.co/" class="accordion-item">
+            <div class="accordion-image">
+              <img src="assets/dossier.png" alt="Street Style" />
+            </div>
+            <span class="accordion-tag">Shopify</span>
+            <div class="accordion-overlay">
+              <div class="accordion-content">
+                <h3>Dossier</h3>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://scentsnstories.pk/" class="accordion-item">
+            <div class="accordion-image">
+              <img src="assets/scentsnstories.png" alt="Vitamin Plus" />
+            </div>
+            <span class="accordion-tag">Shopify</span>
+            <div class="accordion-overlay">
+              <div class="accordion-content">
+                <h3>Scentsn Stories</h3>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://www.calyanwaxco.com/" class="accordion-item">
+            <div class="accordion-image">
+              <img src="assets/calyanwaxco.png" alt="Gadget Zone" />
+            </div>
+            <span class="accordion-tag">Shopify</span>
+            <div class="accordion-overlay">
+              <div class="accordion-content">
+                <h3>Calyanwaxco</h3>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://byltbasics.com/" class="accordion-item">
+            <div class="accordion-image">
+              <img src="assets/byltbasics.png" alt="Creative Studio"
+                style="object-fit: contain; background: var(--bg)" />
+            </div>
+            <span class="accordion-tag">Shopify</span>
+            <div class="accordion-overlay">
+              <div class="accordion-content">
+                <h3>BYLT Basics</h3>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section-services" id="services">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">What I Do</span>
+          <h2 class="section-title">My Expertise</h2>
+          <p class="section-subtitle">Comprehensive e-commerce solutions</p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-box">
+            <div class="service-icon">
+              <i class="fas fa-paint-brush"></i>
+            </div>
+            <h3>Custom Theme Design</h3>
+            <p>
+              Unique, high-speed Shopify themes tailored to your brand
+              identity.
+            </p>
+          </div>
+
+          <div class="service-box">
+            <div class="service-icon">
+              <i class="fas fa-code"></i>
+            </div>
+            <h3>Liquid Development</h3>
+            <p>
+              Advanced Liquid coding for custom sections and functionality.
+            </p>
+          </div>
+
+          <div class="service-box">
+            <div class="service-icon">
+              <i class="fas fa-sync-alt"></i>
+            </div>
+            <h3>App Integration</h3>
+            <p>Seamlessly connecting CRM, Inventory, and Marketing apps.</p>
+          </div>
+
+          <div class="service-box">
+            <div class="service-icon">
+              <i class="fas fa-tachometer-alt"></i>
+            </div>
+            <h3>Performance Optimization</h3>
+            <p>
+              Speed optimization, SEO enhancement, and conversion
+              improvements.
+            </p>
+          </div>
+
+          <div class="service-box">
+            <div class="service-icon">
+              <i class="fas fa-exchange-alt"></i>
+            </div>
+            <h3>Store Migration</h3>
+            <p>
+              Seamless migration from WooCommerce, Magento, or custom
+              platforms.
+            </p>
+          </div>
+
+          <div class="service-box">
+            <div class="service-icon">
+              <i class="fas fa-headset"></i>
+            </div>
+            <h3>Ongoing Support</h3>
+            <p>24/7 maintenance, updates, and technical support.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS SECTION -->
+    <section class="reviews-section" id="reviews">
+      <div class="container">
+        <div class="reviews-header">
+          <span class="section-tag">Testimonials</span>
+          <h2 class="section-title">Client Reviews</h2>
+          <p class="section-subtitle">
+            What my clients say about working with me
+          </p>
+        </div>
+
+        <div class="reviews-grid">
+          <div class="review-card">
+            <span class="review-badge">
+              <i class="fab fa-upwork"></i> Upwork
+            </span>
+            <div class="review-stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="review-text">
+              "Ahmad delivered exceptional work on our Shopify store. His
+              attention to detail and technical expertise transformed our
+              online presence. Sales increased by 40% within the first month!"
+            </p>
+            <div class="review-author">
+              <div class="review-avatar">JD</div>
+              <div class="review-info">
+                <h4>John Davidson</h4>
+                <span>CEO, TechGear Inc.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <span class="review-badge">
+              <i class="fab fa-upwork"></i> Upwork
+            </span>
+            <div class="review-stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="review-text">
+              "Working with Ahmad was a game-changer for our business. He
+              understood our vision perfectly and delivered a stunning custom
+              theme that exceeded all expectations. Highly recommended!"
+            </p>
+            <div class="review-author">
+              <div class="review-avatar">SM</div>
+              <div class="review-info">
+                <h4>Sarah Mitchell</h4>
+                <span>Founder, StyleHub</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <span class="review-badge">
+              <i class="fab fa-upwork"></i> Upwork
+            </span>
+            <div class="review-stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="review-text">
+              "The migration from WooCommerce to Shopify was seamless thanks
+              to Ahmad. Zero downtime, all data preserved, and the new store
+              performs incredibly fast. True professional!"
+            </p>
+            <div class="review-author">
+              <div class="review-avatar">RK</div>
+              <div class="review-info">
+                <h4>Robert Kim</h4>
+                <span>Director, Organic Foods Co.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <span class="review-badge">
+              <i class="fab fa-upwork"></i> Upwork
+            </span>
+            <div class="review-stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="review-text">
+              "Ahmad's expertise in Shopify Plus is unmatched. He optimized
+              our checkout process and increased our conversion rate by 35%.
+              His communication was excellent throughout the project."
+            </p>
+            <div class="review-author">
+              <div class="review-avatar">EW</div>
+              <div class="review-info">
+                <h4>Emily Watson</h4>
+                <span>Marketing Director, Luxe Brands</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <span class="review-badge">
+              <i class="fab fa-upwork"></i> Upwork
+            </span>
+            <div class="review-stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="review-text">
+              "Globaxify transformed our e-commerce business completely. Their
+              Shopify expertise helped us increase sales by 300% in just 3
+              months. The team's dedication exceeded all expectations."
+            </p>
+            <div class="review-author">
+              <div class="review-avatar">AI</div>
+              <div class="review-info">
+                <h4>Zarar Ali</h4>
+                <span>CEO, TechStore Pakistan</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <span class="review-badge">
+              <i class="fab fa-upwork"></i> Upwork
+            </span>
+            <div class="review-stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="review-text">
+              "Working with Globaxify was a game-changer for our startup.
+              Their web development team delivered a world-class platform that
+              helped us secure our first round of funding. Highly
+              recommended!"
+            </p>
+            <div class="review-author">
+              <div class="review-avatar">SA</div>
+              <div class="review-info">
+                <h4>Sarah Ahmed</h4>
+                <span>Founder, StartupX</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <span class="review-badge">
+              <i class="fab fa-upwork"></i> Upwork
+            </span>
+            <div class="review-stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="review-text">
+              "The social media marketing strategy by Globaxify increased our
+              brand visibility by 500%. Their creative team understands
+              exactly what the audience wants. Best investment we ever made!"
+            </p>
+            <div class="review-author">
+              <div class="review-avatar">MA</div>
+              <div class="review-info">
+                <h4>Muhammad Ali</h4>
+                <span>Marketing Director, BrandCo</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <span class="review-badge">
+              <i class="fab fa-upwork"></i> Upwork
+            </span>
+            <div class="review-stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="review-text">
+              "Product hunting service by Globaxify is exceptional. They found
+              winning products that generated $50k revenue in the first month.
+              Their research team is incredibly talented and data-driven."
+            </p>
+            <div class="review-author">
+              <div class="review-avatar">UT</div>
+              <div class="review-info">
+                <h4>Usman Tariq</h4>
+                <span>E-commerce Entrepreneur</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <span class="review-badge">
+              <i class="fab fa-upwork"></i> Upwork
+            </span>
+            <div class="review-stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="review-text">
+              "From web development to digital marketing, Globaxify handled
+              everything professionally. Their 24/7 support and commitment to
+              quality makes them our go-to agency for all digital needs."
+            </p>
+            <div class="review-author">
+              <div class="review-avatar">FK</div>
+              <div class="review-info">
+                <h4>Farhan Khan</h4>
+                <span>Operations Manager, RetailMax</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Support</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">
+            Everything you need to know about working with me
+          </p>
+        </div>
+
+        <div class="faq-wrapper">
+          <div class="faq-left">
+            <div class="faq-visual">
+              <i class="fas fa-comments"></i>
+              <h3>Still Have Questions?</h3>
+              <p>
+                Can't find the answer you're looking for? Please chat with our
+                friendly team.
+              </p>
+            </div>
+            <div class="faq-contact">
+              <p>Get in touch</p>
+              <a href="mailto:mahmadiqbal84@gmail.com">mahmadiqbal84@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="faq-list">
+            <div class="faq-item active">
+              <div class="faq-question">
+                <span>What is your typical project timeline?</span>
+                <div class="faq-icon">
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Most Shopify store projects take 2-4 weeks depending on
+                  complexity. Custom theme development typically requires 3-6
+                  weeks. I'll provide a detailed timeline during our initial
+                  consultation based on your specific requirements.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>Do you offer ongoing support after launch?</span>
+                <div class="faq-icon">
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Absolutely! I offer various maintenance packages including
+                  24/7 technical support, monthly updates, security
+                  monitoring, and performance optimization. Your store's
+                  success is my long-term priority.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>Can you migrate my existing store to Shopify?</span>
+                <div class="faq-icon">
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Yes, I specialize in seamless migrations from WooCommerce,
+                  Magento, BigCommerce, and custom platforms. I ensure zero
+                  data loss, preserve your SEO rankings, and minimize downtime
+                  during the transition.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>What makes your Shopify themes unique?</span>
+                <div class="faq-icon">
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  My themes are built from scratch with clean, optimized code.
+                  They feature lightning-fast load times, mobile-first
+                  responsive design, conversion-focused layouts, and easy
+                  customization options—all tailored to your brand identity.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>How do we get started working together?</span>
+                <div class="faq-icon">
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Simply click the "Let's Talk" button or reach out via
+                  Upwork. We'll schedule a free consultation to discuss your
+                  project, goals, and timeline. I'll then provide a detailed
+                  proposal with transparent pricing.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <a href="#home">
+              <img src="assets/Logo.png" alt="Globaxify Logo" class="footer-logo-img" />
+            </a>
+          </div>
+          <p class="footer-desc">
+            Transforming businesses through innovative digital solutions in
+            Bahawalpur and beyond.
+          </p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/share/1E2N7YbB3C/?mibextid=wwXIfr" target="_blank"
+              rel="noopener noreferrer" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.tiktok.com/@ecom_with_globaxify?is_from_webapp=1&sender_device=pc" target="_blank"
+              rel="noopener noreferrer" aria-label="TikTok">
+              <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="https://www.instagram.com/ecom_with_globaxify/" target="_blank" rel="noopener noreferrer"
+              aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li>
+              <a href="portfolio.html" target="_blank" rel="noopener noreferrer">Portfolio</a>
+            </li>
+            <li>
+              <a href="projects.html" target="_blank" rel="noopener noreferrer">Projects</a>
+            </li>
+            <li>
+              <a href="services.html" target="_blank" rel="noopener noreferrer">Services</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Services</h3>
+          <ul class="footer-links">
+            <li>
+              <a href="Privacy Policy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="Terms of Service.html" target="_blank" rel="noopener noreferrer">Terms of Service</a>
+            </li>
+            <li>
+              <a href="Cookies Policy.html" target="_blank" rel="noopener noreferrer">Cookies Policy</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Newsletter</h3>
+          <p>Subscribe for latest updates and insights</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email" required />
+            <button type="submit" aria-label="Subscribe">
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; 2024 Globaxify. All rights reserved. | Designed with
+          <i class="fas fa-heart"></i> in Bahawalpur
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script>
+    // Mobile Menu Toggle
+    const menuBtn = document.getElementById("menuBtn");
+    const navMenu = document.getElementById("navMenu");
+
+    menuBtn.addEventListener("click", () => {
+      navMenu.classList.toggle("active");
+      menuBtn.classList.toggle("active");
+    });
+
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll(".nav-menu a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navMenu.classList.remove("active");
+        menuBtn.classList.remove("active");
       });
+    });
 
-      // Close mobile menu when clicking on a link
-      document.querySelectorAll(".nav-menu a").forEach((link) => {
-        link.addEventListener("click", () => {
-          navMenu.classList.remove("active");
-          menuBtn.classList.remove("active");
+    // FAQ Accordion
+    const faqItems = document.querySelectorAll(".faq-item");
+
+    faqItems.forEach((item) => {
+      const question = item.querySelector(".faq-question");
+
+      question.addEventListener("click", () => {
+        const isActive = item.classList.contains("active");
+
+        // Close all items
+        faqItems.forEach((i) => i.classList.remove("active"));
+
+        // Open clicked item if it wasn't active
+        if (!isActive) {
+          item.classList.add("active");
+        }
+      });
+    });
+
+    // Project Accordion Interaction (Desktop only)
+    const accordionItems = document.querySelectorAll(".accordion-item");
+
+    // Only apply hover effects on non-touch devices
+    if (window.matchMedia("(hover: hover)").matches) {
+      accordionItems.forEach((item) => {
+        item.addEventListener("mouseenter", () => {
+          accordionItems.forEach((i) => i.classList.remove("active"));
+          item.classList.add("active");
         });
       });
+    }
 
-      // FAQ Accordion
-      const faqItems = document.querySelectorAll(".faq-item");
-
-      faqItems.forEach((item) => {
-        const question = item.querySelector(".faq-question");
-
-        question.addEventListener("click", () => {
-          const isActive = item.classList.contains("active");
-
-          // Close all items
-          faqItems.forEach((i) => i.classList.remove("active"));
-
-          // Open clicked item if it wasn't active
-          if (!isActive) {
-            item.classList.add("active");
-          }
-        });
+    // Smooth Scroll
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute("href"));
+        if (target) {
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
       });
+    });
 
-      // Project Accordion Interaction (Desktop only)
-      const accordionItems = document.querySelectorAll(".accordion-item");
-
-      // Only apply hover effects on non-touch devices
-      if (window.matchMedia("(hover: hover)").matches) {
-        accordionItems.forEach((item) => {
-          item.addEventListener("mouseenter", () => {
-            accordionItems.forEach((i) => i.classList.remove("active"));
-            item.classList.add("active");
-          });
-        });
+    // Navbar Scroll Effect
+    window.addEventListener("scroll", () => {
+      const navbar = document.querySelector(".navbar");
+      if (window.scrollY > 50) {
+        navbar.style.boxShadow = "0 10px 40px rgba(0,0,0,0.1)";
+      } else {
+        navbar.style.boxShadow = "0 4px 6px -1px rgba(0,0,0,0.1)";
       }
+    });
 
-      // Smooth Scroll
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute("href"));
-          if (target) {
-            target.scrollIntoView({ behavior: "smooth", block: "start" });
-          }
-        });
-      });
+    // Back to Top Button
+    const backToTopBtn = document.getElementById("backToTop");
 
-      // Navbar Scroll Effect
-      window.addEventListener("scroll", () => {
-        const navbar = document.querySelector(".navbar");
-        if (window.scrollY > 50) {
-          navbar.style.boxShadow = "0 10px 40px rgba(0,0,0,0.1)";
-        } else {
-          navbar.style.boxShadow = "0 4px 6px -1px rgba(0,0,0,0.1)";
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > 300) {
+        backToTopBtn.classList.add("visible");
+      } else {
+        backToTopBtn.classList.remove("visible");
+      }
+    });
+
+    backToTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    // Active Navigation Link on Scroll
+    const sections = document.querySelectorAll("section[id]");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= sectionTop - 200) {
+          current = section.getAttribute("id");
         }
       });
 
-      // Back to Top Button
-      const backToTopBtn = document.getElementById("backToTop");
-
-      window.addEventListener("scroll", () => {
-        if (window.pageYOffset > 300) {
-          backToTopBtn.classList.add("visible");
-        } else {
-          backToTopBtn.classList.remove("visible");
+      document.querySelectorAll(".nav-menu a").forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href").includes(current)) {
+          link.classList.add("active");
         }
       });
+    });
+  </script>
+</body>
 
-      backToTopBtn.addEventListener("click", () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      });
-
-      // Active Navigation Link on Scroll
-      const sections = document.querySelectorAll("section[id]");
-
-      window.addEventListener("scroll", () => {
-        let current = "";
-        sections.forEach((section) => {
-          const sectionTop = section.offsetTop;
-          const sectionHeight = section.clientHeight;
-          if (pageYOffset >= sectionTop - 200) {
-            current = section.getAttribute("id");
-          }
-        });
-
-        document.querySelectorAll(".nav-menu a").forEach((link) => {
-          link.classList.remove("active");
-          if (link.getAttribute("href").includes(current)) {
-            link.classList.add("active");
-          }
-        });
-      });
-    </script>
-  </body>
 </html>
