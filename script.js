@@ -707,3 +707,58 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     }
   });
 });
+
+// ---upwork profiles Section----
+(function () {
+  // Button click pulse effect
+  const buttons = document.querySelectorAll(".btn");
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", function (e) {
+      const pulse = document.createElement("span");
+      pulse.style.position = "absolute";
+      pulse.style.width = "100%";
+      pulse.style.height = "100%";
+      pulse.style.top = "0";
+      pulse.style.left = "0";
+      pulse.style.borderRadius = "50px";
+      pulse.style.background = "rgba(37, 99, 235, 0.3)";
+      pulse.style.pointerEvents = "none";
+      pulse.style.transform = "scale(0.8)";
+      pulse.style.opacity = "0";
+      pulse.style.transition = "transform 0.3s ease, opacity 0.4s ease";
+      this.style.position = "relative";
+      this.appendChild(pulse);
+      requestAnimationFrame(() => {
+        pulse.style.transform = "scale(1.3)";
+        pulse.style.opacity = "1";
+      });
+      setTimeout(() => {
+        pulse.style.opacity = "0";
+        setTimeout(() => pulse.remove(), 300);
+      }, 200);
+    });
+  });
+
+  // 3D Tilt effect on cards
+  const cards = document.querySelectorAll(".card");
+  cards.forEach((card) => {
+    card.addEventListener("mousemove", (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+
+      const rotateX = (y - centerY) / 20;
+      const rotateY = (centerX - x) / 20;
+
+      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-12px) scale(1.02)`;
+    });
+
+    card.addEventListener("mouseleave", () => {
+      card.style.transform =
+        "perspective(1000px) rotateX(0) rotateY(0) translateY(0) scale(1)";
+    });
+  });
+})();
