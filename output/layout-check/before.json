@@ -1,0 +1,402 @@
+[
+  {
+    "width": 320,
+    "header": {
+      "logo": {
+        "left": 124,
+        "right": 196,
+        "top": 15,
+        "width": 72,
+        "height": 54,
+        "display": "block"
+      },
+      "portfolio": {
+        "left": 46,
+        "right": 109.25,
+        "top": 24,
+        "width": 63.25,
+        "height": 36,
+        "display": "flex"
+      },
+      "menu": {
+        "left": 232,
+        "right": 274,
+        "top": 21,
+        "width": 42,
+        "height": 42,
+        "display": "flex"
+      }
+    },
+    "sections": [
+      {
+        "id": "home",
+        "height": 597,
+        "paddingTop": "110px",
+        "paddingBottom": "30px",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      },
+      {
+        "id": "projects",
+        "height": 798,
+        "paddingTop": "32px",
+        "paddingBottom": "32px",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      },
+      {
+        "id": "services",
+        "height": 2372,
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "marginTop": "10px",
+        "marginBottom": "18px"
+      },
+      {
+        "id": "about",
+        "height": 3853,
+        "paddingTop": "32px",
+        "paddingBottom": "32px",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      },
+      {
+        "id": "reviews",
+        "height": 1987,
+        "paddingTop": "32px",
+        "paddingBottom": "32px",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      },
+      {
+        "id": "contact",
+        "height": 1039,
+        "paddingTop": "32px",
+        "paddingBottom": "32px",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      }
+    ],
+    "scrollWidth": 320
+  },
+  {
+    "width": 390,
+    "header": {
+      "logo": {
+        "left": 128.703125,
+        "right": 261.296875,
+        "top": 15,
+        "width": 132.59375,
+        "height": 54,
+        "display": "block"
+      },
+      "portfolio": {
+        "left": 46,
+        "right": 109.25,
+        "top": 24,
+        "width": 63.25,
+        "height": 36,
+        "display": "flex"
+      },
+      "menu": {
+        "left": 302,
+        "right": 344,
+        "top": 21,
+        "width": 42,
+        "height": 42,
+        "display": "flex"
+      }
+    },
+    "sections": [
+      {
+        "id": "home",
+        "height": 482,
+        "paddingTop": "110px",
+        "paddingBottom": "30px",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      },
+      {
+        "id": "projects",
+        "height": 762,
+        "paddingTop": "32px",
+        "paddingBottom": "32px",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      },
+      {
+        "id": "services",
+        "height": 2711,
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "marginTop": "10px",
+        "marginBottom": "18px"
+      },
+      {
+        "id": "about",
+        "height": 3395,
+        "paddingTop": "32px",
+        "paddingBottom": "32px",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      },
+      {
+        "id": "reviews",
+        "height": 1796,
+        "paddingTop": "32px",
+        "paddingBottom": "32px",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      },
+      {
+        "id": "contact",
+        "height": 1085,
+        "paddingTop": "32px",
+        "paddingBottom": "32px",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      }
+    ],
+    "scrollWidth": 390
+  },
+  {
+    "width": 768,
+    "header": {
+      "logo": {
+        "left": 284,
+        "right": 474,
+        "top": 16,
+        "width": 190,
+        "height": 60,
+        "display": "block"
+      },
+      "portfolio": {
+        "left": 46,
+        "right": 143.375,
+        "top": 27,
+        "width": 97.375,
+        "height": 38,
+        "display": "flex"
+      },
+      "menu": {
+        "left": 670,
+        "right": 712,
+        "top": 25,
+        "width": 42,
+        "height": 42,
+        "display": "flex"
+      }
+    },
+    "sections": [
+      {
+        "id": "home",
+        "height": 489,
+        "paddingTop": "128px",
+        "paddingBottom": "44px",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      },
+      {
+        "id": "projects",
+        "height": 610,
+        "paddingTop": "40px",
+        "paddingBottom": "40px",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      },
+      {
+        "id": "services",
+        "height": 2688,
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "marginTop": "18px",
+        "marginBottom": "24px"
+      },
+      {
+        "id": "about",
+        "height": 2752,
+        "paddingTop": "40px",
+        "paddingBottom": "40px",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      },
+      {
+        "id": "reviews",
+        "height": 1214,
+        "paddingTop": "40px",
+        "paddingBottom": "40px",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      },
+      {
+        "id": "contact",
+        "height": 635,
+        "paddingTop": "40px",
+        "paddingBottom": "40px",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      }
+    ],
+    "scrollWidth": 758
+  },
+  {
+    "width": 1024,
+    "header": {
+      "logo": {
+        "left": 412,
+        "right": 602,
+        "top": 20,
+        "width": 190,
+        "height": 60,
+        "display": "block"
+      },
+      "portfolio": {
+        "left": 50,
+        "right": 149.375,
+        "top": 30.5,
+        "width": 99.375,
+        "height": 39,
+        "display": "flex"
+      },
+      "menu": {
+        "left": 922,
+        "right": 964,
+        "top": 29,
+        "width": 42,
+        "height": 42,
+        "display": "flex"
+      }
+    },
+    "sections": [
+      {
+        "id": "home",
+        "height": 500,
+        "paddingTop": "128px",
+        "paddingBottom": "44px",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      },
+      {
+        "id": "projects",
+        "height": 632,
+        "paddingTop": "48px",
+        "paddingBottom": "48px",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      },
+      {
+        "id": "services",
+        "height": 623,
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "marginTop": "18px",
+        "marginBottom": "24px"
+      },
+      {
+        "id": "about",
+        "height": 2182,
+        "paddingTop": "48px",
+        "paddingBottom": "48px",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      },
+      {
+        "id": "reviews",
+        "height": 1173,
+        "paddingTop": "48px",
+        "paddingBottom": "48px",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      },
+      {
+        "id": "contact",
+        "height": 675,
+        "paddingTop": "48px",
+        "paddingBottom": "48px",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      }
+    ],
+    "scrollWidth": 1014
+  },
+  {
+    "width": 1440,
+    "header": {
+      "logo": {
+        "left": 69,
+        "right": 259,
+        "top": 21,
+        "width": 190,
+        "height": 64,
+        "display": "block"
+      },
+      "portfolio": {
+        "left": 1231.5,
+        "right": 1361,
+        "top": 31.5,
+        "width": 129.5,
+        "height": 43,
+        "display": "flex"
+      },
+      "menu": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "width": 0,
+        "height": 0,
+        "display": "none"
+      }
+    },
+    "sections": [
+      {
+        "id": "home",
+        "height": 529,
+        "paddingTop": "128px",
+        "paddingBottom": "44px",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      },
+      {
+        "id": "projects",
+        "height": 642,
+        "paddingTop": "48px",
+        "paddingBottom": "48px",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      },
+      {
+        "id": "services",
+        "height": 2964,
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "marginTop": "18px",
+        "marginBottom": "24px"
+      },
+      {
+        "id": "about",
+        "height": 2227,
+        "paddingTop": "48px",
+        "paddingBottom": "48px",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      },
+      {
+        "id": "reviews",
+        "height": 1180,
+        "paddingTop": "48px",
+        "paddingBottom": "48px",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      },
+      {
+        "id": "contact",
+        "height": 682,
+        "paddingTop": "48px",
+        "paddingBottom": "48px",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      }
+    ],
+    "scrollWidth": 1430
+  }
+]

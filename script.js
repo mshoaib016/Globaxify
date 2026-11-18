@@ -230,14 +230,24 @@
     const toggleMenu = () => {
       elements.hamburger.classList.toggle("active");
       elements.navMenu.classList.toggle("active");
+      elements.hamburger.setAttribute("aria-expanded", String(elements.navMenu.classList.contains("active")));
     };
 
     elements.hamburger.addEventListener("click", toggleMenu);
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && elements.navMenu.classList.contains("active")) {
+        elements.hamburger.classList.remove("active");
+        elements.navMenu.classList.remove("active");
+        elements.hamburger.setAttribute("aria-expanded", "false");
+        elements.hamburger.focus();
+      }
+    });
 
     elements.navLinks.forEach((link) => {
       link.addEventListener("click", () => {
         elements.hamburger.classList.remove("active");
         elements.navMenu.classList.remove("active");
+        elements.hamburger.setAttribute("aria-expanded", "false");
       });
     });
   }
@@ -257,8 +267,14 @@
       const navLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
 
       if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-        elements.navLinks.forEach((link) => link.classList.remove("active"));
-        if (navLink) navLink.classList.add("active");
+        elements.navLinks.forEach((link) => {
+          link.classList.remove("active");
+          link.removeAttribute("aria-current");
+        });
+        if (navLink) {
+          navLink.classList.add("active");
+          navLink.setAttribute("aria-current", "location");
+        }
       }
     });
   }
@@ -443,14 +459,22 @@
 
   function initContactForm() {
     if (!elements.contactForm) return;
-
-    elements.contactForm.addEventListener("submit", (e) => {
-      e.preventDefault();
-      showNotification(
-        "Thank you! Your message has been sent successfully.",
-        "success",
-      );
-      elements.contactForm.reset();
+    elements.contactForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const form = elements.contactForm;
+      if (!form.reportValidity()) return;
+      const values = new FormData(form);
+      const subject = String(values.get("subject") || "New project inquiry - Globaxify");
+      const body = [
+        `Name: ${values.get("name") || ""}`,
+        `Email: ${values.get("email") || ""}`,
+        `Phone: ${values.get("phone") || ""}`,
+        "",
+        String(values.get("message") || "")
+      ].join("\n");
+      const status = form.querySelector(".contact-studio-status");
+      if (status) status.textContent = "Your email app will open with your message. Please send it there, or email us using the address alongside.";
+      window.location.href = `mailto:globaxify.official@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     });
   }
 
@@ -473,7 +497,7 @@
       position: fixed;
       top: 100px;
       right: 30px;
-      background: ${type === "success" ? "linear-gradient(135deg, #10b981, #3b82f6)" : "#ef4444"};
+      background: ${type === "success" ? "#20796f" : "#282b2b"};
       color: white;
       padding: 15px 25px;
       border-radius: 12px;
@@ -676,24 +700,6 @@
     init();
   }
 })();
-// Form submission handler
-document.getElementById("contactForm").addEventListener("submit", function (e) {
-  e.preventDefault();
-
-  // Get form values
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const service = document.getElementById("service").value;
-  const message = document.getElementById("message").value;
-
-  // Simple validation
-  if (name && email && service && message) {
-    // Show success message (you can replace this with actual form submission)
-    alert("Thank you " + name + "! Your message has been sent successfully.");
-    this.reset();
-  }
-});
-
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
@@ -721,7 +727,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       pulse.style.top = "0";
       pulse.style.left = "0";
       pulse.style.borderRadius = "50px";
-      pulse.style.background = "rgba(37, 99, 235, 0.3)";
+      pulse.style.background = "rgba(45, 163, 151, 0.3)";
       pulse.style.pointerEvents = "none";
       pulse.style.transform = "scale(0.8)";
       pulse.style.opacity = "0";

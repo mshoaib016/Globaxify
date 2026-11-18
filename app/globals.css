@@ -1,0 +1,184 @@
+@import "tailwindcss";
+
+:root {
+  --background: #090b14;
+  --surface: #111525;
+  --surface-raised: #171d31;
+  --foreground: #f4f5ff;
+  --muted: #a2a9c0;
+  --muted-2: #737d99;
+  --line: rgba(173, 184, 220, 0.14);
+  --purple: #8b5cf6;
+  --blue: #4387ff;
+  --cyan: #55d6e8;
+  --font-body: var(--font-inter), Arial, sans-serif;
+  --font-heading: var(--font-space), Arial, sans-serif;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-body);
+  --font-heading: var(--font-heading);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+::selection { background: rgba(139, 92, 246, .35); color: white; }
+a { color: inherit; text-decoration: none; }
+button, a { -webkit-tap-highlight-color: transparent; }
+
+.container-shell {
+  width: min(1160px, calc(100% - 48px));
+  margin-inline: auto;
+}
+.section-space { padding-block: var(--section-space); }
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #c4b5fd;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+.eyebrow::before {
+  content: "";
+  width: 22px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--purple), var(--cyan));
+}
+.heading-xl {
+  font-family: var(--font-heading);
+  font-size: clamp(3.2rem, 7.4vw, 6.6rem);
+  font-weight: 600;
+  letter-spacing: -.075em;
+  line-height: .99;
+}
+.heading-lg {
+  font-family: var(--font-heading);
+  font-size: clamp(2.3rem, 4.5vw, 4rem);
+  font-weight: 600;
+  letter-spacing: -.06em;
+  line-height: 1.05;
+}
+.gradient-text {
+  background: linear-gradient(100deg, #c4b5fd 5%, #8b9dff 48%, #65d8e8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.muted { color: var(--muted); }
+.panel {
+  border: 1px solid var(--line);
+  background: linear-gradient(145deg, rgba(25, 31, 52, .9), rgba(13, 17, 31, .94));
+  border-radius: 22px;
+}
+.button-primary {
+  display: inline-flex;
+  min-height: 50px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid rgba(196, 181, 253, .28);
+  border-radius: 12px;
+  padding: 0 20px;
+  background: linear-gradient(105deg, #7954e8, #466ff0);
+  color: white;
+  font-size: 14px;
+  font-weight: 650;
+  box-shadow: 0 10px 35px rgba(94, 77, 220, .22);
+  transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+}
+.button-primary:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+  box-shadow: 0 14px 40px rgba(94, 77, 220, .32);
+}
+.button-secondary {
+  display: inline-flex;
+  min-height: 50px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0 20px;
+  color: #e8eaff;
+  font-size: 14px;
+  font-weight: 600;
+  transition: border-color .2s ease, background .2s ease;
+}
+.button-secondary:hover { border-color: rgba(196,181,253,.45); background: rgba(255,255,255,.04); }
+.grid-glow {
+  background-image: linear-gradient(rgba(160,170,210,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(160,170,210,.045) 1px, transparent 1px);
+  background-size: 46px 46px;
+  mask-image: linear-gradient(to bottom, black, transparent 95%);
+}
+.glow-orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(1px);
+  pointer-events: none;
+}
+.service-card {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(18, 23, 40, .74);
+  padding: 26px;
+  transition: transform .25s ease, border-color .25s ease, background .25s ease;
+}
+.service-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(139, 92, 246, .48);
+  background: rgba(25, 30, 52, .94);
+}
+.nav-link { color: #aeb5cc; transition: color .2s ease; }
+.nav-link:hover { color: white; }
+@keyframes float { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-12px) } }
+@keyframes pulse-glow { 0%,100% { opacity:.55; transform:scale(.96) } 50% { opacity:.9; transform:scale(1.04) } }
+.float-animation { animation: float 7s ease-in-out infinite; }
+.pulse-animation { animation: pulse-glow 8s ease-in-out infinite; }
+
+@media (max-width: 700px) {
+  .container-shell { width: min(100% - 36px, 1160px); }
+  .section-space { padding-block: var(--section-space); }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
+
+/* Match the compact rhythm and safe header spacing in the Next.js version. */
+.section-padding { padding-block: var(--section-space); }
+section.pb-24,section.pb-28 { padding-bottom: var(--section-space); }
+
+/* Shared compact rhythm and a non-overlapping navigation grid. */
+:root { --section-space: 32px; }
+.app-navbar-row { grid-template-columns: 190px minmax(0,1fr) 140px; column-gap: 24px; padding-inline: 0; }
+.app-navbar-row>.app-navbar-brand { width: 190px; max-width: 100%; min-width: 0; }
+.app-navbar-row>nav { justify-self: center; }
+@media(max-width:1100px) {
+  .app-navbar-row { grid-template-columns: 100px minmax(0,1fr) 100px; column-gap: 24px; }
+  .app-navbar-row>.app-navbar-brand { width: 180px; }
+  .app-navbar-row .app-navbar-portfolio { min-width: 0; max-width: 100%; padding-inline: 10px; gap: 6px; white-space: nowrap; }
+}
+@media(max-width:1000px) { :root { --section-space: 26px; } }
+@media(max-width:700px) { :root { --section-space: 20px; } }
+@media(max-width:600px) {
+  .app-navbar-row { grid-template-columns: 88px minmax(0,1fr) 88px; column-gap: 16px; }
+  .app-navbar-row>.app-navbar-brand { width: 148px; }
+  .app-navbar-row .app-navbar-portfolio { font-size: 10px; padding-inline: 9px; }
+}
+@media(max-width:380px) {
+  .app-navbar-row { grid-template-columns: 64px minmax(0,1fr) 64px; column-gap: 12px; }
+  .app-navbar-row>.app-navbar-brand { width: 132px; }
+  .app-navbar-row .app-navbar-portfolio svg { display: none; }
+}

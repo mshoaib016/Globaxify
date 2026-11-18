@@ -1,0 +1,4 @@
+Install these packages in your existing project:
+npm.cmd install @supabase/ssr @supabase/supabase-js lucide-react
+
+Then merge the scripts from package-scripts.json into your existing package.json only if needed.

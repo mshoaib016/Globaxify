@@ -1,0 +1,9 @@
+/* Copy these styles to the end of your existing app/globals.css */
+.eyebrow { color:#b9a4ff; font-size:11px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; }
+.section-title { color:#fff; font-size:clamp(2rem,4vw,3.5rem); font-weight:600; letter-spacing:-.04em; line-height:1.12; }
+.form-label { display:grid; gap:9px; color:#dbe1f0; font-size:13px; font-weight:500; }
+.form-input { width:100%; border:1px solid rgba(255,255,255,.12); border-radius:11px; background:rgba(255,255,255,.04); padding:13px 14px; color:white; outline:none; }
+.form-input:focus { border-color:rgba(167,139,250,.75); box-shadow:0 0 0 3px rgba(139,92,246,.12); }
+.form-input::placeholder { color:#647087; }
+.form-input option { background:#111827; color:white; }
+.prose-dark p { color:#9ca9bf; font-size:15px; line-height:2; margin:0 0 22px; }

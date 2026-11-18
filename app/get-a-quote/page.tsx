@@ -1,0 +1,3 @@
+import { PageHero } from "@/components/page-hero";
+import { ContactForm } from "@/components/contact-form";
+export default function QuotePage(){return <><PageHero eyebrow="Project enquiry" title="Let's shape your next project." description="Give us the essentials and we'll use them to understand your goals and prepare a sensible next step." action={false}/><section className="container-shell grid gap-10 pb-24 md:grid-cols-[.7fr_1.3fr]"><div><h2 className="text-xl font-semibold text-white">What happens next?</h2><ol className="mt-5 grid gap-4 text-sm leading-7 text-slate-400"><li>01 — Tell us about your project.</li><li>02 — We review your goals and requirements.</li><li>03 — We discuss scope, timeline and next steps.</li></ol></div><ContactForm quote/></section></>}

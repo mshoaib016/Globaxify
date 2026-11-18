@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="assets/fav icon.png" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico?v=3d1" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-3d-32.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-3d-192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-3d-180.png" />
     <title>Modern Projects Showcase</title>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1597162870517228"
      crossorigin="anonymous"></script>
@@ -23,14 +26,14 @@
       }
 
       :root {
-        --primary-blue: #0066ff;
-        --light-blue: #e8f4ff;
-        --accent-blue: #00d4ff;
-        --dark-blue: #0a1628;
-        --navy: #1e3a8a;
-        --text-primary: #0f172a;
-        --text-secondary: #64748b;
-        --text-muted: #94a3b8;
+        --primary-blue: #45baaa;
+        --light-blue: #eef9f7;
+        --accent-blue: #45baaa;
+        --dark-blue: #0e2421;
+        --navy: #2d7b70;
+        --text-primary: #0f2a26;
+        --text-secondary: #41ae9f;
+        --text-muted: #7dcfc4;
         --white: #ffffff;
         --gray-50: #f8fafc;
         --gray-100: #f1f5f9;
@@ -43,7 +46,7 @@
         --shadow-xl:
           0 20px 25px -5px rgba(0, 0, 0, 0.1),
           0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        --shadow-blue: 0 0 40px rgba(0, 102, 255, 0.15);
+        --shadow-blue: 0 0 40px rgba(45,163,151, 0.15);
       }
 
       body {
@@ -76,17 +79,17 @@
         background-image:
           radial-gradient(
             circle at 20% 80%,
-            rgba(0, 102, 255, 0.03) 0%,
+            rgba(45,163,151, 0.03) 0%,
             transparent 50%
           ),
           radial-gradient(
             circle at 80% 20%,
-            rgba(0, 212, 255, 0.03) 0%,
+            rgba(45,163,151, 0.03) 0%,
             transparent 50%
           ),
           radial-gradient(
             circle at 40% 40%,
-            rgba(30, 58, 138, 0.02) 0%,
+            rgba(45,163,151, 0.02) 0%,
             transparent 50%
           );
         pointer-events: none;
@@ -156,9 +159,9 @@
         background: linear-gradient(
           135deg,
           var(--light-blue),
-          rgba(0, 212, 255, 0.1)
+          rgba(45,163,151, 0.1)
         );
-        border: 1px solid rgba(0, 102, 255, 0.2);
+        border: 1px solid rgba(45,163,151, 0.2);
         border-radius: 50px;
         font-size: 0.875rem;
         font-weight: 600;
@@ -172,7 +175,7 @@
       /* Section Badge Icon - Blue (Rocket/Launch) */
       .section-badge i {
         font-size: 1rem;
-        color: #f59e0b; /* Amber/Orange for rocket */
+        color: #46baaa; /* Amber/Orange for rocket */
       }
 
       .section-title {
@@ -264,7 +267,7 @@
         overflow: hidden;
         box-shadow: var(--shadow-lg);
         transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-        border: 1px solid rgba(0, 102, 255, 0.08);
+        border: 1px solid rgba(45,163,151, 0.08);
         position: relative;
         cursor: pointer;
         text-decoration: none;
@@ -291,7 +294,7 @@
       .project-card:hover {
         transform: translateY(-8px);
         box-shadow: var(--shadow-xl), var(--shadow-blue);
-        border-color: rgba(0, 102, 255, 0.2);
+        border-color: rgba(45,163,151, 0.2);
       }
 
       .project-card:hover::before {
@@ -323,8 +326,8 @@
         inset: 0;
         background: linear-gradient(
           to top,
-          rgba(10, 22, 40, 0.9) 0%,
-          rgba(10, 22, 40, 0.3) 50%,
+          rgba(45,163,151, 0.9) 0%,
+          rgba(45,163,151, 0.3) 50%,
           transparent 100%
         );
         opacity: 0;
@@ -482,22 +485,22 @@
 
       /* Views/Eye Icon - Blue */
       .project-stat.views i {
-        color: #3b82f6;
+        color: #69c8bb;
       }
 
       /* Likes/Heart Icon - Red */
       .project-stat.likes i {
-        color: #ef4444;
+        color: #6bc8bb;
       }
 
       /* Comments/Message Icon - Green */
       .project-stat.comments i {
-        color: #10b981;
+        color: #369386;
       }
 
       /* Share Icon - Purple */
       .project-stat.share i {
-        color: #8b5cf6;
+        color: #81d1c6;
       }
 
       .card-actions {
@@ -535,38 +538,38 @@
 
       /* External Link/Arrow - Blue */
       .action-btn.external {
-        color: #0066ff;
+        color: #45baaa;
       }
 
       .action-btn.external:hover {
-        background: #0066ff;
+        background: #45baaa;
         color: var(--white);
         transform: translateY(-3px);
-        box-shadow: 0 10px 20px rgba(0, 102, 255, 0.2);
+        box-shadow: 0 10px 20px rgba(45,163,151, 0.2);
       }
 
       /* Heart/Like - Red */
       .action-btn.like {
-        color: #ef4444;
+        color: #6bc8bb;
       }
 
       .action-btn.like:hover {
-        background: #ef4444;
+        background: #6bc8bb;
         color: var(--white);
         transform: translateY(-3px);
-        box-shadow: 0 10px 20px rgba(239, 68, 68, 0.2);
+        box-shadow: 0 10px 20px rgba(45,163,151, 0.2);
       }
 
       /* Share - Green */
       .action-btn.share {
-        color: #10b981;
+        color: #369386;
       }
 
       .action-btn.share:hover {
-        background: #10b981;
+        background: #369386;
         color: var(--white);
         transform: translateY(-3px);
-        box-shadow: 0 10px 20px rgba(16, 185, 129, 0.2);
+        box-shadow: 0 10px 20px rgba(45,163,151, 0.2);
       }
 
       /* Featured Card */
@@ -599,14 +602,14 @@
         background: var(--white);
         border-radius: 20px;
         box-shadow: var(--shadow-lg);
-        border: 1px solid rgba(0, 102, 255, 0.08);
+        border: 1px solid rgba(45,163,151, 0.08);
         transition: all 0.4s ease;
       }
 
       .achievement-card:hover {
         transform: translateY(-5px);
         box-shadow: var(--shadow-xl), var(--shadow-blue);
-        border-color: rgba(0, 102, 255, 0.2);
+        border-color: rgba(45,163,151, 0.2);
       }
 
       .achievement-icon {
@@ -625,26 +628,26 @@
 
       /* First Achievement - Blue (Projects/Folder) */
       .achievement-card:nth-child(1) .achievement-icon {
-        background: linear-gradient(135deg, #0066ff, #3b82f6);
-        box-shadow: 0 10px 20px rgba(0, 102, 255, 0.3);
+        background: linear-gradient(135deg, #45baaa, #69c8bb);
+        box-shadow: 0 10px 20px rgba(45,163,151, 0.3);
       }
 
       /* Second Achievement - Green (Clients/Users) */
       .achievement-card:nth-child(2) .achievement-icon {
-        background: linear-gradient(135deg, #059669, #10b981);
-        box-shadow: 0 10px 20px rgba(5, 150, 105, 0.3);
+        background: linear-gradient(135deg, #2a7167, #369386);
+        box-shadow: 0 10px 20px rgba(45,163,151, 0.3);
       }
 
       /* Third Achievement - Orange (Awards/Trophy) */
       .achievement-card:nth-child(3) .achievement-icon {
-        background: linear-gradient(135deg, #ea580c, #f97316);
-        box-shadow: 0 10px 20px rgba(234, 88, 12, 0.3);
+        background: linear-gradient(135deg, #42b4a4, #51beaf);
+        box-shadow: 0 10px 20px rgba(45,163,151, 0.3);
       }
 
       /* Fourth Achievement - Purple (Coffee/Cup) */
       .achievement-card:nth-child(4) .achievement-icon {
-        background: linear-gradient(135deg, #7c3aed, #8b5cf6);
-        box-shadow: 0 10px 20px rgba(124, 58, 237, 0.3);
+        background: linear-gradient(135deg, #62c5b7, #81d1c6);
+        box-shadow: 0 10px 20px rgba(45,163,151, 0.3);
       }
 
       .achievement-number {
@@ -730,7 +733,8 @@
         animation-delay: 0.6s;
       }
     </style>
-  </head>
+    <link rel="stylesheet" href="redesign.css" />
+</head>
   <body>
     <section class="projects-showcase">
       <!-- Background Elements -->
@@ -1202,5 +1206,18 @@
 
       achievementNumbers.forEach((stat) => statsObserver.observe(stat));
     </script>
-  </body>
+    <footer class="studio-footer" aria-label="Globaxify footer">
+    <div class="studio-footer-top">
+      <div class="studio-footer-invitation"><h2>Let&#8217;s build your<br>next big idea.</h2><p>Thoughtful design and development.<br>A fresh chapter for your business.</p><a class="studio-footer-cta" href="index.html#contact">Start a project <span aria-hidden="true">&#8599;</span></a></div>
+      <svg class="studio-footer-art" viewBox="0 0 560 220" fill="none" aria-hidden="true"><g stroke="currentColor" stroke-width="2"><path d="m77 25 38 22-38 22-38-22 38-22Zm-38 22v43l38 23 38-23V47M77 69v44"/><path d="m235 26-24 35 24 35m65-70 24 35-24 35m-33-75-15 80"/><path d="m435 24 10 29 30 1-24 18 8 29-24-17-24 17 8-29-24-18 30-1 10-29Z"/><rect x="141" y="135" width="70" height="49" rx="8"/><path d="m155 151 20 14 22-14M367 131v66m-33-33h66m-56-23 46 46m0-46-46 46"/><circle cx="501" cy="160" r="28"/><path d="m488 160 9 9 16-19"/></g></svg>
+    </div>
+    <div class="studio-footer-grid">
+      <div class="studio-footer-brand"><a class="studio-footer-wordmark" href="index.html#home" aria-label="Globaxify home"><img class="studio-footer-logo" src="assets/footer-logo-3d.png" alt="Globaxify - Global eCommerce Experts" width="1983" height="793" loading="lazy" decoding="async" /></a><p>From Bahawalpur to wherever your next idea takes you.</p><a class="studio-footer-email" href="mailto:globaxify.official@gmail.com">globaxify.official@gmail.com</a><a class="studio-footer-phone" href="tel:+923294211306">03294211306</a><div class="studio-footer-socials"><a href="https://www.facebook.com/share/1E2N7YbB3C/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Globaxify on Facebook">Facebook</a><a href="https://www.instagram.com/ecom_with_globaxify/" target="_blank" rel="noopener noreferrer" aria-label="Globaxify on Instagram">Instagram</a><a href="https://www.tiktok.com/@ecom_with_globaxify" target="_blank" rel="noopener noreferrer" aria-label="Globaxify on TikTok">TikTok</a></div></div>
+      <nav class="studio-footer-navigation" aria-label="Footer navigation"><h3>Explore</h3><a href="index.html#home">Home</a><a href="index.html#services">Services</a><a href="projects.html">Projects</a><a href="portfolio.html">Portfolio</a><a href="index.html#about">About</a><a href="index.html#contact">Contact</a></nav>
+      <div class="studio-footer-newsletter"><h3>Stay in the loop</h3><p>Design ideas, project updates and a little inspiration.</p><form class="studio-footer-subscribe"><label class="studio-footer-field-label">Your email address<input name="email" type="email" autocomplete="email" maxlength="120" placeholder="Your email address" required /></label><button type="submit">Subscribe <span aria-hidden="true">&#8599;</span></button></form><p class="studio-footer-subscribe-status" role="status" aria-live="polite"></p></div>
+    </div>
+    <div class="studio-footer-base"><p>&copy; 2026 Globaxify. All rights reserved.</p><nav aria-label="Legal"><a href="Privacy Policy.html">Privacy</a><a href="Terms of Service.html">Terms</a><a href="Cookies Policy.html">Cookies</a></nav></div>
+  </footer>
+  <script src="footer.js"></script>
+</body>
 </html>
