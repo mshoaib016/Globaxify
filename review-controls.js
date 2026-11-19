@@ -1,12 +1,12 @@
 ﻿/* Accessible select-only comboboxes, backed by native form fields. */
 (() => {
-  document.querySelectorAll('#customerReviewForm select, #reviewsRatingFilter').forEach((select, number) => {
+  document.querySelectorAll('#customerReviewForm select, #reviewsRatingFilter, select[data-custom-select]').forEach((select, number) => {
     const shell=document.createElement('div');shell.className='review-select';
     select.parentNode.insertBefore(shell,select);shell.append(select);
     const trigger=document.createElement('button');trigger.type='button';trigger.className='review-select-trigger';
     const text=document.createElement('span');text.className='review-select-value';trigger.append(text);
     const menu=document.createElement('div');menu.className='review-select-menu';menu.id=`review-select-menu-${number}`;menu.role='listbox';menu.hidden=true;
-    const label=select.name==='rating'?'Your rating':'Filter reviews';
+    const label=select.dataset.selectLabel || (select.name==='rating'?'Your rating':'Filter reviews');
     menu.setAttribute('aria-label',label);trigger.setAttribute('role','combobox');trigger.setAttribute('aria-haspopup','listbox');trigger.setAttribute('aria-expanded','false');trigger.setAttribute('aria-controls',menu.id);
     const values=[...select.options].filter(option=>option.value!=='');
     let active=0,opened=false;

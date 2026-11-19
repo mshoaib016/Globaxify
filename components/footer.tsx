@@ -22,7 +22,7 @@ export function Footer() {
             <div className="mt-5 flex flex-col gap-3 text-sm text-slate-400">
               <Link href="/about" className="hover:text-white">About us</Link>
               <Link href="/services" className="hover:text-white">Services</Link>
-              <Link href="/portfolio" className="hover:text-white">Our work</Link>
+              <span role="link" aria-disabled="true" title="New portfolio link coming soon" className="hover:text-white">Our work</span>
               <Link href="/blog" className="hover:text-white">Insights</Link>
             </div>
           </div>
@@ -53,6 +53,7 @@ export function Footer() {
           <div className="flex gap-5">
             <Link href="/privacy-policy" className="hover:text-white">Privacy</Link>
             <Link href="/terms-and-conditions" className="hover:text-white">Terms</Link>
+            <Link href="/cookies-policy" className="hover:text-white">Cookies</Link>
           </div>
         </div>
       </div>

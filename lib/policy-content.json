@@ -1,0 +1,127 @@
+{
+  "privacy": {
+    "title": "Privacy Policy",
+    "filename": "Privacy Policy.html",
+    "subtitle": "What you share, how it is used, and the choices you have.",
+    "summary": [
+      "Information you choose to share",
+      "Public customer reviews",
+      "A direct contact for your requests"
+    ],
+    "sections": [
+      {
+        "id": "information",
+        "title": "Information you share",
+        "html": "<p>Globaxify, based in Bahawalpur, Pakistan, uses information relevant to enquiries and projects. This may include your name, email, phone, company and project details. Contact and newsletter forms prepare an email draft; we receive that information when you send the email.</p>"
+      },
+      {
+        "id": "use",
+        "title": "Why we use it",
+        "html": "<p>We use your information to answer enquiries, discuss or deliver agreed work, maintain business communications and operate the website. Review submissions and limited connection information may also be processed to display feedback and reduce spam. We do not sell personal information.</p>"
+      },
+      {
+        "id": "reviews",
+        "title": "Reviews are public",
+        "html": "<p>When you post a review, your name, optional company/city, rating, title and message are displayed publicly. Submitted reviews are stored by the review service. Please leave private or sensitive information out of your review.</p>"
+      },
+      {
+        "id": "providers",
+        "title": "Service providers and links",
+        "html": "<p>Hosting and email providers may process information needed to operate their services. Some pages load Google advertising scripts and externally hosted fonts or icons; those providers may receive device or connection information. External websites follow their own policies. See our <a href=\"Cookies Policy.html\">Cookies Policy</a> for more.</p>"
+      },
+      {
+        "id": "retention",
+        "title": "Storage and protection",
+        "html": "<p>We keep correspondence and project records while needed for the enquiry, service or applicable record-keeping obligations. Reviews remain until removed. Access is limited to relevant business purposes, but no online system can guarantee complete security.</p>"
+      },
+      {
+        "id": "choices",
+        "title": "Your choices and requests",
+        "html": "<p>Ask us about information you have shared, request a correction or deletion, or opt out of marketing. Depending on your location, you may have additional rights, including access, restriction, objection, portability or a complaint to your local data-protection authority. Contact <a href=\"mailto:globaxify.official@gmail.com\">globaxify.official@gmail.com</a>.</p>"
+      }
+    ],
+    "key": "privacy",
+    "updated": "2026-11-18",
+    "updatedLabel": "18 November 2026"
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "filename": "Terms of Service.html",
+    "subtitle": "The practical essentials for working with Globaxify.",
+    "summary": [
+      "Scope agreed in writing",
+      "Clear payment milestones",
+      "Ownership and responsibilities"
+    ],
+    "sections": [
+      {
+        "id": "agreement",
+        "title": "Website and project scope",
+        "html": "<p>These terms apply to using this website and engaging Globaxify. Services, deliverables, timelines, revisions and fees are confirmed in a written quote or project agreement. Agreed project-specific terms take priority where they differ.</p>"
+      },
+      {
+        "id": "responsibilities",
+        "title": "Your responsibilities",
+        "html": "<p>Provide accurate content, licensed assets, necessary access, timely approvals and a main contact. You remain responsible for the rights and legality of materials you supply. We may refuse unlawful, fraudulent, harmful or infringing work. Delayed inputs or changes in scope may affect delivery dates.</p>"
+      },
+      {
+        "id": "payments",
+        "title": "Payments and refunds",
+        "html": "<p>Unless agreed otherwise: 50% is due before work begins, 25% at design approval/development completion and 25% before final delivery. Fees are in USD unless specified. Payment methods include bank transfer, cards, PayPal and Upwork.</p><p>Payments more than 7 days late may incur a 1.5% monthly fee; work may pause after 14 days. An advance is non-refundable once work starts. Other refund requests are assessed against completed work and circumstances, subject to applicable law.</p>"
+      },
+      {
+        "id": "ownership",
+        "title": "Ownership and licensed assets",
+        "html": "<p>You retain rights to your supplied materials. Custom deliverables transfer after full payment; our existing tools, libraries and methods remain ours. Third-party themes, apps and assets retain their own licence terms. We may show anonymized project examples unless an agreed NDA restricts this.</p>"
+      },
+      {
+        "id": "confidentiality",
+        "title": "Confidentiality and ending a project",
+        "html": "<p>Confidential project information is limited to relevant personnel; a mutual NDA can be agreed before sharing sensitive details. Confidentiality obligations continue for 3 years after services end.</p><p>You may end a project with 14 days\u2019 written notice. We may end it immediately for non-payment, breach or unlawful conduct. Outstanding payments become due; completed work is delivered and any pro-rata refund is considered against work done.</p>"
+      },
+      {
+        "id": "liability",
+        "title": "Liability and resolving concerns",
+        "html": "<p>To the extent permitted by law, liability is limited to the amount paid for the relevant project and excludes indirect or consequential losses. We are not responsible for third-party outages or delays beyond reasonable control.</p><p>Raise concerns with us first. If direct discussion fails, the existing terms provide for mutually agreed mediation, then binding ICC arbitration. Governing law and other project-specific arrangements should be confirmed in the signed project agreement. Nothing here overrides mandatory legal rights.</p>"
+      }
+    ],
+    "key": "terms",
+    "updated": "2026-11-18",
+    "updatedLabel": "18 November 2026"
+  },
+  "cookies": {
+    "title": "Cookies Policy",
+    "filename": "Cookies Policy.html",
+    "subtitle": "A short guide to cookies, external services and browser controls.",
+    "summary": [
+      "Know what cookies do",
+      "Understand external services",
+      "Manage your browser settings"
+    ],
+    "sections": [
+      {
+        "id": "basics",
+        "title": "What cookies do",
+        "html": "<p>Cookies are small files stored by your browser. Similar technologies may also help services remember settings, maintain sessions or measure activity. Their purpose and lifetime depend on the provider.</p>"
+      },
+      {
+        "id": "services",
+        "title": "What this website uses",
+        "html": "<p>Public browsing and email enquiries do not require an account. Some pages load Google advertising scripts, which may use cookies or similar technologies for advertising and measurement. Externally hosted fonts and icons also involve requests to their providers. See <a href=\"https://policies.google.com/technologies/cookies\" target=\"_blank\" rel=\"noopener noreferrer\">how Google uses cookies</a> for its purposes, durations and controls.</p>"
+      },
+      {
+        "id": "control",
+        "title": "Your cookie choices",
+        "html": "<p>Use your browser\u2019s privacy settings to view, delete or block cookies, including third-party cookies. Google also provides <a href=\"https://myadcenter.google.com/\" target=\"_blank\" rel=\"noopener noreferrer\">advertising controls</a>. Blocking a provider may affect its content or functionality. Simply reading this page or continuing to browse is not a cookie-consent choice.</p>"
+      },
+      {
+        "id": "updates",
+        "title": "Questions and updates",
+        "html": "<p>We update this page when the website\u2019s tools or practices change. For questions, email <a href=\"mailto:globaxify.official@gmail.com\">globaxify.official@gmail.com</a>. Our <a href=\"Privacy Policy.html\">Privacy Policy</a> explains how other information you share is handled.</p>"
+      }
+    ],
+    "key": "cookies",
+    "updated": "2026-11-18",
+    "updatedLabel": "18 November 2026"
+  }
+}

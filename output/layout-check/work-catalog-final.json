@@ -1,0 +1,142 @@
+[
+  {
+    "width": 390,
+    "header": {
+      "logo": {
+        "left": 121,
+        "right": 269,
+        "top": 15,
+        "width": 148,
+        "height": 52,
+        "display": "block"
+      },
+      "portfolio": {
+        "left": 16,
+        "right": 102.25,
+        "top": 23,
+        "width": 86.25,
+        "height": 36,
+        "display": "flex"
+      },
+      "menu": {
+        "left": 332,
+        "right": 374,
+        "top": 20,
+        "width": 42,
+        "height": 42,
+        "display": "flex"
+      }
+    },
+    "sections": [
+      {
+        "id": "",
+        "height": 471,
+        "paddingTop": "100px",
+        "paddingBottom": "22px",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      },
+      {
+        "id": "projects",
+        "height": 4187,
+        "paddingTop": "12px",
+        "paddingBottom": "20px",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      },
+      {
+        "id": "",
+        "height": 303,
+        "paddingTop": "14px",
+        "paddingBottom": "20px",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      }
+    ],
+    "scrollWidth": 390,
+    "serviceCards": [],
+    "projectCards": [],
+    "catalogCheck": {
+      "projects": 8,
+      "categories": 2,
+      "filters": true,
+      "industry": true,
+      "search": true,
+      "emptyState": true,
+      "reset": true,
+      "mobileMenu": true,
+      "overflow": false,
+      "images": 8
+    }
+  },
+  {
+    "width": 1440,
+    "header": {
+      "logo": {
+        "left": 42.5,
+        "right": 232.5,
+        "top": 17,
+        "width": 190,
+        "height": 58,
+        "display": "block"
+      },
+      "portfolio": {
+        "left": 1270.125,
+        "right": 1382.5,
+        "top": 26,
+        "width": 112.375,
+        "height": 40,
+        "display": "flex"
+      },
+      "menu": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "width": 0,
+        "height": 0,
+        "display": "none"
+      }
+    },
+    "sections": [
+      {
+        "id": "",
+        "height": 366,
+        "paddingTop": "114px",
+        "paddingBottom": "25px",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      },
+      {
+        "id": "projects",
+        "height": 2276,
+        "paddingTop": "18px",
+        "paddingBottom": "32px",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      },
+      {
+        "id": "",
+        "height": 262,
+        "paddingTop": "14px",
+        "paddingBottom": "32px",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      }
+    ],
+    "scrollWidth": 1425,
+    "serviceCards": [],
+    "projectCards": [],
+    "catalogCheck": {
+      "projects": 8,
+      "categories": 2,
+      "filters": true,
+      "industry": true,
+      "search": true,
+      "emptyState": true,
+      "reset": true,
+      "mobileMenu": true,
+      "overflow": false,
+      "images": 8
+    }
+  }
+]

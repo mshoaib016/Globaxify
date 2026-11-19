@@ -20,9 +20,9 @@ export function Navbar() {
             </Link>
           ))}
         </nav>
-        <Link href="/portfolio" className="app-navbar-portfolio col-start-1 row-start-1 inline-flex min-h-[38px] items-center gap-2 justify-self-start rounded-full border border-white/15 bg-white/10 px-3 text-[11px] text-white min-[1101px]:col-start-3 min-[1101px]:justify-self-end">
+        <span role="link" aria-disabled="true" title="New portfolio link coming soon" className="app-navbar-portfolio col-start-1 row-start-1 inline-flex min-h-[38px] items-center gap-2 justify-self-start rounded-full border border-white/15 bg-white/10 px-3 text-[11px] text-white min-[1101px]:col-start-3 min-[1101px]:justify-self-end">
           Portfolio <ArrowUpRight size={14} className="hidden min-[380px]:block" />
-        </Link>
+        </span>
         <button
           type="button"
           aria-label={open ? "Close menu" : "Open menu"}

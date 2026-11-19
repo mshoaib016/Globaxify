@@ -49,9 +49,9 @@ export default function Home() {
                 <Link href="/get-a-quote" className="button-primary">
                   Start a project <ArrowUpRight size={17} />
                 </Link>
-                <Link href="/portfolio" className="button-secondary">
+                <span role="link" aria-disabled="true" title="New portfolio link coming soon" className="button-secondary">
                   Explore our work <ArrowRight size={16} />
-                </Link>
+                </span>
               </div>
               <div className="mt-12 flex flex-wrap items-center gap-x-7 gap-y-3 border-t border-white/[0.09] pt-6 text-xs text-slate-400">
                 <span className="inline-flex items-center gap-2"><Check size={14} className="text-cyan-300" /> Strategy-led thinking</span>

@@ -1,1223 +1,136 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico?v=3d1" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Globaxify - Websites &amp; E-commerce</title>
+  <meta name="description" content="Explore Globaxify's selected e-commerce and business website projects. Browse by project category, industry or brand." />
+  <link rel="icon" type="image/x-icon" href="favicon.ico?v=3d1" />
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-3d-32.png" />
-  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-3d-192.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-3d-180.png" />
-    <title>Modern Projects Showcase</title>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1597162870517228"
-     crossorigin="anonymous"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      :root {
-        --primary-blue: #45baaa;
-        --light-blue: #eef9f7;
-        --accent-blue: #45baaa;
-        --dark-blue: #0e2421;
-        --navy: #2d7b70;
-        --text-primary: #0f2a26;
-        --text-secondary: #41ae9f;
-        --text-muted: #7dcfc4;
-        --white: #ffffff;
-        --gray-50: #f8fafc;
-        --gray-100: #f1f5f9;
-        --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-        --shadow-md:
-          0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-        --shadow-lg:
-          0 10px 15px -3px rgba(0, 0, 0, 0.1),
-          0 4px 6px -2px rgba(0, 0, 0, 0.05);
-        --shadow-xl:
-          0 20px 25px -5px rgba(0, 0, 0, 0.1),
-          0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        --shadow-blue: 0 0 40px rgba(45,163,151, 0.15);
-      }
-
-      body {
-        font-family: "Inter", sans-serif;
-        background: var(--white);
-        color: var(--text-primary);
-        line-height: 1.6;
-        overflow-x: hidden;
-      }
-
-      /* Modern Projects Section */
-      .projects-showcase {
-        position: relative;
-        padding: 8rem 5%;
-        background: linear-gradient(
-          180deg,
-          var(--white) 0%,
-          var(--gray-50) 100%
-        );
-        overflow: hidden;
-      }
-
-      /* Subtle Background Pattern */
-      .bg-pattern {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image:
-          radial-gradient(
-            circle at 20% 80%,
-            rgba(45,163,151, 0.03) 0%,
-            transparent 50%
-          ),
-          radial-gradient(
-            circle at 80% 20%,
-            rgba(45,163,151, 0.03) 0%,
-            transparent 50%
-          ),
-          radial-gradient(
-            circle at 40% 40%,
-            rgba(45,163,151, 0.02) 0%,
-            transparent 50%
-          );
-        pointer-events: none;
-      }
-
-      /* Floating Orbs */
-      .orb {
-        position: absolute;
-        border-radius: 50%;
-        filter: blur(80px);
-        opacity: 0.4;
-        animation: float 20s infinite ease-in-out;
-      }
-
-      .orb-1 {
-        width: 400px;
-        height: 400px;
-        background: linear-gradient(
-          135deg,
-          var(--primary-blue),
-          var(--accent-blue)
-        );
-        top: -10%;
-        right: -10%;
-        animation-delay: 0s;
-      }
-
-      .orb-2 {
-        width: 300px;
-        height: 300px;
-        background: linear-gradient(
-          135deg,
-          var(--light-blue),
-          var(--accent-blue)
-        );
-        bottom: 10%;
-        left: -5%;
-        animation-delay: -10s;
-      }
-
-      @keyframes float {
-        0%,
-        100% {
-          transform: translate(0, 0) scale(1);
-        }
-        33% {
-          transform: translate(30px, -30px) scale(1.1);
-        }
-        66% {
-          transform: translate(-20px, 20px) scale(0.9);
-        }
-      }
-
-      /* Section Header */
-      .section-header {
-        text-align: center;
-        margin-bottom: 5rem;
-        position: relative;
-        z-index: 1;
-      }
-
-      .section-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        padding: 0.75rem 1.5rem;
-        background: linear-gradient(
-          135deg,
-          var(--light-blue),
-          rgba(45,163,151, 0.1)
-        );
-        border: 1px solid rgba(45,163,151, 0.2);
-        border-radius: 50px;
-        font-size: 0.875rem;
-        font-weight: 600;
-        color: var(--primary-blue);
-        text-transform: uppercase;
-        letter-spacing: 1.5px;
-        margin-bottom: 1.5rem;
-        box-shadow: var(--shadow-sm);
-      }
-
-      /* Section Badge Icon - Blue (Rocket/Launch) */
-      .section-badge i {
-        font-size: 1rem;
-        color: #46baaa; /* Amber/Orange for rocket */
-      }
-
-      .section-title {
-        font-family: "Space Grotesk", sans-serif;
-        font-size: clamp(2.5rem, 5vw, 4rem);
-        font-weight: 700;
-        line-height: 1.1;
-        margin-bottom: 1.25rem;
-        color: var(--text-primary);
-      }
-
-      .section-title span {
-        background: linear-gradient(
-          135deg,
-          var(--primary-blue),
-          var(--accent-blue)
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-
-      .section-subtitle {
-        font-size: 1.25rem;
-        color: var(--text-secondary);
-        max-width: 600px;
-        margin: 0 auto;
-        font-weight: 400;
-      }
-
-      /* Filter Tabs */
-      .filter-wrapper {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 4rem;
-        position: relative;
-        z-index: 1;
-      }
-
-      .filter-tabs {
-        display: inline-flex;
-        background: var(--gray-100);
-        padding: 0.5rem;
-        border-radius: 16px;
-        gap: 0.5rem;
-        box-shadow: var(--shadow-sm);
-      }
-
-      .filter-tab {
-        padding: 0.875rem 1.75rem;
-        border: none;
-        background: transparent;
-        color: var(--text-secondary);
-        font-size: 0.95rem;
-        font-weight: 500;
-        border-radius: 12px;
-        cursor: pointer;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        font-family: inherit;
-      }
-
-      .filter-tab:hover {
-        color: var(--primary-blue);
-        background: rgba(255, 255, 255, 0.5);
-      }
-
-      .filter-tab.active {
-        background: var(--white);
-        color: var(--primary-blue);
-        box-shadow: var(--shadow-md);
-        font-weight: 600;
-      }
-
-      /* Projects Grid */
-      .projects-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-        gap: 2.5rem;
-        max-width: 1400px;
-        margin: 0 auto;
-        position: relative;
-        z-index: 1;
-      }
-
-      /* Modern Project Card */
-      .project-card {
-        background: var(--white);
-        border-radius: 24px;
-        overflow: hidden;
-        box-shadow: var(--shadow-lg);
-        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-        border: 1px solid rgba(45,163,151, 0.08);
-        position: relative;
-        cursor: pointer;
-        text-decoration: none;
-        color: inherit;
-        display: block;
-      }
-
-      .project-card::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 4px;
-        background: linear-gradient(
-          90deg,
-          var(--primary-blue),
-          var(--accent-blue)
-        );
-        transform: scaleX(0);
-        transition: transform 0.4s ease;
-      }
-
-      .project-card:hover {
-        transform: translateY(-8px);
-        box-shadow: var(--shadow-xl), var(--shadow-blue);
-        border-color: rgba(45,163,151, 0.2);
-      }
-
-      .project-card:hover::before {
-        transform: scaleX(1);
-      }
-
-      /* Image Container */
-      .card-image-wrapper {
-        position: relative;
-        height: 280px;
-        overflow: hidden;
-        background: linear-gradient(135deg, var(--gray-100), var(--light-blue));
-      }
-
-      .card-image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-      }
-
-      .project-card:hover .card-image {
-        transform: scale(1.08);
-      }
-
-      /* Image Overlay */
-      .image-overlay {
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(
-          to top,
-          rgba(45,163,151, 0.9) 0%,
-          rgba(45,163,151, 0.3) 50%,
-          transparent 100%
-        );
-        opacity: 0;
-        transition: opacity 0.4s ease;
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
-        padding-bottom: 2rem;
-      }
-
-      .project-card:hover .image-overlay {
-        opacity: 1;
-      }
-
-      .view-btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        padding: 1rem 2rem;
-        background: var(--white);
-        color: var(--primary-blue);
-        border: none;
-        border-radius: 50px;
-        font-weight: 600;
-        font-size: 0.95rem;
-        cursor: pointer;
-        transform: translateY(20px);
-        opacity: 0;
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        box-shadow: var(--shadow-lg);
-        text-decoration: none;
-        pointer-events: auto;
-        z-index: 10;
-      }
-
-      .view-btn i {
-        color: var(--primary-blue);
-      }
-
-      .project-card:hover .view-btn {
-        transform: translateY(0);
-        opacity: 1;
-      }
-
-      /* Category Tag */
-      .category-pill {
-        position: absolute;
-        top: 1.25rem;
-        left: 1.25rem;
-        padding: 0.5rem 1rem;
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        border-radius: 50px;
-        font-size: 0.75rem;
-        font-weight: 600;
-        color: var(--primary-blue);
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        box-shadow: var(--shadow-md);
-        z-index: 2;
-      }
-
-      /* Card Content */
-      .card-content {
-        padding: 2rem;
-      }
-
-      .card-meta {
-        display: flex;
-        align-items: center;
-        gap: 1.5rem;
-        margin-bottom: 1rem;
-        font-size: 0.875rem;
-        color: var(--text-muted);
-      }
-
-      .meta-dot {
-        width: 4px;
-        height: 4px;
-        background: var(--text-muted);
-        border-radius: 50%;
-      }
-
-      .card-title {
-        font-family: "Space Grotesk", sans-serif;
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: var(--text-primary);
-        margin-bottom: 0.75rem;
-        line-height: 1.3;
-        transition: color 0.3s ease;
-      }
-
-      .project-card:hover .card-title {
-        color: var(--primary-blue);
-      }
-
-      .card-description {
-        color: var(--text-secondary);
-        font-size: 1rem;
-        line-height: 1.7;
-        margin-bottom: 1.5rem;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-      }
-
-      /* Tech Stack */
-      .tech-tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        margin-bottom: 1.5rem;
-      }
-
-      .tech-tag {
-        padding: 0.4rem 1rem;
-        background: var(--light-blue);
-        color: var(--primary-blue);
-        border-radius: 20px;
-        font-size: 0.8rem;
-        font-weight: 600;
-        transition: all 0.3s ease;
-      }
-
-      .tech-tag:hover {
-        background: var(--primary-blue);
-        color: var(--white);
-        transform: translateY(-2px);
-      }
-
-      /* Card Footer */
-      .card-footer {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-top: 1.5rem;
-        border-top: 1px solid var(--gray-100);
-      }
-
-      .project-stat {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        color: var(--text-muted);
-        font-size: 0.9rem;
-        font-weight: 500;
-      }
-
-      /* Project Stats Icons */
-      .project-stat i {
-        font-size: 1rem;
-      }
-
-      /* Views/Eye Icon - Blue */
-      .project-stat.views i {
-        color: #69c8bb;
-      }
-
-      /* Likes/Heart Icon - Red */
-      .project-stat.likes i {
-        color: #6bc8bb;
-      }
-
-      /* Comments/Message Icon - Green */
-      .project-stat.comments i {
-        color: #369386;
-      }
-
-      /* Share Icon - Purple */
-      .project-stat.share i {
-        color: #81d1c6;
-      }
-
-      .card-actions {
-        display: flex;
-        gap: 0.75rem;
-      }
-
-      .action-btn {
-        width: 40px;
-        height: 40px;
-        border-radius: 12px;
-        background: var(--gray-100);
-        border: none;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        text-decoration: none;
-      }
-
-      /* Action Buttons Original Colors */
-
-      /* GitHub - Black */
-      .action-btn.github {
-        color: #24292e;
-      }
-
-      .action-btn.github:hover {
-        background: #24292e;
-        color: var(--white);
-        transform: translateY(-3px);
-        box-shadow: 0 10px 20px rgba(36, 41, 46, 0.2);
-      }
-
-      /* External Link/Arrow - Blue */
-      .action-btn.external {
-        color: #45baaa;
-      }
-
-      .action-btn.external:hover {
-        background: #45baaa;
-        color: var(--white);
-        transform: translateY(-3px);
-        box-shadow: 0 10px 20px rgba(45,163,151, 0.2);
-      }
-
-      /* Heart/Like - Red */
-      .action-btn.like {
-        color: #6bc8bb;
-      }
-
-      .action-btn.like:hover {
-        background: #6bc8bb;
-        color: var(--white);
-        transform: translateY(-3px);
-        box-shadow: 0 10px 20px rgba(45,163,151, 0.2);
-      }
-
-      /* Share - Green */
-      .action-btn.share {
-        color: #369386;
-      }
-
-      .action-btn.share:hover {
-        background: #369386;
-        color: var(--white);
-        transform: translateY(-3px);
-        box-shadow: 0 10px 20px rgba(45,163,151, 0.2);
-      }
-
-      /* Featured Card */
-      .project-card.featured {
-        grid-column: span 2;
-      }
-
-      .project-card.featured .card-image-wrapper {
-        height: 400px;
-      }
-
-      .project-card.featured .card-title {
-        font-size: 2rem;
-      }
-
-      /* Stats Section */
-      .achievements-section {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 2rem;
-        max-width: 1100px;
-        margin: 6rem auto 0;
-        position: relative;
-        z-index: 1;
-      }
-
-      .achievement-card {
-        text-align: center;
-        padding: 2.5rem 2rem;
-        background: var(--white);
-        border-radius: 20px;
-        box-shadow: var(--shadow-lg);
-        border: 1px solid rgba(45,163,151, 0.08);
-        transition: all 0.4s ease;
-      }
-
-      .achievement-card:hover {
-        transform: translateY(-5px);
-        box-shadow: var(--shadow-xl), var(--shadow-blue);
-        border-color: rgba(45,163,151, 0.2);
-      }
-
-      .achievement-icon {
-        width: 60px;
-        height: 60px;
-        border-radius: 16px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto 1.25rem;
-        font-size: 1.5rem;
-        color: white;
-      }
-
-      /* Achievement Icons Original Colors */
-
-      /* First Achievement - Blue (Projects/Folder) */
-      .achievement-card:nth-child(1) .achievement-icon {
-        background: linear-gradient(135deg, #45baaa, #69c8bb);
-        box-shadow: 0 10px 20px rgba(45,163,151, 0.3);
-      }
-
-      /* Second Achievement - Green (Clients/Users) */
-      .achievement-card:nth-child(2) .achievement-icon {
-        background: linear-gradient(135deg, #2a7167, #369386);
-        box-shadow: 0 10px 20px rgba(45,163,151, 0.3);
-      }
-
-      /* Third Achievement - Orange (Awards/Trophy) */
-      .achievement-card:nth-child(3) .achievement-icon {
-        background: linear-gradient(135deg, #42b4a4, #51beaf);
-        box-shadow: 0 10px 20px rgba(45,163,151, 0.3);
-      }
-
-      /* Fourth Achievement - Purple (Coffee/Cup) */
-      .achievement-card:nth-child(4) .achievement-icon {
-        background: linear-gradient(135deg, #62c5b7, #81d1c6);
-        box-shadow: 0 10px 20px rgba(45,163,151, 0.3);
-      }
-
-      .achievement-number {
-        font-family: "Space Grotesk", sans-serif;
-        font-size: 2.5rem;
-        font-weight: 700;
-        background: linear-gradient(135deg, var(--primary-blue), var(--navy));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        margin-bottom: 0.5rem;
-      }
-
-      .achievement-label {
-        color: var(--text-secondary);
-        font-size: 0.95rem;
-        font-weight: 500;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-      }
-
-      /* Responsive */
-      @media (max-width: 968px) {
-        .project-card.featured {
-          grid-column: span 1;
-        }
-
-        .project-card.featured .card-image-wrapper {
-          height: 280px;
-        }
-
-        .projects-container {
-          grid-template-columns: 1fr;
-        }
-      }
-
-      @media (max-width: 640px) {
-        .projects-showcase {
-          padding: 5rem 4%;
-        }
-
-        .filter-tabs {
-          flex-wrap: wrap;
-          justify-content: center;
-        }
-
-        .filter-tab {
-          padding: 0.75rem 1.25rem;
-          font-size: 0.875rem;
-        }
-      }
-
-      /* Animation */
-      .project-card {
-        opacity: 0;
-        transform: translateY(30px);
-        animation: slideUp 0.6s ease forwards;
-      }
-
-      @keyframes slideUp {
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      .project-card:nth-child(1) {
-        animation-delay: 0.1s;
-      }
-      .project-card:nth-child(2) {
-        animation-delay: 0.2s;
-      }
-      .project-card:nth-child(3) {
-        animation-delay: 0.3s;
-      }
-      .project-card:nth-child(4) {
-        animation-delay: 0.4s;
-      }
-      .project-card:nth-child(5) {
-        animation-delay: 0.5s;
-      }
-      .project-card:nth-child(6) {
-        animation-delay: 0.6s;
-      }
-    </style>
-    <link rel="stylesheet" href="redesign.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="redesign.css" />
+  <link rel="stylesheet" href="projects.css" />
 </head>
-  <body>
-    <section class="projects-showcase">
-      <!-- Background Elements -->
-      <div class="bg-pattern"></div>
-      <div class="orb orb-1"></div>
-      <div class="orb orb-2"></div>
-
-      <!-- Section Header -->
-      <div class="section-header">
-        <div class="section-badge">
-          <i class="fas fa-rocket"></i>
-          Our Work
+<body class="work-page">
+  <a class="work-skip" href="#main-content">Skip to projects</a>
+<header class="header reference-header" id="header">
+    <div class="container">
+      <nav class="navbar" aria-label="Main navigation">
+        <a class="header-brand" href="index.html#home" aria-label="Globaxify home">
+          <img src="assets/header-logo-3d.png" alt="Globaxify - Global eCommerce Experts" width="2172" height="724" />
+        </a>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html#home" class="nav-link">Home</a></li>
+          <li><a href="#projects" class="nav-link active" aria-current="page">Projects</a></li>
+          <li><a href="index.html#services" class="nav-link">Services</a></li>
+          <li><a href="index.html#about" class="nav-link">About</a></li>
+          <li><a href="index.html#reviews" class="nav-link">Reviews</a></li>
+          <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="header-actions">
+          <a class="header-portfolio" role="link" aria-disabled="true" title="New portfolio link coming soon"><span>Portfolio</span><span class="portfolio-arrow" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 20 20" fill="none"><path d="M6 14 14 6M6 6h8v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+          <button class="hamburger" id="hamburger" type="button" aria-label="Toggle navigation" aria-controls="navMenu" aria-expanded="false"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
         </div>
-        <h2 class="section-title">Featured <span>Projects</span></h2>
-        <p class="section-subtitle">
-          Discover our latest innovations in web development, mobile
-          applications, and digital experiences
-        </p>
+      </nav>
+    </div>
+  </header>
+  <main id="main-content">
+    <section class="work-hero">
+      <div class="work-container"><nav class="work-breadcrumb" aria-label="Breadcrumb"><a class="work-back-home" href="index.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m10 6-6 6 6 6M4 12h16" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Back to Home</span></a><span aria-hidden="true">/</span><span aria-current="page">Projects</span></nav>
+        <div class="work-hero-grid"><div><span class="work-eyebrow">A COLLECTION OF DIGITAL EXPERIENCES</span><h1>Ideas, brought<br><span>to life.</span></h1></div><div class="work-hero-intro"><p>Explore storefronts and business websites from our project collection. Find a familiar industry, discover a different approach, and see the details for yourself.</p><div class="work-hero-facts"><div><strong>08</strong><span>Selected projects</span></div><div><strong>02</strong><span>Project categories</span></div><a href="index.html#contact">Have something in mind?<span>Let&#8217;s talk &#8599;</span></a></div></div></div>
       </div>
-
-      <!-- Filter Tabs -->
-      <div class="filter-wrapper">
-        <div class="filter-tabs">
-          <button class="filter-tab active" data-filter="all">
-            All Projects
-          </button>
-          <button class="filter-tab" data-filter="web">Web Development</button>
-          <!-- <button class="filter-tab" data-filter="app">Mobile Apps</button> -->
-          <button class="filter-tab" data-filter="design">
-            Shopify Design
-          </button>
-          <button class="filter-tab" data-filter="ecommerce">E-Commerce</button>
+    </section>
+    <section class="work-library" id="projects" aria-labelledby="work-library-heading">
+      <div class="work-container">
+        <div class="work-library-heading"><h2 id="work-library-heading">Explore the work</h2><span>Find your kind of project.</span></div>
+        <div class="work-controls">
+          <div class="work-category-tabs" role="group" aria-label="Project category"><button type="button" class="work-filter is-active" data-work-filter="all" aria-pressed="true" aria-controls="work-results">All projects <span>08</span></button><button type="button" class="work-filter" data-work-filter="ecommerce" aria-pressed="false" aria-controls="work-results">E-commerce <span>07</span></button><button type="button" class="work-filter" data-work-filter="business" aria-pressed="false" aria-controls="work-results">Business websites <span>01</span></button></div>
+          <div class="work-search-tools"><label class="work-search"><span class="work-control-label">Search projects</span><svg viewBox="0 0 24 24" width="17" height="17" fill="none" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg><input id="work-search" type="search" placeholder="Search projects..." autocomplete="off" maxlength="80" /></label><label class="work-industry"><span class="work-control-label">Filter by industry</span><select id="work-industry" data-custom-select data-select-label="Filter by industry"><option value="all">All industries</option><option value="fashion">Fashion &amp; fitness</option><option value="beauty">Beauty &amp; fragrance</option><option value="home">Home &amp; pets</option><option value="business">Business services</option></select></label></div>
         </div>
-      </div>
-
-      <!-- Projects Grid -->
-      <div class="projects-container">
-        <!-- Project 1: Featured -->
-        <div
-          class="project-card featured"
-          data-category="web ecommerce"
-          data-link="https://maisonlouismarie.com/"
-        >
-          <div class="card-image-wrapper">
-            <img
-              src="assets/maison louis marie.png"
-              alt="E-Commerce Platform"
-              class="card-image"
-            />
-            <span class="category-pill">E-Commerce</span>
-            <div class="image-overlay">
-              <a
-                href="https://maisonlouismarie.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="view-btn"
-              >
-                View Project <i class="fas fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-          <div class="card-content">
-            <div class="card-meta">
-              <span>2025</span>
-              <span class="meta-dot"></span>
-              <span>3 Months</span>
-              <span class="meta-dot"></span>
-              <span>Client Project</span>
-            </div>
-            <h3 class="card-title">Luxury Fragrance E-Commerce Platform</h3>
-            <p class="card-description">
-              A premium fragrance e-commerce experience inspired by Maison Louis
-              Marie, built with modern web technologies. The platform focuses on
-              elegant product presentation, smooth navigation, and a seamless
-              checkout experience for luxury perfume shoppers.
-            </p>
-            <div class="tech-tags">
-              <span class="tech-tag">Shopify</span>
-              <span class="tech-tag">Liquid</span>
-              <span class="tech-tag">Css</span>
-            </div>
-            <div class="card-footer">
-              <div class="project-stat">
-                <i class="fas fa-eye"></i>
-                <span>50K+ Views</span>
-              </div>
-            </div>
-          </div>
+        <div class="work-results-line"><p id="work-result-count" role="status" aria-live="polite" aria-atomic="true">Showing 8 projects</p><button class="work-reset" type="button" hidden>Clear filters <span aria-hidden="true">&#215;</span></button></div>
+        <div id="work-results">
+      <section class="work-category-group" data-project-group="ecommerce" aria-labelledby="work-ecommerce-heading">
+        <div class="work-category-heading"><div><span class="work-section-number">01 / COLLECTION</span><h2 id="work-ecommerce-heading">E-commerce experiences<span class="work-group-count">07</span></h2></div><p>Storefronts that put products and browsing first.</p></div>
+        <div class="work-grid">
+          <article class="work-card" data-category="ecommerce" data-industry="beauty" data-name="Maison Louis Marie">
+            <a class="work-card-link" href="https://maisonlouismarie.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Maison Louis Marie website (opens in a new tab)">
+              <div class="work-card-preview"><div class="work-browser-line" aria-hidden="true"><span></span><span></span><span></span><b>maisonlouismarie.com</b></div><img src="assets/projects/maison-louis-marie.webp" alt="Maison Louis Marie website project preview" width="1100" height="700" loading="eager" decoding="async" /><span class="work-card-open" aria-hidden="true">&#8599;</span></div>
+              <div class="work-card-body"><span class="work-card-industry">Beauty &amp; fragrance</span><h3>Maison Louis Marie<span aria-hidden="true">&#8599;</span></h3><p>A fragrance, body-care and home collection presented through a refined, product-focused storefront.</p><div class="work-card-tags"><span>Fragrance</span><span>Body care</span><span>Product collections</span></div></div>
+            </a>
+          </article>
+          <article class="work-card" data-category="ecommerce" data-industry="fashion" data-name="Allbirds">
+            <a class="work-card-link" href="https://www.allbirds.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Allbirds website (opens in a new tab)">
+              <div class="work-card-preview"><div class="work-browser-line" aria-hidden="true"><span></span><span></span><span></span><b>allbirds.com</b></div><img src="assets/projects/allbirds.webp" alt="Allbirds website project preview" width="1100" height="700" loading="lazy" decoding="async" /><span class="work-card-open" aria-hidden="true">&#8599;</span></div>
+              <div class="work-card-body"><span class="work-card-industry">Fashion &amp; fitness</span><h3>Allbirds<span aria-hidden="true">&#8599;</span></h3><p>Everyday footwear, apparel and accessories, with dedicated collections for men and women.</p><div class="work-card-tags"><span>Footwear</span><span>Apparel</span><span>Collections</span></div></div>
+            </a>
+          </article>
+          <article class="work-card" data-category="ecommerce" data-industry="fashion" data-name="Gymshark">
+            <a class="work-card-link" href="https://www.gymshark.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Gymshark website (opens in a new tab)">
+              <div class="work-card-preview"><div class="work-browser-line" aria-hidden="true"><span></span><span></span><span></span><b>gymshark.com</b></div><img src="assets/projects/gymshark.webp" alt="Gymshark website project preview" width="1100" height="700" loading="lazy" decoding="async" /><span class="work-card-open" aria-hidden="true">&#8599;</span></div>
+              <div class="work-card-body"><span class="work-card-industry">Fashion &amp; fitness</span><h3>Gymshark<span aria-hidden="true">&#8599;</span></h3><p>An activewear storefront that brings training clothing, accessories and activity-based shopping together.</p><div class="work-card-tags"><span>Activewear</span><span>Accessories</span><span>Shop by activity</span></div></div>
+            </a>
+          </article>
+          <article class="work-card" data-category="ecommerce" data-industry="home" data-name="CraveNest">
+            <a class="work-card-link" href="https://cravenest.store/" target="_blank" rel="noopener noreferrer" aria-label="Visit CraveNest website (opens in a new tab)">
+              <div class="work-card-preview"><div class="work-browser-line" aria-hidden="true"><span></span><span></span><span></span><b>cravenest.store</b></div><img src="assets/projects/cravenest.webp" alt="CraveNest website project preview" width="1100" height="700" loading="lazy" decoding="async" /><span class="work-card-open" aria-hidden="true">&#8599;</span></div>
+              <div class="work-card-body"><span class="work-card-industry">Home &amp; pets</span><h3>CraveNest<span aria-hidden="true">&#8599;</span></h3><p>A kitchen-essentials storefront with practical accessories for cooking, storage and everyday living.</p><div class="work-card-tags"><span>Kitchen essentials</span><span>Home accessories</span><span>Product catalog</span></div></div>
+            </a>
+          </article>
+          <article class="work-card" data-category="ecommerce" data-industry="home" data-name="Bubulab">
+            <a class="work-card-link" href="https://www.bubulabstore.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Bubulab website (opens in a new tab)">
+              <div class="work-card-preview"><div class="work-browser-line" aria-hidden="true"><span></span><span></span><span></span><b>bubulabstore.com</b></div><img src="assets/projects/bubulab.webp" alt="Bubulab website project preview" width="1100" height="700" loading="lazy" decoding="async" /><span class="work-card-open" aria-hidden="true">&#8599;</span></div>
+              <div class="work-card-body"><span class="work-card-industry">Home &amp; pets</span><h3>Bubulab<span aria-hidden="true">&#8599;</span></h3><p>A pet-focused shopping experience covering grooming, food, comfort and clothing for everyday pet care.</p><div class="work-card-tags"><span>Pet care</span><span>Grooming</span><span>Pet essentials</span></div></div>
+            </a>
+          </article>
+          <article class="work-card" data-category="ecommerce" data-industry="beauty" data-name="Glixxy">
+            <a class="work-card-link" href="https://glixxy.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Glixxy website (opens in a new tab)">
+              <div class="work-card-preview"><div class="work-browser-line" aria-hidden="true"><span></span><span></span><span></span><b>glixxy.com</b></div><img src="assets/projects/glixxy.webp" alt="Glixxy website project preview" width="1100" height="700" loading="lazy" decoding="async" /><span class="work-card-open" aria-hidden="true">&#8599;</span></div>
+              <div class="work-card-body"><span class="work-card-industry">Beauty &amp; fragrance</span><h3>Glixxy<span aria-hidden="true">&#8599;</span></h3><p>A beauty and skincare storefront with product-led browsing and a distinctive, expressive brand direction.</p><div class="work-card-tags"><span>Skincare</span><span>Beauty</span><span>Brand experience</span></div></div>
+            </a>
+          </article>
+          <article class="work-card" data-category="ecommerce" data-industry="fashion" data-name="NOBULL">
+            <a class="work-card-link" href="https://nobullproject.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit NOBULL website (opens in a new tab)">
+              <div class="work-card-preview"><div class="work-browser-line" aria-hidden="true"><span></span><span></span><span></span><b>nobullproject.com</b></div><img src="assets/projects/nobull.webp" alt="NOBULL website project preview" width="1100" height="700" loading="lazy" decoding="async" /><span class="work-card-open" aria-hidden="true">&#8599;</span></div>
+              <div class="work-card-body"><span class="work-card-industry">Fashion &amp; fitness</span><h3>NOBULL<span aria-hidden="true">&#8599;</span></h3><p>Training footwear, apparel and accessories organized around an active, performance-focused lifestyle.</p><div class="work-card-tags"><span>Training shoes</span><span>Apparel</span><span>Accessories</span></div></div>
+            </a>
+          </article>
         </div>
-
-        <!-- Project 2 -->
-        <div
-          class="project-card"
-          data-category="app"
-          data-link="https://taqwa.services/"
-        >
-          <div class="card-image-wrapper">
-            <img src="assets/Taqwq.png" alt="Fitness App" class="card-image" />
-            <span class="category-pill">Web Development</span>
-            <div class="image-overlay">
-              <a
-                href="https://taqwa.services/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="view-btn"
-              >
-                View Project <i class="fas fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-          <div class="card-content">
-            <div class="card-meta">
-              <span>2026</span>
-              <span class="meta-dot"></span>
-              <span>2 Months</span>
-            </div>
-            <h3 class="card-title">Home Services Booking Platform</h3>
-            <p class="card-description">
-              A modern service booking platform developed for Taqwa Services,
-              designed to help users easily book professional home and
-              maintenance services online. The website focuses on smooth user
-              experience, fast service selection, and reliable customer
-              interaction.
-            </p>
-            <div class="tech-tags">
-              <span class="tech-tag">Html</span>
-              <span class="tech-tag">Css</span>
-              <span class="tech-tag">JavaScript</span>
-            </div>
-            <div class="card-footer">
-              <div class="project-stat">
-                <i class="fas fa-download"></i>
-                <span>50K+ Downloads</span>
-              </div>
-            </div>
-          </div>
+      </section>
+      <section class="work-category-group" data-project-group="business" aria-labelledby="work-business-heading">
+        <div class="work-category-heading"><div><span class="work-section-number">02 / COLLECTION</span><h2 id="work-business-heading">Business websites<span class="work-group-count">01</span></h2></div><p>Clear destinations for services, support and enquiries.</p></div>
+        <div class="work-grid">
+          <article class="work-card" data-category="business" data-industry="business" data-name="Al Taqwa Services">
+            <a class="work-card-link" href="https://taqwa.services/" target="_blank" rel="noopener noreferrer" aria-label="Visit Al Taqwa Services website (opens in a new tab)">
+              <div class="work-card-preview"><div class="work-browser-line" aria-hidden="true"><span></span><span></span><span></span><b>taqwa.services</b></div><img src="assets/projects/taqwa.webp" alt="Al Taqwa Services website project preview" width="1100" height="700" loading="lazy" decoding="async" /><span class="work-card-open" aria-hidden="true">&#8599;</span></div>
+              <div class="work-card-body"><span class="work-card-industry">Business services</span><h3>Al Taqwa Services<span aria-hidden="true">&#8599;</span></h3><p>A UAE services website bringing maintenance, technical support and manpower services into one clear destination.</p><div class="work-card-tags"><span>Business website</span><span>Service directory</span><span>Enquiry journey</span></div></div>
+            </a>
+          </article>
         </div>
-
-        <!-- Project 3 -->
-        <div class="project-card" data-category="design" data-link="#">
-          <div class="card-image-wrapper">
-            <img
-              src="assets/Crave Nest.png"
-              alt="Brand Identity"
-              class="card-image"
-            />
-            <span class="category-pill">Shopify Design</span>
-            <div class="image-overlay">
-              <a
-                href="https://cravenest.store/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="view-btn"
-              >
-                View Project <i class="fas fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-          <div class="card-content">
-            <div class="card-meta">
-              <span>2025</span>
-              <span class="meta-dot"></span>
-              <span>1 Month</span>
-            </div>
-            <h3 class="card-title">Cravenest Shopify Store Development</h3>
-            <p class="card-description">
-              Developed a modern Shopify e-commerce store for Cravenest with a
-              clean product layout, optimized shopping experience, and
-              responsive design. The project focused on smooth navigation,
-              attractive product presentation, and secure checkout.
-            </p>
-            <div class="tech-tags">
-              <span class="tech-tag">Shopify</span>
-              <span class="tech-tag">Liquid</span>
-              <span class="tech-tag">CSS</span>
-            </div>
-            <div class="card-footer">
-              <div class="project-stat">
-                <i class="fas fa-heart"></i>
-                <span>2.3K Likes</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 4 -->
-        <div
-          class="project-card"
-          data-category="web"
-          data-link="https://www.bubulabstore.com/"
-        >
-          <div class="card-image-wrapper">
-            <img src="assets/Bubulab.png" alt="Dashboard" class="card-image" />
-            <span class="category-pill">Shopify Design</span>
-            <div class="image-overlay">
-              <a
-                href="https://www.bubulabstore.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="view-btn"
-              >
-                View Project <i class="fas fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-          <div class="card-content">
-            <div class="card-meta">
-              <span>2026</span>
-              <span class="meta-dot"></span>
-              <span>4 Months</span>
-            </div>
-            <h3 class="card-title">Bubulab Beauty E-Commerce Store</h3>
-            <p class="card-description">
-              Developed a modern e-commerce platform for Bubulab Store focused
-              on beauty and skincare products. The website features elegant
-              product presentation, optimized product pages, smooth navigation,
-              and a secure checkout experience to enhance online shopping.
-            </p>
-            <div class="tech-tags">
-              <span class="tech-tag">Shopify</span>
-              <span class="tech-tag">Liquid</span>
-              <span class="tech-tag">CSS</span>
-            </div>
-            <div class="card-footer">
-              <div class="project-stat">
-                <i class="fas fa-users"></i>
-                <span>5K Users</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 5 -->
-        <div
-          class="project-card"
-          data-category="ecommerce web"
-          data-link="https://glixxy.com/"
-        >
-          <div class="card-image-wrapper">
-            <img
-              src="assets/Glixxy.png"
-              alt="Fashion Store"
-              class="card-image"
-            />
-            <span class="category-pill">E-Commerce</span>
-            <div class="image-overlay">
-              <a
-                href="https://glixxy.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="view-btn"
-              >
-                View Project <i class="fas fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-          <div class="card-content">
-            <div class="card-meta">
-              <span>2025</span>
-              <span class="meta-dot"></span>
-              <span>2.5 Months</span>
-            </div>
-            <h3 class="card-title">Glixxy Fashion E-Commerce Store</h3>
-            <p class="card-description">
-              Developed a modern Shopify fashion store for Glixxy focused on
-              stylish product presentation and a smooth online shopping
-              experience. The store includes responsive design, optimized
-              product pages, and seamless checkout to improve customer
-              engagement and conversions.
-            </p>
-            <div class="tech-tags">
-              <span class="tech-tag">Shopify</span>
-              <span class="tech-tag">Liquid</span>
-              <span class="tech-tag">CSS</span>
-            </div>
-            <div class="card-footer">
-              <div class="project-stat">
-                <i class="fas fa-shopping-bag"></i>
-                <span> 50K+ Sales</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 6 -->
-        <div
-          class="project-card"
-          data-category="app design"
-          data-link="https://nobullproject.com/"
-        >
-          <div class="card-image-wrapper">
-            <img src="assets/No bull.png" alt="Social App" class="card-image" />
-            <span class="category-pill">Shopify Design</span>
-            <div class="image-overlay">
-              <a
-                href="https://nobullproject.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="view-btn"
-              >
-                View Project <i class="fas fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-          <div class="card-content">
-            <div class="card-meta">
-              <span>2023</span>
-              <span class="meta-dot"></span>
-              <span>5 Months</span>
-            </div>
-            <h3 class="card-title">NoBull Social Platform</h3>
-            <p class="card-description">
-              Developed a next-gen social media platform for NoBull Project with
-              a video-first approach and integrated creator monetization. The
-              app offers real-time video streaming, seamless interactions, and a
-              scalable backend for high performance.
-            </p>
-            <div class="tech-tags">
-              <span class="tech-tag">Flutter</span>
-              <span class="tech-tag">AWS</span>
-              <span class="tech-tag">WebRTC</span>
-            </div>
-            <div class="card-footer">
-              <div class="project-stat">
-                <i class="fas fa-star"></i>
-                <span>4.9 Rating</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Stats Section -->
-      <div class="achievements-section">
-        <div class="achievement-card">
-          <div class="achievement-icon">
-            <i class="fas fa-briefcase"></i>
-          </div>
-          <div class="achievement-number">50+</div>
-          <div class="achievement-label">Projects Completed</div>
-        </div>
-        <div class="achievement-card">
-          <div class="achievement-icon">
-            <i class="fas fa-smile"></i>
-          </div>
-          <div class="achievement-number">50+</div>
-          <div class="achievement-label">Happy Clients</div>
-        </div>
-        <div class="achievement-card">
-          <div class="achievement-icon">
-            <i class="fas fa-calendar-check"></i>
-          </div>
-          <div class="achievement-number">3+</div>
-          <div class="achievement-label">Years Experience</div>
-        </div>
-        <div class="achievement-card">
-          <div class="achievement-icon">
-            <i class="fas fa-trophy"></i>
-          </div>
-          <div class="achievement-number">10+</div>
-          <div class="achievement-label">Awards Won</div>
+      </section>
+          <div class="work-empty" hidden><span aria-hidden="true">&#8981;</span><h3>No projects found</h3><p>Try another name, category or industry.</p><button type="button" class="work-empty-reset">Show all projects &#8599;</button></div>
         </div>
       </div>
     </section>
-
-    <script>
-      // Filter Functionality
-      const filterTabs = document.querySelectorAll(".filter-tab");
-      const projectCards = document.querySelectorAll(".project-card");
-
-      filterTabs.forEach((tab) => {
-        tab.addEventListener("click", () => {
-          // Remove active class from all tabs
-          filterTabs.forEach((t) => t.classList.remove("active"));
-          // Add active class to clicked tab
-          tab.classList.add("active");
-
-          const filter = tab.getAttribute("data-filter");
-
-          projectCards.forEach((card) => {
-            const categories = card.getAttribute("data-category").split(" ");
-
-            if (filter === "all" || categories.includes(filter)) {
-              card.style.display = "block";
-              setTimeout(() => {
-                card.style.opacity = "1";
-                card.style.transform = "translateY(0)";
-              }, 10);
-            } else {
-              card.style.opacity = "0";
-              card.style.transform = "translateY(20px)";
-              setTimeout(() => {
-                card.style.display = "none";
-              }, 300);
-            }
-          });
-        });
-      });
-
-      // Project Card Click - Navigate to link
-      projectCards.forEach((card) => {
-        card.addEventListener("click", (e) => {
-          // Agar action buttons ya links click hue toh card click nahi hoga
-          if (e.target.closest(".action-btn") || e.target.closest("a")) {
-            return;
-          }
-
-          const link = card.getAttribute("data-link");
-          if (link && link !== "#") {
-            window.open(link, "_blank");
-          }
-        });
-      });
-
-      // Intersection Observer for animations
-      const observerOptions = {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px",
-      };
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.style.opacity = "1";
-            entry.target.style.transform = "translateY(0)";
-          }
-        });
-      }, observerOptions);
-
-      projectCards.forEach((card) => {
-        observer.observe(card);
-      });
-
-      // Stats Counter Animation
-      const achievementNumbers = document.querySelectorAll(
-        ".achievement-number",
-      );
-
-      const animateCounter = (el) => {
-        const text = el.innerText;
-        const target = parseInt(text);
-        const suffix = text.replace(/[0-9]/g, "");
-        const duration = 2000;
-        const step = target / (duration / 16);
-        let current = 0;
-
-        const timer = setInterval(() => {
-          current += step;
-          if (current >= target) {
-            el.innerText = target + suffix;
-            clearInterval(timer);
-          } else {
-            el.innerText = Math.floor(current) + suffix;
-          }
-        }, 16);
-      };
-
-      const statsObserver = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              animateCounter(entry.target);
-              statsObserver.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.5 },
-      );
-
-      achievementNumbers.forEach((stat) => statsObserver.observe(stat));
-    </script>
-    <footer class="studio-footer" aria-label="Globaxify footer">
+    <section class="work-next-step"><div class="work-container"><div class="work-next-inner"><div><span class="work-eyebrow">YOUR PROJECT COULD BE NEXT</span><h2>Let&#8217;s make something<br>worth exploring.</h2><p>Tell us what you want to build. We&#8217;ll help you find a practical direction.</p></div><a class="glass-button primary" href="index.html#contact">Start a conversation <span aria-hidden="true">&#8599;</span></a></div></div></section>
+  </main>
+  <footer class="studio-footer" aria-label="Globaxify footer">
     <div class="studio-footer-top">
       <div class="studio-footer-invitation"><h2>Let&#8217;s build your<br>next big idea.</h2><p>Thoughtful design and development.<br>A fresh chapter for your business.</p><a class="studio-footer-cta" href="index.html#contact">Start a project <span aria-hidden="true">&#8599;</span></a></div>
       <svg class="studio-footer-art" viewBox="0 0 560 220" fill="none" aria-hidden="true"><g stroke="currentColor" stroke-width="2"><path d="m77 25 38 22-38 22-38-22 38-22Zm-38 22v43l38 23 38-23V47M77 69v44"/><path d="m235 26-24 35 24 35m65-70 24 35-24 35m-33-75-15 80"/><path d="m435 24 10 29 30 1-24 18 8 29-24-17-24 17 8-29-24-18 30-1 10-29Z"/><rect x="141" y="135" width="70" height="49" rx="8"/><path d="m155 151 20 14 22-14M367 131v66m-33-33h66m-56-23 46 46m0-46-46 46"/><circle cx="501" cy="160" r="28"/><path d="m488 160 9 9 16-19"/></g></svg>
     </div>
     <div class="studio-footer-grid">
       <div class="studio-footer-brand"><a class="studio-footer-wordmark" href="index.html#home" aria-label="Globaxify home"><img class="studio-footer-logo" src="assets/footer-logo-3d.png" alt="Globaxify - Global eCommerce Experts" width="1983" height="793" loading="lazy" decoding="async" /></a><p>From Bahawalpur to wherever your next idea takes you.</p><a class="studio-footer-email" href="mailto:globaxify.official@gmail.com">globaxify.official@gmail.com</a><a class="studio-footer-phone" href="tel:+923294211306">03294211306</a><div class="studio-footer-socials"><a href="https://www.facebook.com/share/1E2N7YbB3C/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Globaxify on Facebook">Facebook</a><a href="https://www.instagram.com/ecom_with_globaxify/" target="_blank" rel="noopener noreferrer" aria-label="Globaxify on Instagram">Instagram</a><a href="https://www.tiktok.com/@ecom_with_globaxify" target="_blank" rel="noopener noreferrer" aria-label="Globaxify on TikTok">TikTok</a></div></div>
-      <nav class="studio-footer-navigation" aria-label="Footer navigation"><h3>Explore</h3><a href="index.html#home">Home</a><a href="index.html#services">Services</a><a href="projects.html">Projects</a><a href="portfolio.html">Portfolio</a><a href="index.html#about">About</a><a href="index.html#contact">Contact</a></nav>
+      <nav class="studio-footer-navigation" aria-label="Footer navigation"><h3>Explore</h3><a href="index.html#home">Home</a><a href="index.html#services">Services</a><a href="projects.html">Projects</a><a role="link" aria-disabled="true" title="New portfolio link coming soon">Portfolio</a><a href="index.html#about">About</a><a href="index.html#contact">Contact</a></nav>
       <div class="studio-footer-newsletter"><h3>Stay in the loop</h3><p>Design ideas, project updates and a little inspiration.</p><form class="studio-footer-subscribe"><label class="studio-footer-field-label">Your email address<input name="email" type="email" autocomplete="email" maxlength="120" placeholder="Your email address" required /></label><button type="submit">Subscribe <span aria-hidden="true">&#8599;</span></button></form><p class="studio-footer-subscribe-status" role="status" aria-live="polite"></p></div>
     </div>
     <div class="studio-footer-base"><p>&copy; 2026 Globaxify. All rights reserved.</p><nav aria-label="Legal"><a href="Privacy Policy.html">Privacy</a><a href="Terms of Service.html">Terms</a><a href="Cookies Policy.html">Cookies</a></nav></div>
   </footer>
+  <button class="work-back-top" id="backToTop" type="button" aria-label="Back to top">&#8593;</button>
+  <script src="script.js"></script>
+  <script src="review-controls.js"></script>
+  <script src="projects.js"></script>
   <script src="footer.js"></script>
 </body>
 </html>
